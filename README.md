@@ -23,7 +23,7 @@ E-commerce de produtos alimentícios congelados e eventos culinários
 
 Parágrafo 2: Como =
 
- 	Utilizando os conceitos aprendidos sobre Metodologias Ágeis, construiremos um e-commerce responsivo com banco de dados SQLite 
+ 	Utilizando os conceitos aprendidos sobre Metodologias Ágeis, construiremos um e-commerce responsivo com banco de dados MySql 
   utilizando recursos para registrar pratos, alimentos e valores. 
 
 As páginas serão desenvolvidas utilizando HTML,CSS,PHP e Laravel. 
