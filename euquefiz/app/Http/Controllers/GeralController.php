@@ -29,4 +29,7 @@ class GeralController extends Controller
     public function account(){
         return view('account.account');
     }
+    public function register(){
+        return view('account.register');
+    }
 }

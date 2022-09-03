@@ -14,16 +14,18 @@ use App\Http\Controllers\AdminController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', [GeralController::class, 'home'])->name('home');
 
-Route::get('/admin', [AdminController::class, 'admin']);
-Route::get('/', [GeralController::class, 'home']);
 
-Route::get('/eventos', [GeralController::class, 'events']);
+Route::get('/admin', [AdminController::class, 'admin'])->name('admin');
 
-Route::get('/entrar', [GeralController::class, 'login']);
+Route::get('/eventos', [GeralController::class, 'events'])->name('events');
+Route::get('/produtos', [GeralController::class, 'products'])->name('products');
 
-Route::get('/produtos', [GeralController::class, 'products']);
+Route::get('/minha-conta', [GeralController::class, 'account'])->name('account');
+Route::get('/register', [GeralController::class, 'register'])->name('register');
+Route::get('/entrar', [GeralController::class, 'login'])->name('login');
 
-Route::get('/sobre', [GeralController::class, 'aboutus']);
+Route::get('/sobre', [GeralController::class, 'aboutus'])->name('aboutus');
 
-Route::get('/minha-conta', [GeralController::class, 'account']);
+
