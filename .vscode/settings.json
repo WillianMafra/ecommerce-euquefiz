@@ -1,0 +1,17 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "3.89.36.150",
+            "port": 3306,
+            "driver": "MySQL",
+            "password": "phpe2122g2@22@ago",
+            "database": "phpe2122g2",
+            "name": "Entra21",
+            "username": "phpe2122g2"
+        }
+    ]
+}
