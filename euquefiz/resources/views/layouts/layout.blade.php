@@ -23,7 +23,7 @@
 
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="#"><img src="storage/app/public/img/shopping-bag.png"></a>
+                            <a href="#"><img src="{{asset('storage/img/icone/shopping-bag.png')}}" width="30" height="25"></a>
                         </li>
                         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
                         <li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> Login / Cadastrar <span class="caret"></span></a>
