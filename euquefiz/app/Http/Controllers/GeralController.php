@@ -11,22 +11,22 @@ class GeralController extends Controller
     }
 
     public function events(){
-        return view('events');
+        return view('others.events');
     }
 
     public function login(){
-        return view('login');
+        return view('account.login');
     }
 
     public function products(){
-        return view('products');
+        return view('products.products');
     }
 
     public function aboutus(){
-        return view('aboutus');
+        return view('others.aboutus');
     }
 
     public function account(){
-        return view('account');
+        return view('account.account');
     }
 }

@@ -15,6 +15,7 @@ use App\Http\Controllers\AdminController;
 |
 */
 
+Route::get('/admin', [AdminController::class, 'admin']);
 Route::get('/', [GeralController::class, 'home']);
 
 Route::get('/eventos', [GeralController::class, 'events']);
