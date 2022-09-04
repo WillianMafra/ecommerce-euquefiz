@@ -1,8 +1,8 @@
 <?php
 
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\OthersController;
 use App\Http\Controllers\ProductsController;
-use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 
@@ -22,9 +22,9 @@ Route::get('/', [ProductsController::class, 'home'])->name('home');
 Route::get('/produtos', [ProductsController::class, 'products'])->name('products');
 
 
-Route::get('/minha-conta', [UserController::class, 'account'])->name('account');
-Route::get('/register', [UserController::class, 'register'])->name('register');
-Route::get('/entrar', [UserController::class, 'login'])->name('login');
+Route::get('/minha-conta', [ClientController::class, 'account'])->name('account');
+Route::get('/register', [ClientController::class, 'register'])->name('register');
+Route::get('/entrar', [ClientController::class, 'login'])->name('login');
 
 Route::get('/eventos', [OthersController::class, 'events'])->name('events');
 Route::get('/sobre', [OthersController::class, 'aboutus'])->name('aboutus');
