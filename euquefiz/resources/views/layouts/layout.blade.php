@@ -1,3 +1,5 @@
+
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <div class="navbar navbar-inverse">
     <div class="container-fluid">
@@ -11,13 +13,26 @@
 
                 <div class="navbar-collapse collapse" id="mobile_menu">
                     <ul class="nav navbar-nav">
-                        <li><a href="{{route('products')}}">Produtos</a></li>
+                        
+                    <li><a href="{{route('products')}}">Produtos</a></li>
+                        
                         <li><a href="{{route('events')}}">Eventos</a></li>
-
-                        <li><a href="/sobre" class="dropdown-toggle" data-toggle="dropdown">Quem Somos <span class="caret"></span></a>
+                        
+                        <li><a href="/sobre" class="dropdown-toggle" data-toggle="dropdown">Congelados <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">DropDown Um</a></li>
-                                <li><a href="#">DropDown Dois</a></li>
+                                <li><a>Lasanhas<span class="caret"></span></a></li>
+                                    <ul class="dropdown-menu">
+                                        <ul>
+                                            <li>espinafre</li>
+                                            <li>bolonhesa</li>
+                                            <li>frango</li>
+                                        </ul>
+                                    </ul>
+                                <li><a href="#">Panquecas</a></li>
+                                <li><a href="#">Esconddinhos</a></li>
+                                <li><a href="#">Empadões</a></li>
+                                <li><a href="#">Pizzas</a></li>
+                                <li><a href="#">Bolinhos de Aipim</a></li>
                             </ul>
                         </li>
                         <li><a href="/eventos">Eventos</a></li>
@@ -43,3 +58,10 @@
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <style>
+        .bg {     
+        background-color: danger
+        }
+    </style>
