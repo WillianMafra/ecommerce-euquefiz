@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-
-
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <div class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-=======
 <!doctype html>
 <html lang="pt-br">
 <head>
@@ -31,11 +27,23 @@
                     <img class="img-thumbnail" id="icone-logo-principal" src="{{asset('storage/img/logo-design/EuQueFizLogo.jpg')}}" width="70" height="30" alt="" />
                 </a>
             </div>
->>>>>>> 485e1a691ab22973c0c509fd900c3af7be4f8aa8
 
             <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav  ">
-                    <li><a href="{{route('products')}}">Produtos</a></li>
+
+                    <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Produtos <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-toggle">Congelados<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            </ul>
+                        </li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                    </ul>
+                    </li>
                     <li><a href="{{route('events')}}">Eventos</a></li>
                     <li><a href="{{route('aboutus')}}">Sobre</a></li>
                     <li class="dropdown">
@@ -60,15 +68,9 @@
                         <ul class="dropdown-menu">
                             <li><a href="{{route('login')}}">Login</a></li>
                             <li><a href="{{route('register')}}">Cadastrar</a></li>
-
-<<<<<<< HEAD
                 <div class="navbar-collapse collapse" id="mobile_menu">
                     <ul class="nav navbar-nav">
-                        
-                    <li><a href="{{route('products')}}">Produtos</a></li>
-                        
-                        <li><a href="{{route('events')}}">Eventos</a></li>
-                        
+
                         <li><a href="/sobre" class="dropdown-toggle" data-toggle="dropdown">Congelados <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a>Lasanhas<span class="caret"></span></a></li>
@@ -103,11 +105,9 @@
                         </li>
                     </ul>
                 </div>
-=======
                         </ul>
                     </li>
                 </ul>
->>>>>>> 485e1a691ab22973c0c509fd900c3af7be4f8aa8
             </div>
         </div>
     </nav>
@@ -156,10 +156,3 @@
 </html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
-    <style>
-        .bg {     
-        background-color: danger
-        }
-    </style>
