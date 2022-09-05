@@ -3,13 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="{{asset('css/layout.css')}}">
-    <link rel="stylesheet" href="{{asset('css/footer.css')}}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('css/footer.css')}}">
+    <link rel="stylesheet" href="{{asset('css/layout.css')}}">
     <title>@yield('Eu Que Fiz', 'Eu Que Fiz')</title>
 </head>
 <header>
-    <nav class="navbar navbar-default  navbar-inverse navbar-dark " role="navigation">
+    <nav class="navbar navbar-default background-nav  navbar-inverse navbar-dark " role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -23,8 +23,8 @@
                 </a>
             </div>
 
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
+            <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav  ">
                     <li><a href="{{route('products')}}">Produtos</a></li>
                     <li><a href="{{route('events')}}">Eventos</a></li>
                     <li><a href="{{route('aboutus')}}">Sobre</a></li>
@@ -41,7 +41,7 @@
                         </ul>
                     </li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right registro">
                     <li>
                         <a href="#"><img src="{{asset('storage/img/icone/shopping-bag.png')}}" alt="icone-carrinho" width="30" height="25"></a>
                     </li>
