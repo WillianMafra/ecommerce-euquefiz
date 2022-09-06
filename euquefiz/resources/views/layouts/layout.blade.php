@@ -1,158 +1,138 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<div class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12">
-<!doctype html>
-<html lang="pt-br">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{asset('css/footer.css')}}">
-    <link rel="stylesheet" href="{{asset('css/layout.css')}}">
-    <title>@yield('Eu Que Fiz', 'Eu Que Fiz')</title>
+<head><!-- CSS only -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{asset('css/home.css')}}">
 </head>
-<header>
-    <nav class="navbar navbar-default background-nav  navbar-inverse navbar-dark " role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="{{route('home')}}" class="navbar-brand">
-                    <img class="img-thumbnail" id="icone-logo-principal" src="{{asset('storage/img/logo-design/EuQueFizLogo.jpg')}}" width="70" height="30" alt="" />
-                </a>
-            </div>
+<header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
 
-            <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav  ">
+        <a href="{{route('home')}}" class="logo d-flex align-items-center me-auto me-lg-0">
+            <img src="{{asset('storage/img/logo-design/EuQueFizLogo.jpg')}}" alt="logo-eu-que-fiz">
+            <h1>Eu que Fiz</h1>
+        </a>
 
-                    <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Produtos <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li class="dropdown-toggle">Congelados<span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li class="dropdown"><a href="#"><span>Menu</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="#">Drop Down 1</a></li>
+                        <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                            <ul>
+                                <li><a href="#">Deep Drop Down 1</a></li>
+                                <li><a href="#">Deep Drop Down 2</a></li>
+                                <li><a href="#">Deep Drop Down 3</a></li>
+                                <li><a href="#">Deep Drop Down 4</a></li>
+                                <li><a href="#">Deep Drop Down 5</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
+                        <li><a href="#">Drop Down 2</a></li>
+                        <li><a href="#">Drop Down 3</a></li>
+                        <li><a href="#">Drop Down 4</a></li>
                     </ul>
-                    </li>
-                    <li><a href="{{route('events')}}">Eventos</a></li>
-                    <li><a href="{{route('aboutus')}}">Sobre</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quem Somos? <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Integrante 1</a></li>
-                            <li><a href="#">Integrante 2</a></li>
-                            <li><a href="#">Integrante 3</a></li>
-                            <li><a href="#">Integrante 4</a></li>
-                            <li><a href="#">Integrante 5</a></li>
-                            <li><a href="#">Integrante 6</a></li>
-                            <li><a href="#">Integrante 7</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right registro">
-                    <li>
-                        <a href="#"><img src="{{asset('storage/img/icone/shopping-bag.png')}}" alt="icone-carrinho" width="30" height="25"></a>
-                    </li>
-                    <li><a href="{{route('account')}}"><span class="glyphicon glyphicon-user"></span> Perfil</a></li>
-                    <li><a  class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> Login / Cadastrar <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{{route('login')}}">Login</a></li>
-                            <li><a href="{{route('register')}}">Cadastrar</a></li>
-                <div class="navbar-collapse collapse" id="mobile_menu">
-                    <ul class="nav navbar-nav">
-
-                        <li><a href="/sobre" class="dropdown-toggle" data-toggle="dropdown">Congelados <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a>Lasanhas<span class="caret"></span></a></li>
-                                    <ul class="dropdown-menu">
-                                        <ul>
-                                            <li>espinafre</li>
-                                            <li>bolonhesa</li>
-                                            <li>frango</li>
-                                        </ul>
-                                    </ul>
-                                <li><a href="#">Panquecas</a></li>
-                                <li><a href="#">Esconddinhos</a></li>
-                                <li><a href="#">Empadões</a></li>
-                                <li><a href="#">Pizzas</a></li>
-                                <li><a href="#">Bolinhos de Aipim</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="/eventos">Eventos</a></li>
+                </li>
+                <li><a href="{{route('events')}}">Eventos</a></li>
+                <li class="dropdown"><a href="#"><span>Quem Somos?</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="#">Integrante 1</a></li>
+                        <li><a href="#">Integrante 2</a></li>
+                        <li><a href="#">Integrante 3</a></li>
+                        <li><a href="#">Integrante 4</a></li>
+                        <li><a href="#">Integrante 5</a></li>
+                        <li><a href="#">Integrante 6</a></li>
+                        <li><a href="#">Integrante 7</a></li>
                     </ul>
+                </li>
+                <li><a href="{{route('aboutus')}}">Sobre</a></li>
+                <li><a href="#gallery">Galeria</a></li>
 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#"><img src="{{asset('storage/img/icone/shopping-bag.png')}}" width="30" height="25"></a>
-                        </li>
-                        <li><a href="{{route('account')}}"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
-                        <li><a href="{{route('register')}}" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> Login / Cadastrar <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="{{route('login')}}">Login</a></li>
-                                <li><a href="{{route('register')}}">Cadastrar</a></li>
-
-                            </ul>
-                        </li>
+                <li><a href="{{route('account')}}">Perfil</a></li>
+                <li>
+                    <a href="#"><img src="{{asset('storage/img/icone/shopping-bag.png')}}" alt="icone-carrinho" width="30" height="25">
+                    </a>
+                </li>
+                <li class="dropdown"><a href="#"><span>Login / Cadastrar</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="{{route('login')}}">Login</a></li>
+                        <li><a href="{{route('register')}}">Cadastro</a></li>
                     </ul>
-                </div>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-</header>
-<footer class="footer-espaco text-center">
-    <div class="container-fluid mt-1" style="background-color:#eff5f5;">
-        <div class="row  row-no-gutters">
-            <div class="col-xs-12 col-sm-6 col-md-3" >
-                <ul>
-                    <li class="col-heading">Contatos</li>
-                    <li>
-                        <i class="fa fa-phone" aria-hidden="true"></i><a href="tel:99-999-999-9999">Telefone Para Contato</a>
-                    </li>
-                    <li>
-                        <i class="fa fa-map-marker" aria-hidden="true"></i><a href="#">Endereço</a>
-                    </li>
-                    <li>
-                        <i class="fa fa-envelope-square" aria-hidden="true"></i><a href="mailto:someone@yoursite.com?subject=Email Subject line">Nós Envie um E-mail</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-xs-12 col-sm-6 col-md-3" >
-                <ul>
-                    <li class="col-heading">Subheading</li>
-                    <li><a href="#">Link to page</a></li>
-                    <li><a href="#">Link to page</a></li>
-                    <li><a href="#">Link to page</a></li>
-                    <li><a href="#">Link to page</a></li>
-                </ul>
-
-            </div>
-
-            <div class="col-xs-12 col-sm-6 col-md-3" >
-                <div class="col-heading">Eventos Recentes</div>
-                    <a href=""><img class="img-thumbnail" src="{{asset('storage/img/logo-design/EuQueFizLogo.jpg')}}" width="60" alt="" /></a>
-                    <a href=""><img class="img-thumbnail" src="{{asset('storage/img/logo-design/EuQueFizLogo.jpg')}}" width="60" alt="" /></a>
-                    <a href=""><img class="img-thumbnail" src="{{asset('storage/img/logo-design/EuQueFizLogo.jpg')}}" width="60" alt="" /></a>
-                    <a href=""><img class="img-thumbnail" src="{{asset('storage/img/logo-design/EuQueFizLogo.jpg')}}" width="60" alt="" /></a>
-            </div>
-        </div>
-
+                </li>
+            </ul>
+        </nav><!-- .navbar -->
     </div>
-</footer>
-</html>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</header><!-- End Header -->
+@yield('content')
+
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+
+    <div class="container">
+        <div class="row gy-3">
+            <div class="col-lg-3 col-md-6 d-flex">
+                <i class="bi bi-geo-alt icon"></i>
+                <div>
+                    <h4>Endereço</h4>
+                    <p>
+                        Rua  <br>
+                        Cidade, (Sigla Estado) CEP - PAIS<br>
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links d-flex">
+                <i class="bi bi-telephone icon"></i>
+                <div>
+                    <h4>Reservas</h4>
+                    <p>
+                        <strong>Número</strong> (XX) XXXX-XXXX<br>
+                        <strong>Email:</strong> info@example.com<br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links d-flex">
+                <i class="bi bi-clock icon"></i>
+                <div>
+                    <h4>Horário de Abertura</h4>
+                    <p>
+                        <strong>Inserir Horários</strong> Até esse horario<br>
+                        Coloque aqui excessões
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Nós Siga</h4>
+                <div class="social-links d-flex">
+                    <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer><!-- End Footer -->
+<!-- End Footer -->
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<div id="preloader"></div>
+
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://plugin.handtalk.me/web/latest/handtalk.min.js"></script>
+
+<script>
+
+    var ht = new HT({
+
+        token: "4f60ffe8202947dff1b21ebc65ffe9bf"
+
+    });
+</script>
+<script src="{{asset('js/app.js')}}"></script>
+<script src="{{asset('js/carousel.js')}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
