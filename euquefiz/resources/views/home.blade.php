@@ -361,7 +361,7 @@
             <div class="row mx-auto my-auto justify-content-center">
                 <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active">
+                        <div class="carousel-item active" data-bs-interval="3000">
                             <div class="col-md-3">
                                 <div class="card">
                                     <div class="card-img">
@@ -370,7 +370,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item" data-bs-interval="3000">
                             <div class="col-md-3">
                                 <div class="card">
                                     <div class="card-img">
@@ -379,7 +379,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item" data-bs-interval="3000">
                             <div class="col-md-3">
                                 <div class="card">
                                     <div class="card-img">
@@ -388,7 +388,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item" data-bs-interval="3000">
                             <div class="col-md-3">
                                 <div class="card">
                                     <div class="card-img">
@@ -406,7 +406,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item" data-bs-interval="3000">
                             <div class="col-md-3">
                                 <div class="card">
                                     <div class="card-img">
@@ -497,5 +497,12 @@
 
             </div>
         </section><!-- End Chefs Section -->
+
     </main><!-- End #main -->
+    @prepend('scripts')
+        <script src="{{asset('js/app.js')}}"></script>
+    @endprepend
+    @push('scripts')
+        <script src="{{asset('js/carousel.js')}}"></script>
+    @endpush
 @endsection

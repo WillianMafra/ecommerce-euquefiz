@@ -2,7 +2,8 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{asset('css/home.css')}}">
+    <link rel="stylesheet" href="{{asset('css/default.css')}}">
+    <link rel="stylesheet" href="{{asset('css/footer.css')}}">
 </head>
 <header id="header" class="header fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
@@ -12,7 +13,7 @@
             <h1>Eu que Fiz</h1>
         </a>
 
-        <nav id="navbar" class="navbar">
+        <nav id="navbar" class="navbar ">
             <ul>
                 <li class="dropdown"><a href="#"><span>Menu</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
@@ -44,7 +45,7 @@
                     </ul>
                 </li>
                 <li><a href="{{route('aboutus')}}">Sobre</a></li>
-                <li><a href="#gallery">Galeria</a></li>
+                <li><a href="">Galeria</a></li>
 
                 <li><a href="{{route('account')}}">Perfil</a></li>
                 <li>
@@ -59,6 +60,8 @@
                 </li>
             </ul>
         </nav><!-- .navbar -->
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
     </div>
 </header><!-- End Header -->
 @yield('content')
@@ -114,7 +117,7 @@
 
         </div>
     </div>
-</footer><!-- End Footer -->
+</footer>
 <!-- End Footer -->
 
 <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -123,6 +126,7 @@
 
 
 <!-- JavaScript Bundle with Popper -->
+@stack('scripts')
 <script src="https://plugin.handtalk.me/web/latest/handtalk.min.js"></script>
 
 <script>
@@ -133,6 +137,5 @@
 
     });
 </script>
-<script src="{{asset('js/app.js')}}"></script>
-<script src="{{asset('js/carousel.js')}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
