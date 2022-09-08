@@ -74,7 +74,7 @@
     <div class="container">
         <div class="row gy-3">
             <div class="col-lg-3 col-md-6 d-flex">
-                <i class="bi bi-geo-alt icon"></i>
+                <img  width="30px" height="30px"  src="{{asset('storage/img/icone/shopping-bag.png')}}">
                 <div>
                     <h4>Endereço</h4>
                     <p>
@@ -86,7 +86,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6 footer-links d-flex">
-                <i class="bi bi-telephone icon"></i>
+                <img  width="30px" height="30px"  src="{{asset('storage/img/icone/shopping-bag.png')}}">
                 <div>
                     <h4>Reservas</h4>
                     <p>
@@ -97,7 +97,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6 footer-links d-flex">
-                <i class="bi bi-clock icon"></i>
+                <img  width="30px" height="30px"  src="{{asset('storage/img/icone/shopping-bag.png')}}">
                 <div>
                     <h4>Horário de Abertura</h4>
                     <p>
