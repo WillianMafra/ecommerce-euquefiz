@@ -2,8 +2,9 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{asset('css/default.css')}}">
     <link rel="stylesheet" href="{{asset('css/footer.css')}}">
+    <link rel="stylesheet" href="{{asset('css/default.css')}}">
+
 </head>
 <header id="header" class="header fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
@@ -13,7 +14,7 @@
             <h1>Eu que Fiz</h1>
         </a>
 
-        <nav id="navbar" class="navbar ">
+        <nav id="navbar" class="navbar navbar-expand-sm">
             <ul>
                 <li class="dropdown"><a href="#"><span>Menu</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
@@ -119,10 +120,8 @@
     </div>
 </footer>
 <!-- End Footer -->
-
-<a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-<div id="preloader"></div>
+<input type="image"src="{{asset('storage/img/icone/scrollup.png')}}" id="bottonUp"  class="scroll-top d-flex align-items-center justify-content-center">
+{{--<div id="preloader"></div>--}}
 
 
 <!-- JavaScript Bundle with Popper -->

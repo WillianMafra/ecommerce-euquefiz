@@ -7,7 +7,7 @@
 /* Colors */
 :root {
     --color-default: #212529;
-    --color-primary: #ce1212;
+    --color-primary: #e01010;
     --color-secondary: #37373f;
 }
 
@@ -93,17 +93,21 @@ section {
     right: 15px;
     bottom: 15px;
     z-index: 99999;
-    background: var(--color-primary);
+    background: red;
     width: 44px;
     height: 44px;
     border-radius: 50px;
     transition: all 0.4s;
+}
+#bottonUp {
+    background: ghostwhite;
 }
 
 .scroll-top i {
     font-size: 24px;
     color: #fff;
     line-height: 0;
+
 }
 
 .scroll-top:hover {
@@ -208,23 +212,6 @@ section {
 
 .header .logo h1 span {
     color: var(--color-primary);
-}
-
-.header .btn-book-a-table,
-.header .btn-book-a-table:focus {
-    font-size: 14px;
-    color: #fff;
-    background: var(--color-primary);
-    padding: 8px 20px;
-    margin-left: 30px;
-    border-radius: 50px;
-    transition: 0.3s;
-}
-
-.header .btn-book-a-table:hover,
-.header .btn-book-a-table:focus:hover {
-    color: #fff;
-    background: rgba(206, 18, 18, 0.8);
 }
 
 section {
