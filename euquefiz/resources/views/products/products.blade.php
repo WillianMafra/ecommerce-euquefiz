@@ -2,11 +2,8 @@
 @push('style')
     <link rel="stylesheet" href="{{asset('css/products/allproducts.css')}}">
 @endpush
+
 <main class="main" id="top">
-    <section class="py-0">
-
-    </section>
-
     <section class="py-8 overflow-hidden">
 
         <div class="container">
@@ -14,7 +11,7 @@
                 <div class="col-lg-7">
                     <h5 class="fw-bold fs-3 fs-lg-5 lh-sm text-center text-lg-start">Procurar por Categoria</h5>
                 </div>
-                <div class="col-lg-4 text-lg-end text-center"><a class="btn btn-lg text-800 me-2" href="#" role="button">Listar<i class="fas fa-chevron-right ms-2"></i></a></div>
+                <div class="col-lg-4 text-lg-end text-center"><a class="btn btn-lg text-800 me-2" href="{{route('productsList')}}" role="button">Listar<i class="fas fa-chevron-right ms-2"></i></a></div>
                 <div class="col-lg-auto position-relative">
                     <button class="carousel-control-prev s-icon-prev carousel-icon" type="button" data-bs-target="#carouselSearchByFood" data-bs-slide="prev"><span class="carousel-control-prev-icon hover-top-shadow" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
                     <button class="carousel-control-next s-icon-next carousel-icon" type="button" data-bs-target="#carouselSearchByFood" data-bs-slide="next"><span class="carousel-control-next-icon hover-top-shadow" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>

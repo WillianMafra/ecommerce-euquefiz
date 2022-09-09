@@ -12,8 +12,19 @@ class ProductsController extends Controller
     }
 
     public function showAllProducts(){
-        $products = Product::all();
-        return view('products.products', compact('products'));
+        return view('products.products');
+    }
+
+    public function productsList(Request $request){
+
+        $products = Product::query();
+        $products->when($request->search, function ($query, $campoDePesquisa){
+        $query->where('product_name', 'like', '%' . $campoDePesquisa . '%');
+        });
+
+        $products = $products->paginate(5);
+
+        return view('products.productsList', ['products'=>$products]);
     }
 
     public function showProduct($id)
