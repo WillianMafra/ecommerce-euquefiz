@@ -19,7 +19,8 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-body {
+body{
+    background-image: url("public/storage/img/logo-design/Background-Avermelhado.png");
     font-family: var(--font-default);
     color: var(--color-default);
 }
@@ -52,7 +53,8 @@ section {
 }
 
 .section-bg {
-    background-color: #eee;
+    background-image: url("public/storage/img/logo-design/Background-Avermelhado.png");
+    background-repeat: no-repeat;
 }
 
 .section-header {

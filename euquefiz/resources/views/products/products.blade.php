@@ -4,170 +4,141 @@
 @endpush
 
 <main class="main" id="top">
+    <section id="menu" class="menu">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-header my-3">
+                <h2>Nossos Principais Pratos</h2>
+                <p>Nós <span>Que Fizemos</span></p>
+            </div>
+
+            <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
+
+                <li class="nav-item">
+                    <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#menu-starters">
+                        <h4>Aperitivos</h4>
+                    </a>
+                </li><!-- End tab nav item -->
+
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-breakfast">
+                        <h4>Café da Manhã</h4>
+                    </a><!-- End tab nav item -->
+
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-lunch">
+                        <h4>Almoço</h4>
+                    </a>
+                </li><!-- End tab nav item -->
+
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-dinner">
+                        <h4>Jantar</h4>
+                    </a>
+                </li><!-- End tab nav item -->
+
+            </ul>
+
+            <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
+
+                <div class="tab-pane fade active show" id="menu-starters">
+
+                    <div class="tab-header text-center">
+                        <p>Menu</p>
+                        <h3>Starters</h3>
+                    </div>
+
+                    <div class="row gy-5">
+
+                        <div class="col-lg-4 menu-item">
+                            <a href="" class="glightbox"><img src="{{asset('storage/img/menu/menu-item-1.png')}}" class="menu-img img-fluid" alt=""></a>
+                            <h4>Magnam Tiste</h4>
+                            <p class="ingredients">
+                                Lorem, deren, trataro, filede, nerada
+                            </p>
+                            <p class="price">
+                                $5.95
+                            </p>
+                        </div><!-- Menu Item -->
+
+                    </div>
+                </div><!-- End Starter Menu Content -->
+
+                <div class="tab-pane fade" id="menu-breakfast">
+
+                    <div class="tab-header text-center">
+                        <p>Menu</p>
+                        <h3>Breakfast</h3>
+                    </div>
+
+                    <div class="row gy-5">
+
+                        <div class="col-lg-4 menu-item">
+                            <a href="" class="glightbox"><img src="{{asset('storage/img/menu/menu-item-1.png')}}" class="menu-img img-fluid" alt=""></a>
+                            <h4>Magnam Tiste</h4>
+                            <p class="ingredients">
+                                Lorem, deren, trataro, filede, nerada
+                            </p>
+                            <p class="price">
+                                $5.95
+                            </p>
+                        </div><!-- Menu Item -->
+
+                    </div>
+                </div><!-- End Breakfast Menu Content -->
+
+                <div class="tab-pane fade" id="menu-lunch">
+
+                    <div class="tab-header text-center">
+                        <p>Menu</p>
+                        <h3>Lunch</h3>
+                    </div>
+
+                    <div class="row gy-5">
+
+                        <div class="col-lg-4 menu-item">
+                            <a href="" class="glightbox"><img src="{{asset('storage/img/menu/menu-item-1.png')}}" class="menu-img img-fluid" alt=""></a>
+                            <h4>Magnam Tiste</h4>
+                            <p class="ingredients">
+                                Lorem, deren, trataro, filede, nerada
+                            </p>
+                            <p class="price">
+                                $5.95
+                            </p>
+                        </div><!-- Menu Item -->
+                    </div>
+                </div><!-- End Lunch Menu Content -->
+
+                <div class="tab-pane fade" id="menu-dinner">
+
+                    <div class="tab-header text-center">
+                        <p>Menu</p>
+                        <h3>Dinner</h3>
+                    </div>
+
+                    <div class="row gy-5">
+
+                        <div class="col-lg-4 menu-item">
+                            <a href="" class="glightbox"><img src="{{asset('storage/img/menu/menu-item-1.png')}}" class="menu-img img-fluid" alt=""></a>
+                            <h4>Magnam Tiste</h4>
+                            <p class="ingredients">
+                                Lorem, deren, trataro, filede, nerada
+                            </p>
+                            <p class="price">
+                                $5.95
+                            </p>
+                        </div><!-- Menu Item -->
+
+                    </div>
+                </div><!-- End Dinner Menu Content -->
+
+            </div>
+
+        </div>
+    </section><!-- End Menu Section -->
     <section class="py-8 overflow-hidden">
 
-        <div class="container">
-            <div class="row flex-center mb-6">
-                <div class="col-lg-7">
-                    <h5 class="fw-bold fs-3 fs-lg-5 lh-sm text-center text-lg-start">Procurar por Categoria</h5>
-                </div>
-                <div class="col-lg-4 text-lg-end text-center"><a class="btn btn-lg text-800 me-2" href="{{route('productsList')}}" role="button">Listar<i class="fas fa-chevron-right ms-2"></i></a></div>
-                <div class="col-lg-auto position-relative">
-                    <button class="carousel-control-prev s-icon-prev carousel-icon" type="button" data-bs-target="#carouselSearchByFood" data-bs-slide="prev"><span class="carousel-control-prev-icon hover-top-shadow" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
-                    <button class="carousel-control-next s-icon-next carousel-icon" type="button" data-bs-target="#carouselSearchByFood" data-bs-slide="next"><span class="carousel-control-next-icon hover-top-shadow" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
-                </div>
-            </div>
-            <div class="row flex-center">
-                <div class="col-12">
-                    <div class="carousel slide" id="carouselSearchByFood" data-bs-touch="false" data-bs-interval="false">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="10000">
-                                <div class="row h-100 align-items-center">
-                                    <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
-                                        <div class="card card-span h-100 rounded-circle"><img class="img-fluid rounded-circle h-100" src="{{asset('storage/img/menu/menu-item-1.png')}}" alt="..." />
-                                            <div class="card-body ps-0">
-                                                <h5 class="text-center fw-bold text-1000 text-truncate mb-2">Categoria 1</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
-                                        <div class="card card-span h-100 rounded-circle"><img class="img-fluid rounded-circle h-100" src="{{asset('storage/img/menu/menu-item-1.png')}}" alt="..." />
-                                            <div class="card-body ps-0">
-                                                <h5 class="text-center fw-bold text-1000 text-truncate mb-2">Categoria 2</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
-                                        <div class="card card-span h-100 rounded-circle"><img class="img-fluid rounded-circle h-100" src="{{asset('storage/img/menu/menu-item-1.png')}}" alt="..." />
-                                            <div class="card-body ps-0">
-                                                <h5 class="text-center fw-bold text-1000 text-truncate mb-2">Categoria 3</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
-                                        <div class="card card-span h-100 rounded-circle"><img class="img-fluid rounded-circle h-100" src="{{asset('storage/img/menu/menu-item-1.png')}}" alt="..." />
-                                            <div class="card-body ps-0">
-                                                <h5 class="text-center fw-bold text-1000 text-truncate mb-2">Categoria 4</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
-                                        <div class="card card-span h-100 rounded-circle"><img class="img-fluid rounded-circle h-100" src="{{asset('storage/img/menu/menu-item-1.png')}}" alt="..." />
-                                            <div class="card-body ps-0">
-                                                <h5 class="text-center fw-bold text-1000 text-truncate mb-2">Categoria 5</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
-                                        <div class="card card-span h-100 rounded-circle"><img class="img-fluid rounded-circle h-100" src="{{asset('storage/img/menu/menu-item-1.png')}}" alt="..." />
-                                            <div class="card-body ps-0">
-                                                <h5 class="text-center fw-bold text-1000 text-truncate mb-2">Categoria 6</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="2000">
-                                <div class="row h-100 align-items-center">
-                                </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                                <div class="row h-100 align-items-center">
-                                    <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
-                                        <div class="card card-span h-100 rounded-circle"><img class="img-fluid rounded-circle h-100" src="{{asset('storage/img/menu/menu-item-1.png')}}" alt="..." />
-                                            <div class="card-body ps-0">
-                                                <h5 class="text-center fw-bold text-1000 text-truncate mb-2">pizza</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
-                                        <div class="card card-span h-100 rounded-circle"><img class="img-fluid rounded-circle h-100" src="{{asset('storage/img/menu/menu-item-1.png')}}" alt="..." />
-                                            <div class="card-body ps-0">
-                                                <h5 class="text-center fw-bold text-1000 text-truncate mb-2">Burger</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
-                                        <div class="card card-span h-100 rounded-circle"><img class="img-fluid rounded-circle h-100" src="{{asset('storage/img/menu/menu-item-1.png')}}" alt="..." />
-                                            <div class="card-body ps-0">
-                                                <h5 class="text-center fw-bold text-1000 text-truncate mb-2">Noodles</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
-                                        <div class="card card-span h-100 rounded-circle"><img class="img-fluid rounded-circle h-100" src="{{asset('storage/img/menu/menu-item-1.png')}}" alt="..." />
-                                            <div class="card-body ps-0">
-                                                <h5 class="text-center fw-bold text-1000 text-truncate mb-2">Sub-sandwiches</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
-                                        <div class="card card-span h-100 rounded-circle"><img class="img-fluid rounded-circle h-100" src="{{asset('storage/img/menu/menu-item-1.png')}}" alt="..." />
-                                            <div class="card-body ps-0">
-                                                <h5 class="text-center fw-bold text-1000 text-truncate mb-2">Chowmein</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
-                                        <div class="card card-span h-100 rounded-circle"><img class="img-fluid rounded-circle h-100" src="{{asset('storage/img/menu/menu-item-1.png')}}" alt="..." />
-                                            <div class="card-body ps-0">
-                                                <h5 class="text-center fw-bold text-1000 text-truncate mb-2">Steak</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="row h-100 align-items-center">
-                                    <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
-                                        <div class="card card-span h-100 rounded-circle"><img class="img-fluid rounded-circle h-100" src="{{asset('storage/img/menu/menu-item-1.png')}}" alt="..." />
-                                            <div class="card-body ps-0">
-                                                <h5 class="text-center fw-bold text-1000 text-truncate mb-2">pizza</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
-                                        <div class="card card-span h-100 rounded-circle"><img class="img-fluid rounded-circle h-100" src="{{asset('storage/img/menu/menu-item-1.png')}}" alt="..." />
-                                            <div class="card-body ps-0">
-                                                <h5 class="text-center fw-bold text-1000 text-truncate mb-2">Burger</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
-                                        <div class="card card-span h-100 rounded-circle"><img class="img-fluid rounded-circle h-100" src="{{asset('storage/img/menu/menu-item-1.png')}}" alt="..." />
-                                            <div class="card-body ps-0">
-                                                <h5 class="text-center fw-bold text-1000 text-truncate mb-2">Noodles</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
-                                        <div class="card card-span h-100 rounded-circle"><img class="img-fluid rounded-circle h-100" src="{{asset('storage/img/menu/menu-item-1.png')}}" alt="..." />
-                                            <div class="card-body ps-0">
-                                                <h5 class="text-center fw-bold text-1000 text-truncate mb-2">Sub-sandwiches</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
-                                        <div class="card card-span h-100 rounded-circle"><img class="img-fluid rounded-circle h-100" src="{{asset('storage/img/menu/menu-item-1.png')}}" alt="..." />
-                                            <div class="card-body ps-0">
-                                                <h5 class="text-center fw-bold text-1000 text-truncate mb-2">Chowmein</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
-                                        <div class="card card-span h-100 rounded-circle"><img class="img-fluid rounded-circle h-100" src="{{asset('storage/img/menu/menu-item-1.png')}}" alt="..." />
-                                            <div class="card-body ps-0">
-                                                <h5 class="text-center fw-bold text-1000 text-truncate mb-2">Steak</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- end of .container-->
+
 
     </section>
 
