@@ -1,11 +1,12 @@
 :root {
     --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-primary: "Amatic SC", sans-serif;
-    --font-secondary: "Inter", sans-serif;
+    --font-primary: "Pacifico", cursive;
+    --font-secondary: "Caveat", cursive;
 }
 
 /* Colors */
 :root {
+
     --color-default: #212529;
     --color-primary: #e01010;
     --color-secondary: #e01010;
@@ -22,15 +23,13 @@
 html {
 
 }
-body{
-    background: url("../storage/img/logo-design/testebackground.png") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+#home-page{
+    background-image: url("../storage/img/logo-design/testebackground.png");
+
 }
 
 a {
+
     color: var(--color-primary);
     text-decoration: none;
 }
@@ -46,7 +45,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--font-secondary);
+    font-family: 'Ms Madi', cursive;
 }
 
 /*--------------------------------------------------------------
@@ -60,9 +59,28 @@ section {
 .section-bg {
 
 }
-h2 {
+.subtitles{
+    font-family: var(--font-secondary);
     color: white;
+    transition: .3s;
 }
+
+.subtitles::after {
+    font-family: var(--font-secondary);
+    content: ' Veja Mais';
+    color: #db7d46;
+    inset: 92% 0 0 0;
+    transition: .3s;
+}
+.subtitles:hover {
+    font-family: var(--font-secondary);
+    font-size: 40px;
+    color: #ffffff;
+}
+.subtitles:hover::after {
+    inset: 0 0 0 0 ;
+}
+
 .section-header {
     color: white;
     text-align: center;
@@ -258,8 +276,8 @@ section {
         align-items: center;
         justify-content: space-between;
         padding: 0 3px;
-        font-family: var(--font-secondary);
-        font-size: 16px;
+        font-family: var(--font-primary);
+        font-size: 20px;
         font-weight: 600;
         color: #7f7f90;
         white-space: nowrap;
@@ -604,6 +622,8 @@ section {
 .carousel-inner .carousel-item.active,
 .carousel-inner .carousel-item-next,
 .carousel-inner .carousel-item-prev {
+    border: yellow 2px solid;
+    border-radius: 10px;
     display: flex;
 }
 

@@ -1,15 +1,15 @@
 @extends('layouts.layout')
 @section('content')
-    <main id="main" class="">
+    <main id="home-page" class="">
 <section>
         <!-- ======= Menu Section ======= -->
         <div class="container text-center ">
-            <h2 class="font-weight-light my-5">Nossos Eventos</h2>
+            <h2 class="font-weight-light my-5 subtitles">Nossos Eventos</h2>
             <div class="row mx-auto my-auto justify-content-center">
                 <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active" data-bs-interval="3000">
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-img">
                                         <img src="{{asset('storage/img/events/events-1.jpg')}}" class="img-fluid" alt="evento-culinario">
@@ -18,7 +18,7 @@
                             </div>
                         </div>
                         <div class="carousel-item" data-bs-interval="3000">
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-img">
                                         <img src="{{asset('storage/img/events/events-2.jpg')}}" class="img-fluid" alt="evento-culinario">
@@ -27,7 +27,7 @@
                             </div>
                         </div>
                         <div class="carousel-item" data-bs-interval="3000">
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-img">
                                         <img src="{{asset('storage/img/events/events-3.jpg')}}" class="img-fluid" alt="evento-culinario">
@@ -36,7 +36,7 @@
                             </div>
                         </div>
                         <div class="carousel-item" data-bs-interval="3000">
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-img">
                                         <img src="{{asset('storage/img/events/events-1.jpg')}}" class="img-fluid" alt="evento-culinario">
@@ -45,7 +45,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-img">
                                         <img src="{{asset('storage/img/events/events-2.jpg')}}" class="img-fluid" alt="evento-culinario">
@@ -54,7 +54,7 @@
                             </div>
                         </div>
                         <div class="carousel-item" data-bs-interval="3000">
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-img">
                                         <img src="{{asset('storage/img/events/events-3.jpg')}}" class="img-fluid" alt="evento-culinario">
@@ -77,10 +77,7 @@
         <section id="chefs" class="chefs section-bg">
             <div class="container" data-aos="fade-up">
 
-                <div class="section-header">
-                    <h2>Chefs</h2>
-                    <p>Our <span>Proffesional</span> Chefs</p>
-                </div>
+                    <h2 class="font-weight-light my-5 subtitles text-center">Nossos Chefs</h2>
 
                 <div class="row gy-4">
 
