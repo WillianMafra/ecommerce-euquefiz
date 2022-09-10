@@ -610,6 +610,13 @@ section {
 /*--------------------------------------------------------------
 # Events Section
 --------------------------------------------------------------*/
+.img-fluid {
+    transition: transform 0.7s;
+}
+.img-fluid:hover {
+    display: inline-block;
+    transform: scale(1.1);
+}
 @media (max-width: 767px) {
     .carousel-inner .carousel-item > div {
         display: none;
