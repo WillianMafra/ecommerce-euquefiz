@@ -8,7 +8,7 @@
 :root {
     --color-default: #212529;
     --color-primary: #e01010;
-    --color-secondary: #37373f;
+    --color-secondary: #e01010;
 }
 
 /* Smooth scroll behavior */
@@ -19,15 +19,15 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+html {
+
+}
 body{
-    background-size: 100%;
-    background: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.25),
-        rgba(255, 255, 255, 0.35)
-    ), url("../storage/img/logo-design/Background-Avermelhado.png") round;
-    font-family: var(--font-default);
-    color: var(--color-default);
+    background: url("../storage/img/logo-design/testebackground.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 a {
@@ -60,8 +60,11 @@ section {
 .section-bg {
 
 }
-
+h2 {
+    color: white;
+}
 .section-header {
+    color: white;
     text-align: center;
     padding-bottom: 30px;
 }

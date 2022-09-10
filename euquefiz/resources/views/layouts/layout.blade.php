@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="pt-br">
 <head><!-- CSS only -->
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -8,6 +10,7 @@
     <title>Eu Que Fiz</title>
 
 </head>
+<body>
 <header id="header" class="header fixed-top d-flex align-items-center pb-3">
     <div class="container d-flex align-items-center justify-content-between">
 
@@ -138,4 +141,5 @@
     });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-
+</body>
+</html>

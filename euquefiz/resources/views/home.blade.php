@@ -1,11 +1,10 @@
 @extends('layouts.layout')
 @section('content')
-
-    <main id="main">
-
+    <main id="main" class="">
+<section>
         <!-- ======= Menu Section ======= -->
-        <div class="container text-center">
-            <h2 class="font-weight-light">Nossos Eventos</h2>
+        <div class="container text-center ">
+            <h2 class="font-weight-light my-5">Nossos Eventos</h2>
             <div class="row mx-auto my-auto justify-content-center">
                 <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner" role="listbox">
@@ -73,6 +72,7 @@
                 </div>
             </div>
         </div>
+</section>
         <!-- ======= Chefs Section ======= -->
         <section id="chefs" class="chefs section-bg">
             <div class="container" data-aos="fade-up">
@@ -140,12 +140,9 @@
                             </div>
                         </div>
                     </div><!-- End Chefs Member -->
-
                 </div>
-
             </div>
         </section><!-- End Chefs Section -->
-
     </main><!-- End #main -->
     @prepend('scripts')
         <script src="{{asset('js/app.js')}}"></script>
