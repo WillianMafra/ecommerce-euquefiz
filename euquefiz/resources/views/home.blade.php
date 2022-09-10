@@ -1,10 +1,10 @@
 @extends('layouts.layout')
 @section('content')
+
     <main id="main">
 
         <!-- ======= Menu Section ======= -->
-
-        <div class="container text-center my-3">
+        <div class="container text-center">
             <h2 class="font-weight-light">Nossos Eventos</h2>
             <div class="row mx-auto my-auto justify-content-center">
                 <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
