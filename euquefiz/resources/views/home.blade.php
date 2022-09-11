@@ -1,6 +1,5 @@
 @extends('layouts.layout')
-@section('content')
-    <main id="home-page" class="">
+@section('events')
 <section>
         <!-- ======= Menu Section ======= -->
         <div class="container text-center ">
@@ -73,74 +72,73 @@
             </div>
         </div>
 </section>
-        <!-- ======= Chefs Section ======= -->
+@endsection
+@section('chefs')
         <section id="chefs" class="chefs section-bg">
             <div class="container" data-aos="fade-up">
-
-                    <h2 class="font-weight-light my-5 subtitles text-center">Nossos Chefs</h2>
-
-                <div class="row gy-4">
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                        <div class="chef-member">
-                            <div class="member-img">
-                                <img src="{{asset('storage/img/chefs/walter-white.jpg')}}" class="img-fluid" alt="master chef">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                <h2 class="font-weight-light my-5 subtitles text-center">Nossos Chefs</h2>
+                    <div class="row gy-4">
+                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                            <div class="chef-member">
+                                <div class="member-img">
+                                    <img src="{{asset('storage/img/chefs/walter-white.jpg')}}" class="img-fluid" alt="master chef">
+                                        <div class="social">
+                                            <a href=""><i class="bi bi-twitter"></i></a>
+                                            <a href=""><i class="bi bi-facebook"></i></a>
+                                            <a href=""><i class="bi bi-instagram"></i></a>
+                                            <a href=""><i class="bi bi-linkedin"></i></a>
+                                        </div>
+                                </div>
+                                <div class="member-info">
+                                    <h4>Walter White</h4>
+                                        <span>Chef</span>
+                                        <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima enim corporis et voluptate.
+                                        </p>
                                 </div>
                             </div>
-                            <div class="member-info">
-                                <h4>Walter White</h4>
-                                <span>Chef</span>
-                                <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima enim corporis et voluptate.</p>
-                            </div>
-                        </div>
-                    </div><!-- End Chefs Member -->
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                        <div class="chef-member">
-                            <div class="member-img">
-                                <img src="{{asset('storage/img/chefs/jesse.jpg')}}" class="img-fluid" alt="master chef">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                        </div><!-- End Chefs Member -->
+                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                            <div class="chef-member">
+                                <div class="member-img">
+                                    <img src="{{asset('storage/img/chefs/jesse.jpg')}}" class="img-fluid" alt="master chef">
+                                        <div class="social">
+                                            <a href=""><i class="bi bi-twitter"></i></a>
+                                            <a href=""><i class="bi bi-facebook"></i></a>
+                                            <a href=""><i class="bi bi-instagram"></i></a>
+                                            <a href=""><i class="bi bi-linkedin"></i></a>
+                                        </div>
+                                </div>
+                                <div class="member-info">
+                                    <h4>Jesse Pinkman</h4>
+                                    <span>Entregador</span>
+                                        <p>Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima suscipit corporis. Voluptate sed quas reiciendis animi neque sapiente.
+                                        </p>
                                 </div>
                             </div>
-                            <div class="member-info">
-                                <h4>Jesse Pinkman</h4>
-                                <span>Entregador</span>
-                                <p>Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima suscipit corporis. Voluptate sed quas reiciendis animi neque sapiente.</p>
-                            </div>
-                        </div>
-                    </div><!-- End Chefs Member -->
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-                        <div class="chef-member">
-                            <div class="member-img">
-                                <img src="{{asset('storage/img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                        </div><!-- End Chefs Member -->
+                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                            <div class="chef-member">
+                                <div class="member-img">
+                                    <img src="{{asset('storage/img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
+                                        <div class="social">
+                                            <a href=""><i class="bi bi-twitter"></i></a>
+                                            <a href=""><i class="bi bi-facebook"></i></a>
+                                            <a href=""><i class="bi bi-instagram"></i></a>
+                                            <a href=""><i class="bi bi-linkedin"></i></a>
+                                        </div>
+                                </div>
+                                <div class="member-info">
+                                    <h4>Jimmy Mcgill</h4>
+                                    <span>Advogado kkkk</span>
+                                        <p>Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt. Voluptates enim aut architecto porro aspernatur molestiae modi.
+                                        </p>
                                 </div>
                             </div>
-                            <div class="member-info">
-                                <h4>Jimmy Mcgill</h4>
-                                <span>Advogado kkkk</span>
-                                <p>Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt. Voluptates enim aut architecto porro aspernatur molestiae modi.</p>
-                            </div>
-                        </div>
-                    </div><!-- End Chefs Member -->
-                </div>
+                        </div><!-- End Chefs Member -->
+                    </div>
             </div>
-        </section><!-- End Chefs Section -->
-    </main><!-- End #main -->
+        </section>
+@endsection
     @prepend('scripts')
         <script src="{{asset('js/app.js')}}"></script>
     @endprepend
@@ -148,4 +146,3 @@
         <script src="{{asset('js/carousel.js')}}"></script>
     @endpush
 
-@endsection

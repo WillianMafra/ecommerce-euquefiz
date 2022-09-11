@@ -725,9 +725,9 @@ section {
 
 .chefs .chef-member .member-info span {
     display: block;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
-    color: rgba(33, 37, 41, 0.4);
+    color: rgb(138, 67, 7);
 }
 
 .chefs .chef-member .member-info p {
