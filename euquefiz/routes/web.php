@@ -19,6 +19,7 @@ use App\Http\Controllers\AdminController;
 //Rota para o admin fazer o gerenciamento do crud
 Route::get('/admin', [AdminController::class, 'admin'])->name('admin');
 Route::get('/admin/gerenciamento', [AdminController::class, 'management'])->name('management');
+Route::get('/inserirProduto', [AdminController::class, 'createProduct'])->name('createProduct');
 
 
 //Rota para exibir os produtos Para o usuário
@@ -26,7 +27,7 @@ Route::get('/', [ProductsController::class, 'home'])->name('home');
 Route::get('/produtos', [ProductsController::class, 'showAllProducts'])->name('showAllProducts');
 Route::get('/listarprodutos', [ProductsController::class, 'productsList'])->name('productsList');
 Route::get('/produtos/{id}', [ProductsController::class, 'showProduct'])->name('show');
-Route::get('/inserirProduto', [AdminController::class, 'createProduct'])->name('createProduct');
+
 
 //Rota para o usuário fazer login e alterar dados da conta
 Route::get('/minha-conta', [ClientController::class, 'account'])->name('account');

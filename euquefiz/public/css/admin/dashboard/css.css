@@ -1,2 +1,8 @@
 #fonte-cinza, #titulo, #copyright {color: #d1d1d1;}
 
+#formulario {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
