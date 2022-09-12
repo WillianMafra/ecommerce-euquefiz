@@ -1,9 +1,3 @@
-/**
- * Template Name: Yummy - v1.1.0
- * Template URL: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/
- * Author: BootstrapMade.com
- * License: https://bootstrapmade.com/license/
- */
 document.addEventListener('DOMContentLoaded', () => {
     "use strict";
 
@@ -124,19 +118,4 @@ document.addEventListener('DOMContentLoaded', () => {
             behavior: 'smooth',
         }));
     }
-    /**
-     * Animation on scroll function and init
-     */
-    function aos_init() {
-        AOS.init({
-            duration: 1000,
-            easing: 'ease-in-out',
-            once: true,
-            mirror: false
-        });
-    }
-    window.addEventListener('load', () => {
-        aos_init();
-    });
-
 });

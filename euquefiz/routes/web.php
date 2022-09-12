@@ -25,6 +25,7 @@ Route::get('/', [ProductsController::class, 'home'])->name('home');
 Route::get('/produtos', [ProductsController::class, 'showAllProducts'])->name('showAllProducts');
 Route::get('/listarprodutos', [ProductsController::class, 'productsList'])->name('productsList');
 Route::get('/produtos/{id}', [ProductsController::class, 'showProduct'])->name('show');
+Route::get('/inserirProduto', [AdminController::class, 'createProduct'])->name('createProduct');
 
 //Rota para o usuário fazer login e alterar dados da conta
 Route::get('/minha-conta', [ClientController::class, 'account'])->name('account');

@@ -1,14 +1,15 @@
 :root {
     --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-primary: "Amatic SC", sans-serif;
-    --font-secondary: "Inter", sans-serif;
+    --font-primary: "Pacifico", cursive;
+    --font-secondary: "Caveat", cursive;
 }
 
 /* Colors */
 :root {
+
     --color-default: #212529;
     --color-primary: #e01010;
-    --color-secondary: #37373f;
+    --color-secondary: #e01010;
 }
 
 /* Smooth scroll behavior */
@@ -19,13 +20,16 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-body{
-    background-image: url("public/storage/img/logo-design/Background-Avermelhado.png");
-    font-family: var(--font-default);
-    color: var(--color-default);
+html {
+
+}
+#home-page{
+    background-image: url("../storage/img/logo-design/testebackground.png");
+
 }
 
 a {
+
     color: var(--color-primary);
     text-decoration: none;
 }
@@ -41,7 +45,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--font-secondary);
+    font-family: 'Ms Madi', cursive;
 }
 
 /*--------------------------------------------------------------
@@ -53,11 +57,37 @@ section {
 }
 
 .section-bg {
+<<<<<<< HEAD
     background-image: url("public/storage/img/logo-design/Background-Avermelhado1.png");
     background-repeat: no-repeat;
+=======
+
+}
+.subtitles{
+    font-family: var(--font-secondary);
+    color: white;
+    transition: .3s;
+}
+
+.subtitles::after {
+    font-family: var(--font-secondary);
+    content: ' Veja Mais';
+    color: #db7d46;
+    inset: 92% 0 0 0;
+    transition: .3s;
+}
+.subtitles:hover {
+    font-family: var(--font-secondary);
+    font-size: 40px;
+    color: #ffffff;
+}
+.subtitles:hover::after {
+    inset: 0 0 0 0 ;
+>>>>>>> f72cb9e737d3f21fb2f8f5a11613bf366a87f17b
 }
 
 .section-header {
+    color: white;
     text-align: center;
     padding-bottom: 30px;
 }
@@ -251,8 +281,8 @@ section {
         align-items: center;
         justify-content: space-between;
         padding: 0 3px;
-        font-family: var(--font-secondary);
-        font-size: 16px;
+        font-family: var(--font-primary);
+        font-size: 20px;
         font-weight: 600;
         color: #7f7f90;
         white-space: nowrap;
@@ -585,6 +615,13 @@ section {
 /*--------------------------------------------------------------
 # Events Section
 --------------------------------------------------------------*/
+.img-fluid {
+    transition: transform 0.7s;
+}
+.img-fluid:hover {
+    display: inline-block;
+    transform: scale(1.1);
+}
 @media (max-width: 767px) {
     .carousel-inner .carousel-item > div {
         display: none;
@@ -597,6 +634,8 @@ section {
 .carousel-inner .carousel-item.active,
 .carousel-inner .carousel-item-next,
 .carousel-inner .carousel-item-prev {
+    border: yellow 2px solid;
+    border-radius: 10px;
     display: flex;
 }
 
@@ -643,7 +682,9 @@ section {
     bottom: 0;
     height: 100%;
     width: 100%;
-    background: url(public/storage/img/logo-design/team-shape.svg) no-repeat center bottom;
+    background-image:url("../storage/img/logo-design/teamShape.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
     background-size: contain;
     z-index: 1;
 }
@@ -689,9 +730,9 @@ section {
 
 .chefs .chef-member .member-info span {
     display: block;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
-    color: rgba(33, 37, 41, 0.4);
+    color: rgb(138, 67, 7);
 }
 
 .chefs .chef-member .member-info p {
