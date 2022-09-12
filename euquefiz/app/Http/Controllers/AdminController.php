@@ -28,9 +28,13 @@ class AdminController extends Controller
         if (!empty($informacoes['image']) && $informacoes['image']->isValid()){
             $file = $informacoes['image'];
             $path = $file->store('product');
-            $input['image'] = $path;
+            $informacoes['image'] = $path;
         }
         Product::create($informacoes);
         return Redirect::route('admin.management.dashboard');
+    }
+    public function teste()
+    {
+        return view('admin.products.teste');
     }
 }
