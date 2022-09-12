@@ -53,7 +53,7 @@ section {
 }
 
 .section-bg {
-    background-image: url("public/storage/img/logo-design/Background-Avermelhado.png");
+    background-image: url("public/storage/img/logo-design/Background-Avermelhado1.png");
     background-repeat: no-repeat;
 }
 
@@ -200,7 +200,7 @@ section {
 }
 
 .header .logo img {
-    max-height: 40px;
+    max-height: 180px;
     margin-right: 6px;
 }
 
@@ -208,7 +208,7 @@ section {
     font-size: 28px;
     font-weight: 700;
     color: #000;
-    margin: 0;
+    margin: 60;
     font-family: var(--font-secondary);
 }
 

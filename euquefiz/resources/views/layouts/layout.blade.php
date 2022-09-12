@@ -11,26 +11,45 @@
     <div class="container d-flex align-items-center justify-content-between">
 
         <a href="{{route('home')}}" class="logo d-flex align-items-center me-auto me-lg-0">
-            <img src="{{asset('storage/img/logo-design/EuQueFizLogo.jpg')}}" alt="logo-eu-que-fiz">
-            <h1>Eu que Fiz</h1>
+            <img src="{{asset('storage/img/logo-design/Euquefizlogo.png')}}" alt="logo-eu-que-fiz">
+            <!-- <h1>Eu que Fiz</h1> -->
         </a>
 
         <nav id="navbar" class="navbar navbar-expand-sm ">
             <ul>
                 <li class="dropdown"><a href="{{route('showAllProducts')}}"><span>Cardápio</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
-                        <li><a href="#">Drop Down 1</a></li>
-                        <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                        
+                        <li class="dropdown"><a href="#"><span>Congelados</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                             <ul>
-                                <li><a href="#">Deep Drop Down 1</a></li>
-                                <li><a href="#">Deep Drop Down 2</a></li>
-                                <li><a href="#">Deep Drop Down 3</a></li>
-                                <li><a href="#">Deep Drop Down 4</a></li>
-                                <li><a href="#">Deep Drop Down 5</a></li>
-                            </ul>
+                                <li><a href="#">lasanha</a></li>
+                                <li><a href="#">econdidinho</a></li>
+                                <li><a href="#">empadão</a></li>
+                                <li><a href="#">panqueca</a></li>
+                                <li><a href="#">strogonoff</a></li>
+                                <li><a href="#">feijoada</a></li>
+                                <li><a href="#">carne de panela</a></li>
+                            </ul> 
                         </li>
-                        <li><a href="#">Drop Down 2</a></li>
-                        <li><a href="#">Drop Down 3</a></li>
+                        <li class="dropdown"><a href="#"><span>Lanches</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                            <ul>
+                                <li><a href="#">pizza</a></li>
+                                <li><a href="#">bolinho de aipim</a></li>
+                                <li><a href="#">quiche</a></li>
+                                <li><a href="#">cookie</a></li>
+                                
+                            </ul> 
+                        </li>
+                        <li class="dropdown"><a href="#"><span>Low carb</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                            <ul>
+                                <li><a href="#">pães</a></li>
+                                <li><a href="#">doces</a></li>
+                                
+                                
+                            </ul> 
+                        </li>
+                        <li><a href="#">Caldos,Cremes e Sopas</a></li>
+                        <li><a href="#">Vegetarianos</a></li>
                         <li><a href="{{route('productsList')}}">Ver Todos</a></li>
                     </ul>
                 </li>
