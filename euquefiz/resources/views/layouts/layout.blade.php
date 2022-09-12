@@ -28,7 +28,7 @@
             <ul>
                 <li class="dropdown"><a href="{{route('showAllProducts')}}"><span>Cardápio</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
-                        
+
                         <li class="dropdown"><a href="#"><span>Congelados</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                             <ul>
                                 <li><a href="#">lasanha</a></li>
@@ -38,7 +38,7 @@
                                 <li><a href="#">strogonoff</a></li>
                                 <li><a href="#">feijoada</a></li>
                                 <li><a href="#">carne de panela</a></li>
-                            </ul> 
+                            </ul>
                         </li>
                         <li class="dropdown"><a href="#"><span>Lanches</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                             <ul>
@@ -46,16 +46,16 @@
                                 <li><a href="#">bolinho de aipim</a></li>
                                 <li><a href="#">quiche</a></li>
                                 <li><a href="#">cookie</a></li>
-                                
-                            </ul> 
+
+                            </ul>
                         </li>
                         <li class="dropdown"><a href="#"><span>Low carb</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                             <ul>
                                 <li><a href="#">pães</a></li>
                                 <li><a href="#">doces</a></li>
-                                
-                                
-                            </ul> 
+
+
+                            </ul>
                         </li>
                         <li><a href="#">Caldos,Cremes e Sopas</a></li>
                         <li><a href="#">Vegetarianos</a></li>
@@ -92,7 +92,6 @@
         </nav><!-- .navbar -->
         <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
         <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-
     </div>
 </header>
 @yield('events')
