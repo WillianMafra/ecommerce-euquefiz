@@ -82,7 +82,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center"> <i class="bi bi-currency-dollar"></i></div>
                                     <div class="ps-3">
-                                        <h6>$3,264</h6>
+                                        <h6>R$3,264</h6>
                                         <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">Aumento</span>
                                     </div>
                                 </div>
@@ -144,8 +144,8 @@
                                         <th scope="row"><a href="#">#2457</a></th>
                                         <td>Brandon Jacob</td>
                                         <td><a href="#" class="text-primary">At praesentium minu</a></td>
-                                        <td>$64</td>
-                                        <td><span class="badge bg-success">Approved</span></td>
+                                        <td>R$64</td>
+                                        <td><span class="badge bg-success">Aprovado</span></td>
                                     </tr>
                                     <tr>
                                     </tbody>
@@ -182,9 +182,9 @@
                                     <tr>
                                         <th scope="row"><a href="#"><img src="{{asset('storage/img/pratos/feijoada.jpg')}}" alt=""></a></th>
                                         <td><a href="#" class="text-primary fw-bold">Ut inventore ipsa voluptas nulla</a></td>
-                                        <td>$64</td>
+                                        <td>R$64</td>
                                         <td class="fw-bold">124</td>
-                                        <td>$5,828</td>
+                                        <td>R$5,828</td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -220,22 +220,22 @@
                                 <div class="activity-content"> Voluptatem blanditiis blanditiis eveniet</div>
                             </div>
                             <div class="activity-item d-flex">
-                                <div class="activite-label">2 hrs</div>
+                                <div class="activite-label">2 h</div>
                                 <i class='bi bi-circle-fill activity-badge text-primary align-self-start'></i>
                                 <div class="activity-content"> Voluptates corrupti molestias voluptatem</div>
                             </div>
                             <div class="activity-item d-flex">
-                                <div class="activite-label">1 day</div>
+                                <div class="activite-label">1 dia</div>
                                 <i class='bi bi-circle-fill activity-badge text-info align-self-start'></i>
                                 <div class="activity-content"> Tempore autem saepe <a href="#" class="fw-bold text-dark">occaecati voluptatem</a> tempore</div>
                             </div>
                             <div class="activity-item d-flex">
-                                <div class="activite-label">2 days</div>
+                                <div class="activite-label">2 dias</div>
                                 <i class='bi bi-circle-fill activity-badge text-warning align-self-start'></i>
                                 <div class="activity-content"> Est sit eum reiciendis exercitationem</div>
                             </div>
                             <div class="activity-item d-flex">
-                                <div class="activite-label">4 weeks</div>
+                                <div class="activite-label">4 semanas</div>
                                 <i class='bi bi-circle-fill activity-badge text-muted align-self-start'></i>
                                 <div class="activity-content"> Dicta dolorem harum nulla eius. Ut quidem quidem sit quas</div>
                             </div>

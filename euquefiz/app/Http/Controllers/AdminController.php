@@ -22,15 +22,10 @@ class AdminController extends Controller
     }
     public function storeProduct(ProductsStoreRequest $request)
     {
-        $informacoes = $request->validated();
-        $informacoes['slug'] = Str::slug($informacoes['name']);
-
-        if (!empty($informacoes['image']) && $informacoes['image']->isValid()){
-            $file = $informacoes['image'];
-            $path = $file->store('product');
-            $input['image'] = $path;
-        }
-        Product::create($informacoes);
-        return Redirect::route('admin.management.dashboard');
+      dd($request);
+    }
+    public function teste()
+    {
+        return view('admin.products.teste');
     }
 }

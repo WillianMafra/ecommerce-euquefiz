@@ -25,6 +25,7 @@ Route::post('/admin/produtos', [AdminController::class, 'storeProduct'])->name('
 
 //Rota para exibir os produtos Para o usuário
 Route::get('/', [ProductsController::class, 'home'])->name('home');
+Route::get('/teste', [AdminController::class, 'teste']);
 Route::get('/produtos', [ProductsController::class, 'showAllProducts'])->name('showAllProducts');
 Route::get('/listarprodutos', [ProductsController::class, 'productsList'])->name('productsList');
 Route::get('/produtos/{id}', [ProductsController::class, 'showProduct'])->name('show');
