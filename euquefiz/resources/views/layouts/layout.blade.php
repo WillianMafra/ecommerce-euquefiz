@@ -17,8 +17,6 @@
 <main id="home-page" class="">
 <header id="header" class="header fixed-top d-flex align-items-center pb-3">
     <div class="container d-flex align-items-center justify-content-between">
-<<<<<<< HEAD
-
         <a href="{{route('home')}}" class="logo d-flex align-items-center me-auto me-lg-0">
             <img src="{{asset('storage/img/logo-design/Euquefizlogo.png')}}" alt="logo-eu-que-fiz">
             <!-- <h1>Eu que Fiz</h1> -->
@@ -28,7 +26,7 @@
             <ul>
                 <li class="dropdown"><a href="{{route('showAllProducts')}}"><span>Cardápio</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
-                        
+
                         <li class="dropdown"><a href="#"><span>Congelados</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                             <ul>
                                 <li><a href="#">lasanha</a></li>
@@ -38,7 +36,7 @@
                                 <li><a href="#">strogonoff</a></li>
                                 <li><a href="#">feijoada</a></li>
                                 <li><a href="#">carne de panela</a></li>
-                            </ul> 
+                            </ul>
                         </li>
                         <li class="dropdown"><a href="#"><span>Lanches</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                             <ul>
@@ -46,16 +44,16 @@
                                 <li><a href="#">bolinho de aipim</a></li>
                                 <li><a href="#">quiche</a></li>
                                 <li><a href="#">cookie</a></li>
-                                
-                            </ul> 
+
+                            </ul>
                         </li>
                         <li class="dropdown"><a href="#"><span>Low carb</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                             <ul>
                                 <li><a href="#">pães</a></li>
                                 <li><a href="#">doces</a></li>
-                                
-                                
-                            </ul> 
+
+
+                            </ul>
                         </li>
                         <li><a href="#">Caldos,Cremes e Sopas</a></li>
                         <li><a href="#">Vegetarianos</a></li>
@@ -92,72 +90,6 @@
         </nav><!-- .navbar -->
         <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
         <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-=======
-        <a href="{{route('home')}}" class="navbar-brand">
-            <img src="{{asset('storage/img/logo-design/LogoSemFundo.png')}}" height="90px" alt="logo-eu-que-fiz">
-        </a>
-            <nav id="navbar" class="navbar navbar-expand-sm ">
-                <ul>
-                    <li class="dropdown">
-                        <a href="{{route('showAllProducts')}}">
-                            <span>Cardápio</span>
-                                <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                            <ul>
-                                <li><a href="#">Drop Down 1</a></li>
-                                    <li class="dropdown">
-                                        <a href="#"><span>Deep Drop Down</span>
-                                            <i class="bi bi-chevron-down dropdown-indicator"></i>
-                                        </a>
-                                            <ul>
-                                                <li><a href="#">Deep Drop Down 1</a></li>
-                                                <li><a href="#">Deep Drop Down 2</a></li>
-                                                <li><a href="#">Deep Drop Down 3</a></li>
-                                                <li><a href="#">Deep Drop Down 4</a></li>
-                                                <li><a href="#">Deep Drop Down 5</a></li>
-                                            </ul>
-                                    </li>
-                                    <li><a href="#">Drop Down 2</a></li>
-                                    <li><a href="#">Drop Down 3</a></li>
-                                    <li><a href="{{route('productsList')}}">Ver Todos</a></li>
-                            </ul>
-                    </li>
-                    <li><a href="{{route('events')}}">Eventos</a></li>
-                    <li><a href="">Galeria</a></li>
-                    <li><a href="{{route('aboutus')}}">Sobre</a></li>
-                    <li class="dropdown">
-                        <a href="#"><span>Devs</span>
-                            <i class="bi bi-chevron-down dropdown-indicator"></i>
-                        </a>
-                            <ul>
-                                <li><a href="#">Integrante 1</a></li>
-                                <li><a href="#">Integrante 2</a></li>
-                                <li><a href="#">Integrante 3</a></li>
-                                <li><a href="#">Integrante 4</a></li>
-                                <li><a href="#">Integrante 5</a></li>
-                                <li><a href="#">Integrante 6</a></li>
-                                <li><a href="#">Integrante 7</a></li>
-                            </ul>
-                    </li>
-                    <li><a href="{{route('account')}}">Perfil</a></li>
-                    <li>
-                        <a href="#">
-                            <img src="{{asset('storage/img/icone/shopping-bag.png')}}" alt="icone-carrinho" width="30" height="25">
-                        </a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#"><span>Login / Cadastrar</span>
-                            <i class="bi bi-chevron-down dropdown-indicator"></i>
-                        </a>
-                            <ul>
-                                <li><a href="{{route('login')}}">Login</a></li>
-                                <li><a href="{{route('register')}}">Cadastro</a></li>
-                            </ul>
-                    </li>
-                </ul>
-            </nav>
-        <img width="30px" src="{{asset('storage/img/icone/dropdown.png')}}" class="mobile-nav-toggle mobile-nav-show bi bi-list" alt="abrir menu">
-        <img src="{{asset('storage/img/icone/dropdown.png')}}" width="20px" class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x" alt="fechar-menu">
->>>>>>> f72cb9e737d3f21fb2f8f5a11613bf366a87f17b
     </div>
 </header>
 @yield('events')
