@@ -12,10 +12,6 @@
     <link rel="stylesheet" href="{{asset('css/default.css')}}">
     <link rel="stylesheet" href="{{asset('css/form.css')}}">
     <title>Eu Que Fiz</title>
-
-</head>
-<body>
-<main id="home-page" class="">
     </head>
     <body>
     <main id="home-page" class="">
