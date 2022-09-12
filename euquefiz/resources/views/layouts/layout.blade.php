@@ -21,7 +21,7 @@
         <header id="header" class="header fixed-top d-flex align-items-center pb-3">
             <div class="container d-flex align-items-center justify-content-between">
                 <a href="{{route('home')}}" class="navbar-brand">
-                    <img src="{{asset('storage/img/logo-design/EuQueFizLogo.jpg')}}" height="90px" alt="logo-eu-que-fiz">
+                    <img src="{{asset('storage/img/logo-design/Euquefizlogo.png')}}" height="200px" alt="logo-eu-que-fiz">
                 </a>
                 <nav id="navbar" class="navbar navbar-expand-sm ">
             <ul>
@@ -78,7 +78,7 @@
                                 <li><a href="#">Integrante 7</a></li>
                             </ul>
                         </li>
-                        <li><a href="{{route('account')}}">Perfil</a></li>
+                        <li><a href="{{route('management')}}">Admin</a></li>
                         <li>
                             <a href="#">
                                 <img src="{{asset('storage/img/icone/shopping-bag.png')}}" alt="icone-carrinho" width="30" height="25">
@@ -93,6 +93,8 @@
                                 <li><a href="{{route('register')}}">Cadastro</a></li>
                             </ul>
                         </li>
+                        <li><a href="{{route('account')}}">Perfil</a></li>
+                        <li>
                     </ul>
                 </nav>
                 <img width="30px" src="{{asset('storage/img/icone/dropdown.png')}}" class="mobile-nav-toggle mobile-nav-show bi bi-list" alt="abrir menu">
