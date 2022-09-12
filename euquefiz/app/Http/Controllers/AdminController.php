@@ -4,17 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ProductsStoreRequest;
 use App\Models\Product;
-use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Str;
 
 class AdminController extends Controller
 
 {
-    public function admin(){
-        return view('admin.admin');
-    }
     public function management(){
         return view('admin.management.dashboard');
+    }
+    public function listar(){
+        $products = Product::all();
+        return view('admin.management.productsList', ['products' => $products]);
     }
     public function createProduct()
     {
