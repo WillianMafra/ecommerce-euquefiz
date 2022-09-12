@@ -94,7 +94,7 @@
         <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
 =======
         <a href="{{route('home')}}" class="navbar-brand">
-            <img src="{{asset('storage/img/logo-design/EuQueFizLogo.jpg')}}" height="90px" alt="logo-eu-que-fiz">
+            <img src="{{asset('storage/img/logo-design/LogoSemFundo.png')}}" height="90px" alt="logo-eu-que-fiz">
         </a>
             <nav id="navbar" class="navbar navbar-expand-sm ">
                 <ul>
