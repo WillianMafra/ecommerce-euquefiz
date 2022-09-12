@@ -19,7 +19,8 @@ use App\Http\Controllers\AdminController;
 //Rota para o admin fazer o gerenciamento do crud
 Route::get('/admin', [AdminController::class, 'admin'])->name('admin');
 Route::get('/admin/gerenciamento', [AdminController::class, 'management'])->name('management');
-Route::get('/inserirProduto', [AdminController::class, 'createProduct'])->name('createProduct');
+Route::get('/admin/produtos/inserirProduto', [AdminController::class, 'createProduct'])->name('createProduct');
+Route::post('/admin/produtos', [AdminController::class, 'storeProduct'])->name('storeProduct');
 
 
 //Rota para exibir os produtos Para o usuário
