@@ -25,10 +25,10 @@ class ProductsStoreRequest extends FormRequest
     {
         return [
             'product_name' => 'required|string',
-            'price' => 'required|numeric',
-            'stock' => 'nullable|integer',
             'image' => 'nullable|file',
+            'price' => 'required|numeric',
             'description' => 'nullable|string',
+            'stock' => 'nullable|integer',
         ];
     }
 }
