@@ -6,6 +6,7 @@ use App\Http\Requests\ProductsStoreRequest;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class AdminController extends Controller
@@ -47,8 +48,10 @@ class AdminController extends Controller
             return Redirect::route('list');
     }
 
-    public function teste()
+    public function destroy(Product $product)
     {
-        return view('admin.products.teste');
+        $product->delete();
+        Storage::delete($product->image ?? '');
+        return Redirect::route('list');
     }
 }
