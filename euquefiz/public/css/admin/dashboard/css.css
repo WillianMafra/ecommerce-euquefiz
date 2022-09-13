@@ -1,6 +1,6 @@
 #fonte-cinza, #titulo, #copyright {color: #d1d1d1;}
 
-#formulario {
+#formulario, #products {
     margin-top: 100px;
     display: flex;
     align-items: center;

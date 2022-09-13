@@ -7,39 +7,42 @@
                     <form enctype="multipart/form-data" method="POST" action="{{route('storeProduct')}}">
                         @csrf
                         <div class="row mb-3">
-                            <label for="name" class="col-sm-2 col-form-label">Nome</label>
-                            <div class="col-sm-10"><input type="text" name="name" class="form-control"></div>
-                            @error('name')
-                            <div class="text-rose-500" role="alert">Nome Inválido</div>
+                            <label for="product_name" class="col-sm-2 col-form-label">Nome</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="product_name" class="form-control" value="{{ old('product_name') }}"></div>
+                            @error('product_name')
+                            <small class="bg-danger text-white w-25 rounded" role="alert">Nome Inválido</small>
                             @enderror
                         </div>
                         <div class="row mb-3">
                             <label for="price" class="col-sm-2 col-form-label">Preço R$</label>
-                            <div class="col-sm-10"><input type="number" step="any" name="price" class="form-control"></div>
+                            <div class="col-sm-10">
+                                <input type="number" step="any" name="price" class="form-control" value="{{ old('price') }}"></div>
                                 @error('price')
-                                <div class="text-rose-500" role="alert">Nome Inválido</div>
+                                <small class="bg-danger text-white w-25 rounded" role="alert">Preço Inválido</small>
                                 @enderror
                         </div>
                         <div class="row mb-3">
                             <label for="stock" class="col-sm-2 col-form-label">Estoque</label>
-                            <div class="col-sm-10"><input type="number" name="stock" class="form-control"></div>
+                            <div class="col-sm-10">
+                                <input type="number" name="stock" class="form-control" value="{{ old('stock') }}"></div>
                             @error('stock')
-                            <div class="text-rose-500" role="alert">Nome Inválido</div>
+                            <small class="bg-danger text-white w-25 rounded" role="alert">Estoque Inválido</small>
                             @enderror
                         </div>
                         <div class="row mb-3">
                             <label for="image" class="col-sm-2 col-form-label">Enviar Foto</label>
                             <div class="col-sm-10"><input class="form-control" type="file" id="formFile" name="image">
                                 @error('image')
-                                <div class="text-rose-500" role="alert">Nome Inválido</div>
+                                <small class="bg-danger text-white w-25 rounded" role="alert">Imagem Inválida</small>
                                 @enderror
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="description" class="col-sm-2 col-form-label">Descrição</label>
-                            <div class="col-sm-10"><textarea name="description" class="form-control" style="height: 70px"></textarea>
+                            <div class="col-sm-10"><textarea name="description" class="form-control" style="height: 70px">{{ old('description') }}</textarea>
                                 @error('description')
-                                <div class="text-rose-500" role="alert">Nome Inválido</div>
+                                <small class="bg-danger text-white w-25 rounded" role="alert">Descrição Inválida</small>
                                 @enderror
                             </div>
                         </div>
