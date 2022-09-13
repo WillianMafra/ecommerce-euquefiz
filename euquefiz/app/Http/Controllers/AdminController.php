@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ProductsStoreRequest;
 use App\Models\Product;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Str;
 
 class AdminController extends Controller
@@ -14,11 +14,12 @@ class AdminController extends Controller
     public function management(){
         return view('admin.management.dashboard');
     }
-    public function list(){
+    public function list(Request $request){
 
         $products = Product::query()->orderBy('product_name')->paginate(10);
-
-        return view('admin.management.productsList', compact('products'));
+        $message = $request->session()->get('message');
+        $request->session()->remove('message');
+        return view('admin.management.productsList', compact('products', 'message'));
     }
     public function createProduct()
     {
@@ -37,7 +38,12 @@ class AdminController extends Controller
 
             Product::create($newProduct);
 
-            Session::flash('message', 'MENSAGEM TESTE');
+            $request->session()
+                ->flash(
+                    'message',
+                    "Produto {$newProduct['product_name']} Inserido no Banco de Dados"
+                );
+
             return Redirect::route('list');
     }
 
