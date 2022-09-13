@@ -31,4 +31,11 @@ class ProductsStoreRequest extends FormRequest
             'stock' => 'nullable|integer',
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'image' => 'Você carregou um arquivo não suportado!',
+        ];
+    }
 }

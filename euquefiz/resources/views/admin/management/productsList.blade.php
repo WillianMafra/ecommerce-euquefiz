@@ -1,5 +1,4 @@
 @extends('admin.management.adminHeader')
-
 <section id="products">
     <div class="col-xs-4 col-sm-6">
         <div class="card">
@@ -20,15 +19,16 @@
                     </thead>
                     <tbody>
                         @foreach ($products as $product)
-                            <tr class="">
-                                <td class="">{{ $product->product_name }}</td>
+                            <tr>
+
+                                <td >{{ $product->product_name }}</td>
 
                                 <td>{{ $product->price }}</td>
 
                                 <td>@if($product->stock > 0){{ round($product->stock) }} @else <strong class="bg-danger p-1 text-white rounded">Sem Estoque</strong> @endif</td>
 
                                 <td><img src="{{asset('storage/img/icone/edit.png')}}" width="20px" alt="editar item"></td>
-                                <form method="POST" action="{{route('destroy', $product->id)}}">
+                                <form method="POST" action="{{route('destroy', $product->id)}}" onsubmit="return confirm('Deseja Remover {{addslashes($product->product_name)}}? Esta ação não poderá ser desfeita.')">
                                     @method('DELETE')
                                     @csrf
                                    <td>

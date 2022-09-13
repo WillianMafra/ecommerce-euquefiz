@@ -48,10 +48,16 @@ class AdminController extends Controller
             return Redirect::route('list');
     }
 
-    public function destroy(Product $product)
+    public function destroy(Product $product, Request $request)
     {
         $product->delete();
         Storage::delete($product->image ?? '');
+
+        $request->session()
+            ->flash(
+                'message',
+                "Produto {$product['product_name']} Removido do Banco de Dados"
+            );
         return Redirect::route('list');
     }
 }
