@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ProductsStoreRequest;
 use App\Models\Product;
+use App\Service\ProductValidation;
+use App\Service\TransationMessage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
@@ -26,38 +28,26 @@ class AdminController extends Controller
     {
         return view('admin.management.addProduct');
     }
-    public function storeProduct(ProductsStoreRequest $request)
+    public function storeProduct(ProductsStoreRequest $request, ProductValidation $productValidation, TransationMessage $transationMessage)
     {
         $newProduct = $request->validated();
+
+        $productValidation->validation($newProduct);
         $newProduct['slug'] = Str::slug($newProduct['product_name']);
-
-            if (!empty($newProduct['image']) && $newProduct['image']->isValid()) {
-                $image = $newProduct['image'];
-                $imagepath = $image->store('product');
-                $newProduct['image'] = $imagepath;
-            }
-
             Product::create($newProduct);
 
-            $request->session()
-                ->flash(
-                    'message',
-                    "Produto {$newProduct['product_name']} Inserido no Banco de Dados"
-                );
+            $transationMessage->returnAddProductMessage($request, $newProduct);
 
             return Redirect::route('list');
     }
 
-    public function destroy(Product $product, Request $request)
+    public function destroy(Product $product, Request $request, TransationMessage $transationMessage)
     {
         $product->delete();
         Storage::delete($product->image ?? '');
 
-        $request->session()
-            ->flash(
-                'message',
-                "Produto {$product['product_name']} Removido do Banco de Dados"
-            );
+        $transationMessage->returnDestroyProductMessage($request,$product);
+
         return Redirect::route('list');
     }
 }
