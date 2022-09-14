@@ -43,4 +43,5 @@ Route::get('/entrar', [ClientController::class, 'login'])->name('login');
 Route::get('/eventos', [OthersController::class, 'events'])->name('events');
 Route::get('/sobre', [OthersController::class, 'aboutus'])->name('aboutus');
 
-
+//Rota para acessar o perfil de usuário
+Route::get('/seu-espaco', 'App\Http\Controllers\ProfileController@dices')->name('dices');
