@@ -29,6 +29,7 @@ class ProductsStoreRequest extends FormRequest
             'price' => 'required|numeric',
             'description' => 'nullable|string',
             'stock' => 'nullable|integer',
+            'category_id' => 'integer',
         ];
     }
 

@@ -39,9 +39,7 @@ class AdminController extends Controller
     {
         $newProduct = $request->validated();
         $productValidation->validation($newProduct);
-
         $newProduct['slug'] = Str::slug($newProduct['product_name']);
-
             Product::create($newProduct);
 
             $transationMessage->returnAddProductMessage($request, $newProduct);
