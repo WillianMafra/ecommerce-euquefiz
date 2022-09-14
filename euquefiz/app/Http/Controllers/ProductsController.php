@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use App\Service\ProductsSearch;
 use Illuminate\Http\Request;
@@ -20,10 +21,10 @@ class ProductsController extends Controller
 
     public function productsList(Request $request, ProductsSearch $productsSearch)
     {
-
+        $category = Category::all();
         $products = $productsSearch->search($request);
 
-        return view('products.productsList', ['products'=>$products]);
+        return view('products.productsList', compact('category', 'products'));
 
     }
 

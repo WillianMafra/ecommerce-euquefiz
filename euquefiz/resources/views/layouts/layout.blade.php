@@ -27,30 +27,28 @@
 
                         <li class="dropdown"><a href="#"><span>Congelados</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                             <ul>
-                                <li><a href="#">lasanha</a></li>
-                                <li><a href="#">econdidinho</a></li>
-                                <li><a href="#">empadão</a></li>
-                                <li><a href="#">panqueca</a></li>
-                                <li><a href="#">strogonoff</a></li>
-                                <li><a href="#">feijoada</a></li>
-                                <li><a href="#">carne de panela</a></li>
+                                <li><a href="#">Lasanha</a></li>
+                                <li><a href="#">Escondidinho</a></li>
+                                <li><a href="#">Empadão</a></li>
+                                <li><a href="#">Panqueca</a></li>
+                                <li><a href="#">Strogonoff</a></li>
+                                <li><a href="#">Feijoada</a></li>
+                                <li><a href="#">Carne de Panela</a></li>
                             </ul>
                         </li>
                         <li class="dropdown"><a href="#"><span>Lanches</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                             <ul>
-                                <li><a href="#">pizza</a></li>
-                                <li><a href="#">bolinho de aipim</a></li>
-                                <li><a href="#">quiche</a></li>
-                                <li><a href="#">cookie</a></li>
+                                <li><a href="#">Pizza</a></li>
+                                <li><a href="#">Bolinho de Aipim</a></li>
+                                <li><a href="#">Quiche</a></li>
+                                <li><a href="#">Cookie</a></li>
 
                             </ul>
                         </li>
                         <li class="dropdown"><a href="#"><span>Low carb</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                             <ul>
-                                <li><a href="#">pães</a></li>
-                                <li><a href="#">doces</a></li>
-
-
+                                <li><a href="#">Pães</a></li>
+                                <li><a href="#">Doces</a></li>
                             </ul>
                         </li>
                         <li><a href="#">Caldos,Cremes e Sopas</a></li>

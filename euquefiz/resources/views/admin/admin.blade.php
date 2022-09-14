@@ -1,1 +1,0 @@
-Gerenciar crud e usuários.
