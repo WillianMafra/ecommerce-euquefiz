@@ -88,7 +88,7 @@
                                 <li><a href="{{route('register')}}">Cadastro</a></li>
                             </ul>
                         </li>
-                        <li><a href="{{route('account')}}">Perfil</a></li>
+                        <li><a href="{{route('dices')}}">Perfil</a></li>
                         <li>
                     </ul>
                 </nav>
