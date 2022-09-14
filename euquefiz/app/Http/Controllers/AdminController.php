@@ -27,7 +27,7 @@ class AdminController extends Controller
 
         $message = $request->session()->get('message');
         $request->session()->remove('message');
-        return view('admin.management.productsList', ['products'=>$products], compact('message'));
+        return view('admin.management.productsList', compact('message', 'products'));
     }
 
     public function createProduct()
@@ -38,7 +38,6 @@ class AdminController extends Controller
     public function storeProduct(ProductsStoreRequest $request, ProductValidation $productValidation, TransationMessage $transationMessage)
     {
         $newProduct = $request->validated();
-
         $productValidation->validation($newProduct);
 
         $newProduct['slug'] = Str::slug($newProduct['product_name']);
