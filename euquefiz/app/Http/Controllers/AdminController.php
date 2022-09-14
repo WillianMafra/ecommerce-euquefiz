@@ -15,10 +15,13 @@ use Illuminate\Support\Str;
 class AdminController extends Controller
 
 {
-    public function management(){
+    public function management()
+    {
         return view('admin.management.dashboard');
     }
-    public function list(Request $request, ProductsSearch $productsSearch){
+
+    public function list(Request $request, ProductsSearch $productsSearch)
+    {
 
         $products = $productsSearch->search($request);
 
@@ -26,6 +29,7 @@ class AdminController extends Controller
         $request->session()->remove('message');
         return view('admin.management.productsList', ['products'=>$products], compact('message'));
     }
+
     public function createProduct()
     {
         return view('admin.management.addProduct');

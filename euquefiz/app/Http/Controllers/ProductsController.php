@@ -8,15 +8,18 @@ use Illuminate\Http\Request;
 
 class ProductsController extends Controller
 {
-    public function home(){
+    public function home()
+    {
         return view('home');
     }
 
-    public function showAllProducts(){
+    public function showAllProducts()
+    {
         return view('products.products');
     }
 
-    public function productsList(Request $request, ProductsSearch $productsSearch){
+    public function productsList(Request $request, ProductsSearch $productsSearch)
+    {
 
         $products = $productsSearch->search($request);
 
