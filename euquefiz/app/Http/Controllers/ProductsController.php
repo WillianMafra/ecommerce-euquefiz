@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Service\ProductsSearch;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
@@ -15,16 +16,12 @@ class ProductsController extends Controller
         return view('products.products');
     }
 
-    public function productsList(Request $request){
+    public function productsList(Request $request, ProductsSearch $productsSearch){
 
-        $products = Product::query();
-        $products->when($request->search, function ($query, $campoDePesquisa){
-        $query->where('product_name', 'like', '%' . $campoDePesquisa . '%');
-        });
-
-        $products = $products->paginate(5);
+        $products = $productsSearch->search($request);
 
         return view('products.productsList', ['products'=>$products]);
+
     }
 
     public function showProduct($id)

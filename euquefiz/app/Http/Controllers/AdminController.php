@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ProductsStoreRequest;
 use App\Models\Product;
+use App\Service\ProductsSearch;
 use App\Service\ProductValidation;
 use App\Service\TransationMessage;
 use Illuminate\Http\Request;
@@ -17,23 +18,27 @@ class AdminController extends Controller
     public function management(){
         return view('admin.management.dashboard');
     }
-    public function list(Request $request){
+    public function list(Request $request, ProductsSearch $productsSearch){
 
-        $products = Product::query()->orderBy('product_name')->paginate(10);
+        $products = $productsSearch->search($request);
+
         $message = $request->session()->get('message');
         $request->session()->remove('message');
-        return view('admin.management.productsList', compact('products', 'message'));
+        return view('admin.management.productsList', ['products'=>$products], compact('message'));
     }
     public function createProduct()
     {
         return view('admin.management.addProduct');
     }
+
     public function storeProduct(ProductsStoreRequest $request, ProductValidation $productValidation, TransationMessage $transationMessage)
     {
         $newProduct = $request->validated();
 
         $productValidation->validation($newProduct);
+
         $newProduct['slug'] = Str::slug($newProduct['product_name']);
+
             Product::create($newProduct);
 
             $transationMessage->returnAddProductMessage($request, $newProduct);

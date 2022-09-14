@@ -23,9 +23,7 @@
             <img src="{{asset('storage/img/logo-design/LogoSemFundo.png')}}" alt="Eu Que Fiz Logo">
             <span class="d-none d-lg-block" id="titulo" >Eu Que Fiz</span></a><i class="bi bi-list toggle-sidebar-btn text-primary"></i>
     </div>
-    <div class="search-bar p-3 ">
-        <form class="search-form d-flex align-items-center" method="POST" action="#"> <input type="text" name="query" placeholder="Pesquisar Produtos" title="Procurar Produtos"> <button type="submit" title="Pesquisar"><i class="bi bi-search"></i></button></form>
-    </div>
+@yield('search')
     <nav class="header-nav ms-auto bg-light rounded p-2">
         <ul class="d-flex align-items-center">
             <li class="nav-item d-block d-lg-none"><a class="nav-link nav-icon search-bar-toggle " href="#"> <i class="bi bi-search"></i></a></li>

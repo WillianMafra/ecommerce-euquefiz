@@ -1,4 +1,11 @@
 @extends('admin.management.adminHeader')
+@section('search')
+    <div class="search-bar p-3 ">
+        <form class="search-form d-flex align-items-center" method="GET" action="{{route('list')}}" autocomplete="off">
+            <input type="text" name="pesquisar" placeholder="Pesquisar Produtos" title="Procurar Produtos"><button type="submit" title="Pesquisar"><i class="bi bi-search"></i></button>
+        </form>
+    </div>
+@endsection
 <section id="products">
     <div class="col-xs-4 col-sm-6">
         <div class="card">
