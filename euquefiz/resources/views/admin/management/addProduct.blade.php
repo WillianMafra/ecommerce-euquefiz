@@ -46,17 +46,17 @@
                                 @enderror
                             </div>
                         </div>
-{{--                        <div class="row mb-3">--}}
-{{--                            <label class="col-sm-2 col-form-label">Categorias</label>--}}
-{{--                            <div class="col-sm-10">--}}
-{{--                                <select class="form-select" aria-label="Default select example">--}}
-{{--                                    <option selected>Abrir as Opções</option>--}}
-{{--                                    <option value="1">Categoria 1</option>--}}
-{{--                                    <option value="2">Categoria 2</option>--}}
-{{--                                    <option value="3">Categoria 3</option>--}}
-{{--                                </select>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label">Categorias</label>
+                            <div class="col-sm-10">
+                                <select class="form-select" name="category" aria-label="Default select example">
+                                    <option selected>Abrir as Opções</option>
+                                    <option value=1>Categoria 1</option>
+                                    <option value=2>Categoria 2</option>
+                                    <option value=3>Categoria 3</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="text-center">
                             <div class=""><button type="submit" class="btn bg-success text-light">Confirmar</button></div>
                         </div>
