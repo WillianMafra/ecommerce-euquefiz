@@ -30,11 +30,18 @@
 
                                 <td >{{ $product->product_name }}</td>
 
-                                <td>{{ $product->price }}</td>
+                                <td>R$ {{ $product->price }}</td>
 
                                 <td>@if($product->stock > 0){{ round($product->stock) }} @else <strong class="bg-danger p-1 text-white rounded">Sem Estoque</strong> @endif</td>
 
-                                <td><img src="{{asset('storage/img/icone/edit.png')}}" width="20px" alt="editar item"></td>
+
+                                <td>
+                                    <a href="{{route('editProduct', $product->id)}}">
+                                    <img src="{{asset('storage/img/icone/edit.png')}}" width="20px" alt="editar item">
+                                    </a>
+                                </td>
+
+
                                 <form method="POST" action="{{route('destroy', $product->id)}}" onsubmit="return confirm('Deseja Remover {{addslashes($product->product_name)}}? Esta ação não poderá ser desfeita.')">
                                     @method('DELETE')
                                     @csrf

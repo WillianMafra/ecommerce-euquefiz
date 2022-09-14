@@ -21,6 +21,8 @@ Route::get('/admin', [AdminController::class, 'management'])->name('management')
 Route::get('/admin/lista', [AdminController::class, 'list'])->name('list');
 Route::get('/admin/produtos/inserirProduto', [AdminController::class, 'createProduct'])->name('createProduct');
 Route::post('/admin/produtos/inserirProduto', [AdminController::class, 'storeProduct'])->name('storeProduct');
+Route::get('/admin/produtos/editarProduto/{product}', [AdminController::class, 'editProduct'])->name('editProduct');
+Route::put('/admin/produtos/editarProduto/{product}', [AdminController::class, 'updateProduct'])->name('updateProduct');
 Route::delete('/admin/lista/{product}/apagar', [AdminController::class, 'destroy'])->name('destroy');
 
 

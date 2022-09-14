@@ -50,6 +50,23 @@ class AdminController extends Controller
             return Redirect::route('list');
     }
 
+    public function editProduct(Product $product)
+    {
+        return view('admin.management.productEdit', ['product' => $product]);
+    }
+
+    public function updateProduct(Product $product, ProductsStoreRequest $productsStoreRequest, ProductValidation $productValidation)
+    {
+        $newProduct = $productsStoreRequest->validated();
+        $productValidation->validation($newProduct);
+        $newProduct['slug'] = Str::slug($newProduct['product_name']);
+
+        $product->fill($newProduct);
+        $product->saveOrFail();
+
+        return Redirect::route('list');
+    }
+
     public function destroy(Product $product, Request $request, TransationMessage $transationMessage)
     {
         $product->delete();
