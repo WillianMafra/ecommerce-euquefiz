@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{asset('css/footer.css')}}">
     <link rel="stylesheet" href="{{asset('css/default.css')}}">
     <link rel="stylesheet" href="{{asset('css/form.css')}}">
+    <link rel="stylesheet" href="{{asset('css/aboutus.css')}}">
     <title>Eu Que Fiz</title>
     </head>
     <body>
@@ -96,6 +97,7 @@
                 <img src="{{asset('storage/img/icone/dropdown.png')}}" width="20px" class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x" alt="fechar-menu">
             </div>
         </header>
+        @yield('aboutus')
         @yield('events')
         @yield('chefs')
     </main>
