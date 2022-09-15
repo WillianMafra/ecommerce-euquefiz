@@ -28,7 +28,7 @@ Route::delete('/admin/lista/{product}/apagar', [AdminController::class, 'destroy
 
 //Rota para exibir os produtos Para o usuário
 Route::get('/', [ProductsController::class, 'home'])->name('home');
-Route::get('/teste', [AdminController::class, 'teste']);
+Route::get('/categoria/{id}', [ProductsController::class, 'categoryPage'])->name('categoryPage');
 Route::get('/produtos', [ProductsController::class, 'showAllProducts'])->name('showAllProducts');
 Route::get('/listarprodutos', [ProductsController::class, 'productsList'])->name('productsList');
 Route::get('/produtos/{id}', [ProductsController::class, 'showProduct'])->name('show');

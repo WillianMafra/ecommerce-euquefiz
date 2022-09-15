@@ -19,6 +19,7 @@
                     <tr>
                         <th scope="col">Nome</th>
                         <th scope="col">Preço</th>
+                        <th scope="col">Categoria</th>
                         <th scope="col">Estoque</th>
                         <th scope="col">Edit</th>
                         <th scope="col">Delete</th>
@@ -31,6 +32,13 @@
                                 <td >{{ $product->product_name }}</td>
 
                                 <td>R$ {{ $product->price }}</td>
+
+                                    @foreach($categories as $category)
+                                        @if($category->id == $product->category_id)
+                                            <td>{{ $category->name }}</td>
+                                        @endif
+                                    @endforeach
+
 
                                 <td>@if($product->stock > 0){{ round($product->stock) }} @else <strong class="bg-danger p-1 text-white rounded">Sem Estoque</strong> @endif</td>
 

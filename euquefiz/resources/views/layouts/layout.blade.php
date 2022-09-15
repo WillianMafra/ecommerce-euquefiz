@@ -25,35 +25,24 @@
                 <li class="dropdown"><a href="{{route('showAllProducts')}}"><span>Cardápio</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
 
-                        <li class="dropdown"><a href="#"><span>Congelados</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                            <ul>
-                                <li><a href="#">Lasanha</a></li>
-                                <li><a href="#">Escondidinho</a></li>
-                                <li><a href="#">Empadão</a></li>
-                                <li><a href="#">Panqueca</a></li>
-                                <li><a href="#">Strogonoff</a></li>
-                                <li><a href="#">Feijoada</a></li>
-                                <li><a href="#">Carne de Panela</a></li>
-                            </ul>
                         </li>
-                        <li class="dropdown"><a href="#"><span>Lanches</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                            <ul>
-                                <li><a href="#">Pizza</a></li>
-                                <li><a href="#">Bolinho de Aipim</a></li>
-                                <li><a href="#">Quiche</a></li>
-                                <li><a href="#">Cookie</a></li>
 
-                            </ul>
+                        <li class="dropdown"><a href={{route('categoryPage', 3)}}><span>Lasanha</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                         </li>
-                        <li class="dropdown"><a href="#"><span>Low carb</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                            <ul>
-                                <li><a href="#">Pães</a></li>
-                                <li><a href="#">Doces</a></li>
-                            </ul>
+
+                        <li class="dropdown"><a href={{route('categoryPage', 4)}}><span>Lanches</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                         </li>
-                        <li><a href="#">Caldos,Cremes e Sopas</a></li>
-                        <li><a href="#">Vegetarianos</a></li>
+
+                        <li class="dropdown"><a href={{route('categoryPage', 5)}}><span>Low carb</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                        </li>
+
+                        <li><a href={{route('categoryPage', 6)}}>Caldos,Cremes e Sopas</a></li>
+                        <li><a href={{route('categoryPage', 7)}}>Vegetarianos</a></li>
+
+                        <li class="dropdown"><a href="{{route('categoryPage', 8)}}"><span>Congelados</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+
                         <li><a href="{{route('productsList')}}">Ver Todos</a></li>
+
                     </ul>
                         </li>
                         <li><a href="{{route('events')}}">Eventos</a></li>

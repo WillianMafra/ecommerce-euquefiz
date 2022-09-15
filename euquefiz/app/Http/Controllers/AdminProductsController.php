@@ -3,62 +3,59 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProductsStoreRequest;
-use App\Models\Category;
 use App\Models\Product;
 use App\Service\ProductsSearch;
-use App\Service\ProductValidation;
+use App\Service\ImageValidation;
 use App\Service\TransationMessage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
-class AdminController extends Controller
-
+class AdminProductsController extends Controller
 {
-    public function management()
-    {
-        return view('admin.management.dashboard');
-    }
 
     public function list(Request $request, ProductsSearch $productsSearch)
     {
         $products = $productsSearch->search($request);
 
-        $categories = Category::all();
-
-
         $message = $request->session()->get('message');
         $request->session()->remove('message');
-        return view('admin.management.productsList', compact('message', 'products','categories'));
+        return view('admin.products.productsList', compact('message', 'products'));
     }
 
     public function createProduct()
     {
-        $categories = Category::all();
-        return view('admin.management.addProduct', compact('categories'));
+        return view('admin.products.addProduct');
     }
 
-    public function storeProduct(ProductsStoreRequest $request, ProductValidation $productValidation, TransationMessage $transationMessage)
+    public function storeProduct(
+        ProductsStoreRequest $request,
+        ImageValidation      $productValidation,
+        TransationMessage    $transationMessage)
     {
+        $newProduct['category_id'] = $request->get('category');
         $newProduct = $request->validated();
         $productValidation->validation($newProduct);
         $newProduct['slug'] = Str::slug($newProduct['product_name']);
-        $newProduct['category_id'] = $request->category;
-            Product::create($newProduct);
+        Product::create($newProduct);
 
-            $transationMessage->returnAddProductMessage($request, $newProduct);
+        $transationMessage->returnAddProductMessage($request, $newProduct);
 
-            return Redirect::route('list');
+        return Redirect::route('list');
     }
 
     public function editProduct(Product $product)
     {
-        return view('admin.management.productEdit', ['product' => $product]);
+        return view('admin.products.productEdit', ['product' => $product]);
     }
 
-    public function updateProduct(Product $product, ProductsStoreRequest $productsStoreRequest, ProductValidation $productValidation)
+    public function updateProduct(
+        Product              $product,
+        ProductsStoreRequest $productsStoreRequest,
+        ImageValidation      $productValidation)
     {
+
         $newProduct = $productsStoreRequest->validated();
         $productValidation->validation($newProduct);
         $newProduct['slug'] = Str::slug($newProduct['product_name']);
@@ -69,8 +66,12 @@ class AdminController extends Controller
         return Redirect::route('list');
     }
 
-    public function destroy(Product $product, Request $request, TransationMessage $transationMessage)
+    public function destroy(
+        Product $product,
+        Request $request,
+        TransationMessage $transationMessage)
     {
+
         $product->delete();
         Storage::delete($product->image ?? '');
 
