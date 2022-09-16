@@ -51,9 +51,9 @@
                             <div class="col-sm-10">
                                 <select class="form-select" name="category" aria-label="Default select example">
                                     <option selected>Abrir as Opções</option>
-                                    <option value=1>Categoria 1</option>
-                                    <option value=2>Categoria 2</option>
-                                    <option value=3>Categoria 3</option>
+                                    @foreach($categories as $category)
+                                    <option value={{$category->id}}>{{$category->name}}</option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div>

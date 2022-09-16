@@ -19,4 +19,9 @@ class ProductsSearch
         $products = $products->paginate(5);
             return $products;
     }
+
+    public function categoryFilter(Request $request)
+    {
+
+    }
 }

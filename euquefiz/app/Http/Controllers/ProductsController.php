@@ -11,7 +11,16 @@ class ProductsController extends Controller
 {
     public function home()
     {
-        return view('home');
+        $categories = Category::all();
+        return view('home', compact('categories'));
+    }
+
+    public function categoryPage($id)
+    {
+        $category= Category::findOrFail($id);
+        $product = Product::all();
+
+        return view('products.category', compact('category', 'product'));
     }
 
     public function showAllProducts()

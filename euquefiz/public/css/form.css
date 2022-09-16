@@ -144,3 +144,30 @@ h3 {
 .valid-feedback{
    color: #2acc80;
 }
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding: 100px 20px;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0px;
+    margin-left: 80px;
+   
+}
+
+.card-header:first-child {
+    border-radius: var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius) 0 0;
+    text-align: center;
+}
+
+.bg-primary {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-primary-rgb),var(--bs-bg-opacity))!important;
+    padding: 2px 2px;
+    padding-right: 2px;
+    padding-left: 2px;
+    margin-right: 100px;
+    margin-left: 80px;
+}
