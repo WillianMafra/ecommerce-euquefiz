@@ -30,3 +30,7 @@ As páginas serão desenvolvidas utilizando HTML,CSS,PHP e Laravel.
 
 Será incluído dentro do e-commerce áreas para: visualização de produtos,carrinho de  pedidos, fotos dos produtos, fotos de eventos,
 formulários para cadastros, sistema de autenticação e permissões do usuário e um menu estruturado por categorias, contatos.
+
+
+
+## Adicionando deploy no heroku
