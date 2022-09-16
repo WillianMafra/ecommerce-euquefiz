@@ -57,10 +57,6 @@ section {
 }
 
 .section-bg {
-<<<<<<< HEAD
-    background-image: url("public/storage/img/logo-design/Background-Avermelhado1.png");
-    background-repeat: no-repeat;
-=======
 
 }
 .subtitles{
@@ -83,7 +79,6 @@ section {
 }
 .subtitles:hover::after {
     inset: 0 0 0 0 ;
->>>>>>> f72cb9e737d3f21fb2f8f5a11613bf366a87f17b
 }
 
 .section-header {
@@ -231,7 +226,8 @@ section {
 
 .header .logo img {
     max-height: 180px;
-    margin-right: 6px;
+    margin-right: 40px;
+    
 }
 
 .header .logo h1 {

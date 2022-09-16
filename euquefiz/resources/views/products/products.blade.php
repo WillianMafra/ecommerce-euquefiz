@@ -8,7 +8,7 @@
         <div class="container" data-aos="fade-up">
             <div class="section-header my-3">
                 <h2>Nossos Principais Pratos</h2>
-                <p>Nós <span>Que Fizemos</span></p>
+                <p>Nós <span>Nós Que Fizemos</span></p>
             </div>
 
             <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
@@ -43,16 +43,27 @@
                     <div class="row gy-5">
 
                         <div class="col-lg-4 menu-item">
-                            <a href="" class="glightbox"><img src="{{asset('storage/img/menu/menu-item-1.png')}}" class="menu-img img-fluid" alt=""></a>
-                            <h4>Magnam Tiste</h4>
+                            <a href="" class="glightbox"><img src="{{asset('storage/img/cardapio/congelados/bolinho de aipim.jpg')}}" class="menu-img img-fluid" alt=""></a>
+                            <h4>Bolinho de Aipim</h4>
                             <p class="ingredients">
-                                Lorem, deren, trataro, filede, nerada
+                                Aipim, carne seca desfiada
                             </p>
                             <p class="price">
-                                $5.95
+                                R$10,00
                             </p>
                         </div><!-- Menu Item -->
+                        
 
+                        <div class="col-lg-4 menu-item">
+                            <a href="" class="glightbox"><img src="{{asset('storage/img/cardapio/lanches/pizzas brotinho.jpeg')}}" class="menu-img img-fluid" alt=""></a>
+                            <h4>Pizza Brotinho</h4>
+                            <p class="ingredients">
+                                Mussarela, calabresa, bacon, abobrinha c/ alho, frango c/ catupiri, brocolis
+                            </p>
+                            <p class="price">
+                                R$10,00
+                            </p>
+                        </div>
                     </div>
                 </div><!-- End Starter Menu Content -->
 
@@ -65,13 +76,13 @@
                     <div class="row gy-5">
 
                         <div class="col-lg-4 menu-item">
-                            <a href="" class="glightbox"><img src="{{asset('storage/img/menu/menu-item-1.png')}}" class="menu-img img-fluid" alt=""></a>
-                            <h4>Magnam Tiste</h4>
+                            <a href="" class="glightbox"><img src="{{asset('storage/img/cardapio/low-carb/pães low carb.jpeg')}}" class="menu-img img-fluid" alt=""></a>
+                            <h4>Pães low-carb</h4>
                             <p class="ingredients">
-                                Lorem, deren, trataro, filede, nerada
+                                Castanhas, farinha de coco, parmesão(gluten free)
                             </p>
                             <p class="price">
-                                $5.95
+                                R$ 30,00/500g
                             </p>
                         </div><!-- Menu Item -->
 
@@ -87,14 +98,14 @@
 
                     <div class="row gy-5">
 
-                        <div class="col-lg-4 menu-item">
-                            <a href="" class="glightbox"><img src="{{asset('storage/img/menu/menu-item-1.png')}}" class="menu-img img-fluid" alt=""></a>
-                            <h4>Magnam Tiste</h4>
+                    <div class="col-lg-4 menu-item">
+                            <a href="" class="glightbox"><img src="{{asset('storage/img/cardapio/congelados/feijoada.jpg')}}" class="menu-img img-fluid" alt=""></a>
+                            <h4>Feijoada</h4>
                             <p class="ingredients">
-                                Lorem, deren, trataro, filede, nerada
+                                Feijoada, arroz, couve, farofa, salada
                             </p>
                             <p class="price">
-                                $5.95
+                                R$55,00
                             </p>
                         </div><!-- Menu Item -->
                     </div>
@@ -109,14 +120,14 @@
 
                     <div class="row gy-5">
 
-                        <div class="col-lg-4 menu-item">
-                            <a href="" class="glightbox"><img src="{{asset('storage/img/menu/menu-item-1.png')}}" class="menu-img img-fluid" alt=""></a>
-                            <h4>Magnam Tiste</h4>
+                    <div class="col-lg-4 menu-item">
+                            <a href="" class="glightbox"><img src="{{asset('storage/img/cardapio/sopas/sopa de legumes.jpg')}}" class="menu-img img-fluid" alt=""></a>
+                            <h4>Sopa de legumes</h4>
                             <p class="ingredients">
-                                Lorem, deren, trataro, filede, nerada
+                                Vegetais, carne
                             </p>
                             <p class="price">
-                                $5.95
+                                R$20,00
                             </p>
                         </div><!-- Menu Item -->
                     </div>
@@ -129,7 +140,7 @@
             <div class="container">
                 <div class="row flex-center">
                     <div class="col-xxl-9 py-7 text-center">
-                        <h1 class="fw-bold mb-4 text-white fs-6">Preparado para pedir<br />com os melhores preços?</h1><a class="btn btn-danger" href="#">Continuar o pedido<i class="fas fa-chevron-right ms-2"></i></a>
+                        <h1 class="fw-bold mb-4 text-white fs-6">Preparado para pedir<br /> os melhores produtos?</h1><a class="btn btn-danger" href="#">Continuar o pedido<i class="fas fa-chevron-right ms-2"></i></a>
                     </div>
                 </div>
             </div>
