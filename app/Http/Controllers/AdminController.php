@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CategoryStoreRequest;
 use App\Http\Requests\ProductsStoreRequest;
 use App\Models\Category;
 use App\Models\Product;
@@ -33,6 +34,30 @@ class AdminController extends Controller
         return view('admin.management.productsList', compact('message', 'products','categories'));
     }
 
+    public function categoriesList(Category $categories)
+    {
+        $categories = Category::all();
+        return view('admin.management.categoriesList', compact('categories'));
+    }
+
+    public function createCategory()
+    {
+        $categories = Category::all();
+        return view('admin.management.addCategory', compact('categories'));
+    }
+    public function storeCategory(CategoryStoreRequest $request)
+    {
+        $newCategory = $request->validated();
+        Category::create($newCategory);
+        return Redirect::route('categoriesList');
+
+    }
+
+    public function destroyCategory(Category $category)
+    {
+        $category->delete();
+        return Redirect::route('categoriesList');
+    }
     public function createProduct()
     {
         $categories = Category::all();
@@ -45,11 +70,11 @@ class AdminController extends Controller
         $productValidation->validation($newProduct);
         $newProduct['slug'] = Str::slug($newProduct['product_name']);
         $newProduct['category_id'] = $request->category;
-            Product::create($newProduct);
+        Product::create($newProduct);
 
-            $transationMessage->returnAddProductMessage($request, $newProduct);
+        $transationMessage->returnAddProductMessage($request, $newProduct);
 
-            return Redirect::route('list');
+        return Redirect::route('list');
     }
 
     public function editProduct(Product $product)

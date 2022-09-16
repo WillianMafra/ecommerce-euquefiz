@@ -14,6 +14,8 @@
             <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li> <a href="{{route('list')}}"> <i class="bi bi-circle"></i><span>Listar Produtos</span> </a></li>
                 <li> <a href="{{route('createProduct')}}"> <i class="bi bi-circle"></i><span>Adicionar Produto</span> </a></li>
+                <li> <a href="{{route('categoriesList')}}"> <i class="bi bi-circle"></i><span>Listar Categorias</span> </a></li>
+                <li> <a href="{{route('createCategory')}}"> <i class="bi bi-circle"></i><span>Adicionar Categoria</span> </a></li>
             </ul>
         </li>
         <li class="nav-item bg-light">
