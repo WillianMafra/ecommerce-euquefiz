@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
     public function dices()
     {
-        return view('profile.profile');
+        $categories = Category::all();
+        return view('profile.profile',  compact('categories'));
     }
 }
