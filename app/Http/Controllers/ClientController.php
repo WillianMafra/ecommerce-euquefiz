@@ -27,15 +27,15 @@ class ClientController extends Controller
     public function salvar(Request $request)
     {
       $data = $request->except('_token');
-      $user = User::create($data);
       $data['password'] = Hash::make($data['password']);
+      $user = User::create($data);
       Auth::login($user);
 
       return redirect () ->route('home');
 
     }
 
-    
+
     public function login()
     {
         $categories = Category::all();

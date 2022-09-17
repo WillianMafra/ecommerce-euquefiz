@@ -12,10 +12,10 @@
                         @csrf
 
                         <div class="row mb-3">
-                            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Nome:') }}</label>
+                            <label for="user_name" class="col-md-4 col-form-label text-md-end">{{ __('Nome:') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <input id="user_name" type="text" class="form-control @error('user_name') is-invalid @enderror" name="user_name" value="{{ old('user_name') }}" required autocomplete="user_name" autofocus>
 
                                 @error('Nome')
                                     <span class="invalid-feedback" role="alert">
@@ -26,12 +26,12 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Endereço:') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Endereco:') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('endereço') is-invalid @enderror" name="endereço" value="{{ old('endereço') }}" required autocomplete="endereço" autofocus>
+                                <input id="name" type="text" class="form-control @error('endereco') is-invalid @enderror" name="endereco" value="{{ old('endereco') }}" required autocomplete="endereco" autofocus>
 
-                                @error('Endereço')
+                                @error('Endereco')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
