@@ -44,6 +44,8 @@ Route::get('/produtos/{id}', [ProductsController::class, 'showProduct'])->name('
 Route::get('/minha-conta', [ClientController::class, 'account'])->name('account');
 Route::get('/register', [ClientController::class, 'register'])->name('register');
 Route::get('/entrar', [ClientController::class, 'login'])->name('login');
+Route::post('/entrar', [ClientController::class, 'entrar'])->name('entrar');
+
 
 //Rotas extras que podem precisar de alguma manipulação
 Route::get('/eventos', [OthersController::class, 'events'])->name('events');
