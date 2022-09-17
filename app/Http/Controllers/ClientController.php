@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
@@ -22,6 +24,18 @@ class ClientController extends Controller
         return view('account.register', compact('categories'));
     }
 
+    public function salvar(Request $request)
+    {
+      $data = $request->except('_token');
+      $user = User::create($data);
+      $data['password'] = Hash::make($data['password']);
+      Auth::login($user);
+
+      return redirect () ->route('home');
+
+    }
+
+    
     public function login()
     {
         $categories = Category::all();
@@ -36,6 +50,7 @@ class ClientController extends Controller
         ->back()
         ->withErrors ('Usuário e/ou senha incorreta');
        }
+       return redirect () ->route('home');
     }
 
 }

@@ -43,6 +43,7 @@ Route::get('/produtos/{id}', [ProductsController::class, 'showProduct'])->name('
 //Rota para o usuário fazer login e alterar dados da conta
 Route::get('/minha-conta', [ClientController::class, 'account'])->name('account');
 Route::get('/register', [ClientController::class, 'register'])->name('register');
+Route::post('/register', [ClientController::class, 'salvar'])->name('salvar');
 Route::get('/entrar', [ClientController::class, 'login'])->name('login');
 Route::post('/entrar', [ClientController::class, 'entrar'])->name('entrar');
 
