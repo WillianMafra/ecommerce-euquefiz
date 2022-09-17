@@ -58,6 +58,6 @@ Route::get('/seu-espaco', 'App\Http\Controllers\ProfileController@dices')->name(
 
 Route::get('/logout', function () 
 {
-    \Illuminate\Support|Facades\Auth::logout();
+    Auth::logout();
     return redirect ('/');
 });
