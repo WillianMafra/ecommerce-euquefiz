@@ -57,6 +57,7 @@
                             <img src="{{asset('storage/img/icone/shopping-bag.png')}}" alt="icone-carrinho" width="30" height="25">
                         </a>
                     </li>
+                    @guest
                     <li class="dropdown">
                         <a href="#"><span>Login / Cadastrar</span>
                             <i class="bi bi-chevron-down dropdown-indicator"></i>
@@ -66,7 +67,11 @@
                             <li><a href="{{route('register')}}">Cadastro</a></li>
                         </ul>
                     </li>
+                    @endguest
+                    @auth
                     <li><a href="{{route('dices')}}">Perfil</a></li>
+                    <li><a href="logout">Logout</a></li>
+                    @endauth
                     <li>
                 </ul>
             </nav>

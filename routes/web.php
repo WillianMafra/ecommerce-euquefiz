@@ -5,6 +5,7 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\OthersController;
 use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\AdminController;
 
 /*
@@ -54,3 +55,9 @@ Route::get('/sobre', [OthersController::class, 'aboutus'])->name('aboutus');
 
 //Rota para acessar o perfil de usuário
 Route::get('/seu-espaco', 'App\Http\Controllers\ProfileController@dices')->name('dices');
+
+Route::get('/logout', function () 
+{
+    \Illuminate\Support|Facades\Auth::logout();
+    return redirect ('/');
+});
