@@ -15,6 +15,7 @@
     <title>Eu Que Fiz</title>
 </head>
 <body>
+
 <main id="home-page" class="">
     <header id="header" class="header fixed-top d-flex align-items-center pb-3">
         <div class="container d-flex align-items-center justify-content-between">
@@ -25,15 +26,10 @@
                 <ul>
                     <li class="dropdown"><a href="{{route('showAllProducts')}}"><span>Cardápio</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                         <ul>
-
+                                @foreach($categories as $category)
+                                <li class="dropdown"><a href="{{route('categoryPage',$category->id)}}"><span>{{$category->name}}</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                             </li>
-
-                            @foreach($categories as $category)
-                                <li class="dropdown"><a href=#><span>{{$category->name}}</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                                </li>
-
                             @endforeach
-
                             <li><a href="{{route('productsList')}}">Ver Todos</a></li>
 
                         </ul>

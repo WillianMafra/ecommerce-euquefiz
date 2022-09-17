@@ -4,52 +4,36 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CategoryStoreRequest;
 use App\Models\Category;
-use App\Service\ImageValidation;
-use App\Service\ProductsSearch;
-use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Contracts\View\Factory;
-use Illuminate\Contracts\View\View;
-use Illuminate\Http\Request;
+use App\Service\ProductValidation;
 use Illuminate\Support\Facades\Redirect;
 
 class AdminCategoryController extends Controller
 {
-    public function listCategory(Request $request, ProductsSearch $categorySearch) : Application|View|Factory
-    {
-        $categories = $categorySearch->searchCategory($request);
 
-        return view('admin.category.categoryList',compact('categories'));
+    public function categoriesList()
+    {
+        $categories = Category::all();
+        return view('admin.management.categoriesList', compact('categories'));
     }
 
-    public function createCategory() : Application|View|Factory
+    public function createCategory()
     {
-        return view('admin.category.addCategory');
+        $categories = Category::all();
+        return view('admin.management.addCategory', compact('categories'));
     }
 
-    public function storeCategory( CategoryStoreRequest $request)
+    public function storeCategory(CategoryStoreRequest $request, ProductValidation $productValidation)
     {
         $newCategory = $request->validated();
+        $productValidation->validation($newCategory);
         Category::create($newCategory);
+        return Redirect::route('categoriesList');
 
-        return Redirect::route('list');
-    }
-    public function editCategory(Category $category) : Application|View|Factory
-    {
-        return view('admin.category.editCategory', ['category' => $category]);
     }
 
-    public function updateCategory(
-        Category              $category,
-        CategoryStoreRequest $categoryStoreRequest,
-        ImageValidation      $imageValidation)
+    public function destroyCategory(Category $category)
     {
-
-        $newCategory = $categoryStoreRequest->validated();
-        $imageValidation->validation($newCategory);
-
-        $category->fill($newCategory);
-        $category->saveOrFail();
-
-        return Redirect::route('listCategory');
+        $category->delete();
+        return Redirect::route('categoriesList');
     }
 }

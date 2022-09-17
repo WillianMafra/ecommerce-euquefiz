@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\OthersController;
 use App\Http\Controllers\ProductsController;
@@ -19,10 +20,10 @@ use App\Http\Controllers\AdminController;
 //Rota para o admin fazer o gerenciamento do crud
 Route::get('/admin', [AdminController::class, 'management'])->name('management');
 Route::get('/admin/lista', [AdminController::class, 'list'])->name('list');
-Route::get('/admin/lista/Categorias', [AdminController::class, 'categoriesList'])->name('categoriesList');
-Route::get('/admin/categorias/inserirCategoria', [AdminController::class, 'createCategory'])->name('createCategory');
-Route::post('/admin/categorias/inserirCategoria', [AdminController::class, 'storeCategory'])->name('storeCategory');
-Route::delete('/admin/lista/{category}/apagar', [AdminController::class, 'destroyCategory'])->name('destroyCategory');
+Route::get('/admin/lista/Categorias', [AdminCategoryController::class, 'categoriesList'])->name('categoriesList');
+Route::get('/admin/categorias/inserirCategoria', [AdminCategoryController::class, 'createCategory'])->name('createCategory');
+Route::post('/admin/categorias/inserirCategoria', [AdminCategoryController::class, 'storeCategory'])->name('storeCategory');
+Route::delete('/admin/lista/{category}/apagar', [AdminCategoryController::class, 'destroyCategory'])->name('destroyCategory');
 
 Route::get('/admin/produtos/inserirProduto', [AdminController::class, 'createProduct'])->name('createProduct');
 Route::post('/admin/produtos/inserirProduto', [AdminController::class, 'storeProduct'])->name('storeProduct');

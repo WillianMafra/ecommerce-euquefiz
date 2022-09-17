@@ -18,12 +18,15 @@
                     <tbody>
                     @foreach ($categories as $category)
                         <tr>
-
-                            <td>{{ $category->image }}</td>
+                            <td> @if (!empty($category->image))
+                                        {{$category->image}}
+                                @else <p class="text-danger">Imagem Indisponível</p>
+                                 @endif
+                            </td>
 
                             <td >{{ $category->name }}</td>
 
-                            <form method="POST" action="{{route('destroy', $category->id)}}" onsubmit="return confirm('Deseja Remover {{addslashes($category->name)}}? Esta ação não poderá ser desfeita.')">
+                            <form method="POST" action="{{route('destroyCategory', $category->id)}}" onsubmit="return confirm('Deseja Remover {{addslashes($category->name)}}? Esta ação não poderá ser desfeita.')">
                                 @method('DELETE')
                                 @csrf
                                 <td>

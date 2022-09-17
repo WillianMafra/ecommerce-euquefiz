@@ -17,23 +17,25 @@ class ProductsController extends Controller
 
     public function categoryPage($id)
     {
-        $category= Category::findOrFail($id);
+        $categories = Category::all();
+        $category = Category::find($id);
         $product = Product::all();
-
-        return view('products.category', compact('category', 'product'));
+        return view('products.category', compact('product', 'categories', 'category'));
     }
 
     public function showAllProducts()
     {
-        return view('products.products');
+        $categories = Category::all();
+        return view('products.products',compact('categories'));
     }
 
     public function productsList(Request $request, ProductsSearch $productsSearch)
     {
+        $categories = Category::all();
         $category = Category::all();
         $products = $productsSearch->search($request);
 
-        return view('products.productsList', compact('category', 'products'));
+        return view('products.productsList', compact('products','category', 'categories'));
 
     }
 

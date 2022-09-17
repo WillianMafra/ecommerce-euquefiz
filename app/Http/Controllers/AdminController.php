@@ -17,9 +17,10 @@ use Illuminate\Support\Str;
 class AdminController extends Controller
 
 {
-    public function management()
+    public function management(Category $categories)
     {
-        return view('admin.management.dashboard');
+        $categories = Category::all();
+        return view('admin.management.dashboard', compact('categories'));
     }
 
     public function list(Request $request, ProductsSearch $productsSearch)
@@ -28,36 +29,11 @@ class AdminController extends Controller
 
         $categories = Category::all();
 
-
         $message = $request->session()->get('message');
         $request->session()->remove('message');
         return view('admin.management.productsList', compact('message', 'products','categories'));
     }
 
-    public function categoriesList(Category $categories)
-    {
-        $categories = Category::all();
-        return view('admin.management.categoriesList', compact('categories'));
-    }
-
-    public function createCategory()
-    {
-        $categories = Category::all();
-        return view('admin.management.addCategory', compact('categories'));
-    }
-    public function storeCategory(CategoryStoreRequest $request)
-    {
-        $newCategory = $request->validated();
-        Category::create($newCategory);
-        return Redirect::route('categoriesList');
-
-    }
-
-    public function destroyCategory(Category $category)
-    {
-        $category->delete();
-        return Redirect::route('categoriesList');
-    }
     public function createProduct()
     {
         $categories = Category::all();

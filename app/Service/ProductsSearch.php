@@ -20,8 +20,4 @@ class ProductsSearch
             return $products;
     }
 
-    public function categoryFilter(Request $request)
-    {
-
-    }
 }
