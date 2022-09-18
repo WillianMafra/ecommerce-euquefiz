@@ -6,16 +6,15 @@
     @stack('style')
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="{{asset('css/form.css')}}">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('css/footer.css')}}">
     <link rel="stylesheet" href="{{asset('css/default.css')}}">
-    <link rel="stylesheet" href="{{asset('css/form.css')}}">
-    <link rel="stylesheet" href="{{asset('css/aboutus.css')}}">
+
     <title>Eu Que Fiz</title>
 </head>
 <body>
-
 <main id="home-page" class="">
     <header id="header" class="header fixed-top d-flex align-items-center pb-3">
         <div class="container d-flex align-items-center justify-content-between">
@@ -26,10 +25,12 @@
                 <ul>
                     <li class="dropdown"><a href="{{route('showAllProducts')}}"><span>Cardápio</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                         <ul>
+                            @if(!empty($categories))
                                 @foreach($categories as $category)
                                 <li class="dropdown"><a href="{{route('categoryPage',$category->id)}}"><span>{{$category->name}}</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                             </li>
                             @endforeach
+                            @endif
                             <li><a href="{{route('productsList')}}">Ver Todos</a></li>
 
                         </ul>

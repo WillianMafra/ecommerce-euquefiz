@@ -12,7 +12,13 @@ class ProductsController extends Controller
     public function home()
     {
         $categories = Category::all();
+
+        if (!empty($categories)) {
+
         return view('home', compact('categories'));
+
+        }
+            return view('home');
     }
 
     public function categoryPage($id)
@@ -25,17 +31,15 @@ class ProductsController extends Controller
 
     public function showAllProducts()
     {
-        $categories = Category::all();
-        return view('products.products',compact('categories'));
+
+        return view('products.products');
     }
 
     public function productsList(Request $request, ProductsSearch $productsSearch)
     {
-        $categories = Category::all();
-        $category = Category::all();
         $products = $productsSearch->search($request);
 
-        return view('products.productsList', compact('products','category', 'categories'));
+        return view('products.productsList', compact('products'));
 
     }
 

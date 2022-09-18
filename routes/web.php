@@ -47,7 +47,7 @@ Route::get('/register', [ClientController::class, 'register'])->name('register')
 Route::post('/register', [ClientController::class, 'salvar'])->name('salvar');
 Route::get('/entrar', [ClientController::class, 'login'])->name('login');
 Route::post('/entrar', [ClientController::class, 'entrar'])->name('entrar');
-
+Route::get('/logout', [ClientController::class, 'logout'])->name('logout');
 
 //Rotas extras que podem precisar de alguma manipulação
 Route::get('/eventos', [OthersController::class, 'events'])->name('events');
@@ -56,8 +56,4 @@ Route::get('/sobre', [OthersController::class, 'aboutus'])->name('aboutus');
 //Rota para acessar o perfil de usuário
 Route::get('/seu-espaco', 'App\Http\Controllers\ProfileController@dices')->name('dices');
 
-Route::get('/logout', function () 
-{
-    \Illuminate\Support|Facades\Auth::logout();
-    return redirect ('/');
-});
+

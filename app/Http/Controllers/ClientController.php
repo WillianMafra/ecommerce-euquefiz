@@ -46,11 +46,17 @@ class ClientController extends Controller
     public function entrar(Request $request)
     {
        if (!Auth::attempt($request->only(['email', 'password']))) {
-        return redirect ()
+        return redirect()
         ->back()
-        ->withErrors ('Usuário e/ou senha incorreta');
+        ->withErrors('Usuário e/ou senha incorretos');
        }
-       return redirect () ->route('home');
+       return redirect()->route('home');
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect ('/');
     }
 
 }

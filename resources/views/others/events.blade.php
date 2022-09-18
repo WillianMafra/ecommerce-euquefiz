@@ -1,5 +1,4 @@
 <!-- Lista de fotos de eventos passados e solicitar evento personalizado (com campo de observações) -->
-
 @extends('layouts.layout')
 @section('events')
 <section>
@@ -84,7 +83,7 @@
                     <div class="form-holder">
                         <div class="form-content">
                             <div class="form-items">
-                                <h3>SOLICITAR ORÇAMENTO</h>
+                                <h3>SOLICITAR ORÇAMENTO</h3>
                                     <form class="requires-validation" action="https://formsubmit.co/thiagowolter7@gmail.com" method="POST" novalidate>
 
                                         <div class="col-md-12">

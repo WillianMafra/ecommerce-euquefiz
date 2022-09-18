@@ -17,27 +17,24 @@ use Illuminate\Support\Str;
 class AdminController extends Controller
 
 {
-    public function management(Category $categories)
+    public function management()
     {
-        $categories = Category::all();
-        return view('admin.management.dashboard', compact('categories'));
+        return view('admin.management.dashboard');
     }
 
     public function list(Request $request, ProductsSearch $productsSearch)
     {
         $products = $productsSearch->search($request);
 
-        $categories = Category::all();
 
         $message = $request->session()->get('message');
         $request->session()->remove('message');
-        return view('admin.management.productsList', compact('message', 'products','categories'));
+        return view('admin.management.productsList', compact('message', 'products'));
     }
 
     public function createProduct()
     {
-        $categories = Category::all();
-        return view('admin.management.addProduct', compact('categories'));
+        return view('admin.management.addProduct');
     }
 
     public function storeProduct(ProductsStoreRequest $request, ProductValidation $productValidation, TransationMessage $transationMessage)
