@@ -55,5 +55,3 @@ Route::get('/sobre', [OthersController::class, 'aboutus'])->name('aboutus');
 
 //Rota para acessar o perfil de usuário
 Route::get('/seu-espaco', 'App\Http\Controllers\ProfileController@dices')->name('dices');
-
-
