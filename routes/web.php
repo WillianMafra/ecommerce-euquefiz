@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\OthersController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\AdminController;
@@ -54,4 +55,4 @@ Route::get('/eventos', [OthersController::class, 'events'])->name('events');
 Route::get('/sobre', [OthersController::class, 'aboutus'])->name('aboutus');
 
 //Rota para acessar o perfil de usuário
-Route::get('/seu-espaco', 'App\Http\Controllers\ProfileController@dices')->name('dices');
+Route::get('/seu-espaco', [ProfileController::class, 'dices'])->name('dices');
