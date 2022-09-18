@@ -20,18 +20,20 @@ use App\Http\Controllers\AdminController;
 |
 */
 //Rota para o admin fazer o gerenciamento do crud
-Route::get('/admin', [AdminController::class, 'management'])->name('management');
-Route::get('/admin/lista', [AdminController::class, 'list'])->name('list');
-Route::get('/admin/lista/Categorias', [AdminCategoryController::class, 'categoriesList'])->name('categoriesList');
-Route::get('/admin/categorias/inserirCategoria', [AdminCategoryController::class, 'createCategory'])->name('createCategory');
-Route::post('/admin/categorias/inserirCategoria', [AdminCategoryController::class, 'storeCategory'])->name('storeCategory');
-Route::delete('/admin/lista/{category}/apagar', [AdminCategoryController::class, 'destroyCategory'])->name('destroyCategory');
+Route::prefix('admin')->group(function (){
+    Route::get('/', [AdminController::class, 'management'])->name('management');
+    Route::get('/lista', [AdminController::class, 'list'])->name('list');
+    Route::get('/lista/Categorias', [AdminCategoryController::class, 'categoriesList'])->name('categoriesList');
+    Route::get('/categorias/inserirCategoria', [AdminCategoryController::class, 'createCategory'])->name('createCategory');
+    Route::post('/categorias/inserirCategoria', [AdminCategoryController::class, 'storeCategory'])->name('storeCategory');
+    Route::delete('/lista/{category}/apagar', [AdminCategoryController::class, 'destroyCategory'])->name('destroyCategory');
+    Route::get('/produtos/inserirProduto', [AdminController::class, 'createProduct'])->name('createProduct');
+    Route::post('/produtos/inserirProduto', [AdminController::class, 'storeProduct'])->name('storeProduct');
+    Route::get('/produtos/editarProduto/{product}', [AdminController::class, 'editProduct'])->name('editProduct');
+    Route::put('/produtos/editarProduto/{product}', [AdminController::class, 'updateProduct'])->name('updateProduct');
+    Route::delete('/lista/{product}/apagar', [AdminController::class, 'destroy'])->name('destroy');
+});
 
-Route::get('/admin/produtos/inserirProduto', [AdminController::class, 'createProduct'])->name('createProduct');
-Route::post('/admin/produtos/inserirProduto', [AdminController::class, 'storeProduct'])->name('storeProduct');
-Route::get('/admin/produtos/editarProduto/{product}', [AdminController::class, 'editProduct'])->name('editProduct');
-Route::put('/admin/produtos/editarProduto/{product}', [AdminController::class, 'updateProduct'])->name('updateProduct');
-Route::delete('/admin/lista/{product}/apagar', [AdminController::class, 'destroy'])->name('destroy');
 
 
 //Rota para exibir os produtos Para o usuário

@@ -31,7 +31,7 @@ class ClientController extends Controller
       $user = User::create($data);
       Auth::login($user);
 
-      return redirect () ->route('home');
+      return redirect ()->route('home');
 
     }
 

@@ -26,15 +26,17 @@ class AdminController extends Controller
     {
         $products = $productsSearch->search($request);
 
+        $categories = Category::all();
 
         $message = $request->session()->get('message');
         $request->session()->remove('message');
-        return view('admin.management.productsList', compact('message', 'products'));
+        return view('admin.management.productsList', compact('message', 'products','categories'));
     }
 
     public function createProduct()
     {
-        return view('admin.management.addProduct');
+        $categories = Category::all();
+        return view('admin.management.addProduct', compact('categories'));
     }
 
     public function storeProduct(ProductsStoreRequest $request, ProductValidation $productValidation, TransationMessage $transationMessage)

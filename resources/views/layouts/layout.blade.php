@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     @stack('style')
+    <link href="{{asset('storage/img/logo-design/LogoSemFundo.png')}}" rel="icon">
+    <link href="{{asset('storage/img/logo-design/LogoSemFundo.png')}}" rel="apple-touch-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="{{asset('css/form.css')}}">
@@ -19,7 +21,7 @@
     <header id="header" class="header fixed-top d-flex align-items-center pb-3">
         <div class="container d-flex align-items-center justify-content-between">
             <a href="{{route('home')}}" class="navbar-brand">
-                <img src="{{asset('storage/img/logo-design/Euquefizlogo.png')}}"  height="170px" alt="logo-eu-que-fiz">
+                <img src="{{asset('storage/img/logo-design/Euquefizlogo.png')}}" class="mt-4" width="110px" alt="logo-eu-que-fiz">
             </a>
             <nav id="navbar" class="navbar navbar-expand-sm ">
                 <ul>
@@ -86,7 +88,7 @@
 </main>
 <!-- ======= Footer ======= -->
 <footer id="footer" class="footer">
-    <div class="container">
+    <div class="container align-items-center">
         <div class="row gy-3">
             <div class="col-lg-3 col-md-6 d-flex">
                 <img width="30px" height="30px" src="{{asset('storage/img/icone/shopping-bag.png')}}" alt="endereço para contato">

@@ -27,7 +27,7 @@ class AdminCategoryController extends Controller
         $newCategory = $request->validated();
         $productValidation->validation($newCategory);
         Category::create($newCategory);
-        return Redirect::route('categoriesList');
+        return Redirect()->back();
 
     }
 
