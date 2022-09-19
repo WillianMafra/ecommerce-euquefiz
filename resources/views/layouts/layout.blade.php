@@ -22,6 +22,8 @@
         <div class="container d-flex align-items-center justify-content-between">
             <a href="{{route('home')}}" class="navbar-brand" >
                 <img src="{{asset('storage/img/logo-design/Euquefizlogo.png')}}"  class="mt-4 " width="150px" alt="logo-eu-que-fiz">
+
+                <img src="{{asset('storage/img/logo-design/Euquefizlogo.png')}}" class="mt-5" width="170px" alt="logo-eu-que-fiz">
             </a>
             <nav id="navbar" class="navbar navbar-expand-sm ">
                 <ul>
@@ -73,7 +75,7 @@
                     @endguest
                     @auth
                     <li><a href="{{route('dices')}}">Perfil</a></li>
-                    <li><a href="logout">Logout</a></li>
+                    <li><a href="{{route('logout')}}">Logout</a></li>
                     @endauth
                     <li>
                 </ul>
