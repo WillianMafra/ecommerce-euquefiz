@@ -12,5 +12,6 @@ class ProductValidation
             $newProduct['image'] = $imagepath;
         }
             return $newProduct;
+
     }
 }
