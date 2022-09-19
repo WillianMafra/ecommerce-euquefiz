@@ -69,9 +69,6 @@
     </nav>
 </header>
 @yield('adminDashboard')
-<footer id="footer" class="footer">
-    <div class="copyright" id="copyright"> &copy; Copyright <strong><span>Eu Que Fiz</span></strong></div>
-</footer>
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 <!-- JavaScript Bundle with Popper -->
 @stack('adminScript')

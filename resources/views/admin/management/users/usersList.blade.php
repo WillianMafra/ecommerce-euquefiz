@@ -13,7 +13,8 @@
                     <tr>
                         <th scope="col">Imagem</th>
                         <th scope="col">Nome</th>
-                        <th scope="col">Delete</th>
+                        <th scope="col">Promover</th>
+                        <th scope="col">Rebaixar</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -26,15 +27,25 @@
                             </td>
 
                             <td >{{ $user->name }}</td>
-{{--                            {{route('destroyCategory', $user->id)}}--}}
-                            <form method="POST" action="" onsubmit="return confirm('Deseja Remover {{addslashes($user->name)}}? Esta ação não poderá ser desfeita.')">
-                                @method('DELETE')
+                            <form method="POST" action="">
+                                @method('put')
                                 @csrf
                                 <td>
-                                    <button type="submit" class="border-0"><img src="{{asset('storage/img/icone/recycle-bin.png')}}" width="20px" alt="apagar item">
+                                    <a href="{{route('userDemoted', $user->id)}}"> onsubmit="return confirm('Deseja Rebaixar a Usuário {{addslashes($user->name)}}?')">
+                                    <button type="submit" class="border-0"><img src="{{asset('storage/img/icone/arrow-up.png')}}" width="20px" alt="apagar item">
                                     </button>
+                                    </a>
                                 </td>
+
+                            <td>
+                                <a href="{{route('userDemoted', $user->id)}}"> onsubmit="return confirm('Deseja Rebaixar a Usuário {{addslashes($user->name)}}?')">
+                                <button type="submit" class="border-0"><img src="{{asset('storage/img/icone/arrow-down.png')}}" width="20px" alt="apagar item">
+                                </button>
+                                </a>
+                                </td>
+
                             </form>
+
                         </tr>
                     @endforeach
                     </tbody>

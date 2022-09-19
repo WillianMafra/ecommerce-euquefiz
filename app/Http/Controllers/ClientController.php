@@ -35,7 +35,6 @@ class ClientController extends Controller
 
     }
 
-
     public function login()
     {
         $categories = Category::all();
