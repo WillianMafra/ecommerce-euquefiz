@@ -1,19 +1,14 @@
-.table {
-    color: red;
+#img-background {
+    background-image: url("../../../storage/img/logo-design/testebackground.png");
+    height: 300px;
 }
-.form-control{
+#background-formulario {
+    margin-top: -100px;
 
-    border:none;
-    padding-left:32px;
+    background-image: linear-gradient(to top, transparent 5%, #fff 70%), url("../../../storage/img/logo-design/Background-Avermelhado.png");
+    background-size: cover;
 }
-
-.form-control:focus{
-
-    border:none;
-    box-shadow:none;
+#register-body {
 }
 
-.green{
 
-    color:green;
-}
