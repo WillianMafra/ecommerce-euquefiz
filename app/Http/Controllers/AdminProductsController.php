@@ -23,13 +23,13 @@ class AdminProductsController extends Controller
 
         $message = $request->session()->get('message');
         $request->session()->remove('message');
-        return view('admin.management.productsList', compact('message', 'products','categories'));
+        return view('admin.management.products.productsList', compact('message', 'products','categories'));
     }
 
     public function createProduct()
     {
         $categories = Category::all();
-        return view('admin.management.addProduct', compact('categories'));
+        return view('admin.management.products.addProduct', compact('categories'));
     }
 
     public function storeProduct(ProductsStoreRequest $request, ProductValidation $productValidation, TransationMessage $transationMessage)
@@ -46,7 +46,7 @@ class AdminProductsController extends Controller
     }
     public function editProduct(Product $product)
     {
-        return view('admin.management.productEdit', ['product' => $product]);
+        return view('admin.management.products.productEdit', ['product' => $product]);
     }
 
     public function updateProduct(Product $product, ProductsStoreRequest $productsStoreRequest, ProductValidation $productValidation)

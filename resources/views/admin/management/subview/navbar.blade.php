@@ -4,7 +4,7 @@
         <li class="nav-item  bg-light">
             <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#"> <i class="bi bi-menu-button-wide "></i><span>Usuarios</span><i class="bi bi-chevron-down ms-auto"></i></a>
             <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                <li> <a href="#"><i class="bi bi-circle"></i><span>Listar Usuários</span></a></li>
+                <li> <a href="{{route('usersList')}}"><i class="bi bi-circle"></i><span>Listar Usuários</span></a></li>
             </ul>
         </li>
         <li class="nav-item bg-light ">

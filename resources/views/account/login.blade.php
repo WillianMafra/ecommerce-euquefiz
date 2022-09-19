@@ -23,7 +23,7 @@
                                     </div>
 
                                     <h5 class="fw-normal mb-3 pb-3 login-title">Entrar Na Conta</h5>
-
+                                    @include('account.subview.erros')
                                     <div class="form-outline mb-4">
                                         <input type="email" id="form2Example17" class="form-control form-control-lg" name="email"/>
                                         <label class="form-label" for="form2Example17">E-mail</label>

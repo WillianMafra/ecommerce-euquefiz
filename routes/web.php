@@ -30,8 +30,9 @@ Route::prefix('admin')->group(function (){
     //Fim dos Controllers Gerais - Admin
 
     //Gerenciamento dos Usuarios - Admin
-    Route::get('/lista', [AdminProductsController::class, 'list'])->name('list');
-    Route::get('/lista/usuarios', [AdminUserController::class, 'list'])->name('usersList');
+    Route::get('/lista/usuarios', [AdminUserController::class, 'usersList'])->name('usersList');
+    Route::put('/lista/usuarios/{id}', [AdminUserController::class, 'userPromotion'])->name('userPromotion');
+    Route::put('/lista/usuarios/{id}', [AdminUserController::class, 'userDemoted'])->name('userDemoted');
     //Fim do Gerenciamento dos Usuarios - Admin
 
     //Gerenciamento das Categorias - Admin
@@ -42,6 +43,7 @@ Route::prefix('admin')->group(function (){
     //Fim do Gerenciamento das Categorias - Admin
 
     //Gerenciamento dos Produtos - Admin
+    Route::get('/lista', [AdminProductsController::class, 'list'])->name('list');
     Route::get('/produtos/inserirProduto', [AdminProductsController::class, 'createProduct'])->name('createProduct');
     Route::post('/produtos/inserirProduto', [AdminProductsController::class, 'storeProduct'])->name('storeProduct');
     Route::get('/produtos/editarProduto/{product}', [AdminProductsController::class, 'editProduct'])->name('editProduct');

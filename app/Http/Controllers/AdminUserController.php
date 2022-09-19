@@ -12,4 +12,14 @@ class AdminUserController extends Controller
         $users = User::all();
         return view('admin.management.users.usersList', compact('users'));
     }
+
+    public function userPromotion(Request $request)
+    {
+        dd($request);
+    }
+
+    public function userDemoted()
+    {
+
+    }
 }
