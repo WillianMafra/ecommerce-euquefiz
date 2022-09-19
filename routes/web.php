@@ -22,6 +22,7 @@ use App\Http\Controllers\AdminController;
 //Rota para o admin fazer o gerenciamento do crud
 Route::prefix('admin')->group(function (){
     Route::get('/', [AdminController::class, 'management'])->name('management');
+    Route::get('/teste', [AdminController::class, 'teste'])->name('teste');
     Route::get('/lista', [AdminController::class, 'list'])->name('list');
     Route::get('/lista/Categorias', [AdminCategoryController::class, 'categoriesList'])->name('categoriesList');
     Route::get('/categorias/inserirCategoria', [AdminCategoryController::class, 'createCategory'])->name('createCategory');

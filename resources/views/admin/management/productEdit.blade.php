@@ -1,4 +1,5 @@
 @extends('admin.management.adminHeader')
+@include('admin.management.subview.navbar')
 <section id="formulario">
     <div class="col-md-6">
         <div class="card">

@@ -1,4 +1,5 @@
 @extends('admin.management.adminHeader')
+@include('admin.management.subview.navbar')
 <section id="products">
     <div class="col-xs-4 col-sm-6">
         <div class="card">
