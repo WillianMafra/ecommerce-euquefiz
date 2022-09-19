@@ -11,7 +11,7 @@
                             <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-img">
-                                        <img src="{{asset('storage/img/events/events-1.jpg')}}" class="img-fluid" alt="evento-culinario">
+                                        <img src="{{asset('img/events/events-1.jpg')}}" class="img-fluid" alt="evento-culinario">
                                     </div>
                                 </div>
                             </div>
@@ -20,7 +20,7 @@
                             <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-img">
-                                        <img src="{{asset('storage/img/events/events-2.jpg')}}" class="img-fluid" alt="evento-culinario">
+                                        <img src="{{asset('img/events/events-2.jpg')}}" class="img-fluid" alt="evento-culinario">
                                     </div>
                                 </div>
                             </div>
@@ -29,7 +29,7 @@
                             <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-img">
-                                        <img src="{{asset('storage/img/events/events-3.jpg')}}" class="img-fluid" alt="evento-culinario">
+                                        <img src="{{asset('img/events/events-3.jpg')}}" class="img-fluid" alt="evento-culinario">
                                     </div>
                                 </div>
                             </div>
@@ -38,7 +38,7 @@
                             <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-img">
-                                        <img src="{{asset('storage/img/events/events-1.jpg')}}" class="img-fluid" alt="evento-culinario">
+                                        <img src="{{asset('img/events/events-1.jpg')}}" class="img-fluid" alt="evento-culinario">
                                     </div>
                                 </div>
                             </div>
@@ -47,7 +47,7 @@
                             <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-img">
-                                        <img src="{{asset('storage/img/events/events-2.jpg')}}" class="img-fluid" alt="evento-culinario">
+                                        <img src="{{asset('img/events/events-2.jpg')}}" class="img-fluid" alt="evento-culinario">
                                     </div>
                                 </div>
                             </div>
@@ -56,7 +56,7 @@
                             <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-img">
-                                        <img src="{{asset('storage/img/events/events-3.jpg')}}" class="img-fluid" alt="evento-culinario">
+                                        <img src="{{asset('img/events/events-3.jpg')}}" class="img-fluid" alt="evento-culinario">
                                     </div>
                                 </div>
                             </div>
@@ -81,7 +81,7 @@
                         <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
                             <div class="chef-member">
                                 <div class="member-img">
-                                    <img src="{{asset('storage/img/chefs/walter-white.jpg')}}" class="img-fluid" alt="master chef">
+                                    <img src="{{asset('img/chefs/walter-white.jpg')}}" class="img-fluid" alt="master chef">
                                         <div class="social">
                                             <a href=""><i class="bi bi-twitter"></i></a>
                                             <a href=""><i class="bi bi-facebook"></i></a>
@@ -100,7 +100,7 @@
                         <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
                             <div class="chef-member">
                                 <div class="member-img">
-                                    <img src="{{asset('storage/img/chefs/jesse.jpg')}}" class="img-fluid" alt="master chef">
+                                    <img src="{{asset('img/chefs/jesse.jpg')}}" class="img-fluid" alt="master chef">
                                         <div class="social">
                                             <a href=""><i class="bi bi-twitter"></i></a>
                                             <a href=""><i class="bi bi-facebook"></i></a>
@@ -119,7 +119,7 @@
                         <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
                             <div class="chef-member">
                                 <div class="member-img">
-                                    <img src="{{asset('storage/img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
+                                    <img src="{{asset('img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
                                         <div class="social">
                                             <a href=""><i class="bi bi-twitter"></i></a>
                                             <a href=""><i class="bi bi-facebook"></i></a>

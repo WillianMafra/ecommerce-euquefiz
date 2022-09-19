@@ -156,7 +156,7 @@
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <th scope="row"><a href="#"><img src="{{asset('storage/img/pratos/feijoada.jpg')}}" alt=""></a></th>
+                                        <th scope="row"><a href="#"><img src="{{asset('img/pratos/feijoada.jpg')}}" alt=""></a></th>
                                         <td><a href="#" class="text-primary fw-bold">Ut inventore ipsa voluptas nulla</a></td>
                                         <td>R$64</td>
                                         <td class="fw-bold">124</td>

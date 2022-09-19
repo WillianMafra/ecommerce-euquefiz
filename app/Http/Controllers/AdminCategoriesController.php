@@ -25,7 +25,7 @@ class AdminCategoriesController extends Controller
     public function storeCategory(CategoryStoreRequest $request, ProductValidation $productValidation)
     {
         $newCategory = $request->validated();
-        $productValidation->validation($newCategory);
+        $newCategory['image'] = $productValidation->validation($newCategory);
         Category::create($newCategory);
         return Redirect()->back();
 

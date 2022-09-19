@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     @stack('style')
-    <link href="{{asset('storage/img/logo-design/LogoSemFundo.png')}}" rel="icon">
-    <link href="{{asset('storage/img/logo-design/LogoSemFundo.png')}}" rel="apple-touch-icon">
+    <link href="{{asset('img/logo-design/LogoSemFundo.png')}}" rel="icon">
+    <link href="{{asset('img/logo-design/LogoSemFundo.png')}}" rel="apple-touch-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="{{asset('css/form.css')}}">
@@ -21,9 +21,8 @@
     <header id="header" class="header fixed-top d-flex align-items-center pb-3">
         <div class="container d-flex align-items-center justify-content-between">
             <a href="{{route('home')}}" class="navbar-brand" >
-                <img src="{{asset('storage/img/logo-design/Euquefizlogo.png')}}"  class="mt-4 " width="150px" alt="logo-eu-que-fiz">
 
-                <img src="{{asset('storage/img/logo-design/Euquefizlogo.png')}}" class="mt-5" width="170px" alt="logo-eu-que-fiz">
+                <img src="{{asset('img/logo-design/Euquefizlogo.png')}}" class="mt-5" width="170px" alt="logo-eu-que-fiz">
             </a>
             <nav id="navbar" class="navbar navbar-expand-sm ">
                 <ul>
@@ -59,7 +58,7 @@
                     <li><a href="{{route('management')}}">Admin</a></li>
                     <li>
                         <a href="#">
-                            <img src="{{asset('storage/img/icone/shopping-bag.png')}}" alt="icone-carrinho" width="30" height="25">
+                            <img src="{{asset('img/icone/shopping-bag.png')}}" alt="icone-carrinho" width="30" height="25">
                         </a>
                     </li>
                     @guest
@@ -80,8 +79,8 @@
                     <li>
                 </ul>
             </nav>
-            <img width="30px" src="{{asset('storage/img/icone/dropdown.png')}}" class="mobile-nav-toggle mobile-nav-show bi bi-list" alt="abrir menu">
-            <img src="{{asset('storage/img/icone/dropdown.png')}}" width="20px" class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x" alt="fechar-menu">
+            <img width="30px" src="{{asset('img/icone/dropdown.png')}}" class="mobile-nav-toggle mobile-nav-show bi bi-list" alt="abrir menu">
+            <img src="{{asset('img/icone/dropdown.png')}}" width="20px" class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x" alt="fechar-menu">
         </div>
     </header>
     @yield('gallery')
@@ -94,7 +93,7 @@
     <div class="container align-items-center">
         <div class="row gy-3">
             <div class="col-lg-3 col-md-6 d-flex">
-                <img width="30px" height="30px" src="{{asset('storage/img/icone/shopping-bag.png')}}" alt="endereço para contato">
+                <img width="30px" height="30px" src="{{asset('img/icone/shopping-bag.png')}}" alt="endereço para contato">
                 <div>
                     <h4>Endereço</h4>
                     <p>
@@ -104,7 +103,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 footer-links d-flex">
-                <img  width="30px" height="30px"  src="{{asset('storage/img/icone/shopping-bag.png')}}" alt="contato para reservas">
+                <img  width="30px" height="30px"  src="{{asset('img/icone/shopping-bag.png')}}" alt="contato para reservas">
                 <div>
                     <h4>Reservas</h4>
                     <p>
@@ -114,7 +113,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 footer-links d-flex">
-                <img  width="30px" height="30px" src="{{asset('storage/img/icone/shopping-bag.png')}}" alt="horário de funcionamento">
+                <img  width="30px" height="30px" src="{{asset('img/icone/shopping-bag.png')}}" alt="horário de funcionamento">
                 <div>
                     <h4>Horário de Abertura</h4>
                     <p>
@@ -127,15 +126,15 @@
                 <h4>Nós Siga</h4>
                 <div class="d-flex">
                     <a href="#" >
-                        <img class="icone" src="{{asset('storage/img/icone/twitter-icone.png')}}" alt="icone do twitter"></a>
+                        <img class="icone" src="{{asset('img/icone/twitter-icone.png')}}" alt="icone do twitter"></a>
                     <a href="#">
-                        <img class="icone" src="{{asset('storage/img/icone/github-icone.png')}}" alt="icone do github">
+                        <img class="icone" src="{{asset('/img/icone/github-icone.png')}}" alt="icone do github">
                     </a>
                     <a href="#">
-                        <img class="icone" src="{{asset('storage/img/icone/linkedin-icone.png')}}" alt="icone do linkedin">
+                        <img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin">
                     </a>
                     <a href="#">
-                        <img class="icone" src="{{asset('storage/img/icone/instagram-icone.png')}}" alt="icone do instagram">
+                        <img class="icone" src="{{asset('img/icone/instagram-icone.png')}}" alt="icone do instagram">
                     </a>
                 </div>
             </div>
@@ -143,7 +142,7 @@
     </div>
 </footer>
 <!-- End Footer -->
-<input type="image" src="{{asset('storage/img/icone/scrollup.png')}}" id="bottonUp"  class="scroll-top d-flex align-items-center justify-content-center" alt="subir para o topo da página">
+<input type="image" src="{{asset('img/icone/scrollup.png')}}" id="bottonUp"  class="scroll-top d-flex align-items-center justify-content-center" alt="subir para o topo da página">
 {{--<div id="preloader"></div>--}}
 <!-- JavaScript Bundle with Popper -->
 @stack('scripts')

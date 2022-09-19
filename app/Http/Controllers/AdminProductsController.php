@@ -35,7 +35,8 @@ class AdminProductsController extends Controller
     public function storeProduct(ProductsStoreRequest $request, ProductValidation $productValidation, TransationMessage $transationMessage)
     {
         $newProduct = $request->validated();
-        $productValidation->validation($newProduct);
+        $newProduct['image'] = $productValidation->validation($newProduct);
+
         $newProduct['slug'] = Str::slug($newProduct['product_name']);
         $newProduct['category_id'] = $request->category;
         Product::create($newProduct);

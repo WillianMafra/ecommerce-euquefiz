@@ -20,7 +20,7 @@
                     @foreach ($categories as $category)
                         <tr>
                             <td> @if (!empty($category->image))
-                                        {{$category->image}}
+                                        <img src="{{asset($category->image)}}" class="img-thumbnail" width="75px">
                                 @else <p class="text-danger">Imagem Indisponível</p>
                                  @endif
                             </td>

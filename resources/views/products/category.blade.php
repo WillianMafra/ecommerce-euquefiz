@@ -14,7 +14,7 @@
                 <div class="col-md-3">
                     <div class="card p-3">
                         <div class="text-center">
-                            <img src="{{asset('storage/img/menu/menu-item-1.png')}}" width="200" alt="{{$prod->product_name}}">
+                            <img src="{{asset('img/menu/menu-item-1.png')}}" width="200" alt="{{$prod->product_name}}">
                         </div>
 
                         <div class="product-details">
@@ -23,7 +23,7 @@
                             <span>{{$prod->product_name}}</span>
 
                             <div class="buttons d-flex flex-row">
-                                <div class="cart"><img width="30px" src="{{asset('storage/img/icone/shopping-bag2.png')}}" alt="adicionar-ao-carrinho"></div><button class="btn btn-success cart-button btn-block"><span class="dot"></span>Add to cart </button>
+                                <div class="cart"><img width="30px" src="{{asset('img/icone/shopping-bag2.png')}}" alt="adicionar-ao-carrinho"></div><button class="btn btn-success cart-button btn-block"><span class="dot"></span>Add to cart </button>
                             </div>
 
                             <div class="weight">
