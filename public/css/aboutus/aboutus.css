@@ -26,7 +26,7 @@
     /* text-transform: uppercase; */
     font-family: pacifico;
     letter-spacing: 1.5px;
-    margin-top: 80px;
+    margin-top: 125px;
 }
 
 .h1-about:after{
@@ -44,6 +44,7 @@
     border: 4px solid #fff;
     border-radius: 50%;
     margin-top: 30px;
+    transition: transform 0.4s ease;
 }
 .about-img:hover{
     -webkit-transform: scale(1.1);

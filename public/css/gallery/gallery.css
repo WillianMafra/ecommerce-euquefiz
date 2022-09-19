@@ -1,0 +1,95 @@
+.h1-gallery{
+    font-size: 50px;
+    font-weight: 800;
+    /* text-transform: uppercase; */
+    font-family: pacifico;
+    letter-spacing: 1.5px;
+    margin-top: 125px;
+    text-align: center;
+    color: white;
+}
+
+.h1-gallery:after{
+    content: "";
+    height: 5px;
+    width: 225px;
+    background-color: #a90000;
+    display: block;
+    margin:auto;
+    margin-bottom: 50px;
+}
+.testimonial{
+    padding: 30px 100px;
+
+}
+.gallery-image {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 100%;
+    width: 100%;
+    background: rgba(3, 3, 3, 0.2);
+  }
+  
+  .gallery-image img {
+    height: 300px;
+    width: 400px;
+    transform: scale(1.0);
+    transition: transform 0.4s ease;
+  }
+  
+  .img-caixa {
+    box-sizing: content-box;
+    margin: 10px;
+    height: 300px;
+    width: 400px;
+    overflow: hidden;
+    display: inline-block;
+    color: white;
+    position: relative;
+    background-color: white;
+  }
+  
+  .caption {
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+    opacity: 0.0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .transparent-caixa {
+    height: 300px;
+    width: 400px;
+    background-color:rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .img-caixa:hover img { 
+    transform: scale(1.1);
+  }
+  
+  .img-caixa:hover .transparent-caixa {
+    background-color:rgba(105, 105, 105, 0.3);
+  }
+  
+  .img-caixa:hover .caption {
+    transform: translateY(-20px);
+    opacity: 1.0;
+  }
+  
+  .img-caixa:hover {
+    cursor: pointer;
+  }
+  
+  .caption > p:nth-child(2) {
+    font-size: 0.8em;
+  }
+  
+  .opacity-low {
+    opacity: 0.5;
+  }
