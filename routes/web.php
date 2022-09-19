@@ -72,6 +72,7 @@ Route::get('/logout', [ClientController::class, 'logout'])->name('logout');
 //Rotas extras que podem precisar de alguma manipulação
 Route::get('/eventos', [OthersController::class, 'events'])->name('events');
 Route::get('/sobre', [OthersController::class, 'aboutus'])->name('aboutus');
+Route::get('/galeria', [OthersController::class, 'gallery'])->name('gallery');
 
 //Rota para acessar o perfil de usuário
 Route::get('/seu-espaco', [ProfileController::class, 'dices'])->name('dices');

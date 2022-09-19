@@ -14,4 +14,8 @@ class OthersController extends Controller
     {
         return view('others.events');
     }
+    public function gallery()
+    {
+        return view('others.gallery');
+    }
 }

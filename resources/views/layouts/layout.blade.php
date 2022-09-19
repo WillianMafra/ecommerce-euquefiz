@@ -40,7 +40,7 @@
                         </ul>
                     </li>
                     <li><a href="{{route('events')}}">Eventos</a></li>
-                    <li><a href="">Galeria</a></li>
+                    <li><a href="{{route('gallery')}}">Galeria</a></li>
                     <li><a href="{{route('aboutus')}}">Sobre</a></li>
                     <li class="dropdown">
                         <a href="#"><span>Devs</span>
@@ -84,6 +84,7 @@
             <img src="{{asset('storage/img/icone/dropdown.png')}}" width="20px" class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x" alt="fechar-menu">
         </div>
     </header>
+    @yield('gallery')
     @yield('aboutus')
     @yield('events')
     @yield('chefs')
