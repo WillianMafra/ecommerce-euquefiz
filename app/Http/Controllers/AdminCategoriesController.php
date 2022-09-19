@@ -7,19 +7,19 @@ use App\Models\Category;
 use App\Service\ProductValidation;
 use Illuminate\Support\Facades\Redirect;
 
-class AdminCategoryController extends Controller
+class AdminCategoriesController extends Controller
 {
 
     public function categoriesList()
     {
         $categories = Category::all();
-        return view('admin.management.categoriesList', compact('categories'));
+        return view('admin.management.categories.categoriesList', compact('categories'));
     }
 
     public function createCategory()
     {
         $categories = Category::all();
-        return view('admin.management.addCategory', compact('categories'));
+        return view('admin.management.categories.addCategory', compact('categories'));
     }
 
     public function storeCategory(CategoryStoreRequest $request, ProductValidation $productValidation)
