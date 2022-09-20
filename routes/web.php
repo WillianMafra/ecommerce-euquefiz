@@ -31,8 +31,8 @@ Route::prefix('admin')->group(function (){
 
     //Gerenciamento dos Usuarios - Admin
     Route::get('/lista/usuarios', [AdminUserController::class, 'usersList'])->name('usersList');
-    Route::put('/lista/usuarios/{id}', [AdminUserController::class, 'userPromotion'])->name('userPromotion');
-    Route::put('/lista/usuarios/{id}', [AdminUserController::class, 'userDemoted'])->name('userDemoted');
+    Route::put('/lista/usuarios/promover/{id}', [AdminUserController::class, 'userPromotion'])->name('userPromotion');
+    Route::put('/lista/usuarios/rebaixar/{id}', [AdminUserController::class, 'userDemoted'])->name('userDemoted');
     //Fim do Gerenciamento dos Usuarios - Admin
 
     //Gerenciamento das Categorias - Admin

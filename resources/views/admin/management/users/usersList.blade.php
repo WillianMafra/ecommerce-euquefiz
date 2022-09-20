@@ -7,7 +7,7 @@
                 @if(!empty($message))
                     <div class="text-white alert alert-success bg-success text-center">{{$message}}</div>
                 @endif
-                <h5 class="card-title text-center">Lista de Categorias</h5>
+                <h5 class="card-title text-center">Lista de Usuarios</h5>
                 <table class="table table-striped table-hover ">
                     <thead>
                     <tr>
@@ -21,7 +21,7 @@
                     @foreach ($users as $user)
                         <tr>
                             <td> @if (!empty($user->image))
-                                    {{$user->image}}
+                                    <img src="{{asset($user->image)}}" alt="imagem-de-perfil">
                                 @else <p class="text-danger">Imagem Indisponível</p>
                                 @endif
                             </td>
@@ -31,18 +31,22 @@
                                 @method('put')
                                 @csrf
                                 <td>
-                                    <a href="{{route('userDemoted', $user->id)}}"> onsubmit="return confirm('Deseja Rebaixar a Usuário {{addslashes($user->name)}}?')">
-                                    <button type="submit" class="border-0"><img src="{{asset('storage/img/icone/arrow-up.png')}}" width="20px" alt="apagar item">
-                                    </button>
-                                    </a>
+                                        <button
+                                            type="submit" name="userPromotion"
+                                            formaction="{{route('userPromotion', $user->id)}}"
+                                            class="border-0">
+                                            <img src="{{asset('img/icone/arrow-up.png')}}" width="20px" alt="promover usuario"  onsubmit="return confirm('Deseja Rebaixar a Usuário {{addslashes($user->name)}}?')">
+                                        </button>
                                 </td>
 
-                            <td>
-                                <a href="{{route('userDemoted', $user->id)}}"> onsubmit="return confirm('Deseja Rebaixar a Usuário {{addslashes($user->name)}}?')">
-                                <button type="submit" class="border-0"><img src="{{asset('storage/img/icone/arrow-down.png')}}" width="20px" alt="apagar item">
-                                </button>
-                                </a>
-                                </td>
+                                <td>
+                                        <button
+                                            type="submit" name="userDemoted"
+                                            formaction="{{route('userDemoted', $user->id)}}"
+                                            class="border-0">
+                                            <img src="{{asset('img/icone/arrow-down.png')}}" width="20px" alt="rebaixar-usuario"  onsubmit="return confirm('Deseja Rebaixar a Usuário {{addslashes($user->name)}}?')">
+                                        </button>
+                                    </td>
 
                             </form>
 

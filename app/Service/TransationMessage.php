@@ -2,7 +2,6 @@
 
 namespace App\Service;
 
-use App\Models\Product;
 use Illuminate\Http\Request;
 
 
@@ -23,6 +22,24 @@ class TransationMessage
             ->flash(
                 'message',
                 "Produto {$product['product_name']} Inserido no Banco de Dados"
+            );
+    }
+
+    public function userPromotionMessage(Request $request, $userName)
+    {
+        $request->session()
+            ->flash(
+                'message',
+                "{$userName} Se tornou Administrador"
+            );
+    }
+
+    public function userDemotedMessage(Request $request, $userName)
+    {
+        $request->session()
+            ->flash(
+                'message',
+                "Usuário {$userName} Se tornou User Comum"
             );
     }
 }
