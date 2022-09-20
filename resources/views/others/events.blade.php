@@ -12,7 +12,7 @@
                         <div class="col-md-4">
                             <div class="card">
                                 <div class="card-img">
-                                    <img src="{{asset('storage/img/events/events-1.jpg')}}" class="img-fluid" alt="evento-culinario">
+                                    <img src="{{asset('img/events/events-1.jpg')}}" class="img-fluid" alt="evento-culinario">
                                 </div>
                             </div>
                         </div>
@@ -21,7 +21,7 @@
                         <div class="col-md-4">
                             <div class="card">
                                 <div class="card-img">
-                                    <img src="{{asset('storage/img/events/events-2.jpg')}}" class="img-fluid" alt="evento-culinario">
+                                    <img src="{{asset('img/events/events-2.jpg')}}" class="img-fluid" alt="evento-culinario">
                                 </div>
                             </div>
                         </div>
@@ -30,7 +30,7 @@
                         <div class="col-md-4">
                             <div class="card">
                                 <div class="card-img">
-                                    <img src="{{asset('storage/img/events/events-3.jpg')}}" class="img-fluid" alt="evento-culinario">
+                                    <img src="{{asset('img/events/events-3.jpg')}}" class="img-fluid" alt="evento-culinario">
                                 </div>
                             </div>
                         </div>
@@ -39,7 +39,7 @@
                         <div class="col-md-4">
                             <div class="card">
                                 <div class="card-img">
-                                    <img src="{{asset('storage/img/events/events-1.jpg')}}" class="img-fluid" alt="evento-culinario">
+                                    <img src="{{asset('img/events/events-1.jpg')}}" class="img-fluid" alt="evento-culinario">
                                 </div>
                             </div>
                         </div>
@@ -48,7 +48,7 @@
                         <div class="col-md-4">
                             <div class="card">
                                 <div class="card-img">
-                                    <img src="{{asset('storage/img/events/events-2.jpg')}}" class="img-fluid" alt="evento-culinario">
+                                    <img src="{{asset('img/events/events-2.jpg')}}" class="img-fluid" alt="evento-culinario">
                                 </div>
                             </div>
                         </div>
@@ -57,7 +57,7 @@
                         <div class="col-md-4">
                             <div class="card">
                                 <div class="card-img">
-                                    <img src="{{asset('storage/img/events/events-3.jpg')}}" class="img-fluid" alt="evento-culinario">
+                                    <img src="{{asset('img/events/events-3.jpg')}}" class="img-fluid" alt="evento-culinario">
                                 </div>
                             </div>
                         </div>

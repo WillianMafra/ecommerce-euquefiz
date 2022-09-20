@@ -10,6 +10,10 @@ class OthersController extends Controller
     {
         return view('others.aboutus');
     }
+    public function carShopping()
+    {
+        return view('products.carShopping.carShopping');
+    }
     public function events()
     {
         return view('others.events');

@@ -57,7 +57,7 @@
                     </li>
                     <li><a href="{{route('management')}}">Admin</a></li>
                     <li>
-                        <a href="#">
+                        <a href="{{route('carShopping')}}">
                             <img src="{{asset('img/icone/shopping-bag.png')}}" alt="icone-carrinho" width="30" height="25">
                         </a>
                     </li>

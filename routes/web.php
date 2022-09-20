@@ -72,6 +72,8 @@ Route::get('/logout', [ClientController::class, 'logout'])->name('logout');
 
 //Rotas extras que podem precisar de alguma manipulação
 Route::get('/eventos', [OthersController::class, 'events'])->name('events');
+Route::get('/carrinho', [OthersController::class, 'carShopping'])->name('carShopping');
+
 Route::get('/sobre', [OthersController::class, 'aboutus'])->name('aboutus');
 Route::get('/galeria', [OthersController::class, 'gallery'])->name('gallery');
 
