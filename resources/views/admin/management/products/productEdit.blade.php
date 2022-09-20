@@ -13,7 +13,7 @@
                         <div class="row mb-3">
                             <label for="product_name" class="col-sm-2 col-form-label">Nome</label>
                             <div class="col-sm-10">
-                                <input type="text" name="product_name" class="form-control" value="{{ old('product_name') }}"></div>
+                                <input type="text" name="product_name" class="form-control" value="{{ ($product->product_name)}}"></div>
                             @error('product_name')
                             <small class="bg-danger text-white w-25 rounded" role="alert">Nome Inválido</small>
                             @enderror
@@ -21,7 +21,7 @@
                         <div class="row mb-3">
                             <label for="price" class="col-sm-2 col-form-label">Preço R$</label>
                             <div class="col-sm-10">
-                                <input type="number" step="any" name="price" class="form-control" value="{{ old('price') }}"></div>
+                                <input type="number" step="any" name="price" class="form-control" value="{{ ($product->price)}}"></div>
                             @error('price')
                             <small class="bg-danger text-white w-25 rounded" role="alert">Preço Inválido</small>
                             @enderror
@@ -29,7 +29,7 @@
                         <div class="row mb-3">
                             <label for="stock" class="col-sm-2 col-form-label">Estoque</label>
                             <div class="col-sm-10">
-                                <input type="number" name="stock" class="form-control" value="{{ old('stock') }}"></div>
+                                <input type="number" name="stock" class="form-control" value="{{($product->stock) }}"></div>
                             @error('stock')
                             <small class="bg-danger text-white w-25 rounded" role="alert">Estoque Inválido</small>
                             @enderror
@@ -41,10 +41,19 @@
                                 <small class="bg-danger text-white w-25 rounded" role="alert">{{$message}}</small>
                                 @enderror
                             </div>
+                            @if($product->image)
+                                <div class="p-2 w-full">
+                                    <img class="object-cover w-2/5"
+                                         src="{{asset($product->image)}}" width="100px"
+                                         alt="product-image">
+                                    <a class="mt-3 text-indigo-500 inline-flex items-center" href="{{route('destroyImage',$product->id)}}">Deletar imagem
+                                    </a>
+                                </div>
+                            @endif
                         </div>
                         <div class="row mb-3">
                             <label for="description" class="col-sm-2 col-form-label">Descrição</label>
-                            <div class="col-sm-10"><textarea name="description" class="form-control" style="height: 70px">{{ old('description') }}</textarea>
+                            <div class="col-sm-10"><textarea name="description" class="form-control" style="height: 70px">{{ $product->description }}</textarea>
                                 @error('description')
                                 <small class="bg-danger text-white w-25 rounded" role="alert">Descrição Inválida</small>
                                 @enderror

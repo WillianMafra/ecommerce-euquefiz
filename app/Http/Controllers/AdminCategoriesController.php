@@ -6,6 +6,7 @@ use App\Http\Requests\CategoryStoreRequest;
 use App\Models\Category;
 use App\Service\ProductValidation;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Storage;
 
 class AdminCategoriesController extends Controller
 {
@@ -25,15 +26,16 @@ class AdminCategoriesController extends Controller
     public function storeCategory(CategoryStoreRequest $request, ProductValidation $productValidation)
     {
         $newCategory = $request->validated();
-        $productValidation->validation($newCategory);
+        $newCategory['image'] = $productValidation->categoryImageValidation($newCategory);
         Category::create($newCategory);
-        return Redirect()->back();
+        return Redirect::route('categoriesList');
 
     }
 
     public function destroyCategory(Category $category)
     {
         $category->delete();
+        Storage::delete($category->image ?? '');
         return Redirect::route('categoriesList');
     }
 }

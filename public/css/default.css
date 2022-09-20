@@ -24,8 +24,7 @@ html {
 
 }
 #home-page{
-    background-image: url("../storage/img/logo-design/testebackground.png");
-
+    background-image: url("../img/logo-design/BackgroundComLogo.png");
 }
 
 a {
@@ -229,7 +228,7 @@ section {
     padding-top: 50px;
     max-height: 180px;
     margin-right: 40px;
-    
+
 }
 
 .header .logo h1 {
@@ -680,7 +679,7 @@ section {
     bottom: 0;
     height: 100%;
     width: 100%;
-    background-image:url("../storage/img/logo-design/teamShape.svg");
+    background-image:url("../img/logo-design/teamShape.svg");
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: contain;

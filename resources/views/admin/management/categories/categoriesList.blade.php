@@ -20,7 +20,7 @@
                     @foreach ($categories as $category)
                         <tr>
                             <td> @if (!empty($category->image))
-                                        {{$category->image}}
+                                        <img src="{{asset($category->image)}}" class="img-thumbnail w-25" >
                                 @else <p class="text-danger">Imagem Indisponível</p>
                                  @endif
                             </td>
@@ -31,7 +31,7 @@
                                 @method('DELETE')
                                 @csrf
                                 <td>
-                                    <button type="submit" class="border-0"><img src="{{asset('storage/img/icone/recycle-bin.png')}}" width="20px" alt="apagar item">
+                                    <button type="submit" class="border-0"><img src="{{asset('img/icone/recycle-bin.png')}}" width="20px" alt="apagar item">
                                     </button>
                                 </td>
                             </form>

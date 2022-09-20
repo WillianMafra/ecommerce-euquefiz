@@ -2,18 +2,17 @@
 
 namespace App\Service;
 
-use App\Models\Product;
 use Illuminate\Http\Request;
 
 
 class TransationMessage
 {
-    public function returnDestroyProductMessage(Request $request, Product $product)
+    public function returnDestroyProductMessage(Request $request, $productName)
     {
         $request->session()
             ->flash(
                 'message',
-                "Produto {$product['product_name']} Removido do Banco de Dados"
+                "Produto {$productName} Removido do Banco de Dados"
             );
     }
 
@@ -23,6 +22,24 @@ class TransationMessage
             ->flash(
                 'message',
                 "Produto {$product['product_name']} Inserido no Banco de Dados"
+            );
+    }
+
+    public function userPromotionMessage(Request $request, $userName)
+    {
+        $request->session()
+            ->flash(
+                'message',
+                "{$userName} Se tornou Administrador"
+            );
+    }
+
+    public function userDemotedMessage(Request $request, $userName)
+    {
+        $request->session()
+            ->flash(
+                'message',
+                "Usuário {$userName} Se tornou User Comum"
             );
     }
 }

@@ -43,7 +43,7 @@
                     <div class="row gy-5">
 
                         <div class="col-lg-4 menu-item">
-                            <a href="" class="glightbox"><img src="{{asset('storage/img/cardapio/congelados/bolinho de aipim.jpg')}}" class="menu-img img-fluid" alt=""></a>
+                            <a href="" class="glightbox"><img src="{{asset('img/cardapio/congelados/bolinho de aipim.jpg')}}" class="menu-img img-fluid" alt=""></a>
                             <h4>Bolinho de Aipim</h4>
                             <p class="ingredients">
                                 Aipim, carne seca desfiada
@@ -52,10 +52,10 @@
                                 R$10,00
                             </p>
                         </div><!-- Menu Item -->
-                        
+
 
                         <div class="col-lg-4 menu-item">
-                            <a href="" class="glightbox"><img src="{{asset('storage/img/cardapio/lanches/pizzas brotinho.jpeg')}}" class="menu-img img-fluid" alt=""></a>
+                            <a href="" class="glightbox"><img src="{{asset('img/cardapio/lanches/pizzas brotinho.jpeg')}}" class="menu-img img-fluid" alt=""></a>
                             <h4>Pizza Brotinho</h4>
                             <p class="ingredients">
                                 Mussarela, calabresa, bacon, abobrinha c/ alho, frango c/ catupiri, brocolis
@@ -76,7 +76,7 @@
                     <div class="row gy-5">
 
                         <div class="col-lg-4 menu-item">
-                            <a href="" class="glightbox"><img src="{{asset('storage/img/cardapio/low-carb/pães low carb.jpeg')}}" class="menu-img img-fluid" alt=""></a>
+                            <a href="" class="glightbox"><img src="{{asset('img/cardapio/low-carb/pães low carb.jpeg')}}" class="menu-img img-fluid" alt=""></a>
                             <h4>Pães low-carb</h4>
                             <p class="ingredients">
                                 Castanhas, farinha de coco, parmesão(gluten free)
@@ -99,7 +99,7 @@
                     <div class="row gy-5">
 
                     <div class="col-lg-4 menu-item">
-                            <a href="" class="glightbox"><img src="{{asset('storage/img/cardapio/congelados/feijoada.jpg')}}" class="menu-img img-fluid" alt=""></a>
+                            <a href="" class="glightbox"><img src="{{asset('img/cardapio/congelados/feijoada.jpg')}}" class="menu-img img-fluid" alt=""></a>
                             <h4>Feijoada</h4>
                             <p class="ingredients">
                                 Feijoada, arroz, couve, farofa, salada
@@ -121,7 +121,7 @@
                     <div class="row gy-5">
 
                     <div class="col-lg-4 menu-item">
-                            <a href="" class="glightbox"><img src="{{asset('storage/img/cardapio/sopas/sopa de legumes.jpg')}}" class="menu-img img-fluid" alt=""></a>
+                            <a href="" class="glightbox"><img src="{{asset('img/cardapio/sopas/sopa de legumes.jpg')}}" class="menu-img img-fluid" alt=""></a>
                             <h4>Sopa de legumes</h4>
                             <p class="ingredients">
                                 Vegetais, carne

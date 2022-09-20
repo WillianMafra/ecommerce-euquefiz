@@ -9,7 +9,7 @@
                 <div class="card" style="border-radius: 1rem;">
                     <div class="row g-0">
                         <div class="col-md-6 col-lg-5 d-none d-md-block">
-                            <img src="{{asset('storage/img/logo-design/Prato.jpg')}}"
+                            <img src="{{asset('img/logo-design/Prato.jpg')}}"
                                  alt="login form" class="img-fluid"/>
                         </div>
                         <div class="col-md-6 col-lg-7 d-flex align-items-center">
@@ -19,7 +19,7 @@
                                     @csrf
 
                                     <div class="d-flex mb-3 pb-1" id="logo-image">
-                                        <img src="{{asset('storage/img/logo-design/Euquefizlogo.png')}}" class="mt-4" width="110px" alt="logo-eu-que-fiz">
+                                        <img src="{{asset('img/logo-design/Euquefizlogo.png')}}" class="mt-4" width="110px" alt="logo-eu-que-fiz">
                                     </div>
 
                                     <h5 class="fw-normal mb-3 pb-3 login-title">Entrar Na Conta</h5>

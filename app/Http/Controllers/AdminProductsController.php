@@ -35,7 +35,8 @@ class AdminProductsController extends Controller
     public function storeProduct(ProductsStoreRequest $request, ProductValidation $productValidation, TransationMessage $transationMessage)
     {
         $newProduct = $request->validated();
-        $productValidation->validation($newProduct);
+        $newProduct['image'] = $productValidation->validation($newProduct);
+
         $newProduct['slug'] = Str::slug($newProduct['product_name']);
         $newProduct['category_id'] = $request->category;
         Product::create($newProduct);
@@ -52,7 +53,7 @@ class AdminProductsController extends Controller
     public function updateProduct(Product $product, ProductsStoreRequest $productsStoreRequest, ProductValidation $productValidation)
     {
         $newProduct = $productsStoreRequest->validated();
-        $productValidation->validation($newProduct);
+        $newProduct['image'] = $productValidation->validation($newProduct);
         $newProduct['slug'] = Str::slug($newProduct['product_name']);
 
         $product->fill($newProduct);
@@ -63,11 +64,20 @@ class AdminProductsController extends Controller
 
     public function destroy(Product $product, Request $request, TransationMessage $transationMessage)
     {
+        $productNome = $product->product_name;
         $product->delete();
         Storage::delete($product->image ?? '');
 
-        $transationMessage->returnDestroyProductMessage($request,$product);
+        $transationMessage->returnDestroyProductMessage($request,$productNome);
 
         return Redirect::route('list');
+    }
+
+    public function destroyImage(Product $product)
+    {
+        Storage::delete($product->image ?? '');
+        $product->image = null;
+        $product->save();
+        return Redirect::back();
     }
 }

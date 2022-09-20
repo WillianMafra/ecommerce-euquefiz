@@ -31,8 +31,8 @@ Route::prefix('admin')->group(function (){
 
     //Gerenciamento dos Usuarios - Admin
     Route::get('/lista/usuarios', [AdminUserController::class, 'usersList'])->name('usersList');
-    Route::put('/lista/usuarios/{id}', [AdminUserController::class, 'userPromotion'])->name('userPromotion');
-    Route::put('/lista/usuarios/{id}', [AdminUserController::class, 'userDemoted'])->name('userDemoted');
+    Route::put('/lista/usuarios/promover/{id}', [AdminUserController::class, 'userPromotion'])->name('userPromotion');
+    Route::put('/lista/usuarios/rebaixar/{id}', [AdminUserController::class, 'userDemoted'])->name('userDemoted');
     //Fim do Gerenciamento dos Usuarios - Admin
 
     //Gerenciamento das Categorias - Admin
@@ -44,11 +44,12 @@ Route::prefix('admin')->group(function (){
 
     //Gerenciamento dos Produtos - Admin
     Route::get('/lista', [AdminProductsController::class, 'list'])->name('list');
-    Route::get('/produtos/inserirProduto', [AdminProductsController::class, 'createProduct'])->name('createProduct');
+    Route::get('/produtos/inserirProduto', [AdminProductsController::class, 'createProduct'])->name('createProduct')->middleware('isAdmin');
     Route::post('/produtos/inserirProduto', [AdminProductsController::class, 'storeProduct'])->name('storeProduct');
     Route::get('/produtos/editarProduto/{product}', [AdminProductsController::class, 'editProduct'])->name('editProduct');
     Route::put('/produtos/editarProduto/{product}', [AdminProductsController::class, 'updateProduct'])->name('updateProduct');
-    Route::delete('/lista/{product}/apagar', [AdminProductsController::class, 'destroy'])->name('destroy');
+    Route::delete('/lista/apagar/{product}', [AdminProductsController::class, 'destroy'])->name('destroy');
+    Route::get('/admin/lista/deleteImage/{product}', [AdminProductsController::class, 'destroyImage'])->name('destroyImage');
     //Fim do Gerenciamento dos Produtos
 });
 
@@ -71,6 +72,8 @@ Route::get('/logout', [ClientController::class, 'logout'])->name('logout');
 
 //Rotas extras que podem precisar de alguma manipulação
 Route::get('/eventos', [OthersController::class, 'events'])->name('events');
+Route::get('/carrinho', [OthersController::class, 'carShopping'])->name('carShopping');
+
 Route::get('/sobre', [OthersController::class, 'aboutus'])->name('aboutus');
 Route::get('/galeria', [OthersController::class, 'gallery'])->name('gallery');
 

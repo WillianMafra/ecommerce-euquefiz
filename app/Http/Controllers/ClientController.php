@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UserStoreRequest;
 use App\Models\Category;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -24,8 +25,9 @@ class ClientController extends Controller
         return view('account.register', compact('categories'));
     }
 
-    public function salvar(Request $request)
+    public function salvar(UserStoreRequest $request)
     {
+
       $data = $request->except('_token');
       $data['password'] = Hash::make($data['password']);
       $user = User::create($data);

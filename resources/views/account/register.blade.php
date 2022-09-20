@@ -17,12 +17,18 @@
                                     <input type="text" id="form3Example1" class="form-control" name="name" value="{{ old('name') }}" required/>
                                     <label class="form-label" for="form3Example1">Nome</label>
                                 </div>
+                                @error('name')
+                                <small class="bg-danger text-white w-25 rounded" role="alert">Nome Inválido</small>
+                                @enderror
                             </div>
                             <div class="col-md-6 mb-4">
                                 <div class="form-outline">
                                     <input type="email" id="form3Example2" class="form-control" name="email" value="{{old('email')}}" required/>
                                     <label class="form-label" for="form3Example2">Email</label>
                                 </div>
+                                @error('email')
+                                <small class="bg-danger text-white w-25 rounded" role="alert">Email Inválido</small>
+                                @enderror
                             </div>
                         </div>
                         <div class="row">
@@ -31,6 +37,9 @@
                                     <input type="text" id="form3Example1" class="form-control" name="endereco" value="{{old('endereco')}}" required/>
                                     <label class="form-label" for="form3Example1">Endereço</label>
                                 </div>
+                                @error('endereco')
+                                <small class="bg-danger text-white w-25 rounded" role="alert">Endereco Inválido</small>
+                                @enderror
                             </div>
                             <div class="col-md-6 mb-4">
                                 <div class="form-outline">
@@ -38,6 +47,9 @@
                                     <label class="form-label" for="form3Example2">Cidade</label>
                                 </div>
                             </div>
+                            @error('cidade')
+                            <small class="bg-danger text-white w-25 rounded" role="alert">Cidade Inválida</small>
+                            @enderror
                         </div>
                         <div class="row">
                             <div class="col-md-6 mb-4">
@@ -46,12 +58,18 @@
                                     <label class="form-label" for="form3Example1">CEP:</label>
                                 </div>
                             </div>
+                            @error('cep')
+                            <small class="bg-danger text-white w-25 rounded" role="alert">CEP Inválido</small>
+                            @enderror
                             <div class="col-md-6 mb-4">
                                 <div class="form-outline">
                                     <input type="tel" id="form3Example2" class="form-control" name="telefone"  required/>
                                     <label class="form-label" for="form3Example2">Telefone</label>
                                 </div>
                             </div>
+                            @error('telefone')
+                            <small class="bg-danger text-white w-25 rounded" role="alert">Telefone Inválido</small>
+                            @enderror
                         </div>
                         <div class="row">
                             <div class="col-md-6 mb-4">
@@ -66,6 +84,9 @@
                                     <label class="form-label" for="form3Example2">Confirmar Senha</label>
                                 </div>
                             </div>
+                            @error('password')
+                            <small class="bg-danger text-white w-25 rounded" role="alert">{{$message}}</small>
+                            @enderror
                         </div>
                         <button type="submit" class="btn btn-dark btn-block mb-4">
                             Finalizar
