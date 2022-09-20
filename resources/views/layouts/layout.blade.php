@@ -21,8 +21,7 @@
     <header id="header" class="header fixed-top d-flex align-items-center pb-3">
         <div class="container d-flex align-items-center justify-content-between">
             <a href="{{route('home')}}" class="navbar-brand" >
-                <img src="{{asset('storage/img/logo-design/Euquefizlogo.png')}}"  class="mt-4 " width="150px" alt="logo-eu-que-fiz">
-
+        
                 <img src="{{asset('storage/img/logo-design/Euquefizlogo.png')}}" class="mt-5" width="170px" alt="logo-eu-que-fiz">
             </a>
             <nav id="navbar" class="navbar navbar-expand-sm ">
