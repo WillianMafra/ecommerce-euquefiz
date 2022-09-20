@@ -48,7 +48,8 @@ Route::prefix('admin')->group(function (){
     Route::post('/produtos/inserirProduto', [AdminProductsController::class, 'storeProduct'])->name('storeProduct');
     Route::get('/produtos/editarProduto/{product}', [AdminProductsController::class, 'editProduct'])->name('editProduct');
     Route::put('/produtos/editarProduto/{product}', [AdminProductsController::class, 'updateProduct'])->name('updateProduct');
-    Route::delete('/lista/{product}/apagar', [AdminProductsController::class, 'destroy'])->name('destroy');
+    Route::delete('/lista/apagar/{product}', [AdminProductsController::class, 'destroy'])->name('destroy');
+    Route::get('/admin/lista/deleteImage/{product}', [AdminProductsController::class, 'destroyImage'])->name('destroyImage');
     //Fim do Gerenciamento dos Produtos
 });
 

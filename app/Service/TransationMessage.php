@@ -8,12 +8,12 @@ use Illuminate\Http\Request;
 
 class TransationMessage
 {
-    public function returnDestroyProductMessage(Request $request, Product $product)
+    public function returnDestroyProductMessage(Request $request, $productName)
     {
         $request->session()
             ->flash(
                 'message',
-                "Produto {$product['product_name']} Removido do Banco de Dados"
+                "Produto {$productName} Removido do Banco de Dados"
             );
     }
 

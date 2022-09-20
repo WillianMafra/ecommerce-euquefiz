@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->decimal('price')->default('0.00');
             $table->text('description')->nullable();
-            $table->decimal('stock')->default(1);
+            $table->decimal('stock')->default(0)->nullable();
             $table->unsignedBigInteger('category_id')->nullable();
             $table->foreign('category_id')
                 ->references('id')

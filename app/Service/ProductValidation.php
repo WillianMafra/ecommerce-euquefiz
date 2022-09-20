@@ -13,4 +13,13 @@ class ProductValidation
         }
             return $newProduct['image'];
     }
+    public function categoryImageValidation(array $newCategory)
+    {
+        if (!empty($newCategory['image']) && $newCategory['image']->isValid()) {
+            $image = $newCategory['image'];
+            $imagepath = $image->store('category');
+            $newCategory['image'] = $imagepath;
+        }
+        return $newCategory['image'];
+    }
 }

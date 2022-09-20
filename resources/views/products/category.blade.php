@@ -14,7 +14,7 @@
                 <div class="col-md-3">
                     <div class="card p-3">
                         <div class="text-center">
-                            <img src="{{asset('img/menu/menu-item-1.png')}}" width="200" alt="{{$prod->product_name}}">
+                            <img src="{{asset($prod->image)}}" width="200" alt="{{$prod->product_name}}">
                         </div>
 
                         <div class="product-details">
