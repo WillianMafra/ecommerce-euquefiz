@@ -44,7 +44,7 @@ Route::prefix('admin')->group(function (){
 
     //Gerenciamento dos Produtos - Admin
     Route::get('/lista', [AdminProductsController::class, 'list'])->name('list');
-    Route::get('/produtos/inserirProduto', [AdminProductsController::class, 'createProduct'])->name('createProduct');
+    Route::get('/produtos/inserirProduto', [AdminProductsController::class, 'createProduct'])->name('createProduct')->middleware('isAdmin');
     Route::post('/produtos/inserirProduto', [AdminProductsController::class, 'storeProduct'])->name('storeProduct');
     Route::get('/produtos/editarProduto/{product}', [AdminProductsController::class, 'editProduct'])->name('editProduct');
     Route::put('/produtos/editarProduto/{product}', [AdminProductsController::class, 'updateProduct'])->name('updateProduct');
