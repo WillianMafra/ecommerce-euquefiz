@@ -4,8 +4,48 @@
 @endpush
 
 @section('gallery')
+<div class="testimonial">
+    <h1 class="h1-gallery">Galeria</h1>
+    <div class="wrapper">
+        <!-- filter Items -->
+        <nav>
+            <div class="items">
+                <span class="item active" data-name="all">All</span>
+                <span class="item" data-name="bag">Bag</span>
+                <span class="item" data-name="shoe">Shoe</span>
+                <span class="item" data-name="watch">Watch</span>
+                <span class="item" data-name="camera">Camera</span>
+                <span class="item" data-name="headphone">Headphone</span>
+            </div>
+        </nav>
+        <!-- filter Images -->
+        <div class="gallery">
+            <div class="image" data-name="bag"><span><img src="https://picsum.photos/350/250/?image=431" alt=""></span></div>
+            <div class="image" data-name="headphone"><span><img src="https://picsum.photos/350/250/?image=232" alt=""></span></div>
+            <div class="image" data-name="camera"><span><img src="https://picsum.photos/350/250?image=474" alt=""></span></div>
+            <div class="image" data-name="shoe"><span><img src="https://picsum.photos/350/250?image=494" alt=""></span></div>
+            <div class="image" data-name="headphone"><span><img src="https://picsum.photos/350/250?image=444" alt=""></span></div>
+            <div class="image" data-name="watch"><span><img src="https://picsum.photos/350/250/?image=232" alt=""></span></div>
+            <div class="image" data-name="shoe"><span><img src="https://picsum.photos/350/250?image=474" alt=""></span></div>
+            <div class="image" data-name="camera"><span><img src="https://picsum.photos/350/250?image=444" alt=""></span></div>
+        </div>
+    </div>
+    <!-- fullscreen img preview box -->
+    <div class="preview-box">
+        <div class="details">
+            <span class="title">Categoria: <p></p></span>
+            <span class="icon fas fa-times">FECHAR</span>
+        </div>
+        <div class="image-box"><img src="" alt=""></div>
+    </div>
+    <div class="shadow"></div>
 
-<div class="gallery-image">
+</div>
+
+
+
+<!-- =============================================================== -->
+<!-- <div class="gallery-image">
     <div class="testimonial">
         <h1 class="h1-gallery">Galeria</h1>
         <div class="img-caixa">
@@ -63,12 +103,12 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
+@push('scripts')
+<script src="{{asset('js/gallery.js')}}"></script>
+@endpush
 @endsection
 
 @prepend('scripts')
 <script src="{{asset('js/app.js')}}"></script>
 @endprepend
-@push('scripts')
-<script src="{{asset('js/gallery.js')}}"></script>
-@endpush
