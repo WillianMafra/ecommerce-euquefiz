@@ -49,12 +49,12 @@ body {
 .picture {
     width: 250px;
     aspect-ratio: 16/16;
-    background: #ddd;
+    background: #ccc;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #aaa;
-    border: 2px dashed currentcolor;
+    color: rgb(0, 0, 0);
+    
     cursor: pointer;
     font-family: sans-serif;
     transition: color 300ms ease-in-out, background 300ms ease-in-out;
@@ -65,20 +65,20 @@ body {
 }
   
 .picture:hover {
-    color: #777;
-    background: #ccc;
+    color: #ccc;
+    background: rgba(102, 6, 6, 0.829);
 }
   
 .picture:active {
-    border-color: turquoise;
-    color: turquoise;
+    border-color: rgb(224, 107, 64);
+    color: rgb(224, 107, 64);
     background: #eee;
 }
   
 .picture:focus {
-    color: #777;
-    background: #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: #ccc;
+    background: rgb(112, 2, 2);
+    box-shadow: 0 0 10px #ccc;
 }
   
 .picture__img {
