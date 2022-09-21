@@ -5,11 +5,9 @@
 
 @section('gallery')
 
-
-
 <div class="gallery-image">
     <div class="testimonial">
-    <h1 class="h1-gallery">Galeria</h1>
+        <h1 class="h1-gallery">Galeria</h1>
         <div class="img-caixa">
             <img src="https://picsum.photos/350/250?image=444" alt="" />
             <div class="transparent-caixa">
