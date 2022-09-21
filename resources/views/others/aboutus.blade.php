@@ -9,10 +9,15 @@
             <h1 class="h1-about">Sobre Nós</h1>
             <img class="about-img border-0" src="{{asset('img/logo-design/logosemfundo.png')}}"  alt="">
             <blockquote class="blockquote-about">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora delectus est dolores ratione voluptates, odio obcaecati facilis, temporibus inventore, magni fugit asperiores non ipsum quibusdam a illum fuga amet nam! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, vitae hic inventore dicta tenetur corrupti eveniet quam amet repellendus omnis quis.
+            Trata-se de um e-commerce de produtos alimentícios congelados e eventos culinários.
+            Utilizando os conceitos aprendidos sobre Metodologias Ágeis, nós construimos um e-commerce responsivo com banco de dados MySql 
+utilizando recursos para registrar pratos, alimentos, valores, usuários, pedidos e muito mais. 
+
+As páginas foram desenvolvidas utilizando HTML,CSS,PHP e Laravel. 
+
             </blockquote>
             <h5>Eu que fiz!</h5>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <p>Sua felicidade, nossa missão.</p>
         </article>
     </div>
 </div>
