@@ -46,13 +46,13 @@
                             <i class="bi bi-chevron-down dropdown-indicator"></i>
                         </a>
                         <ul>
-                            <li><a href="#">Integrante 1</a></li>
-                            <li><a href="#">Integrante 2</a></li>
-                            <li><a href="#">Integrante 3</a></li>
-                            <li><a href="#">Integrante 4</a></li>
-                            <li><a href="#">Integrante 5</a></li>
-                            <li><a href="#">Integrante 6</a></li>
-                            <li><a href="#">Integrante 7</a></li>
+                            <li><a href="https://www.linkedin.com/in/bruno-hoffmann-schumacher-0b4631168/">Integrante 1</a></li>
+                            <li><a href="Claudio   ">Integrante 2</a></li>
+                            <li><a href="https://www.linkedin.com/in/deborabl/">Integrante 3</a></li>
+                            <li><a href="https://www.linkedin.com/in/marlimeza/">Integrante 4</a></li>
+                            <li><a href="https://www.linkedin.com/in/matheussan/">Integrante 5</a></li>
+                            <li><a href="https://www.linkedin.com/in/thiagowolter/">Integrante 6</a></li>
+                            <li><a href="https://www.linkedin.com/in/willnmafra/">Integrante 7</a></li>
                         </ul>
                     </li>
                     <li><a href="{{route('management')}}">Admin</a></li>
