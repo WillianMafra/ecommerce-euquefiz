@@ -32,7 +32,7 @@
                             @enderror
                         </div>
                         <div class="row mb-3">
-                            <label for="image" class="col-sm-2 col-form-label">Enviar Foto</label>
+                            <label for="image" class="col-sm-2 col-form-label">Insira a Url da Imagem</label>
                             <div class="col-sm-10"><input class="form-control" type="text" id="formFile" name="image">
                                 @error('image')
                                 <small class="bg-danger text-white w-25 rounded" role="alert">{{$message}}</small>
