@@ -70,6 +70,7 @@ Route::get('/entrar', [ClientController::class, 'login'])->name('login');
 Route::post('/entrar', [ClientController::class, 'entrar'])->name('entrar');
 Route::get('/logout', [ClientController::class, 'logout'])->name('logout');
 
+
 //Rotas extras que podem precisar de alguma manipulação
 Route::get('/eventos', [OthersController::class, 'events'])->name('events');
 Route::get('/carrinho', [OthersController::class, 'carShopping'])->name('carShopping');

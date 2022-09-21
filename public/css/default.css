@@ -211,7 +211,8 @@ section {
     z-index: 997;
     height: 100px;
     border-bottom: -15px solid #fff;
-}
+  
+}  
 
 @media (max-width: 575px) {
     .header {
