@@ -32,10 +32,9 @@ class AdminProductsController extends Controller
         return view('admin.management.products.addProduct', compact('categories'));
     }
 
-    public function storeProduct(ProductsStoreRequest $request, ProductValidation $productValidation, TransationMessage $transationMessage)
+    public function storeProduct(ProductsStoreRequest $request, TransationMessage $transationMessage)
     {
         $newProduct = $request->validated();
-        $newProduct['image'] = $productValidation->validation($newProduct);
 
         $newProduct['slug'] = Str::slug($newProduct['product_name']);
         $newProduct['category_id'] = $request->category;
@@ -50,10 +49,9 @@ class AdminProductsController extends Controller
         return view('admin.management.products.productEdit', ['product' => $product]);
     }
 
-    public function updateProduct(Product $product, ProductsStoreRequest $productsStoreRequest, ProductValidation $productValidation)
+    public function updateProduct(Product $product, ProductsStoreRequest $productsStoreRequest)
     {
         $newProduct = $productsStoreRequest->validated();
-        $newProduct['image'] = $productValidation->validation($newProduct);
         $newProduct['slug'] = Str::slug($newProduct['product_name']);
 
         $product->fill($newProduct);

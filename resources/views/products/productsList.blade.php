@@ -37,6 +37,7 @@
                         <div class="weight mt-2 text-center d-block text-product">
                             <small>{{round($product->stock)}} Unidades</small>
                         </div>
+                        <form method="POST" ></form>
                         <div class="py-3">
                         <span class="pqt-minus">-</span>
                         <button class="cart-button">
