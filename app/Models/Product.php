@@ -14,4 +14,13 @@ class Product extends Model
     {
         return $this->hasOne(Category::class);
     }
+    public static function sumPricesByQuantities($products, $productsInSession)
+    {
+        $total = 0;
+        foreach ($products as $product) {
+            $total = $total + ($product->getPrice()*$productsInSession[$product->getId()]);
+        }
+        return $total;
+    }
+
 }

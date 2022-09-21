@@ -26,23 +26,25 @@
                 <div class="card p-3">
 
                     <div class="text-center">
-
                         <img src="{{asset($product->image)}}" width="200" alt="{{$product->product_name}}">
                     </div>
 
                     <div class="product-details">
 
-                        <span class="font-weight-bold d-block">{{$product->price}}</span>
-                        <span>{{$product->product_name}}</span>
+                        <span class="text-center d-block text-product">{{$product->product_name}}</span>
+                        <span class="font-weight-bold text-center d-block text-product">R$ {{$product->price}}</span>
 
-                        <div class="buttons d-flex flex-row">
-                            <div class="cart"><img width="30px" src="{{asset('img/icone/shopping-bag2.png')}}" alt="adicionar-ao-carrinho"></div><button class="btn btn-success cart-button btn-block"><span class="dot">1</span>Add to cart </button>
+                        <div class="weight mt-2 text-center d-block text-product">
+                            <small>{{round($product->stock)}} Unidades</small>
                         </div>
-
-                        <div class="weight">
-
-                            <small>{{$product->stock}} Unidades</small>
-
+                        <div class="py-3">
+                        <span class="pqt-minus">-</span>
+                        <button class="cart-button">
+                            <span class="add-to-cart"><img width="30px" src="{{asset('img/icone/shopping-bag2.png')}}" alt="adicionar-ao-carrinho"></span>
+                            <span class="added"></span>
+                            <i class="fa fa-shopping-cart"></i>
+                        </button>
+                        <span class="pqt-plus">+</span>
                         </div>
                     </div>
                 </div>
