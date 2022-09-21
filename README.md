@@ -1,36 +1,27 @@
-# ecommerce-euquefiz
-Este será o repositório para desenvolvimento do projeto do grupo 02 do curso de PHP do Entra21-2022.
 
-Produtos fixos e produtos sazonais.
-Delivery (conversada)
-Estoque com MySQL
-Cardápio
-Orçamento com campo de observações
-Loja para encomendas (organizada por tipos de pratos)
-Contato (Facebook)
-Eventos passados.
+### Este é o repositório para desenvolvimento do projeto do grupo 02 do curso de PHP do Entra21-2022.
 
+## Projeto: E-Commerce EuQueFiz!
 
-HISTÓRIA PROJETO (Enviado Professor)
-12 palavras:
+## ℹ️ O que é?
 
- Eu que fiz!
+Trata-se de um e-commerce de produtos alimentícios congelados e eventos culinários
 
-Parágrafo 1: o que?
+## 🔧 Como foi desenvolvido? 
+Utilizando os conceitos aprendidos sobre Metodologias Ágeis, nós construimos um e-commerce responsivo com banco de dados MySql 
+utilizando recursos para registrar pratos, alimentos, valores, usuários, pedidos e muito mais. 
 
-E-commerce de produtos alimentícios congelados e eventos culinários
+As páginas foram desenvolvidas utilizando HTML,CSS,PHP e Laravel. 
 
-
-Parágrafo 2: Como =
-
- 	Utilizando os conceitos aprendidos sobre Metodologias Ágeis, construiremos um e-commerce responsivo com banco de dados MySql 
-  utilizando recursos para registrar pratos, alimentos e valores. 
-
-As páginas serão desenvolvidas utilizando HTML,CSS,PHP e Laravel. 
-
-Será incluído dentro do e-commerce áreas para: visualização de produtos,carrinho de  pedidos, fotos dos produtos, fotos de eventos,
+Está incluído dentro do e-commerce áreas para: visualização de produtos,carrinho de  pedidos, fotos dos produtos, fotos de eventos,
 formulários para cadastros, sistema de autenticação e permissões do usuário e um menu estruturado por categorias, contatos.
 
+## 📚 Autores
 
-
-## Adicionando deploy no heroku
+* [Bruno](https://www.linkedin.com/in/bruno-hoffmann-schumacher-0b4631168/)
+* [Claúdio]()
+* [Débora](https://www.linkedin.com/in/deborabl/)
+* [Marli](https://www.linkedin.com/in/marlimeza/)
+* [Matheus](https://www.linkedin.com/in/matheussan/)
+* [Thiago](https://www.linkedin.com/in/thiagowolter/)
+* [Willian](https://www.linkedin.com/in/willnmafra/)
