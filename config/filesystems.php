@@ -38,11 +38,7 @@ return [
 
         'public' => [
             'driver' => 'local',
-<<<<<<< HEAD
             'root' => storage_path('public'),
-=======
-            'root' => storage_path('app/product'),
->>>>>>> 0d9000641a729e84017eb05765f0b3ee60797993
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
             'throw' => false,
@@ -75,12 +71,9 @@ return [
 
     'links' => [
         public_path('img') => storage_path('app/img'),
-<<<<<<< HEAD
-=======
         public_path('product') => storage_path('app/product'),
         public_path('category') => storage_path('app/category'),
 
->>>>>>> 0d9000641a729e84017eb05765f0b3ee60797993
     ],
 
 ];
