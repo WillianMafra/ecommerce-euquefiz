@@ -3,7 +3,6 @@
     @include('admin.management.subview.navbar')
 <main id="main" class="main">
     <div class="pagetitle">
-        <h1 id="fonte-cinza">Administração</h1>
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item "><a href="#" class="text-white">Home</a></li>

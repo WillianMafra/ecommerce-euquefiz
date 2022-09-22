@@ -11,7 +11,6 @@
 
                     <div class="cart_items">
                         <ul class="cart_list">
-                            @foreach($products as $product)
 
                             <li class="cart_item clearfix">
                                 <div class="cart_item_image img-thumbnail"><img src="{{asset('img/cardapio/congelados/bolinho de aipim.jpg')}}" alt=""></div>
@@ -34,7 +33,6 @@
                                     </div>
                                 </div>
                             </li>
-                            @endforeach
                         </ul>
                     </div>
                     <div class="order_total">

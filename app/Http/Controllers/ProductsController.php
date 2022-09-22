@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Product;
 use App\Service\ProductsSearch;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class ProductsController extends Controller
 {
@@ -60,17 +61,19 @@ class ProductsController extends Controller
 
     public function carShopping(Request $request)
     {
-        $products = $request->session()->get('products');
+
+        dd(Session::all());
         return view('products.carShopping.carShopping', compact('products'));
     }
 
-    public function addToCart(Request $request)
+    public function addToCart(Request $request, $id)
     {
-        $products = $request->session()->get("products");
-        $products['quantity'] = $request->input('quantity');
-        $request->session()->put('products', $products);
+        $productId = Product::findOrFail($id);
 
-        dd($request->session()->all());
-        return view('products.carShopping.carShopping');
+        $productsInCart = ['product' => $productId, 'quantity' => $request->input('quantity')];
+
+        Session::push('products', $productsInCart);
+
+        return view('home');
     }
 }
