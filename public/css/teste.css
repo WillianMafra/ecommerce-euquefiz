@@ -1,0 +1,76 @@
+/**************** exclusive_item_part css start ****************/
+/* line 2, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_exclusive_item_part.scss */
+.exclusive_item_part {
+    position: relative;
+    z-index: 1;
+}
+
+/* line 5, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_exclusive_item_part.scss */
+.exclusive_item_part:after {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content: "";
+    bottom: -250px;
+    z-index: -1;
+    background: url(../img/about_overlay.png) bottom right no-repeat;
+    background-size: 15% 65%;
+    right: 0px;
+}
+
+@media (max-width: 576px) {
+    /* line 5, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_exclusive_item_part.scss */
+    .exclusive_item_part:after {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    /* line 5, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_exclusive_item_part.scss */
+    .exclusive_item_part:after {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    /* line 5, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_exclusive_item_part.scss */
+    .exclusive_item_part:after {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    /* line 2, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_exclusive_item_part.scss */
+    .exclusive_item_part {
+        padding-top: 70px;
+        margin-bottom: -20px;
+    }
+    /* line 31, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_exclusive_item_part.scss */
+    .exclusive_item_part .single_blog_item {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    /* line 2, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_exclusive_item_part.scss */
+    .exclusive_item_part {
+        padding-top: 70px;
+        margin-bottom: -20px;
+    }
+    /* line 38, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_exclusive_item_part.scss */
+    .exclusive_item_part .single_blog_item {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    /* line 2, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_exclusive_item_part.scss */
+    .exclusive_item_part {
+        padding-top: 70px;
+        margin-bottom: -20px;
+    }
+    /* line 45, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_exclusive_item_part.scss */
+    .exclusive_item_part .single_blog_item {
+        margin-bottom: 20px;
+    }
+}

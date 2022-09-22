@@ -35,17 +35,40 @@ class ProductsController extends Controller
         return view('products.products');
     }
 
+    public function teste()
+    {
+
+        return view('products.carShopping.teste');
+    }
+
     public function productsList(Request $request, ProductsSearch $productsSearch)
     {
-        $products = $productsSearch->search($request);
 
+        $products = $productsSearch->search($request);
         return view('products.productsList', compact('products'));
 
     }
 
-    public function showProduct($id)
+    public function showProduct (Request $request,$id)
     {
         $product = Product::findOrFail($id);
-        return view('products.showProduct',['product' => $product]);
+        $request->session()
+            ->put(
+                'produto',
+                "$id"
+            );
+        return view('products.showProduct', compact('product'));
+    }
+
+    public function carShopping(Request $request)
+    {
+        return view('products.carShopping.carShopping');
+    }
+
+    public function addToCart(Request $request, $id)
+    {
+        $product = Product::findOrFail($id);
+
+        return view('products.carShopping.carShopping',compact('product'));
     }
 }

@@ -10,8 +10,5 @@ class AdminController extends Controller
     {
         return view('admin.management.dashboard');
     }
-    public function teste()
-    {
-        return view('admin.management.teste');
-    }
+
 }

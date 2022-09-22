@@ -7,7 +7,6 @@
 @endpush
 <main>
 <section class="wrapper">
-
     <div class="container">
         <div class="col-lg-7">
             <h5 class="fw-bold fs-3 fs-lg-5 lh-sm text-center text-lg-start">Confira Nossos Pratos</h5>
@@ -21,35 +20,27 @@
         </div>
         <div class="row g-1">
             @foreach($products as $product)
-            <div class="col-md-3">
+                <div class="col-md-3">
+                    <a href="{{route('showProduct',$product->id)}}">
+                        <div class="card p-3">
 
-                <div class="card p-3">
+                            <div class="text-center">
+                                <img src="{{asset($product->image)}}" width="200" alt="{{$product->product_name}}">
+                            </div>
 
-                    <div class="text-center">
-                        <img src="{{asset($product->image)}}" width="200" alt="{{$product->product_name}}">
-                    </div>
+                            <div class="product-details">
 
-                    <div class="product-details">
+                                <span class="text-center d-block text-product">{{$product->product_name}}</span>
+                                <span class="font-weight-bold text-center d-block text-product">R$ {{$product->price}}</span>
 
-                        <span class="text-center d-block text-product">{{$product->product_name}}</span>
-                        <span class="font-weight-bold text-center d-block text-product">R$ {{$product->price}}</span>
+                                <div class="weight mt-2 text-center d-block text-product">
+                                    <small>{{round($product->stock)}} Unidades</small>
+                                </div>
 
-                        <div class="weight mt-2 text-center d-block text-product">
-                            <small>{{round($product->stock)}} Unidades</small>
+                            </div>
                         </div>
-                        <form method="POST" ></form>
-                        <div class="py-3">
-                        <span class="pqt-minus">-</span>
-                        <button class="cart-button">
-                            <span class="add-to-cart"><img width="30px" src="{{asset('img/icone/shopping-bag2.png')}}" alt="adicionar-ao-carrinho"></span>
-                            <span class="added"></span>
-                            <i class="fa fa-shopping-cart"></i>
-                        </button>
-                        <span class="pqt-plus">+</span>
-                        </div>
-                    </div>
+                    </a>
                 </div>
-            </div>
             @endforeach
         </div>
     </div>

@@ -6,7 +6,6 @@ use App\Http\Requests\ProductsStoreRequest;
 use App\Models\Category;
 use App\Models\Product;
 use App\Service\ProductsSearch;
-use App\Service\ProductValidation;
 use App\Service\TransationMessage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;

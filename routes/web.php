@@ -8,7 +8,6 @@ use App\Http\Controllers\OthersController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\AdminController;
 
 /*
@@ -52,14 +51,16 @@ Route::prefix('admin')->group(function (){
     Route::get('/admin/lista/deleteImage/{product}', [AdminProductsController::class, 'destroyImage'])->name('destroyImage');
     //Fim do Gerenciamento dos Produtos
 });
-
+Route::get('/teste', [ProductsController::class, 'teste'])->name('teste');
 
 //Rota para exibir os produtos Para o usuário
 Route::get('/', [ProductsController::class, 'home'])->name('home');
 Route::get('/categoria/{id}', [ProductsController::class, 'categoryPage'])->name('categoryPage');
 Route::get('/produtos', [ProductsController::class, 'showAllProducts'])->name('showAllProducts');
 Route::get('/listarprodutos', [ProductsController::class, 'productsList'])->name('productsList');
-Route::get('/produtos/{id}', [ProductsController::class, 'showProduct'])->name('show');
+Route::get('/listarprodutos/{id}', [ProductsController::class, 'showProduct'])->name('showProduct');
+Route::get('/carrinho', [ProductsController::class, 'carShopping'])->name('carShopping');
+Route::post('/listarprodutos/adicionarAoCarrinho/{id}', [ProductsController::class, 'addToCart'])->name('addToCart');
 
 
 //Rota para o usuário fazer login e alterar dados da conta
@@ -73,7 +74,6 @@ Route::get('/logout', [ClientController::class, 'logout'])->name('logout');
 
 //Rotas extras que podem precisar de alguma manipulação
 Route::get('/eventos', [OthersController::class, 'events'])->name('events');
-Route::get('/carrinho', [OthersController::class, 'carShopping'])->name('carShopping');
 
 Route::get('/sobre', [OthersController::class, 'aboutus'])->name('aboutus');
 Route::get('/galeria', [OthersController::class, 'gallery'])->name('gallery');
