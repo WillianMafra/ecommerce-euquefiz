@@ -17,7 +17,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h1 class="h2">{{$product->product_name}}</h1>
-                        <p class="h3 py-2">. R$ . {{$product->price}}</p>
+                        <p class="h3 py-2">R$ {{$product->price}}</p>
                         <p class="py-2">
                             <i class="fa fa-star text-warning">@if($product->stock > 0 )Unidades  {{round($product->stock)}} @else  <b class="text-danger">Sem Estoque</b> @endif</i>
 
