@@ -9,16 +9,17 @@ use Illuminate\Http\Request;
 
 class ProductsController extends Controller
 {
-    public function home()
+    public function home(Request $request)
     {
         $categories = Category::all();
+        $productsInSession = $request->session()->get('products');
 
         if (!empty($categories)) {
 
-        return view('home', compact('categories'));
+        return view('home', compact('categories', 'productsInSession'));
 
         }
-            return view('home');
+            return view('home',compact('productsInSession'));
     }
 
     public function categoryPage($id)
@@ -49,26 +50,27 @@ class ProductsController extends Controller
 
     }
 
-    public function showProduct (Request $request,$id)
+    public function showProduct ($id)
     {
         $product = Product::findOrFail($id);
-        $request->session()
-            ->put(
-                'produto',
-                "$id"
-            );
+
+
         return view('products.showProduct', compact('product'));
     }
 
     public function carShopping(Request $request)
     {
-        return view('products.carShopping.carShopping');
+        $products = $request->session()->get('products');
+        return view('products.carShopping.carShopping', compact('products'));
     }
 
-    public function addToCart(Request $request, $id)
+    public function addToCart(Request $request)
     {
-        $product = Product::findOrFail($id);
+        $products = $request->session()->get("products");
+        $products['quantity'] = $request->input('quantity');
+        $request->session()->put('products', $products);
 
-        return view('products.carShopping.carShopping',compact('product'));
+        dd($request->session()->all());
+        return view('products.carShopping.carShopping');
     }
 }

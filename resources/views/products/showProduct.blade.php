@@ -1,15 +1,11 @@
 @extends('layouts.layout')
-@push('style')
-    <link rel="stylesheet" href="{{asset('css/teste.css')}}">
-    <link rel="stylesheet" href="{{asset('css/products/productslist.css')}}">
-@endpush
-<!-- Open Content -->
+
 <section class="bg-light">
-    <div class="container pb-5">
+    <div class="container pb-5 container-geral">
         <div class="row">
             <div class="col-lg-5 mt-5">
                 <div class="card mb-3">
-                    <img class="card-img img-fluid" src="{{asset('img/menu/menu-item-1.png')}}" alt="Card image cap" id="product-detail">
+                    <img class="card-img img-fluid" src="{{asset('img/cardapio/congelados/bolinho de aipim.jpg')}}" alt="Card image cap" id="product-detail">
                 </div>
             </div>
             <!-- col end -->
@@ -30,7 +26,7 @@
                             <div class="col-auto">
                                 <ul class="list-inline pb-3">
                                     <li class="list-inline-item text-right">
-                                        <label for="product-quanity" class="p-2">Quantidade</label>
+                                        <label for="product-quantity" class="p-2">Quantidade</label>
                                         <input type="number" name="quantity" id="product-quanity" >
                                     </li>
                                 </ul>

@@ -8,8 +8,11 @@
             <div class="col-lg-10 offset-lg-1">
                 <div class="cart_container">
                     <div class="cart_title">Carrinho de Compras<small> (Voce tem X Itens no Carrinho) </small></div>
+
                     <div class="cart_items">
                         <ul class="cart_list">
+                            @foreach($products as $product)
+
                             <li class="cart_item clearfix">
                                 <div class="cart_item_image img-thumbnail"><img src="{{asset('img/cardapio/congelados/bolinho de aipim.jpg')}}" alt=""></div>
                                 <div class="cart_item_info d-flex flex-md-row flex-column justify-content-between">
@@ -31,6 +34,7 @@
                                     </div>
                                 </div>
                             </li>
+                            @endforeach
                         </ul>
                     </div>
                     <div class="order_total">

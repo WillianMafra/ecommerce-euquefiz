@@ -1,1 +1,0 @@
-Lista de fotos de eventos passados e solicitar evento personalizado (com campo de observações)<?php /**PATH /home/adriano/repos/e2122/php/g2/ecommerce-euquefiz/euquefiz/resources/views/others/events.blade.php ENDPATH**/ ?>

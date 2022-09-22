@@ -5,6 +5,9 @@
     padding-bottom: 2px;
 
 }
+.container-geral {
+    margin-top: 20px;
+}
 .cart-button {
     position: relative;
     display: flex;
