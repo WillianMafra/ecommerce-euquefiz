@@ -21,6 +21,7 @@ return new class extends Migration
             $table->decimal('price')->default('0.00');
             $table->text('description')->nullable();
             $table->decimal('stock')->default(0)->nullable();
+            $table->decimal('quantity')->default(1)->nullable();
             $table->unsignedBigInteger('category_id')->nullable();
             $table->foreign('category_id')
                 ->references('id')

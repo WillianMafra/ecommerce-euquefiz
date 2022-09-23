@@ -693,7 +693,7 @@ section {
     opacity: 0;
     border-radius: 4px;
     transition: 0.5s;
-    background: rgba(255, 255, 255, 0.3);
+    background-color: #faebd700;
     z-index: 2;
 }
 
@@ -751,4 +751,7 @@ section {
 }
 .container-geral {
     margin-top: 30px;
+}
+#product-detail {
+    max-height: 410px;
 }

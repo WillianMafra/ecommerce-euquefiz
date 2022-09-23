@@ -46,34 +46,44 @@ class ProductsController extends Controller
     public function productsList(Request $request, ProductsSearch $productsSearch)
     {
 
+        $categories = Category::all();
         $products = $productsSearch->search($request);
-        return view('products.productsList', compact('products'));
+        return view('products.productsList', compact('products', 'categories'));
 
     }
 
     public function showProduct ($id)
     {
+        $categories = Category::all();
         $product = Product::findOrFail($id);
 
 
-        return view('products.showProduct', compact('product'));
+        return view('products.showProduct', compact('product','categories'));
     }
 
     public function carShopping(Request $request)
     {
+        $total = 0;
+        $productsInCart = [];
+        $productsInSession = $request->session()->get("products");
+        if ($productsInSession) {
+            $productsInCart = Product::findMany(array_keys($productsInSession));
+            $total = Product::sumPricesByQuantities($productsInCart, $productsInSession);
+        }
+        $quantidade = $request->session()->all();
+        $viewData["total"] = $total;
+        $viewData["products"] = $productsInCart;
 
-        dd(Session::all());
-        return view('products.carShopping.carShopping', compact('products'));
+        return view('products.carShopping.carShopping', compact('quantidade'))->with("viewData", $viewData);
     }
 
     public function addToCart(Request $request, $id)
     {
-        $productId = Product::findOrFail($id);
+        $products = $request->session()->get("products");
+        $products[$id] = $request->input('quantity');
+        $request->session()->put('products', $products);
 
-        $productsInCart = ['product' => $productId, 'quantity' => $request->input('quantity')];
 
-        Session::push('products', $productsInCart);
-
-        return view('home');
+        return redirect()->back();
     }
 }
