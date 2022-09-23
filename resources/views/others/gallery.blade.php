@@ -10,12 +10,12 @@
         <!-- filter Items -->
         <nav>
             <div class="items">
-                <span class="item active" data-name="all">All</span>
-                <span class="item" data-name="bag">Bag</span>
-                <span class="item" data-name="shoe">Shoe</span>
-                <span class="item" data-name="watch">Watch</span>
-                <span class="item" data-name="camera">Camera</span>
-                <span class="item" data-name="headphone">Headphone</span>
+                <span class="item active" data-name="all">Todos</span>
+                <span class="item" data-name="bag">Categoria 1</span>
+                <span class="item" data-name="shoe">Categoria 3</span>
+                <span class="item" data-name="watch">Categoria 4</span>
+                <span class="item" data-name="camera">Categoria 5</span>
+                <span class="item" data-name="headphone">Categoria 6</span>
             </div>
         </nav>
         <!-- filter Images -->
