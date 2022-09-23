@@ -6,3 +6,9 @@
     align-items: center;
     justify-content: center;
 }
+#header {
+    padding-top: 50px;
+}
+#sidebar {
+    margin-top: 50px;
+}

@@ -21,7 +21,8 @@ return new class extends Migration
             $table->string('cidade');
             $table->string('cep');
             $table->string('telefone');
-            $table->string('user_type')->default('user')->nullable();
+            $table->string('balance')->nullable()->default(1000);
+            $table->string('user_type')->default('user');
             $table->string('cpf')->nullable()->default('000-000-000-00');
             $table->string('nascimento')->default('01/01/1970');
             $table->string('email')->unique();
