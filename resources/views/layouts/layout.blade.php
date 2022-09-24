@@ -134,7 +134,7 @@
                         <img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin">
                     </a>
                     <a href="#">
-                        <img class="icone" src="{{asset('img/icone/instagram-icone.png')}}" alt="icone do instagram">
+                            <img class="icone" src="{{asset('img/icone/instagram-icone.png')}}" alt="icone do instagram">
                     </a>
                 </div>
             </div>
@@ -146,6 +146,7 @@
 {{--<div id="preloader"></div>--}}
 <!-- JavaScript Bundle with Popper -->
 @stack('scripts')
+<script src="{{asset('js/app.js')}}"></script>
 <script src="https://plugin.handtalk.me/web/latest/handtalk.min.js"></script>
 <script>
 

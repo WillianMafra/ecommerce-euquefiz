@@ -49,6 +49,4 @@
         </div>
     </div>
 </section>
-@prepend('scripts')
-    <script src="{{asset('js/app.js')}}"></script>
-@endprepend
+

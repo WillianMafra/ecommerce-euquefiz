@@ -108,7 +108,3 @@
 <script src="{{asset('js/gallery.js')}}"></script>
 @endpush
 @endsection
-
-@prepend('scripts')
-<script src="{{asset('js/app.js')}}"></script>
-@endprepend

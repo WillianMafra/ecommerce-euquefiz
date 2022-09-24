@@ -51,7 +51,3 @@
 </div>
 </div
 @endsection
-@endpush
-@push('scripts')
-    <script src="{{asset('js/app.js')}}"></script>
-@endpush
