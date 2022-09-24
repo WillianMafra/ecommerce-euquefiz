@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CartRequest;
 use App\Models\Category;
 use App\Models\Product;
 use App\Service\ProductsSearch;
+use App\Service\QuantityValidation;
+use App\Service\TransationMessage;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
 
 class ProductsController extends Controller
 {
@@ -52,13 +54,15 @@ class ProductsController extends Controller
 
     }
 
-    public function showProduct ($id)
+    public function showProduct ($id, Request $request)
     {
         $categories = Category::all();
         $product = Product::findOrFail($id);
 
+        $message = $request->session()->get('message');
+        $request->session()->remove('message');
 
-        return view('products.showProduct', compact('product','categories'));
+        return view('products.showProduct', compact('product','categories', 'message'));
     }
 
     public function carShopping(Request $request)
@@ -70,20 +74,29 @@ class ProductsController extends Controller
             $productsInCart = Product::findMany(array_keys($productsInSession));
             $total = Product::sumPricesByQuantities($productsInCart, $productsInSession);
         }
-        $quantidade = $request->session()->all();
+        $quantidade = $productsInSession;
         $viewData["total"] = $total;
         $viewData["products"] = $productsInCart;
 
         return view('products.carShopping.carShopping', compact('quantidade'))->with("viewData", $viewData);
     }
 
-    public function addToCart(Request $request, $id)
+    public function addToCart(CartRequest $request, $id, QuantityValidation $quantityValidation, TransationMessage $transationMessage)
     {
+
+        $request->validated();
+        $sucessOrFail = $quantityValidation->quantityValidator($request->quantity,$id);
+
+        $transationMessage->productInsertedCart($request, $sucessOrFail);
+
+        if ($sucessOrFail) {
         $products = $request->session()->get("products");
         $products[$id] = $request->input('quantity');
         $request->session()->put('products', $products);
 
-
         return redirect()->back();
+
+        }
+            return redirect()->back();
     }
 }

@@ -25,6 +25,9 @@
                         @csrf
                             <div class="col-auto">
                                 <ul class="list-inline pb-3">
+                                    @if(!empty($message))
+                                        <div class="text-white alert alert-success bg-secondary text-center">{{$message}}</div>
+                                    @endif
                                     <li class="list-inline-item text-right">
                                         <label for="product-quantity" class="p-2">Quantidade</label>
                                         <input type="number" name="quantity" id="product-quanity" >

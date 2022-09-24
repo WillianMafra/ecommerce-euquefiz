@@ -9,14 +9,11 @@
                 <div class="cart_container">
                     <div class="cart_title">Carrinho de Compras<small> (Voce tem X Itens no Carrinho) </small></div>
 
-                @foreach($quantidade['products'] as $productId)
-                        {{$quantidade['products']}}
-                    @endforeach
                     <div class="cart_items">
                         <ul class="cart_list">
                             @foreach ($viewData["products"] as $product)
                                 <li class="cart_item clearfix">
-                                <div class="cart_item_image img-thumbnail"><img src="{{($product->getImage()}}" alt="{{ $product->getProductName() }}"></div>
+                                <div class="cart_item_image img-thumbnail"><img src="{{($product->getImage())}}" alt="{{ $product->getProductName() }}"></div>
                                 <div class="cart_item_info d-flex flex-md-row flex-column justify-content-between">
                                     <div class="cart_item_name cart_info_col">
                                         <div class="cart_item_title">Nome</div>
@@ -25,10 +22,8 @@
                                     <div class="cart_item_quantity cart_info_col">
                                         <div class="cart_item_title">Quantidade</div>
                                         <div class="cart_item_text">
+                                                {{$quantidade[$product->getId()]}} Unidades
 
-                                            @if ($product->getId() == $quantidade['products'])
-                                                {{$quantidade['products']}}
-                                            @endif
                                         </div>
                                     </div>
                                     <div class="cart_item_price cart_info_col">
@@ -37,7 +32,7 @@
                                     </div>
                                     <div class="cart_item_total cart_info_col">
                                         <div class="cart_item_title">Total</div>
-                                        <div class="cart_item_text">Total Aqui</div>
+                                        <div class="cart_item_text">R$ {{$product->getPrice() * $quantidade[$product->getId()]}}</div>
                                     </div>
                                 </div>
                             </li>

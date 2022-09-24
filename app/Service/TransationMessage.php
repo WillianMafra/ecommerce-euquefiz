@@ -42,4 +42,23 @@ class TransationMessage
                 "Usuário {$userName} Se tornou User Comum"
             );
     }
+
+    public function productInsertedCart(Request $request, $sucessConfirmation)
+    {
+        if ($sucessConfirmation) {
+        $request->session()
+            ->flash(
+                'message',
+                "Produto Inserido no Carrinho!"
+            );
+        }
+        else {
+        $request->session()
+            ->flash(
+                'message',
+                "Desculpe, não temos o estoque necessário no momento. Para encomendas entre em contato pelo Whats ou E-mail"
+            );
+        }
+    }
+
 }
