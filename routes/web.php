@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminCategoriesController;
 use App\Http\Controllers\AdminProductsController;
 use App\Http\Controllers\AdminUserController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\OthersController;
 use App\Http\Controllers\ProductsController;
@@ -59,9 +60,11 @@ Route::get('/categoria/{id}', [ProductsController::class, 'categoryPage'])->name
 Route::get('/produtos', [ProductsController::class, 'showAllProducts'])->name('showAllProducts');
 Route::get('/listarprodutos', [ProductsController::class, 'productsList'])->name('productsList');
 Route::get('/listarprodutos/{id}', [ProductsController::class, 'showProduct'])->name('showProduct');
-Route::get('/carrinho', [ProductsController::class, 'carShopping'])->name('carShopping');
-Route::post('/listarprodutos/adicionarAoCarrinho/{id}', [ProductsController::class, 'addToCart'])->name('addToCart');
 
+
+//Rotas para gerenciar o carrinho de compras
+Route::get('/carrinho', [CartController::class, 'carShopping'])->name('carShopping');
+Route::post('/listarprodutos/adicionarAoCarrinho/{id}', [CartController::class, 'addToCart'])->name('addToCart');
 
 //Rota para o usuário fazer login e alterar dados da conta
 Route::get('/minha-conta', [ClientController::class, 'account'])->name('account');
