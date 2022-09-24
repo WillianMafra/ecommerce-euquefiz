@@ -52,7 +52,6 @@ Route::prefix('admin')->group(function (){
     Route::get('/admin/lista/deleteImage/{product}', [AdminProductsController::class, 'destroyImage'])->name('destroyImage');
     //Fim do Gerenciamento dos Produtos
 });
-Route::get('/teste', [ProductsController::class, 'teste'])->name('teste');
 
 //Rota para exibir os produtos Para o usuário
 Route::get('/', [ProductsController::class, 'home'])->name('home');
@@ -64,6 +63,7 @@ Route::get('/listarprodutos/{id}', [ProductsController::class, 'showProduct'])->
 
 //Rotas para gerenciar o carrinho de compras
 Route::get('/carrinho', [CartController::class, 'carShopping'])->name('carShopping');
+Route::get('/carrinho/delete', [CartController::class, 'destroy'])->name('destroyCart');
 Route::post('/listarprodutos/adicionarAoCarrinho/{id}', [CartController::class, 'addToCart'])->name('addToCart');
 
 //Rota para o usuário fazer login e alterar dados da conta

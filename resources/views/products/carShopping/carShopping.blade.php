@@ -11,6 +11,15 @@
 
                     <div class="cart_items">
                         <ul class="cart_list">
+                            @if(!empty($viewData['products']))
+                                <div class="cart_item_price cart_info_col">
+                                    <a href="{{route('destroyCart')}}">
+                                        <div class="cart_item_title text-danger">Limpar Carrinho <img src="{{asset('img/icone/recycle-bin.png')}}" width="20px" alt="limpar carrinho">
+                                        </div>
+                                    </a>
+                                </div>
+                            @endif
+                            <div class="cart_item_price cart_info_col text-success p-2">Boas Compras!</div>
                             @foreach ($viewData["products"] as $product)
                                 <li class="cart_item clearfix">
                                 <div class="cart_item_image img-thumbnail"><img src="{{($product->getImage())}}" alt="{{ $product->getProductName() }}"></div>
@@ -30,6 +39,9 @@
                                         <div class="cart_item_title">Preco</div>
                                         <div class="cart_item_text">R$ {{ $product->getPrice() }}</div>
                                     </div>
+
+
+
                                     <div class="cart_item_total cart_info_col">
                                         <div class="cart_item_title">Total</div>
                                         <div class="cart_item_text">R$ {{$product->getPrice() * $quantidade[$product->getId()]}}</div>
