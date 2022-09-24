@@ -58,7 +58,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="cart_buttons"> <button type="button" class="button cart_button_clear">Continue Shopping</button> <button type="button" class="button cart_button_checkout">Add to Cart</button> </div>
+                    <form action="{{route('completeOrder')}}" method="POST">
+                        @csrf
+                    <div class="cart_buttons"><button type="submit" class="button cart_button_checkout">Finalizar Compra</button> </div>
+                    </form>
                 </div>
             </div>
         </div>

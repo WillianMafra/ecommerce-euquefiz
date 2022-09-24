@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminProductsController;
 use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\OthersController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\ProfileController;
@@ -65,6 +66,8 @@ Route::get('/listarprodutos/{id}', [ProductsController::class, 'showProduct'])->
 Route::get('/carrinho', [CartController::class, 'carShopping'])->name('carShopping');
 Route::get('/carrinho/delete', [CartController::class, 'destroy'])->name('destroyCart');
 Route::post('/listarprodutos/adicionarAoCarrinho/{id}', [CartController::class, 'addToCart'])->name('addToCart');
+Route::post('/carrinho/finalizar-compra', [OrderController::class, 'storeOrder'])->name('completeOrder');
+
 
 //Rota para o usuário fazer login e alterar dados da conta
 Route::get('/minha-conta', [ClientController::class, 'account'])->name('account');

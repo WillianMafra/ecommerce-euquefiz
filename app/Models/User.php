@@ -12,6 +12,30 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
+
+    public function getOrders()
+    {
+        return $this->orders;
+    }
+
+    public function getId()
+    {
+        return $this->attributes['id'];
+    }
+
+    public function getBalance()
+    {
+        return $this->attributes['balance'];
+    }
+
+    public function setBalance($balance)
+    {
+        $this->attributes['balance'] = $balance;
+    }
     /**
      * The attributes that are mass assignable.
      *
@@ -47,4 +71,6 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
 }
