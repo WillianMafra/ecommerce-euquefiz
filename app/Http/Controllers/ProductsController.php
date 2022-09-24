@@ -84,6 +84,7 @@ class ProductsController extends Controller
     public function addToCart(CartRequest $request, $id, QuantityValidation $quantityValidation, TransationMessage $transationMessage)
     {
 
+        //A lógica aplicada foi a seguinte, eu faço a validação da request da inserção do produto no carrinho, depois usando um metodo de uma classe verifico se a quantidade escolhida pelo cliente não é maior do que o que temos em estoque, e baseado nessa mensagem, usando outro metodo, eu retorno uma mensagem de sucesso ou falha, caso a operacao se suceda, o processo continua normalmente, caso fracasse, o cliente é redirecionado de volta.
         $request->validated();
         $sucessOrFail = $quantityValidation->quantityValidator($request->quantity,$id);
 
