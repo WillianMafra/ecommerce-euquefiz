@@ -23,10 +23,6 @@
   display: block;
   margin:auto;
 }
-::selection{
-  color: rgb(255, 0, 0);
-  background: #da0000;
-}
 
 .wrapper{
   margin: 40px auto;
@@ -105,7 +101,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.9);
-  background: rgb(181, 181, 181);
+  background: rgba(0, 0, 0, 0.539);
   max-width: 600px;
   width: 80%;
   max-height: 80%;
@@ -133,6 +129,7 @@
   display: flex;
   font-size: 18px;
   font-weight: 400;
+  color: white;
 }
 .details .title p{
   font-weight: 500;
@@ -159,7 +156,7 @@
   width: 100%;
   z-index: 2;
   display: none;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
 }
 .shadow.show{
   display: block;
