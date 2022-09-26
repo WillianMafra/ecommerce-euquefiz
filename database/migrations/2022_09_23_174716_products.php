@@ -17,11 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('product_name');
             $table->string('slug');
-            $table->string('image')->nullable();
+            $table->string('image')->nullable()->default('img/logo-design/LogoSemFundo-Triangular.png');
             $table->decimal('price')->default('0.00');
             $table->text('description')->nullable();
             $table->decimal('stock')->default(0)->nullable();
-            $table->decimal('quantity')->default(1)->nullable();
             $table->unsignedBigInteger('category_id')->nullable();
             $table->foreign('category_id')
                 ->references('id')

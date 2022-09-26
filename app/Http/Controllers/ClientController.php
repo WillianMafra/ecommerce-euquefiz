@@ -3,11 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UserStoreRequest;
+use App\Mail\ResetPasswordEmail;
 use App\Models\Category;
 use App\Models\User;
+use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Password;
+use Illuminate\Support\Str;
 
 class ClientController extends Controller
 {
@@ -22,7 +27,7 @@ class ClientController extends Controller
     {
         $categories = Category::all();
 
-        return view('account.register', compact('categories'));
+        return view('account.login.register', compact('categories'));
     }
 
     public function salvar(UserStoreRequest $request)
@@ -41,11 +46,12 @@ class ClientController extends Controller
     {
         $categories = Category::all();
 
-        return view('account.login', compact('categories'));
+        return view('account.login.login', compact('categories'));
     }
 
     public function entrar(Request $request)
     {
+
        if (!Auth::attempt($request->only(['email', 'password']))) {
         return redirect()
         ->back()
@@ -58,6 +64,54 @@ class ClientController extends Controller
     {
         Auth::logout();
         return redirect ('/');
+    }
+
+    public function resetPassword()
+    {
+        return view('account.login.reset');
+    }
+
+    public function emailPassword(Request $request)
+    {
+        $request->validate(['email' => 'required|email']);
+
+        $status = Password::sendResetLink(
+            $request->only('email')
+        );
+
+        return $status === Password::RESET_LINK_SENT ? back()
+            ->with(['status' => __($status)])
+            : back()->withErrors(['email' => __($status)]);
+    }
+
+    public function formNewPassword($token)
+    {
+        return view('account.login.newpassword', ['token' => $token]);
+    }
+
+    public function storeNewPassword(Request $request)
+    {
+        $request->validate([
+            'token' => 'required',
+            'email' => 'required|email',
+            'password' => 'required|min:8|confirmed',
+        ]);
+
+        $status = Password::reset(
+            $request->only('email', 'password', 'password_confirmation', 'token'),
+            function ($user, $password) {
+                $user->forceFill([
+                    'password' => Hash::make($password)
+                ])->setRememberToken(Str::random(60));
+
+                $user->save();
+
+            }
+        );
+
+        return $status === Password::PASSWORD_RESET
+            ? redirect()->route('login')->with('status', __($status))
+            : back()->withErrors(['email' => [__($status)]]);
     }
 
 }

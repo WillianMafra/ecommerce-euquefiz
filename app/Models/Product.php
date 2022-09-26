@@ -10,6 +10,15 @@ class Product extends Model
     use HasFactory;
     protected $fillable = ['product_name', 'slug', 'image', 'price', 'description', 'stock','category_id'];
 
+    public function items()
+    {
+        return $this->hasMany(Item::class);
+    }
+    public function getItems()
+    {
+        return $this->items;
+    }
+
     public function getId()
     {
         return $this->attributes['id'];
