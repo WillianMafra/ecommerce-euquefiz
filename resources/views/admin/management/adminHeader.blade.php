@@ -20,7 +20,7 @@
 <body class="bg-dark">
 <header id="header" class="header fixed-top d-flex align-items-center bg-dark">
     <div class="d-flex align-items-center justify-content-between"> <a href="/" class="logo d-flex align-items-center">
-            <img src="{{asset('img/logo-design/LogoSemFundo.png')}}" alt="Eu Que Fiz Logo">
+            <img src="{{asset('img/logo-design/LogoSemFundo.png')}}"class="mt-5" alt="Eu Que Fiz Logo">
             <span class="d-none d-lg-block" id="titulo" >Eu Que Fiz</span></a><i class="bi bi-list toggle-sidebar-btn text-primary"></i>
     </div>
 @yield('search')
