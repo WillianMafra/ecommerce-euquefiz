@@ -1,5 +1,8 @@
 ul  {list-style: none;margin-bottom: 0}
 
+.cart_section{
+    margin-top: 3rem;
+}
 .button {
     display: inline-block;
     background: #bf5c0e;

@@ -17,7 +17,8 @@
     <title>Eu Que Fiz</title>
 </head>
 <body>
-<main id="home-page" class="">
+<div id="cover-background">
+<main id="home-page">
     <header id="header" class="header fixed-top d-flex align-items-center pb-3">
         <div class="container d-flex align-items-center justify-content-between">
             <a href="{{route('home')}}" class="navbar-brand" >
@@ -83,11 +84,13 @@
             <img src="{{asset('img/icone/dropdown.png')}}" width="20px" class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x" alt="fechar-menu">
         </div>
     </header>
+    @yield('mainContent')
     @yield('gallery')
     @yield('aboutus')
     @yield('events')
     @yield('chefs')
 </main>
+</div>
 <!-- ======= Footer ======= -->
 <footer id="footer" class="footer">
     <div class="container align-items-center">

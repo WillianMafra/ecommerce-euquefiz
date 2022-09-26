@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="{{asset('css/others/carShopping.css')}}">
 @endpush
 <div class="cart_section">
-    <div class="container-fluid">
+    <div class="container-fluid ">
         <div class="row">
             <div class="col-lg-10 offset-lg-1">
                 <div class="cart_container">

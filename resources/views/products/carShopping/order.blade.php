@@ -1,5 +1,5 @@
 @extends('layouts.layout')
-<div class="card">
+<div class="card container">
     <div class="card-header">
         Purchase Completed
     </div>
