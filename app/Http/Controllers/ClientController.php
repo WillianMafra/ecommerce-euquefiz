@@ -66,21 +66,22 @@ class ClientController extends Controller
         return redirect ('/');
     }
 
-    public function teste()
+    public function resetPassword()
     {
-        return view('account.login.recoverAccountEmail.recoveryEmail');
+        return view('account.login.reset');
     }
 
     public function emailPassword(Request $request)
     {
-        $token = $request->_token;
         $request->validate(['email' => 'required|email']);
-        $userObj = (object)['email' => $request->email];
 
-        $email = new ResetPasswordEmail($token);
+        $status = Password::sendResetLink(
+            $request->only('email')
+        );
 
-        Mail::to($userObj)->send($email);
-            return 'email enviado';
+        return $status === Password::RESET_LINK_SENT ? back()
+            ->with(['status' => __($status)])
+            : back()->withErrors(['email' => __($status)]);
     }
 
     public function formNewPassword($token)
@@ -105,7 +106,6 @@ class ClientController extends Controller
 
                 $user->save();
 
-                event(new PasswordReset($user));
             }
         );
 
@@ -114,9 +114,4 @@ class ClientController extends Controller
             : back()->withErrors(['email' => [__($status)]]);
     }
 
-    public function newEmail()
-    {
-        $token = 1;
-        $email = new PasswordReset($token);
-    }
 }

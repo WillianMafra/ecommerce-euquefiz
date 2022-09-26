@@ -13,6 +13,7 @@
        style="@import url(https://fonts.googleapis.com/css?family=Rubik:300,400,500,700|Open+Sans:300,400,600,700); font-family: 'Open Sans', sans-serif;">
     <tr>
         <td>
+            <p>{{$token}}</p>
             <table style="background-color: #f2f3f8; max-width:670px;  margin:0 auto;" width="100%" border="0"
                    align="center" cellpadding="0" cellspacing="0">
                 <tr>
@@ -46,7 +47,7 @@
                                         password has been generated for you. To reset your password, click the
                                         following link and follow the instructions.
                                     </p>
-                                    <a href="javascript:void(0);"
+                                    <a href="{{route('password.reset', $token)}}"
                                        style="background:#20e277;text-decoration:none !important; font-weight:500; margin-top:35px; color:#fff;text-transform:uppercase; font-size:14px;padding:10px 24px;display:inline-block;border-radius:50px;">Reset
                                         Password</a>
                                 </td>

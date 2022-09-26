@@ -79,7 +79,7 @@ Route::get('/logout', [ClientController::class, 'logout'])->name('logout');
 
 
 Route::get('/esqueci-a-senha', [ClientController::class, 'resetPassword'])->name('resetPassword');
-Route::get('/esqueci-a-senha123', [ClientController::class, 'teste'])->name('resetPassword');
+
 Route::post('/esqueci-a-senha', [ClientController::class, 'emailPassword'])->name('password.email');
 Route::get('/resetar-senha/{token}', [ClientController::class, 'formNewPassword'])->name('password.reset');
 Route::post('/resetar-senha', [ClientController::class, 'storeNewPassword'])->name('storeNewPassword');
