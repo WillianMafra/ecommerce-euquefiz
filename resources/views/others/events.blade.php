@@ -161,9 +161,6 @@
 </section>
 
 @endsection
-@prepend('scripts')
-<script src="{{asset('js/app.js')}}"></script>
-@endprepend
 @push('scripts')
 <script src="{{asset('js/carousel.js')}}"></script>
 <script src="{{asset('js/form.js')}}"></script>

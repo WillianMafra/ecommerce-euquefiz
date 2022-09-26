@@ -25,7 +25,6 @@
                                 @else <p class="text-danger">Imagem Indisponível</p>
                                 @endif
                             </td>
-
                             <td >{{ $user->name }}</td>
                             <form method="POST" action="">
                                 @method('put')
@@ -38,7 +37,6 @@
                                             <img src="{{asset('img/icone/arrow-up.png')}}" width="20px" alt="promover usuario"  onsubmit="return confirm('Deseja Rebaixar a Usuário {{addslashes($user->name)}}?')">
                                         </button>
                                 </td>
-
                                 <td>
                                         <button
                                             type="submit" name="userDemoted"
@@ -47,9 +45,7 @@
                                             <img src="{{asset('img/icone/arrow-down.png')}}" width="20px" alt="rebaixar-usuario"  onsubmit="return confirm('Deseja Rebaixar a Usuário {{addslashes($user->name)}}?')">
                                         </button>
                                     </td>
-
                             </form>
-
                         </tr>
                     @endforeach
                     </tbody>
