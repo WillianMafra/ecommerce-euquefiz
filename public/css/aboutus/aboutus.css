@@ -28,25 +28,28 @@
     font-family: pacifico;
     letter-spacing: 1.5px;
     margin-top: 125px;
+    text-align: center;
 }
 
 .h1-about:after{
     content: "";
     height: 5px;
-    width: 225px;
+    width: 195px;
+    max-width: 80%;
     background-color: #a90000;
     display: block;
     margin:auto;
 }
 
 .about-img{
+    align-items: center;
     height: 225px;
     width: 225px;
-    border: 4px solid #fff;
     border-radius: 50%;
     margin-top: 30px;
     transition: transform 0.4s ease;
 }
+
 .about-img:hover{
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
@@ -54,8 +57,8 @@
 
 .blockquote-about{
     font-family: sans-serif;
-    font-size: 20px;
-    margin-top: 30px;
+    font-size: 1.5vw;
+    margin-top: 20px;
 }
 article h5{
     text-transform: uppercase;

@@ -15,9 +15,10 @@
 .h1-gallery:after{
     content: "";
     height: 5px;
-    width: 225px;
+    width: 195px;
+    max-width: 80%;
     background-color: #a90000;
-    display: block;
+    display: flex;
     margin:auto;
     margin-bottom: 50px;
 }
@@ -46,7 +47,7 @@ h3 {
       justify-content: center;
       align-items: center;
       text-align: center;
-      /* min-height: 100vh; */
+      min-height: 100%;
 
 }
 
@@ -64,8 +65,8 @@ h3 {
     -webkit-align-items: center;
     align-items: center;
     padding: 60px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .form-content .form-items {
@@ -74,7 +75,7 @@ h3 {
     padding: 40px;
     display: inline-block;
     width: 100%;
-    min-width: 540px;
+    min-width: 80%;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
