@@ -5,10 +5,8 @@
             <div class="row flex-center min-vh-100 py-5" id="reset-password">
                 <div class="col-sm-10 col-md-8 col-lg-5 col-xxl-4">
                     <div class="text-center mb-6">
-                        @if (session('resent'))
-                            <div class="alert alert-success" role="alert">
-                                {{ __('A fresh verification link has been sent to your email address.') }}
-                            </div>
+                        @if(!empty($message))
+                            <div class="text-white alert alert-success bg-success text-center">{{$message}}</div>
                         @endif
                         <h4 class="text-800">Esqueceu a senha?</h4>
                         <p class="text-700 mb-5">Insira o E-mail e te enviaremos um link para reset :)</p>

@@ -29,8 +29,9 @@
                 <ul>
                     <li class="dropdown"><a href="{{route('showAllProducts')}}"><span>Cardápio</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                         <ul>
+
                             @if(!empty($categories))
-                                @foreach($categories as $category)
+                                @foreach ($categories as $category)
                                 <li class="dropdown"><a href="{{route('categoryPage',$category->id)}}"><span>{{$category->name}}</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                             </li>
                             @endforeach

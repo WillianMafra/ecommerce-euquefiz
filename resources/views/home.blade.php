@@ -8,7 +8,6 @@
 {{--<iframe class="embed-responsive-item " id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/M7lc1UVf-VE?&autoplay=1&loop=1&rel=0&showinfo=0&color=white&iv_load_policy=3&playlist=M7lc1UVf-VE"--}}
 {{--        frameborder="0" allowfullscreen></iframe>--}}
     @endsection
-
     @section('events')
 <section>
         <!-- ======= Menu Section ======= -->

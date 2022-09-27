@@ -3,14 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UserStoreRequest;
-use App\Mail\ResetPasswordEmail;
 use App\Models\Category;
 use App\Models\User;
-use Illuminate\Auth\Events\PasswordReset;
+use App\Service\TransationMessage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Str;
 
@@ -25,9 +23,7 @@ class ClientController extends Controller
 
     public function register()
     {
-        $categories = Category::all();
-
-        return view('account.login.register', compact('categories'));
+        return view('account.login.register');
     }
 
     public function salvar(UserStoreRequest $request)
@@ -66,15 +62,17 @@ class ClientController extends Controller
         return redirect ('/');
     }
 
-    public function resetPassword()
+    public function resetPassword(Request $request)
     {
-        return view('account.login.reset');
+        $message = $request->session()->get('message');
+        return view('account.login.reset',compact('message'));
     }
 
-    public function emailPassword(Request $request)
+    public function emailPassword(Request $request,TransationMessage $transationMessage)
     {
-        $request->validate(['email' => 'required|email']);
+        $transationMessage->newEmail($request, $request->email);
 
+        $request->validate(['email' => 'required|email']);
         $status = Password::sendResetLink(
             $request->only('email')
         );
