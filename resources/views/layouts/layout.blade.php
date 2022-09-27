@@ -31,7 +31,7 @@
                         <ul>
 
                             @if(!empty($categories))
-                                @foreach(\Illuminate\Support\Facades\Session::get('categories') as $category)
+                                @foreach ($categories as $category)
                                 <li class="dropdown"><a href="{{route('categoryPage',$category->id)}}"><span>{{$category->name}}</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                             </li>
                             @endforeach
