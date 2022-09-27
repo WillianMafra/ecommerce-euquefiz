@@ -85,8 +85,6 @@ Route::get('/resetar-senha/{token}', [ClientController::class, 'formNewPassword'
 Route::post('/resetar-senha', [ClientController::class, 'storeNewPassword'])->name('storeNewPassword');
 
 
-
-
 //Rotas extras que podem precisar de alguma manipulação
 Route::get('/eventos', [OthersController::class, 'events'])->name('events');
 
