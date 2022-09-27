@@ -72,6 +72,13 @@ Route::post('/entrar', [ClientController::class, 'entrar'])->name('entrar');
 Route::get('/logout', [ClientController::class, 'logout'])->name('logout');
 
 
+Route::get('/esqueci-a-senha', [ClientController::class, 'resetPassword'])->name('resetPassword');
+
+Route::post('/esqueci-a-senha', [ClientController::class, 'emailPassword'])->name('password.email');
+Route::get('/resetar-senha/{token}', [ClientController::class, 'formNewPassword'])->name('password.reset');
+Route::post('/resetar-senha', [ClientController::class, 'storeNewPassword'])->name('storeNewPassword');
+
+
 //Rotas extras que podem precisar de alguma manipulação
 Route::get('/eventos', [OthersController::class, 'events'])->name('events');
 
