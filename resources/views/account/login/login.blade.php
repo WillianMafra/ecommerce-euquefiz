@@ -35,6 +35,7 @@
                                     </div>
                                     <a href="{{route('resetPassword')}}" class=""><p class="text-center text-white bg-secondary w-50 rounded">Esqueceu a Senha?</p></a>
                                         <button class="btn btn-dark btn-lg btn-block" type="submit">Login</button>
+                                        <a href="{{route('register')}}" class=""><p class="text-center   text-primary ">Cadastre-se </p></a>
                                 </form>
                             </div>
                         </div>
