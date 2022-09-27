@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class TransationMessage
 {
+
     public function returnDestroyProductMessage(Request $request, $productName)
     {
         $request->session()
@@ -59,6 +60,15 @@ class TransationMessage
                 "Desculpe, não temos o estoque necessário no momento. Para encomendas entre em contato pelo Whats ou E-mail"
             );
         }
+    }
+
+    public function newEmail(Request $request, string $email)
+    {
+        $request->session()
+            ->flash(
+                'message',
+                "Email de Recuperação Enviado para {$email}. Por favor verifique também a caixa de SPAM"
+            );
     }
 
 }

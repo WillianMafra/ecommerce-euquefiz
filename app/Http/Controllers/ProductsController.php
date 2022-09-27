@@ -6,17 +6,19 @@ use App\Models\Category;
 use App\Models\Product;
 use App\Service\ProductsSearch;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class ProductsController extends Controller
 {
     public function home(Request $request)
     {
         $categories = Category::all();
+
         $productsInSession = $request->session()->get('products');
 
         if (!empty($categories)) {
 
-        return view('home', compact('categories', 'productsInSession'));
+        return view('home', compact('productsInSession','categories'));
 
         }
             return view('home',compact('productsInSession'));

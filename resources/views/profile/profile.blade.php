@@ -4,6 +4,7 @@
 @endpush
 @push('style')
     <link rel="stylesheet" href="{{asset('css/profile/profile.css')}}">
+@endpush
 @section('events')
 <div style="border:solid 1px;width: 600px" class="container p-5 my-5 bg-white">
     <div class="row">
