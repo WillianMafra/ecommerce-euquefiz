@@ -39,8 +39,8 @@
                         <div class="col-md-12"><label class="labels">Endereço</label><input type="text" class="form-control" placeholder="digite seu novo endereço" value=""></div>
                         <div class="col-md-12"><label class="labels">CEP</label><input type="text" class="form-control" placeholder="digite seu novo CEP" value=""></div>
                         <div class="col-md-12"><label class="labels">Email</label><input type="text" class="form-control" placeholder=" digite seu novo e-mail" value=""></div>
-                        <div class="col-md-12"><label class="labels">Nova senha</label><input type="password" class="form-control" name="password" required></div>
-                        <div class="col-md-12"><label class="labels">Confirmar senha</label><input type="password" class="form-control" name="password_confirmation" required></div>
+                        <!-- <div class="col-md-12"><label class="labels">Nova senha</label><input type="password" class="form-control" name="password" required></div>
+                        <div class="col-md-12"><label class="labels">Confirmar senha</label><input type="password" class="form-control" name="password_confirmation" required></div> -->
                     </div>
                 </div>
                 <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Editar perfil</button></div>
