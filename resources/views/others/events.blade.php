@@ -93,7 +93,7 @@
                 <div class="form-content">
                     <div class="form-items">
                         <h3>SOLICITAR ORÇAMENTO</h3>
-                        <form class="requires-validation" action="https://formsubmit.co/thiagowolter7@gmail.com" method="POST" novalidate>
+                        <form class="requires-validation" action="https://formsubmit.co/euquefiz.e21@gmail.com" method="POST" novalidate>
 
                             <!-- <div class="col-xs-4">
                                 <select class="form-select mt-3" type="text" required>
