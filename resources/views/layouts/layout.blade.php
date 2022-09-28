@@ -16,8 +16,12 @@
 
     <title>Eu Que Fiz</title>
 </head>
+@php
+    $categories = \App\Models\Category::all();
+@endphp
 <body>
-<main id="home-page" class="">
+<div id="cover-background">
+<main id="home-page">
     <header id="header" class="header fixed-top d-flex align-items-center pb-3">
         <div class="container d-flex align-items-center justify-content-between">
             <a href="{{route('home')}}" class="navbar-brand" >
@@ -28,8 +32,9 @@
                 <ul>
                     <li class="dropdown"><a href="{{route('showAllProducts')}}"><span>Cardápio</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                         <ul>
+
                             @if(!empty($categories))
-                                @foreach($categories as $category)
+                                @foreach ($categories as $category)
                                 <li class="dropdown"><a href="{{route('categoryPage',$category->id)}}"><span>{{$category->name}}</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                             </li>
                             @endforeach
@@ -83,11 +88,13 @@
             <img src="{{asset('img/icone/dropdown.png')}}" width="20px" class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x" alt="fechar-menu">
         </div>
     </header>
+    @yield('mainContent')
     @yield('gallery')
     @yield('aboutus')
     @yield('events')
     @yield('chefs')
 </main>
+</div>
 <!-- ======= Footer ======= -->
 <footer id="footer" class="footer">
     <div class="container align-items-center">
@@ -134,7 +141,7 @@
                         <img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin">
                     </a>
                     <a href="#">
-                        <img class="icone" src="{{asset('img/icone/instagram-icone.png')}}" alt="icone do instagram">
+                            <img class="icone" src="{{asset('img/icone/instagram-icone.png')}}" alt="icone do instagram">
                     </a>
                 </div>
             </div>
@@ -146,6 +153,7 @@
 {{--<div id="preloader"></div>--}}
 <!-- JavaScript Bundle with Popper -->
 @stack('scripts')
+<script src="{{asset('js/app.js')}}"></script>
 <script src="https://plugin.handtalk.me/web/latest/handtalk.min.js"></script>
 <script>
 

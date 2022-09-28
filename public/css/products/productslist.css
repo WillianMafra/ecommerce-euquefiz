@@ -5,6 +5,10 @@
     padding-bottom: 2px;
 
 }
+.lista-de-produtos {
+    width: 95%;
+    height: 300px;
+}
 .container-geral {
     margin-top: 20px;
 }

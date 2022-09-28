@@ -25,7 +25,7 @@
                         <div class="card p-3">
 
                             <div class="text-center">
-                                <img src="{{asset($product->image)}}" width="200" alt="{{$product->product_name}}">
+                                <img class="img-thumbnail lista-de-produtos" src="{{asset($product->image)}}" width="200" alt="{{$product->product_name}}">
                             </div>
 
                             <div class="product-details">

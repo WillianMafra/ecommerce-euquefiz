@@ -24,8 +24,8 @@
 
                                     <h5 class="fw-normal mb-3 pb-3 login-title">Entrar Na Conta</h5>
                                     @include('account.subview.erros')
-                                    <div class="form-outline mb-4">
-                                        <input type="email" id="form2Example17" class="form-control form-control-lg" name="email"/>
+                                    <div class="form-outline mb-4 ">
+                                        <input type="email" id="form2Example17" class=" form-control form-control-lg" name="email"/>
                                         <label class="form-label" for="form2Example17">E-mail</label>
                                     </div>
 
@@ -33,10 +33,9 @@
                                         <input type="password" id="form2Example27" class="form-control form-control-lg" name="password" />
                                         <label class="form-label" for="form2Example27">Senha</label>
                                     </div>
-
-                                    <div class="pt-1 mb-4 botao-login">
+                                    <a href="{{route('resetPassword')}}" class=""><p class="text-center text-white bg-secondary w-50 rounded">Esqueceu a Senha?</p></a>
                                         <button class="btn btn-dark btn-lg btn-block" type="submit">Login</button>
-                                    </div>
+                                        <a href="{{route('register')}}" class=""><p class="text-center   text-primary ">Cadastre-se </p></a>
                                 </form>
                             </div>
                         </div>

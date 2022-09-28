@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-lg-5 mt-5">
                 <div class="card mb-3">
-                    <img class="card-img img-fluid" src="{{asset('img/cardapio/congelados/bolinho de aipim.jpg')}}" alt="Card image cap" id="product-detail">
+                    <img class="card-img img-fluid" src="{{asset($product->image)}}" alt="Card image cap" id="product-detail">
                 </div>
             </div>
             <!-- col end -->
@@ -25,6 +25,9 @@
                         @csrf
                             <div class="col-auto">
                                 <ul class="list-inline pb-3">
+                                    @if(!empty($message))
+                                        <div class="text-white alert alert-success bg-secondary text-center">{{$message}}</div>
+                                    @endif
                                     <li class="list-inline-item text-right">
                                         <label for="product-quantity" class="p-2">Quantidade</label>
                                         <input type="number" name="quantity" id="product-quanity" >
@@ -46,6 +49,4 @@
         </div>
     </div>
 </section>
-@prepend('scripts')
-    <script src="{{asset('js/app.js')}}"></script>
-@endprepend
+

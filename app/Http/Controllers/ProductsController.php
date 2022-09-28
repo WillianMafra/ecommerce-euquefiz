@@ -6,40 +6,31 @@ use App\Models\Category;
 use App\Models\Product;
 use App\Service\ProductsSearch;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class ProductsController extends Controller
 {
+
     public function home(Request $request)
     {
-        $categories = Category::all();
+
         $productsInSession = $request->session()->get('products');
 
-        if (!empty($categories)) {
+        return view('home', compact('productsInSession'));
 
-        return view('home', compact('categories', 'productsInSession'));
-
-        }
-            return view('home',compact('productsInSession'));
     }
 
     public function categoryPage($id)
     {
-        $categories = Category::all();
         $category = Category::find($id);
         $product = Product::all();
-        return view('products.category', compact('product', 'categories', 'category'));
+        return view('products.category', compact('product', 'category'));
     }
 
     public function showAllProducts()
     {
 
         return view('products.products');
-    }
-
-    public function teste()
-    {
-
-        return view('products.carShopping.teste');
     }
 
     public function productsList(Request $request, ProductsSearch $productsSearch)
@@ -50,27 +41,14 @@ class ProductsController extends Controller
 
     }
 
-    public function showProduct ($id)
+    public function showProduct ($id, Request $request)
     {
         $product = Product::findOrFail($id);
 
+        $message = $request->session()->get('message');
+        $request->session()->remove('message');
 
-        return view('products.showProduct', compact('product'));
+        return view('products.showProduct', compact('product', 'message'));
     }
 
-    public function carShopping(Request $request)
-    {
-        $products = $request->session()->get('products');
-        return view('products.carShopping.carShopping', compact('products'));
-    }
-
-    public function addToCart(Request $request)
-    {
-        $products = $request->session()->get("products");
-        $products['quantity'] = $request->input('quantity');
-        $request->session()->put('products', $products);
-
-        dd($request->session()->all());
-        return view('products.carShopping.carShopping');
-    }
 }

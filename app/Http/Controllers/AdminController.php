@@ -3,12 +3,28 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\Order;
+use App\Models\User;
+use App\Service\DataForManagement;
+use Auth;
+
 class AdminController extends Controller
 
 {
-    public function management()
+    public function management(User $users, DataForManagement $dataForManagement)
     {
-        return view('admin.management.dashboard');
+        $orders = Order::all();
+
+        $rentability = $dataForManagement->ordersTotalAndQuantity($orders);
+
+        $lastDataByTotal = $dataForManagement->ordersSortedByTotal($orders);
+
+        $lastDataByDate = $dataForManagement->ordersSortedById($orders);
+
+        $usersQuantity = $users->where(['user_type' => 'user'])->count();
+
+
+        return view('admin.management.dashboard',compact('rentability', 'usersQuantity','lastDataByTotal','lastDataByDate'));
     }
 
 }

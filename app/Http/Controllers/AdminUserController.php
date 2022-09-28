@@ -5,11 +5,24 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Service\TransationMessage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminUserController extends Controller
 {
+
+    public function getAdminData()
+    {
+        $actualUser = Auth::user();
+        $userData = [
+            'name' => $actualUser->getAttribute('name'),
+            'image' => $actualUser->getAttribute('image')];
+
+        return view('admin.management.subview.navbar',compact('userData'));
+    }
+
     public function usersList(Request $request)
     {
+
         $message = $request->session()->get('message');
         $users = User::all();
         return view('admin.management.users.usersList', compact('users', 'message'));
