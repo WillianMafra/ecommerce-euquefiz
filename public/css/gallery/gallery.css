@@ -2,7 +2,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
   .testimonial{
-    padding: 30px 100px;
+    padding: 30px 45px;
 
 }
 .h1-gallery{
@@ -168,17 +168,29 @@
 
 @media (max-width: 1000px) {
   .gallery .image{
-    width: calc(100% / 3);
+    width: calc(100% / 2);
+  }
+  .wrapper nav .items{
+    max-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 @media (max-width: 800px) {
   .gallery .image{
     width: calc(100% / 2);
   }
+  .wrapper nav .items{
+    max-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 @media (max-width: 700px) {
   .wrapper nav .items{
-    max-width: 600px;
+    max-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
   }
   nav .items span{
     padding: 7px 15px;
@@ -189,7 +201,7 @@
     margin: 30px auto;
   }
   .wrapper nav .items{
-    flex-wrap: wrap;
+    display: none;
     justify-content: center;
   }
   nav .items span{

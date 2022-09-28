@@ -11,11 +11,11 @@
         <nav>
             <div class="items">
                 <span class="item active" data-name="all">Todos</span>
-                <span class="item" data-name="bag">Categoria 1</span>
-                <span class="item" data-name="shoe">Categoria 3</span>
-                <span class="item" data-name="watch">Categoria 4</span>
-                <span class="item" data-name="camera">Categoria 5</span>
-                <span class="item" data-name="headphone">Categoria 6</span>
+                <span class="item" data-name="bag">Categoria1</span>
+                <span class="item" data-name="shoe">Categoria2</span>
+                <span class="item" data-name="watch">Categoria3</span>
+                <span class="item" data-name="camera">Categoria4</span>
+                <span class="item" data-name="headphone">Categoria5</span>
             </div>
         </nav>
         <!-- filter Images -->
