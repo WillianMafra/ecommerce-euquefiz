@@ -87,7 +87,7 @@
             <div class="container" data-aos="fade-up">
                 <h2 class="font-weight-light my-5 subtitles text-center">Nossos Chefs</h2>
                     <div class="row gy-4">
-                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="10">
                             <div class="chef-member">
                                 <div class="member-img">
                                     <img src="{{asset('img/chefs/walter-white.jpg')}}" class="img-fluid" alt="master chef">
@@ -125,7 +125,7 @@
                                 </div>
                             </div>
                         </div><!-- End Chefs Member -->
-                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                        <div class="col-lg-2 col-md-2 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
                             <div class="chef-member">
                                 <div class="member-img">
                                     <img src="{{asset('img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
