@@ -43,9 +43,10 @@ class AdminProductsController extends Controller
 
         return Redirect::route('list');
     }
-    public function editProduct(Product $product)
+    public function editProduct(Product $product, Category $categories)
     {
-        return view('admin.management.products.productEdit', ['product' => $product]);
+        $categories = Category::all();
+        return view('admin.management.products.productEdit', compact('categories'), ['product' => $product]);
     }
 
     public function updateProduct(Product $product, ProductsStoreRequest $productsStoreRequest)
