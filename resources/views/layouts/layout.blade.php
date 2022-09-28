@@ -16,6 +16,9 @@
 
     <title>Eu Que Fiz</title>
 </head>
+@php
+    $categories = \App\Models\Category::all();
+@endphp
 <body>
 <div id="cover-background">
 <main id="home-page">

@@ -5,8 +5,8 @@
     <div class="pagetitle">
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item "><a href="#" class="text-white">Home</a></li>
-                <li class="breadcrumb-item active text-white">Dashboard</li>
+                <li class="breadcrumb-item "><a href="/" class="text-white">Home</a></li>
+                <li class="breadcrumb-item active text-white"><a href="{{route('management')}}">Dashboard</a></li>
             </ol>
         </nav>
     </div>
@@ -32,8 +32,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center"> <i class="bi bi-cart"></i></div>
                                     <div class="ps-3">
-                                        <h6>145</h6>
-                                        <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">Aumento</span>
+                                        <p><b> Total de Vendas Atuais</b> {{$rentability['quantity']}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -57,8 +56,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center"> <i class="bi bi-currency-dollar"></i></div>
                                     <div class="ps-3">
-                                        <h6>R$3,264</h6>
-                                        <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">Aumento</span>
+                                        <h6>R$ {{$rentability['total']}}</h6>
                                     </div>
                                 </div>
                             </div>
@@ -82,8 +80,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center"> <i class="bi bi-people"></i></div>
                                     <div class="ps-3">
-                                        <h6>1244</h6>
-                                        <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">a menos</span>
+                                        <b><p class="text-success">Atualmente Temos {{$usersQuantity}} Clientes Registrados</p></b>
                                     </div>
                                 </div>
                             </div>
@@ -109,20 +106,17 @@
                                     <tr>
                                         <th scope="col">ID</th>
                                         <th scope="col">Cliente</th>
-                                        <th scope="col">Produto</th>
-                                        <th scope="col">Preço</th>
-                                        <th scope="col">Status</th>
+                                        <th scope="col">Preco Total</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <th scope="row"><a href="#">#2457</a></th>
-                                        <td>Brandon Jacob</td>
-                                        <td><a href="#" class="text-primary">At praesentium minu</a></td>
-                                        <td>R$64</td>
-                                        <td><span class="badge bg-success">Aprovado</span></td>
-                                    </tr>
-                                    <tr>
+                                    @foreach($lastDataByDate as $data)
+                                        <tr>
+                                            <th scope="row">{{$data['id']}}</th>
+                                            <td>{{$data['user_name']}}</td>
+                                            <td>R$ {{$data['total']}}</td>
+                                        </tr>
+                                    @endforeach
                                     </tbody>
                                 </table>
                             </div>
@@ -146,21 +140,19 @@
                                 <table class="table table-borderless">
                                     <thead>
                                     <tr>
-                                        <th scope="col">Imagem</th>
-                                        <th scope="col">Produto</th>
-                                        <th scope="col">Preço</th>
-                                        <th scope="col">Quantidade</th>
-                                        <th scope="col">Receita</th>
+                                        <th scope="col">Nota ID</th>
+                                        <th scope="col">Cliente</th>
+                                        <th scope="col">Preço Total</th>
                                     </tr>
                                     </thead>
                                     <tbody>
+                                    @foreach($lastDataByTotal as $data)
                                     <tr>
-                                        <th scope="row"><a href="#"><img src="{{asset('img/pratos/feijoada.jpg')}}" alt=""></a></th>
-                                        <td><a href="#" class="text-primary fw-bold">Ut inventore ipsa voluptas nulla</a></td>
-                                        <td>R$64</td>
-                                        <td class="fw-bold">124</td>
-                                        <td>R$5,828</td>
+                                        <th scope="row">{{$data['id']}}</th>
+                                        <td>{{$data['user_name']}}</td>
+                                        <td>R$ {{$data['total']}}</td>
                                     </tr>
+                                    @endforeach
                                     </tbody>
                                 </table>
                             </div>

@@ -814,4 +814,8 @@ cursor: pointer;
     align-items: center;
     flex-wrap: nowrap;
 }
+.chefs-container {
 
+    width: 65%;
+
+}

@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Storage;
 
 class AdminCategoriesController extends Controller
 {
-
     public function categoriesList()
     {
         $categories = Category::all();

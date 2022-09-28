@@ -10,26 +10,21 @@ use Illuminate\Support\Facades\Session;
 
 class ProductsController extends Controller
 {
+
     public function home(Request $request)
     {
-        $categories = Category::all();
 
         $productsInSession = $request->session()->get('products');
 
-        if (!empty($categories)) {
+        return view('home', compact('productsInSession'));
 
-        return view('home', compact('productsInSession','categories'));
-
-        }
-            return view('home',compact('productsInSession'));
     }
 
     public function categoryPage($id)
     {
-        $categories = Category::all();
         $category = Category::find($id);
         $product = Product::all();
-        return view('products.category', compact('product', 'categories', 'category'));
+        return view('products.category', compact('product', 'category'));
     }
 
     public function showAllProducts()
@@ -41,21 +36,19 @@ class ProductsController extends Controller
     public function productsList(Request $request, ProductsSearch $productsSearch)
     {
 
-        $categories = Category::all();
         $products = $productsSearch->search($request);
-        return view('products.productsList', compact('products', 'categories'));
+        return view('products.productsList', compact('products'));
 
     }
 
     public function showProduct ($id, Request $request)
     {
-        $categories = Category::all();
         $product = Product::findOrFail($id);
 
         $message = $request->session()->get('message');
         $request->session()->remove('message');
 
-        return view('products.showProduct', compact('product','categories', 'message'));
+        return view('products.showProduct', compact('product', 'message'));
     }
 
 }

@@ -33,6 +33,7 @@ class OrderController extends Controller
             $userName = $order->getUser()->name;
 
             $email = new NewBuy($userName,$total);
+
             $euQueFizEmail = (object)['email' => 'euquefiz.e21@gmail.com', 'name' => 'Nova Compra'];
 
             Mail::to($euQueFizEmail)->send($email);
