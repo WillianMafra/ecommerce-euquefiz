@@ -16,14 +16,16 @@
                         <span class="picture__image"></span>
                     </label>
             </div>
-            <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-                <span class="font-weight-bold">Nome</span>
-                <span class="text-black-50">Telefone</span>
-                <span class="text-black-50">Cidade</span>
-                <span class="text-black-50">Endereço</span>
-                <span class="text-black-50">CEP</span>
-                <span class="text-black-50">E-mail</span>
-            </div>
+            @foreach ($users as $user)
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                    <span class="font-weight-bold">{{ $user->name }}</span>
+                    <span class="text-black-50">{{ $user->telefone }}</span>
+                    <span class="text-black-50">{{ $user->cidade }}</span>
+                    <span class="text-black-50">{{ $user->endereco }}</span>
+                    <span class="text-black-50">{{ $user->cep }}</span>
+                    <span class="text-black-50">{{ $user->email }}</span>
+                </div>
+            @endforeach
         </div>
     </div>
     <div class="d-flex justify-content-center align-items-center">
