@@ -15,9 +15,10 @@
 .h1-gallery:after{
     content: "";
     height: 5px;
-    width: 225px;
+    width: 195px;
+    max-width: 80%;
     background-color: #a90000;
-    display: block;
+    display: flex;
     margin:auto;
     margin-bottom: 50px;
 }
@@ -32,7 +33,7 @@
     font-family: pacifico, cursive;
     font-size: 26px;
     color: #f6f6f6;
-    margin-top: 30px;
+    text-align: center;
 }
 
 
@@ -46,7 +47,8 @@ h3 {
       justify-content: center;
       align-items: center;
       text-align: center;
-      min-height: 100vh;
+      min-height: 100%;
+
 }
 
 .form-holder .form-content {
@@ -63,20 +65,24 @@ h3 {
     -webkit-align-items: center;
     align-items: center;
     padding: 60px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .form-content .form-items {
+    
     border: 3px solid rgb(216, 0, 0);
     padding: 40px;
     display: inline-block;
     width: 100%;
-    min-width: 540px;
+    min-width: 80%;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
     text-align: left;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
+    background: rgba(0, 0, 0, 0.209);
 }
 
 .form-content h3 {
@@ -97,7 +103,7 @@ h3 {
     font-size: 17px;
     font-weight: 300;
     line-height: 20px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 
 
@@ -105,7 +111,7 @@ h3 {
     color: #fff;
 }
 
-.form-content input[type=text], .form-content input[type=password], .form-content input[type=email], .form-content select {
+.form-content input[type=text], .form-content input[type=password], .form-content input[type=month], .form-content input[type=email], .form-content select {
     width: 100%;
     padding: 9px 20px;
     text-align: left;
