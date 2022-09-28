@@ -16,9 +16,8 @@ class ClientController extends Controller
 {
     public function account()
     {
-        $categories = Category::all();
 
-        return view('account.account', compact('categories'));
+        return view('account.account');
     }
 
     public function register()
@@ -40,9 +39,8 @@ class ClientController extends Controller
 
     public function login()
     {
-        $categories = Category::all();
 
-        return view('account.login.login', compact('categories'));
+        return view('account.login.login');
     }
 
     public function entrar(Request $request)

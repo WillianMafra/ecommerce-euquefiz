@@ -27,7 +27,6 @@ Route::prefix('admin')->group(function (){
 
     //Controllers Gerais Admin
     Route::get('/', [AdminController::class, 'management'])->name('management');
-    Route::get('/teste', [AdminController::class, 'teste'])->name('teste');
     //Fim dos Controllers Gerais - Admin
 
     //Gerenciamento dos Usuarios - Admin
@@ -56,6 +55,7 @@ Route::prefix('admin')->group(function (){
 
 //Rota para exibir os produtos Para o usuário
 Route::get('/', [ProductsController::class, 'home'])->name('home');
+
 Route::get('/categoria/{id}', [ProductsController::class, 'categoryPage'])->name('categoryPage');
 Route::get('/produtos', [ProductsController::class, 'showAllProducts'])->name('showAllProducts');
 Route::get('/listarprodutos', [ProductsController::class, 'productsList'])->name('productsList');
@@ -66,7 +66,7 @@ Route::get('/listarprodutos/{id}', [ProductsController::class, 'showProduct'])->
 Route::get('/carrinho', [CartController::class, 'carShopping'])->name('carShopping');
 Route::get('/carrinho/delete', [CartController::class, 'destroy'])->name('destroyCart');
 Route::post('/listarprodutos/adicionarAoCarrinho/{id}', [CartController::class, 'addToCart'])->name('addToCart');
-Route::post('/carrinho/finalizar-compra', [OrderController::class, 'storeOrder'])->name('completeOrder');
+Route::post('/carrinho/finalizar-compra', [OrderController::class, 'storeOrder'])->name('completeOrder')->middleware('auth');
 
 
 //Rota para o usuário fazer login e alterar dados da conta
