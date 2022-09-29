@@ -9,7 +9,30 @@
     <section>
 <div style="border:solid 1px;" class="container p-5 my-5 bg-white w-75">
     <div class="row">
+<<<<<<< HEAD
 
+=======
+    <div class="d-flex justify-content-center">
+        <div class="col-md-3 border-right">
+            <div class="d-flex flex-column align-items-center rounded-circle mt-5">
+                    <label class="picture" for="picture__input" tabIndex="0">
+                        <input type="file" name="picture__input" id="picture__input">
+                        <span class="picture__image"></span>
+                    </label>
+            </div>
+            @foreach ($users as $user)
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                    <span class="font-weight-bold">{{ $user->name }}</span>
+                    <span class="text-black-50">{{ $user->telefone }}</span>
+                    <span class="text-black-50">{{ $user->cidade }}</span>
+                    <span class="text-black-50">{{ $user->endereco }}</span>
+                    <span class="text-black-50">{{ $user->cep }}</span>
+                    <span class="text-black-50">{{ $user->email }}</span>
+                </div>
+            @endforeach
+        </div>
+    </div>
+>>>>>>> 8991ba2f3af8a92b45e0d577f4459da7d8514e4e
     <div class="d-flex justify-content-center align-items-center">
         <div class="col-md-10 border-right">
             <div class="p-3 py-5">
