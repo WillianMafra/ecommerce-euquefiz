@@ -763,6 +763,15 @@ section {
     right: 8px;
     opacity: 1;
 }
+
+@media screen and (max-width: 768px)
+{
+
+.alte {
+   max-width: 33%;
+  
+}
+
 .container-geral {
     margin-top: 30px;
 }

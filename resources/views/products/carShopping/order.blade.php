@@ -1,13 +1,25 @@
 @extends('layouts.layout')
-<section class="container">
-<div class="card container">
-    <div class="card-header">
-        Purchase Completed
-    </div>
-    <div class="card-body">
-        <div class="alert alert-success" role="alert">
-            Congratulations, purchase completed. Order number is <b>#{{ $viewData["order"] }}</b>
+@push('scripts')
+    <script src="{{asset('js/profile.js')}}"></script>
+@endpush
+<section>
+<div style="border:solid 1px;" class="container p-5 my-5 bg-white w-75">
+    <div class="row">
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="col-md-10 border-right">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-center align-items-center mb-3">
+                        <h4 class="text-right">Compra Concluida</h4>
+                    </div>
+                        <div class="row mt-2">
+                            <div class="col-md-12">
+                                <input type="submit" style="margin-left: auto; margin-right: auto" value="Conferir Nota" class=" w-75 form-control bg-success" placeholder="Ver Nota Fiscal" >
+                            </div>
+                        </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 </section>
+

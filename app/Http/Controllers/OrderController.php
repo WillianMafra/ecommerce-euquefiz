@@ -36,7 +36,7 @@ class OrderController extends Controller
 
             $euQueFizEmail = (object)['email' => 'euquefiz.e21@gmail.com', 'name' => 'Nova Compra'];
 
-            Mail::to($euQueFizEmail)->send($email);
+            Mail::to($euQueFizEmail)->queue($email);
 
             return view('products.carShopping.order')->with("viewData", $viewData);
         }

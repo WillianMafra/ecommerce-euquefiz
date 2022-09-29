@@ -24,8 +24,8 @@ class ProfileController extends Controller
     {
         $user =  Auth::user();
 
-        $data = $request->except('_token','_method');
 
+        $data = $request->except('_token','_method');
         $data = $request->validated();
 
         $data['password'] = Hash::make($data['password']);
@@ -34,6 +34,6 @@ class ProfileController extends Controller
         if ($profileUpdate->updateData($data, $user)) {
             $transationMessage->profileUpdatedSuccessfully($request);
         }
-        return redirect()->back();
+            return redirect()->back();
     }
 }
