@@ -55,6 +55,7 @@ Route::prefix('admin')->group(function (){
 
 //Rota para exibir os produtos Para o usuário
 Route::get('/', [ProductsController::class, 'home'])->name('home');
+Route::get('/order', [ProductsController::class, 'order'])->name('order');
 
 Route::get('/categoria/{id}', [ProductsController::class, 'categoryPage'])->name('categoryPage');
 Route::get('/produtos', [ProductsController::class, 'showAllProducts'])->name('showAllProducts');

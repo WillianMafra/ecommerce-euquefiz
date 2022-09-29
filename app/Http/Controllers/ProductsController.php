@@ -19,6 +19,13 @@ class ProductsController extends Controller
         return view('home', compact('productsInSession'));
 
     }
+    public function order()
+    {
+
+        $viewData = ['order' => 1];
+        return view('products.carShopping.order',compact('viewData'));
+
+    }
 
     public function categoryPage($id)
     {
