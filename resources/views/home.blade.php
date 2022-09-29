@@ -82,14 +82,14 @@
 </section>
 @endsection
 @section('chefs')
-        <section id="chefs" class="chefs section-bg">
-            <div class="container chefs-container" data-aos="fade-up">
+<section id="chefs" class="chefs section-bg">
+            <div class="container" data-aos="fade-up">
                 <h2 class="font-weight-light my-5 subtitles text-center">Nossos Chefs</h2>
                     <div class="row gy-4">
-                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="col py-1 px-lg-1 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
                             <div class="chef-member">
                                 <div class="member-img">
-                                    <img src="{{asset('img/chefs/walter-white.jpg')}}" class="img-fluid" alt="master chef">
+                                    <img src="{{asset('img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
                                         <div class="social">
                                             <a href=""><i class="bi bi-twitter"></i></a>
                                             <a href=""><i class="bi bi-facebook"></i></a>
@@ -98,16 +98,17 @@
                                         </div>
                                 </div>
                                 <div class="member-info">
-                                    <h4>Walter White</h4>
-                                        <span>Chef</span>
-
+                                    <h4>Bruno</h4>
+                                        <span>Dev</span>
+                                        <p>xxx
+                                        </p>
                                 </div>
                             </div>
                         </div><!-- End Chefs Member -->
-                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                        <div class="col py-1 px-lg-1 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
                             <div class="chef-member">
                                 <div class="member-img">
-                                    <img src="{{asset('img/chefs/jesse.jpg')}}" class="img-fluid" alt="master chef">
+                                    <img src="{{asset('img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
                                         <div class="social">
                                             <a href=""><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
                                             <a href=""><i class="bi bi-facebook"></i></a>
@@ -116,13 +117,14 @@
                                         </div>
                                 </div>
                                 <div class="member-info">
-                                    <h4>Jesse Pinkman</h4>
-                                    <span>Entregador</span>
-
+                                    <h4>Cláudio</h4>
+                                    <span>Dev</span>
+                                        <p>xxx
+                                        </p>
                                 </div>
                             </div>
                         </div><!-- End Chefs Member -->
-                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                        <div class="col py-1 px-lg-1 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
                             <div class="chef-member">
                                 <div class="member-img">
                                     <img src="{{asset('img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
@@ -134,81 +136,86 @@
                                         </div>
                                 </div>
                                 <div class="member-info">
-                                    <h4>Jimmy Mcgill</h4>
-                                    <span>Advogado kkkk</span>
-
+                                    <h4>Débora</h4>
+                                    <span>Dev</span>
+                                        <p>xxx
+                                        </p>
                                 </div>
                             </div>
                         </div><!-- End Chefs Member -->
-                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                        <div class="col py-1 px-lg-1 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
                             <div class="chef-member">
                                 <div class="member-img">
                                     <img src="{{asset('img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
-                                    <div class="social">
-                                        <a href=""><i class="bi bi-twitter"></i></a>
-                                        <a href=""><i class="bi bi-facebook"></i></a>
-                                        <a href=""><i class="bi bi-instagram"></i></a>
-                                        <a href=""><i class="bi bi-linkedin"></i></a>
-                                    </div>
+                                        <div class="social">
+                                            <a href=""><i class="bi bi-twitter"></i></a>
+                                            <a href=""><i class="bi bi-facebook"></i></a>
+                                            <a href=""><i class="bi bi-instagram"></i></a>
+                                            <a href=""><i class="bi bi-linkedin"></i></a>
+                                        </div>
                                 </div>
                                 <div class="member-info">
-                                    <h4>Jimmy Mcgill</h4>
-                                    <span>Advogado kkkk</span>
-
+                                    <h4>Marli</h4>
+                                    <span>Dev</span>
+                                        <p>xxx
+                                        </p>
                                 </div>
                             </div>
                         </div><!-- End Chefs Member -->
-                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                        <div class="col py-1 px-lg-1 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
                             <div class="chef-member">
                                 <div class="member-img">
                                     <img src="{{asset('img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
-                                    <div class="social">
-                                        <a href=""><i class="bi bi-twitter"></i></a>
-                                        <a href=""><i class="bi bi-facebook"></i></a>
-                                        <a href=""><i class="bi bi-instagram"></i></a>
-                                        <a href=""><i class="bi bi-linkedin"></i></a>
-                                    </div>
+                                        <div class="social">
+                                            <a href=""><i class="bi bi-twitter"></i></a>
+                                            <a href=""><i class="bi bi-facebook"></i></a>
+                                            <a href=""><i class="bi bi-instagram"></i></a>
+                                            <a href=""><i class="bi bi-linkedin"></i></a>
+                                        </div>
                                 </div>
                                 <div class="member-info">
-                                    <h4>Jimmy Mcgill</h4>
-                                    <span>Advogado kkkk</span>
-
+                                    <h4>Matheus</h4>
+                                    <span>Dev</span>
+                                        <p>xxx
+                                        </p>
                                 </div>
                             </div>
                         </div><!-- End Chefs Member -->
-                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                        <div class="col py-1 px-lg-1 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
                             <div class="chef-member">
                                 <div class="member-img">
                                     <img src="{{asset('img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
-                                    <div class="social">
-                                        <a href=""><i class="bi bi-twitter"></i></a>
-                                        <a href=""><i class="bi bi-facebook"></i></a>
-                                        <a href=""><i class="bi bi-instagram"></i></a>
-                                        <a href=""><i class="bi bi-linkedin"></i></a>
-                                    </div>
+                                        <div class="social">
+                                            <a href=""><i class="bi bi-twitter"></i></a>
+                                            <a href=""><i class="bi bi-facebook"></i></a>
+                                            <a href=""><i class="bi bi-instagram"></i></a>
+                                            <a href=""><i class="bi bi-linkedin"></i></a>
+                                        </div>
                                 </div>
                                 <div class="member-info">
-                                    <h4>Jimmy Mcgill</h4>
-                                    <span>Advogado kkkk</span>
-
+                                    <h4>Thiago</h4>
+                                    <span>Dev</span>
+                                        <p>xxx
+                                        </p>
                                 </div>
                             </div>
                         </div><!-- End Chefs Member -->
-                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                        <div class="col py-1 px-lg-1 d-flex align-items-stretch alte"  data-aos="fade-up" data-aos-delay="300">
                             <div class="chef-member">
                                 <div class="member-img">
                                     <img src="{{asset('img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
-                                    <div class="social">
-                                        <a href=""><i class="bi bi-twitter"></i></a>
-                                        <a href=""><i class="bi bi-facebook"></i></a>
-                                        <a href=""><i class="bi bi-instagram"></i></a>
-                                        <a href=""><i class="bi bi-linkedin"></i></a>
-                                    </div>
+                                        <div class="social">
+                                            <a href=""><i class="bi bi-twitter"></i></a>
+                                            <a href=""><i class="bi bi-facebook"></i></a>
+                                            <a href=""><i class="bi bi-instagram"></i></a>
+                                            <a href=""><i class="bi bi-linkedin"></i></a>
+                                        </div>
                                 </div>
                                 <div class="member-info">
-                                    <h4>Jimmy Mcgill</h4>
-                                    <span>Advogado kkkk</span>
-
+                                    <h4>Willian</h4>
+                                    <span>Dev</span>
+                                        <p>xxx
+                                        </p>
                                 </div>
                             </div>
                         </div><!-- End Chefs Member -->
