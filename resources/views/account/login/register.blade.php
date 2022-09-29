@@ -78,6 +78,9 @@
                                     <label class="form-label" for="form3Example1">Senha</label>
                                 </div>
                             </div>
+                            @error('password_confirmation')
+                            <small class="bg-danger text-white w-25 rounded" role="alert">{{$message}}</small>
+                            @enderror
                             <div class="col-md-6 mb-4">
                                 <div class="form-outline">
                                     <input type="password" id="form3Example2" class="form-control" name="password_confirmation" required/>

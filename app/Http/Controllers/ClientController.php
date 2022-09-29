@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UserStoreRequest;
-use App\Models\Category;
 use App\Models\User;
 use App\Service\TransationMessage;
 use Illuminate\Auth\Events\PasswordReset;
@@ -17,7 +16,6 @@ class ClientController extends Controller
 {
     public function account()
     {
-
         return view('account.account');
     }
 

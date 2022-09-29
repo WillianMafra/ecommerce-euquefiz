@@ -92,4 +92,5 @@ Route::get('/sobre', [OthersController::class, 'aboutus'])->name('aboutus');
 Route::get('/galeria', [OthersController::class, 'gallery'])->name('gallery');
 
 //Rota para acessar o perfil de usuário
-Route::get('/seu-espaco', [ProfileController::class, 'dices'])->name('dices');
+Route::get('/seu-espaco/', [ProfileController::class, 'dices'])->name('dices');
+Route::put('/seu-espaco/', [ProfileController::class, 'saveProfile'])->name('saveProfile');

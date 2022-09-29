@@ -71,4 +71,13 @@ class TransationMessage
             );
     }
 
+    public function profileUpdatedSuccessfully(Request $request)
+    {
+        $request->session()
+            ->flash(
+                'message',
+                "Perfil Atualizado Com Sucesso"
+            );
+    }
+
 }
