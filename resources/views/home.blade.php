@@ -1,12 +1,11 @@
 @extends('layouts.layout')
     @section('mainContent')
-{{--    <div class="pt-5 video-home-page">--}}
-{{--    <video autoplay muted id="myVideo" class="rounded">--}}
-{{--        <source src="https://www.canva.com/design/DAFNNOVM6M8/KsJbpHpx14Wn0_1-QUYm8A/edit?utm_content=DAFNNOVM6M8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" type="video/mp4">--}}
-{{--    </video>--}}
-{{--    <div id="videoEnd" style="display:none">Video end</div>--}}
-{{--<iframe class="embed-responsive-item " id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/M7lc1UVf-VE?&autoplay=1&loop=1&rel=0&showinfo=0&color=white&iv_load_policy=3&playlist=M7lc1UVf-VE"--}}
-{{--        frameborder="0" allowfullscreen></iframe>--}}
+    <div class="pt-5 video-home-page">
+    <video autoplay muted id="myVideo" class="rounded">
+        <source src="{{asset('img/video-background.mp4')}}" type="video/mp4">
+    </video>
+    <div id="videoEnd" style="display:none">Video end</div>
+
     @endsection
     @section('events')
 <section>

@@ -12,6 +12,7 @@ class UserProfileUpdate
      */
     public function updateData(array $userData, User $user)
     {
+
         $user = $user->fill($userData);
 
         if ($user->saveOrFail()) {
