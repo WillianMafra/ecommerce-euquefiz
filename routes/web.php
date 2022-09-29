@@ -54,6 +54,7 @@ Route::get('/teste', [ProductsController::class, 'teste'])->name('teste');
 
 //Rota para exibir os produtos Para o usuário
 Route::get('/', [ProductsController::class, 'home'])->name('home');
+Route::get('/order', [ProductsController::class, 'order'])->name('order');
 
 Route::get('/categoria/{id}', [ProductsController::class, 'categoryPage'])->name('categoryPage');
 Route::get('/produtos', [ProductsController::class, 'showAllProducts'])->name('showAllProducts');
@@ -91,4 +92,5 @@ Route::get('/sobre', [OthersController::class, 'aboutus'])->name('aboutus');
 Route::get('/galeria', [OthersController::class, 'gallery'])->name('gallery');
 
 //Rota para acessar o perfil de usuário
-Route::get('/seu-espaco', [ProfileController::class, 'dices'])->name('dices');
+Route::get('/seu-espaco/', [ProfileController::class, 'dices'])->name('dices');
+Route::put('/seu-espaco/', [ProfileController::class, 'saveProfile'])->name('saveProfile');

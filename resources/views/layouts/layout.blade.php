@@ -52,7 +52,7 @@
                         </a>
                         <ul>
                             <li><a href="https://www.linkedin.com/in/bruno-hoffmann-schumacher-0b4631168/">Integrante 1</a></li>
-                            <li><a href="Claudio   ">Integrante 2</a></li>
+                            <li><a href="https://www.linkedin.com/in/cl%C3%A1udio-j%C3%BAnior-872444251/">Integrante 2</a></li>
                             <li><a href="https://www.linkedin.com/in/deborabl/">Integrante 3</a></li>
                             <li><a href="https://www.linkedin.com/in/marlimeza/">Integrante 4</a></li>
                             <li><a href="https://www.linkedin.com/in/matheussan/">Integrante 5</a></li>

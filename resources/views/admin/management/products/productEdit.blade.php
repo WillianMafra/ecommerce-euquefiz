@@ -29,14 +29,14 @@
                         <div class="row mb-3">
                             <label for="stock" class="col-sm-2 col-form-label">Estoque</label>
                             <div class="col-sm-10">
-                                <input type="number" name="stock" class="form-control" value="{{($product->stock) }}"></div>
+                                <input type="number" name="stock" class="form-control" value="{{(round($product->stock)) }}"></div>
                             @error('stock')
                             <small class="bg-danger text-white w-25 rounded" role="alert">Estoque Inválido</small>
                             @enderror
                         </div>
                         <div class="row mb-3">
                             <label for="image" class="col-sm-2 col-form-label">Insira a Url da Imagem</label>
-                            <div class="col-sm-10"><input class="form-control" type="text" id="formFile" name="image">
+                            <div class="col-sm-10"><input class="form-control" type="text" id="formFile" name="image"  value="{{($product->image)}}">
                                 @error('image')
                                 <small class="bg-danger text-white w-25 rounded" role="alert">{{$message}}</small>
                                 @enderror
@@ -59,17 +59,21 @@
                                 @enderror
                             </div>
                         </div>
-                        {{--                        <div class="row mb-3">--}}
-                        {{--                            <label class="col-sm-2 col-form-label">Categorias</label>--}}
-                        {{--                            <div class="col-sm-10">--}}
-                        {{--                                <select class="form-select" aria-label="Default select example">--}}
-                        {{--                                    <option selected>Abrir as Opções</option>--}}
-                        {{--                                    <option value="1">Categoria 1</option>--}}
-                        {{--                                    <option value="2">Categoria 2</option>--}}
-                        {{--                                    <option value="3">Categoria 3</option>--}}
-                        {{--                                </select>--}}
-                        {{--                            </div>--}}
-                        {{--                        </div>--}}
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label">Categorias</label>
+                            <div class="col-sm-10">
+                                <select class="form-select" name="category_id" required>
+                                    <option selected >Abrir as Opções</option>
+                                    @foreach($categories as $category)
+                                        <option  value={{$category->id}}>{{$category->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        @error('category_id')
+                        <small class="bg-danger text-white w-25 rounded" role="alert">Insira a Categoria</small>
+                        @enderror
+
                         <div class="text-center">
                             <div class=""><button type="submit" class="btn bg-success text-light">Confirmar</button></div>
                         </div>

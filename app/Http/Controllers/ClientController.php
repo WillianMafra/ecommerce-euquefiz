@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UserStoreRequest;
-use App\Models\Category;
 use App\Models\User;
 use App\Service\TransationMessage;
+use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
@@ -16,7 +16,6 @@ class ClientController extends Controller
 {
     public function account()
     {
-
         return view('account.account');
     }
 
@@ -101,7 +100,7 @@ class ClientController extends Controller
                 ])->setRememberToken(Str::random(60));
 
                 $user->save();
-
+                event(new PasswordReset($user));
             }
         );
 
