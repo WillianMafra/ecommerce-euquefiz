@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\SendEmail;
+use App\Jobs\SendNewOrderEmail;
 use App\Mail\NewBuy;
 use App\Service\NewItemCreator;
 use App\Service\NewOrderCreator;
@@ -32,11 +34,16 @@ class OrderController extends Controller
             $total = $order->getTotal();
             $userName = $order->getUser()->name;
 
-            $email = new NewBuy($userName,$total);
+            SendNewOrderEmail::dispatch($userName, $total);
 
-            $euQueFizEmail = (object)['email' => 'euquefiz.e21@gmail.com', 'name' => 'Nova Compra'];
-
-            Mail::to($euQueFizEmail)->queue($email);
+//            $email = new NewBuy($userName,$total);
+//
+//
+//            $euQueFizEmail = (object)['email' => 'euquefiz.e21@gmail.com', 'name' => 'Nova Compra'];
+//
+//            Mail::to($euQueFizEmail)->send($email);
+//
+//
 
             return view('products.carShopping.order')->with("viewData", $viewData);
         }
