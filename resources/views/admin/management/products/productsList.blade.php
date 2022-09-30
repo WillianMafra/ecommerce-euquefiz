@@ -1,43 +1,43 @@
 @extends('admin.management.adminHeader')
 @include('admin.management.subview.navbar')
 @section('search')
-    <div class="search-bar p-3 ">
-        <form class="search-form d-flex align-items-center" method="GET" action="{{route('list')}}" autocomplete="off">
-            <input type="text" name="search" placeholder="Pesquisar Produtos" title="Procurar Produtos"><button type="submit"><i class="bi bi-search"></i></button>
-        </form>
-    </div>
+<div class="search-bar p-3 ">
+    <form class="search-form d-flex align-items-center" method="GET" action="{{route('list')}}" autocomplete="off">
+        <input type="text" name="search" placeholder="Pesquisar Produtos" title="Procurar Produtos"><button type="submit"><i class="bi bi-search"></i></button>
+    </form>
+</div>
 @endsection
 <section id="products">
     <div class="col-xs-4 col-sm-6">
         <div class="card">
             <div class="card-body">
                 @if(!empty($message))
-                    <div class="text-white alert alert-success bg-success text-center">{{$message}}</div>
+                <div class="text-white alert alert-success bg-success text-center">{{$message}}</div>
                 @endif
                 <h5 class="card-title text-center">Lista de Produtos</h5>
                 <table class="table table-striped table-hover table-scrollable">
                     <thead>
-                    <tr>
-                        <th scope="col">Nome</th>
-                        <th scope="col">Preço</th>
-                        <th scope="col">Categoria</th>
-                        <th scope="col">Estoque</th>
-                        <th scope="col">Edit</th>
-                        <th scope="col">Delete</th>
-                    </tr>
+                        <tr>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Preço</th>
+                            <th scope="col">Categoria</th>
+                            <th scope="col">Estoque</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+                        </tr>
                     </thead>
                     <tbody>
-                    @foreach ($products as $product)
+                        @foreach ($products as $product)
                         <tr>
 
-                            <td >{{ $product->product_name }}</td>
+                            <td>{{ $product->product_name }}</td>
 
                             <td>R$ {{ $product->price }}</td>
 
                             @foreach($categories as $category)
-                                @if($category->id == $product->category_id)
-                                    <td>{{ $category->name }}</td>
-                                @endif
+                            @if($category->id == $product->category_id)
+                            <td>{{ $category->name }}</td>
+                            @endif
                             @endforeach
 
 
@@ -60,7 +60,7 @@
                                 </td>
                             </form>
                         </tr>
-                    @endforeach
+                        @endforeach
                     </tbody>
                 </table>
             </div>

@@ -89,7 +89,7 @@
                         <div class="col py-1 px-lg-1 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
                             <div class="chef-member">
                                 <div class="member-img">
-                                    <img src="{{asset('img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
+                                    <img src="{{asset('img/chefs/Brunodev.jpg')}}" class="img-fluid" alt="master chef">
                                         <div class="social">
                                             <a href=""><i class="bi bi-twitter"></i></a>
                                             <a href=""><i class="bi bi-facebook"></i></a>
@@ -109,7 +109,7 @@
                         <div class="col py-1 px-lg-1 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
                             <div class="chef-member">
                                 <div class="member-img">
-                                    <img src="{{asset('img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
+                                    <img src="{{asset('img/chefs/Claudiodev.jpg')}}" class="img-fluid" alt="master chef">
                                         <div class="social">
                                             <a href="https://www.linkedin.com/in/cl%C3%A1udio-j%C3%BAnior-872444251/"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
                                             <a href=""><i class="bi bi-facebook"></i></a>
@@ -128,7 +128,7 @@
                         <div class="col py-1 px-lg-1 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
                             <div class="chef-member">
                                 <div class="member-img">
-                                    <img src="{{asset('img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
+                                    <img src="{{asset('img/chefs/Deboradev.jpg')}}" class="img-fluid" alt="master chef">
                                         <div class="social">
                                             <a href=""><i class="bi bi-twitter"></i></a>
                                             <a href=""><i class="bi bi-facebook"></i></a>
@@ -149,7 +149,7 @@
                         <div class="col py-1 px-lg-1 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
                             <div class="chef-member">
                                 <div class="member-img">
-                                    <img src="{{asset('img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
+                                    <img src="{{asset('img/chefs/Marlidev.jpg')}}" class="img-fluid" alt="master chef">
                                         <div class="social">
                                             <a href=""><i class="bi bi-twitter"></i></a>
                                             <a href=""><i class="bi bi-facebook"></i></a>
@@ -171,7 +171,7 @@
                         <div class="col py-1 px-lg-1 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
                             <div class="chef-member">
                                 <div class="member-img">
-                                    <img src="{{asset('img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
+                                    <img src="{{asset('img/chefs/Matheusdev.jpg')}}" class="img-fluid" alt="master chef">
                                         <div class="social">
                                             <a href=""><i class="bi bi-twitter"></i></a>
                                             <a href=""><i class="bi bi-facebook"></i></a>
@@ -192,7 +192,7 @@
                         <div class="col py-1 px-lg-1 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
                             <div class="chef-member">
                                 <div class="member-img">
-                                    <img src="{{asset('img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
+                                    <img src="{{asset('img/chefs/Thiagodev.jpg')}}" class="img-fluid" alt="master chef">
                                         <div class="social">
                                             <a href=""><i class="bi bi-twitter"></i></a>
                                             <a href=""><i class="bi bi-facebook"></i></a>
@@ -213,7 +213,7 @@
                         <div class="col py-1 px-lg-1 d-flex align-items-stretch alte"  data-aos="fade-up" data-aos-delay="300">
                             <div class="chef-member">
                                 <div class="member-img">
-                                    <img src="{{asset('img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
+                                    <img src="{{asset('img/chefs/Williandev.jpg')}}" class="img-fluid" alt="master chef">
                                         <div class="social">
                                             <a href=""><i   class="bi bi-twitter"></i></a>
                                             <a href=""><i class="bi bi-facebook"></i></a>
