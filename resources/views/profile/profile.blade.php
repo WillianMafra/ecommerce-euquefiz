@@ -12,12 +12,15 @@
                 <div class="d-flex justify-content-center align-items-center">
                     <div class="col-md-10 border-right">
                         <div class="p-3 py-5">
+
                             <div class="d-flex justify-content-center align-items-center mb-3">
                                 <h4 class="text-right">Configuração de Perfil</h4>
                             </div>
+
                             @if(!empty($message))
                                 <div class="text-white alert alert-success bg-success text-center">{{$message}}</div>
                             @endif
+
                             <form action="{{route('saveProfile')}}" method="post">
                                 @csrf
                                 @method('PUT')

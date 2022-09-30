@@ -4,7 +4,7 @@
     <video autoplay muted id="myVideo" class="rounded">
         <source src="{{asset('img/video-background.mp4')}}" type="video/mp4">
     </video>
-    <div id="videoEnd" style="display:none">Video end</div>
+{{--    <div id="videoEnd" style="display:none">Video end</div>--}}
 
     @endsection
     @section('events')
