@@ -101,8 +101,7 @@
                                 <div class="member-info">
                                     <h4>Bruno</h4>
                                         <span>Dev</span>
-                                        <p>xxx
-                                        </p>
+                                        
                                 </div>
                             </div>
                         </div><!-- End Chefs Member -->
@@ -113,15 +112,14 @@
                                         <div class="social">
                                             <a href="https://www.linkedin.com/in/cl%C3%A1udio-j%C3%BAnior-872444251/"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
                                             <a href=""><i class="bi bi-facebook"></i></a>
-                                            <a href=""><img class="icone" src="{{asset('img/icone/instagram-icone.png')}}" alt="icone do instagram"></a>
+                                            <a href="https://www.instagram.com/juchocolate77"><img class="icone" src="{{asset('img/icone/instagram-icone.png')}}" alt="icone do instagram"></a>
                                             <a href=""><i class="bi bi-linkedin"></i></a>
                                         </div>
                                 </div>
                                 <div class="member-info">
                                     <h4>Cláudio</h4>
                                     <span>Dev</span>
-                                        <p>xxx
-                                        </p>
+                                        
                                 </div>
                             </div>
                         </div><!-- End Chefs Member -->
@@ -141,8 +139,7 @@
                                 <div class="member-info">
                                     <h4>Débora</h4>
                                     <span>Dev</span>
-                                        <p>xxx
-                                        </p>
+                                        
                                 </div>
                             </div>
                         </div><!-- End Chefs Member -->
@@ -163,8 +160,7 @@
                                 <div class="member-info">
                                     <h4>Marli</h4>
                                     <span>Dev</span>
-                                        <p>xxx
-                                        </p>
+                                       
                                 </div>
                             </div>
                         </div><!-- End Chefs Member -->
@@ -184,8 +180,7 @@
                                 <div class="member-info">
                                     <h4>Matheus</h4>
                                     <span>Dev</span>
-                                        <p>xxx
-                                        </p>
+                                        
                                 </div>
                             </div>
                         </div><!-- End Chefs Member -->
@@ -205,8 +200,7 @@
                                 <div class="member-info">
                                     <h4>Thiago</h4>
                                     <span>Dev</span>
-                                        <p>xxx
-                                        </p>
+                                        
                                 </div>
                             </div>
                         </div><!-- End Chefs Member -->
@@ -226,8 +220,7 @@
                                 <div class="member-info">
                                     <h4>Willian</h4>
                                     <span>Dev</span>
-                                        <p>xxx
-                                        </p>
+                                        
                                 </div>
                             </div>
                         </div><!-- End Chefs Member -->
