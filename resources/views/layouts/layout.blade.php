@@ -52,7 +52,7 @@
                         </a>
                         <ul>
                             <li><a href="https://www.linkedin.com/in/bruno-hoffmann-schumacher-0b4631168/">Integrante 1</a></li>
-                            <li><a href="Claudio   ">Integrante 2</a></li>
+                            <li><a href="https://www.linkedin.com/in/cl%C3%A1udio-j%C3%BAnior-872444251/">Integrante 2</a></li>
                             <li><a href="https://www.linkedin.com/in/deborabl/">Integrante 3</a></li>
                             <li><a href="https://www.linkedin.com/in/marlimeza/">Integrante 4</a></li>
                             <li><a href="https://www.linkedin.com/in/matheussan/">Integrante 5</a></li>
@@ -104,8 +104,8 @@
                 <div>
                     <h4>Endereço</h4>
                     <p>
-                        Rua <br />
-                        Cidade, (Sigla Estado) CEP - PAIS <br />
+                        Rua Bom Jesus, 345<br />
+                        Garopaba - SC CEP - Brasil <br />
                     </p>
                 </div>
             </div>
@@ -114,33 +114,33 @@
                 <div>
                     <h4>Reservas</h4>
                     <p>
-                        <strong>Número</strong> (XX) XXXX-XXXX <br />
-                        <strong>Email:</strong> info@example.com <br />
+                        <strong>Número</strong> (48)99811-7740<br />
+                        <strong>Email:</strong> euquefiz.e21@gmail.com <br />
                     </p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 footer-links d-flex">
                 <img  width="30px" height="30px" src="{{asset('img/icone/shopping-bag.png')}}" alt="horário de funcionamento">
                 <div>
-                    <h4>Horário de Abertura</h4>
+                    <h4>Horário de Funcionamento</h4>
                     <p>
-                        <strong>Inserir Horários</strong> Até esse horário <br />
-                        Coloque aqui excessões
+                        <strong>9:00h</strong>às 17:00h <br />
+                        Sábados: 9:00h às 13:00h
                     </p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6  footer-links">
-                <h4>Nós Siga</h4>
+                <h4>Siga-nos</h4>
                 <div class="d-flex">
                     <a href="#" >
                         <img class="icone" src="{{asset('img/icone/twitter-icone.png')}}" alt="icone do twitter"></a>
-                    <a href="#">
+                    <a href="https://github.com/WillianMafra/ecommerce-euquefiz">
                         <img class="icone" src="{{asset('/img/icone/github-icone.png')}}" alt="icone do github">
                     </a>
                     <a href="#">
                         <img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin">
                     </a>
-                    <a href="#">
+                    <a href="https://www.instagram.com/euquefizcongelados/">
                             <img class="icone" src="{{asset('img/icone/instagram-icone.png')}}" alt="icone do instagram">
                     </a>
                 </div>

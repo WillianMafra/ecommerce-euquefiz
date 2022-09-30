@@ -3,9 +3,7 @@
 use App\Http\Controllers\AdminCategoriesController;
 use App\Http\Controllers\AdminProductsController;
 use App\Http\Controllers\AdminUserController;
-use App\Http\Controllers\CartController;
 use App\Http\Controllers\ClientController;
-use App\Http\Controllers\OrderController;
 use App\Http\Controllers\OthersController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\ProfileController;
@@ -52,6 +50,7 @@ Route::prefix('admin')->group(function (){
     Route::get('/admin/lista/deleteImage/{product}', [AdminProductsController::class, 'destroyImage'])->name('destroyImage');
     //Fim do Gerenciamento dos Produtos
 });
+Route::get('/teste', [ProductsController::class, 'teste'])->name('teste');
 
 //Rota para exibir os produtos Para o usuário
 Route::get('/', [ProductsController::class, 'home'])->name('home');
