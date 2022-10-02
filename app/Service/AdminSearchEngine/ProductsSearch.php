@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Service;
+namespace App\Service\AdminSearchEngine;
 
 
 use App\Models\Product;
 use Illuminate\Http\Request;
 
-class ProductsSearch
+class ProductsSearch implements SearchEngine
 {
     public function search(Request $request)
     {
