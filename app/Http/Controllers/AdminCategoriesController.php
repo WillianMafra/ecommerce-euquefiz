@@ -32,7 +32,13 @@ class AdminCategoriesController extends Controller
     public function destroyCategory(Category $category)
     {
         $category->delete();
-        Storage::delete($category->image ?? '');
+
+        if (!empty($category->image)) {
+
+            Storage::delete($category->image ?? '');
+        }
+
+
         return Redirect::route('categoriesList');
     }
 }

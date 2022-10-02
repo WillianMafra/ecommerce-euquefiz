@@ -23,6 +23,11 @@ use App\Http\Controllers\AdminController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', [ProductsController::class, 'home'])->name('home');
+Route::get('/eventos', [OthersController::class, 'events'])->name('events');
+Route::get('/sobre', [OthersController::class, 'aboutus'])->name('aboutus');
+Route::get('/galeria', [OthersController::class, 'gallery'])->name('gallery');
+
 //Rota para o admin fazer o gerenciamento do crud
 Route::prefix('admin')->group(function (){
 
@@ -39,7 +44,7 @@ Route::prefix('admin')->group(function (){
 
     //Gerenciamento Das Orders (Nota Fiscal)
     Route::get('/lista/Notas-Fiscais', [AdminOrdersController::class, 'ordersList'])->name('ordersList');
-
+    Route::delete('/lista//apagar/{order}', [AdminOrdersController::class, 'destroyOrder'])->name('destroyOrder');
     //Gerenciamento das Categorias - Admin
     Route::get('/lista/Categorias', [AdminCategoriesController::class, 'categoriesList'])->name('categoriesList');
     Route::get('/categorias/inserirCategoria', [AdminCategoriesController::class, 'createCategory'])->name('createCategory');
@@ -59,44 +64,38 @@ Route::prefix('admin')->group(function (){
 });
 
 //Rota para exibir os produtos Para o usuário
-Route::get('/', [ProductsController::class, 'home'])->name('home');
-Route::get('/order', [ProductsController::class, 'order'])->name('order');
 
-Route::get('/categoria/{id}', [ProductsController::class, 'categoryPage'])->name('categoryPage');
-Route::get('/produtos', [ProductsController::class, 'showAllProducts'])->name('showAllProducts');
-Route::get('/listarprodutos', [ProductsController::class, 'productsList'])->name('productsList');
-Route::get('/listarprodutos/{id}', [ProductsController::class, 'showProduct'])->name('showProduct');
-
+Route::prefix('listarprodutos')->group(function () {
+    Route::get('/categoria/{id}', [ProductsController::class, 'categoryPage'])->name('categoryPage');
+    Route::get('/todos', [ProductsController::class, 'productsList'])->name('productsList');
+    Route::get('/{id}', [ProductsController::class, 'showProduct'])->name('showProduct');
+    Route::post('/adicionarAoCarrinho/{id}', [CartController::class, 'addToCart'])->name('addToCart');
+});
 
 //Rotas para gerenciar o carrinho de compras
-Route::get('/carrinho', [CartController::class, 'carShopping'])->name('carShopping');
-Route::get('/carrinho/delete', [CartController::class, 'destroy'])->name('destroyCart');
-Route::post('/listarprodutos/adicionarAoCarrinho/{id}', [CartController::class, 'addToCart'])->name('addToCart');
-Route::post('/carrinho/finalizar-compra', [OrderController::class, 'storeOrder'])->name('completeOrder')->middleware('auth');
+Route::prefix('carrinho')->group(function () {
+    Route::get('/', [CartController::class, 'carShopping'])->name('carShopping');
+    Route::post('/finalizar-compra', [OrderController::class, 'storeOrder'])->name('completeOrder')->middleware('auth');
+    Route::get('/nota-fiscal', [ProductsController::class, 'order'])->name('order');
+    Route::get('/delete', [CartController::class, 'destroy'])->name('destroyCart');
+});
 
-
-//Rota para o usuário fazer login e alterar dados da conta
-Route::get('/minha-conta', [ClientController::class, 'account'])->name('account');
-Route::get('/register', [ClientController::class, 'register'])->name('register');
-Route::post('/register', [ClientController::class, 'salvar'])->name('salvar');
-Route::get('/entrar', [ClientController::class, 'login'])->name('login');
-Route::post('/entrar', [ClientController::class, 'entrar'])->name('entrar');
-Route::get('/logout', [ClientController::class, 'logout'])->name('logout');
-
-
-Route::get('/esqueci-a-senha', [ClientController::class, 'resetPassword'])->name('resetPassword');
-
-Route::post('/esqueci-a-senha', [ClientController::class, 'emailPassword'])->name('password.email');
-Route::get('/resetar-senha/{token}', [ClientController::class, 'formNewPassword'])->name('password.reset');
-Route::post('/resetar-senha', [ClientController::class, 'storeNewPassword'])->name('storeNewPassword');
-
-
-//Rotas extras que podem precisar de alguma manipulação
-Route::get('/eventos', [OthersController::class, 'events'])->name('events');
-
-Route::get('/sobre', [OthersController::class, 'aboutus'])->name('aboutus');
-Route::get('/galeria', [OthersController::class, 'gallery'])->name('gallery');
+Route::prefix('/convidado')->group(function (){
+    Route::get('/registro', [ClientController::class, 'register'])->name('register');
+    Route::post('/registro', [ClientController::class, 'salvar'])->name('salvar');
+    Route::get('/entrar', [ClientController::class, 'login'])->name('login');
+    Route::post('/entrar', [ClientController::class, 'entrar'])->name('entrar');
+    Route::get('/logout', [ClientController::class, 'logout'])->name('logout');
+    Route::get('/esqueci-a-senha', [ClientController::class, 'resetPassword'])->name('resetPassword');
+    Route::post('/esqueci-a-senha', [ClientController::class, 'emailPassword'])->name('password.email');
+    Route::get('/resetar-senha/{token}', [ClientController::class, 'formNewPassword'])->name('password.reset');
+    Route::post('/resetar-senha', [ClientController::class, 'storeNewPassword'])->name('storeNewPassword');
+});
 
 //Rota para acessar o perfil de usuário
-Route::get('/seu-espaco/', [ProfileController::class, 'dices'])->name('dices');
-Route::put('/seu-espaco/', [ProfileController::class, 'saveProfile'])->name('saveProfile');
+Route::prefix('meu-perfil')->group(function () {
+    Route::get('/minha-conta', [ClientController::class, 'account'])->name('account');
+    Route::get('/seu-espaco/', [ProfileController::class, 'dices'])->name('dices');
+    Route::put('/seu-espaco/', [ProfileController::class, 'saveProfile'])->name('saveProfile');
+});
+

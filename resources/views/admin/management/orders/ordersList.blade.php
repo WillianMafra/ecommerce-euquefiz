@@ -22,24 +22,26 @@
                         <th scope="col">Total</th>
                         <th scope="col">User</th>
                         <th scope="col">Data</th>
-                        <th scope="col" class="text-warning">Zerar Ordens</th>
+                        <th scope="col">Excluir</th>
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach ($products as $product)
+                    @foreach ($orders as $order)
                         <tr>
 
-                            <td >{{ $product->product_name }}</td>
+                            <td >{{ $order->id }}</td>
 
-                            <td>R$ {{ $product->price }}</td>
+                            <td>R$ {{ $order->total }}</td>
 
-                            @foreach($categories as $category)
-                                @if($category->id == $product->category_id)
-                                    <td>{{ $category->name }}</td>
+                            @foreach($users as $user)
+                                @if($order->user_id == $user->id)
+                                    <td>{{ $user->name }}</td>
                                 @endif
                             @endforeach
 
-                            <form method="POST" action="" onsubmit="return confirm('Deseja Remover ? Esta ação não poderá ser desfeita.')">
+                            <td>{{ $order->created_at }}</td>
+
+                            <form method="POST" action="{{route('destroyOrder', $order->id)}}" onsubmit="return confirm('Deseja Remover a Nota Fiscal {{$order->id}} ? Esta ação não poderá ser desfeita.')">
                                 @method('DELETE')
                                 @csrf
                                 <td>
@@ -55,4 +57,3 @@
         </div>
     </div>
 </section>
-{{ $products->links() }}

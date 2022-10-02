@@ -15,9 +15,9 @@
             <div class="right">
                 <h1>Eu Que Fiz!</h1>
                 <h3>Conheça nossos serviços!</h3>
-                <a href="#" class="btn-1">Cardapio</a>
-                <a href="#" class="btn-1">Eventos</a>
-                <a href="#" class="btn-1">Ver +</a>
+                <a href="{{route('productsList')}}" class="btn-1">Cardapio</a>
+                <a href="{{route('events')}}" class="btn-1">Eventos</a>
+                <a href="{{route('aboutus')}}" class="btn-1">Ver +</a>
             </div>
         </div>
     </div>
@@ -105,10 +105,10 @@
                     <div class="member-img">
                         <img src="{{asset('img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
                         <div class="social">
-                            <a href=""><i class="bi bi-twitter"></i></a>
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-instagram"></i></a>
-                            <a href=""><i class="bi bi-linkedin"></i></a>
+                            <a href="" target="_blank"><i class="bi bi-twitter" ></i></a>
+                            <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
+                            <a href="" target="_blank"><i class="bi bi-instagram"></i></a>
+                            <a href="" target="_blank"><i class="bi bi-linkedin"></i></a>
                         </div>
                     </div>
                     <div class="member-info">
@@ -124,10 +124,10 @@
                     <div class="member-img">
                         <img src="{{asset('img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
                         <div class="social">
-                            <a href=""><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><img class="icone" src="{{asset('img/icone/instagram-icone.png')}}" alt="icone do instagram"></a>
-                            <a href=""><i class="bi bi-linkedin"></i></a>
+                            <a href="" target="_blank"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
+                            <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
+                            <a href="" target="_blank"><img class="icone" src="{{asset('img/icone/instagram-icone.png')}}" alt="icone do instagram"></a>
+                            <a href="" target="_blank"><i class="bi bi-linkedin"></i></a>
                         </div>
                     </div>
                     <div class="member-info">
@@ -143,10 +143,10 @@
                     <div class="member-img">
                         <img src="{{asset('img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
                         <div class="social">
-                            <a href=""><i class="bi bi-twitter"></i></a>
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-instagram"></i></a>
-                            <a href=""><i class="bi bi-linkedin"></i></a>
+                            <a href="" target="_blank"><i class="bi bi-twitter"></i></a>
+                            <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
+                            <a href="" target="_blank"><i class="bi bi-instagram"></i></a>
+                            <a href="" target="_blank"><i class="bi bi-linkedin"></i></a>
                         </div>
                     </div>
                     <div class="member-info">
@@ -162,10 +162,10 @@
                     <div class="member-img">
                         <img src="{{asset('img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
                         <div class="social">
-                            <a href=""><i class="bi bi-twitter"></i></a>
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-instagram"></i></a>
-                            <a href=""><i class="bi bi-linkedin"></i></a>
+                            <a href="" target="_blank"><i class="bi bi-twitter"></i></a>
+                            <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
+                            <a href="" target="_blank"><i class="bi bi-instagram"></i></a>
+                            <a href="" target="_blank"><i class="bi bi-linkedin"></i></a>
                         </div>
                     </div>
                     <div class="member-info">
@@ -181,10 +181,10 @@
                     <div class="member-img">
                         <img src="{{asset('img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
                         <div class="social">
-                            <a href=""><i class="bi bi-twitter"></i></a>
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-instagram"></i></a>
-                            <a href=""><i class="bi bi-linkedin"></i></a>
+                            <a href="" target="_blank"><i class="bi bi-twitter"></i></a>
+                            <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
+                            <a href="" target="_blank"><i class="bi bi-instagram"></i></a>
+                            <a href="" target="_blank"><i class="bi bi-linkedin"></i></a>
                         </div>
                     </div>
                     <div class="member-info">
@@ -200,10 +200,10 @@
                     <div class="member-img">
                         <img src="{{asset('img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
                         <div class="social">
-                            <a href=""><i class="bi bi-twitter"></i></a>
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-instagram"></i></a>
-                            <a href=""><i class="bi bi-linkedin"></i></a>
+                            <a href="" target="_blank"><i class="bi bi-twitter"></i></a>
+                            <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
+                            <a href="" target="_blank"><i class="bi bi-instagram"></i></a>
+                            <a href="" target="_blank"><i class="bi bi-linkedin"></i></a>
                         </div>
                     </div>
                     <div class="member-info">
@@ -219,10 +219,10 @@
                     <div class="member-img">
                         <img src="{{asset('img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
                         <div class="social">
-                            <a href=""><i class="bi bi-twitter"></i></a>
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-instagram"></i></a>
-                            <a href=""><i class="bi bi-linkedin"></i></a>
+                            <a href="" target="_blank"><i class="bi bi-twitter"></i></a>
+                            <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
+                            <a href="" target="_blank"><i class="bi bi-instagram"></i></a>
+                            <a href="" target="_blank"><i class="bi bi-linkedin"></i></a>
                         </div>
                     </div>
                     <div class="member-info">

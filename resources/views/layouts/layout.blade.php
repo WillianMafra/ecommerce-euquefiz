@@ -28,7 +28,7 @@
             </a>
             <nav id="navbar" class="navbar navbar-expand-sm ">
                 <ul>
-                    <li class="dropdown"><a href="{{route('showAllProducts')}}"><span>Cardápio</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <li class="dropdown"><a href="{{route('productsList')}}"><span>Cardápio</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                         <ul>
                             @if(!empty($categories))
                                 @foreach ($categories as $category)
@@ -47,13 +47,13 @@
                             <i class="bi bi-chevron-down dropdown-indicator"></i>
                         </a>
                         <ul>
-                            <li><a href="https://www.linkedin.com/in/bruno-hoffmann-schumacher-0b4631168/">Integrante 1</a></li>
+                            <li><a href="https://www.linkedin.com/in/bruno-hoffmann-schumacher-0b4631168/" target="_blank">Integrante 1</a></li>
                             <li><a href="https://www.linkedin.com/in/cl%C3%A1udio-j%C3%BAnior-872444251/">Integrante 2</a></li>
-                            <li><a href="https://www.linkedin.com/in/deborabl/">Integrante 3</a></li>
-                            <li><a href="https://www.linkedin.com/in/marlimeza/">Integrante 4</a></li>
-                            <li><a href="https://www.linkedin.com/in/matheussan/">Integrante 5</a></li>
-                            <li><a href="https://www.linkedin.com/in/thiagowolter/">Integrante 6</a></li>
-                            <li><a href="https://www.linkedin.com/in/willnmafra/">Integrante 7</a></li>
+                            <li><a href="https://www.linkedin.com/in/deborabl/" target="_blank">Integrante 3</a></li>
+                            <li><a href="https://www.linkedin.com/in/marlimeza/" target="_blank">Integrante 4</a></li>
+                            <li><a href="https://www.linkedin.com/in/matheussan/" target="_blank">Integrante 5</a></li>
+                            <li><a href="https://www.linkedin.com/in/thiagowolter/" target="_blank">Integrante 6</a></li>
+                            <li><a href="https://www.linkedin.com/in/willnmafra/" target="_blank">Integrante 7</a></li>
                         </ul>
                     </li>
                     <li><a href="{{route('management')}}">Admin</a></li>
@@ -96,7 +96,7 @@
     <div class="container align-items-center">
         <div class="row gy-3">
             <div class="col-lg-3 col-md-6 d-flex">
-                <img width="30px" height="30px" src="{{asset('img/icone/shopping-bag.png')}}" alt="endereço para contato">
+                <img width="30px" height="30px" src="{{asset('img/icone/pino-de-localizacao.png')}}" alt="endereço para contato">
                 <div>
                     <h4>Endereço</h4>
                     <p>
@@ -106,22 +106,22 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 footer-links d-flex">
-                <img  width="30px" height="30px"  src="{{asset('img/icone/shopping-bag.png')}}" alt="contato para reservas">
+                <img  width="30px" height="30px"  src="{{asset('img/icone/reserva.png')}}" alt="contato para reservas">
                 <div>
                     <h4>Reservas</h4>
                     <p>
-                        <strong>Número</strong> (48)99811-7740<br />
+                        <strong>Número</strong> (48) 99811-7740<br />
                         <strong>Email:</strong> euquefiz.e21@gmail.com <br />
                     </p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 footer-links d-flex">
-                <img  width="30px" height="30px" src="{{asset('img/icone/shopping-bag.png')}}" alt="horário de funcionamento">
+                <img  width="30px" height="30px" src="{{asset('img/icone/chef.png')}}" alt="horário de funcionamento">
                 <div>
                     <h4>Horário de Funcionamento</h4>
                     <p>
-                        <strong>9:00h</strong>às 17:00h <br />
-                        Sábados: 9:00h às 13:00h
+                        <strong>9:00h às 17:00h <br />
+                        Sábados: 9:00h às 13:00h</strong>
                     </p>
                 </div>
             </div>
@@ -130,13 +130,13 @@
                 <div class="d-flex">
                     <a href="#" >
                         <img class="icone" src="{{asset('img/icone/twitter-icone.png')}}" alt="icone do twitter"></a>
-                    <a href="https://github.com/WillianMafra/ecommerce-euquefiz">
+                    <a href="https://github.com/WillianMafra/ecommerce-euquefiz" target="_blank">
                         <img class="icone" src="{{asset('/img/icone/github-icone.png')}}" alt="icone do github">
                     </a>
                     <a href="#">
                         <img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin">
                     </a>
-                    <a href="https://www.instagram.com/euquefizcongelados/">
+                    <a href="https://www.instagram.com/euquefizcongelados/" target="_blank">
                             <img class="icone" src="{{asset('img/icone/instagram-icone.png')}}" alt="icone do instagram">
                     </a>
                 </div>
