@@ -1,13 +1,10 @@
 @extends('layouts.layout')
-@push('style')
-    <link rel="stylesheet" href="{{asset('css/admin/login/login.css')}}">
-@endpush
+
 <section id="section-new-password">
     <div class="new-password-background">
     <div class="row justify-content-center">
         <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center align-items-center h-100" id="div-centralizada">
-
 
                 <div class="card" style="border-radius: 1rem;">
                     <div class="row g-0 new-password">

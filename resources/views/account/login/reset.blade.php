@@ -1,5 +1,8 @@
 @extends('layouts.layout')
-<main class="main"  >
+@push('style')
+    <link rel="stylesheet" href="{{asset('css/admin/login/login.css')}}">
+@endpush
+<main class="main">
     <div class="container-fluid px-0" >
         <div class="container">
             <div class="row flex-center min-vh-100 py-5" id="reset-password">
