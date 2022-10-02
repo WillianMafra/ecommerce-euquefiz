@@ -2,15 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Jobs\SendEmail;
 use App\Jobs\SendNewOrderEmail;
-use App\Mail\NewBuy;
 use App\Service\NewItemCreator;
 use App\Service\NewOrderCreator;
 use App\Service\NewUserBalance;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Mail;
 
 class OrderController extends Controller
 {
@@ -35,15 +32,6 @@ class OrderController extends Controller
             $userName = $order->getUser()->name;
 
             SendNewOrderEmail::dispatch($userName, $total);
-
-//            $email = new NewBuy($userName,$total);
-//
-//
-//            $euQueFizEmail = (object)['email' => 'euquefiz.e21@gmail.com', 'name' => 'Nova Compra'];
-//
-//            Mail::to($euQueFizEmail)->send($email);
-//
-//
 
             return view('products.carShopping.order')->with("viewData", $viewData);
         }

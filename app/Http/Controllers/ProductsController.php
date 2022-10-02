@@ -19,6 +19,8 @@ class ProductsController extends Controller
         return view('home', compact('productsInSession'));
 
     }
+
+
     public function order()
     {
 

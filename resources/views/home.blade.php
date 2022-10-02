@@ -23,6 +23,7 @@
     </div>
 </section>
 <!-- ======= Menu Section ======= -->
+<section>
 <div class="container text-center ">
     <h2 class="font-weight-light my-5 subtitles">Nossos Eventos</h2>
     <div class="row mx-auto my-auto justify-content-center">
@@ -236,6 +237,4 @@
     </div>
 </section>
 @endsection
-@push('scripts')
-<script src="{{asset('js/carousel.js')}}"></script>
-@endpush
+

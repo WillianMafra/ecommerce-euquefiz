@@ -32,17 +32,20 @@ class DataForManagement
         return $orders;
     }
 
-    public function insertIntoArray($orders)
+    public function insertIntoArray($orders): array
     {
-        foreach ($orders as $order) {
-            $data = [
-                'id' => $order->getAttribute('id'),
-                'total' => $order->getAttribute('total'),
-                'user_id' => $order->getAttribute('user_id'),
-                'user_name' => User::find($order->getAttribute('user_id'))->name
-            ];
-            $lastData[] = $data;
-        }
-        return $lastData;
+        $lastData = [];
+
+            foreach ($orders as $order) {
+                $data = [
+                    'id' => $order->getAttribute('id'),
+                    'total' => $order->getAttribute('total'),
+                    'user_id' => $order->getAttribute('user_id'),
+                    'created_at' => $order->getAttribute('created_at')->format('d/m/Y'),
+                    'user_name' => User::find($order->getAttribute('user_id'))->name
+                ];
+                $lastData[] = $data;
+            }
+            return $lastData;
     }
 }

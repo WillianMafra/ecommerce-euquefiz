@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Service\TransationMessage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Redirect;
 
 class AdminUserController extends Controller
 {
@@ -24,7 +25,9 @@ class AdminUserController extends Controller
     {
 
         $message = $request->session()->get('message');
-        $users = User::all();
+
+        $users = User::all()->except(['id' => '1']);
+
         return view('admin.management.users.usersList', compact('users', 'message'));
     }
 
@@ -48,5 +51,12 @@ class AdminUserController extends Controller
         $transationMessage->userDemotedMessage($request, $userData['name']);
 
         return redirect()->back();
+    }
+
+    public function destroyUser(User $user)
+    {
+        $user->delete();
+
+        return Redirect::route('usersList');
     }
 }

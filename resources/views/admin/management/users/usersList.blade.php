@@ -13,6 +13,8 @@
                     <tr>
                         <th scope="col">Imagem</th>
                         <th scope="col">Nome</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Excluir</th>
                         <th scope="col">Promover</th>
                         <th scope="col">Rebaixar</th>
                     </tr>
@@ -26,6 +28,15 @@
                                 @endif
                             </td>
                             <td >{{ $user->name }}</td>
+                            <td >{{ $user->user_type }}</td>
+                            <form method="POST" action="{{route('destroy', $user->id)}}" onsubmit="return confirm('Deseja Remover {{addslashes($user->name)}}? Esta ação não poderá ser desfeita.')">
+                                @method('DELETE')
+                                @csrf
+                                <td>
+                                    <button type="submit" class="border-0"><img src="{{asset('img/icone/recycle-bin.png')}}" width="20px" alt="apagar item">
+                                    </button>
+                                </td>
+                            </form>
                             <form method="POST" action="">
                                 @method('put')
                                 @csrf

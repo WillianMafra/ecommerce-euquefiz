@@ -1,9 +1,12 @@
 <?php
 
 use App\Http\Controllers\AdminCategoriesController;
+use App\Http\Controllers\AdminOrdersController;
 use App\Http\Controllers\AdminProductsController;
 use App\Http\Controllers\AdminUserController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\OthersController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\ProfileController;
@@ -31,7 +34,11 @@ Route::prefix('admin')->group(function (){
     Route::get('/lista/usuarios', [AdminUserController::class, 'usersList'])->name('usersList');
     Route::put('/lista/usuarios/promover/{id}', [AdminUserController::class, 'userPromotion'])->name('userPromotion');
     Route::put('/lista/usuarios/rebaixar/{id}', [AdminUserController::class, 'userDemoted'])->name('userDemoted');
+    Route::delete('/lista/apagar/{user}', [AdminUserController::class, 'destroyUser'])->name('destroyUser');
     //Fim do Gerenciamento dos Usuarios - Admin
+
+    //Gerenciamento Das Orders (Nota Fiscal)
+    Route::get('/lista/Notas-Fiscais', [AdminOrdersController::class, 'ordersList'])->name('ordersList');
 
     //Gerenciamento das Categorias - Admin
     Route::get('/lista/Categorias', [AdminCategoriesController::class, 'categoriesList'])->name('categoriesList');
@@ -50,7 +57,6 @@ Route::prefix('admin')->group(function (){
     Route::get('/admin/lista/deleteImage/{product}', [AdminProductsController::class, 'destroyImage'])->name('destroyImage');
     //Fim do Gerenciamento dos Produtos
 });
-Route::get('/teste', [ProductsController::class, 'teste'])->name('teste');
 
 //Rota para exibir os produtos Para o usuário
 Route::get('/', [ProductsController::class, 'home'])->name('home');

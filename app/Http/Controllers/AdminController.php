@@ -21,10 +21,12 @@ class AdminController extends Controller
 
         $lastDataByDate = $dataForManagement->ordersSortedById($orders);
 
+        $usersData = User::all();
+
         $usersQuantity = $users->where(['user_type' => 'user'])->count();
 
 
-        return view('admin.management.dashboard',compact('rentability', 'usersQuantity','lastDataByTotal','lastDataByDate'));
+        return view('admin.management.dashboard',compact('rentability', 'usersData', 'usersQuantity','lastDataByTotal','lastDataByDate'));
     }
 
 }

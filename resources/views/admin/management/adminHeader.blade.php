@@ -26,28 +26,6 @@
 @yield('search')
     <nav class="header-nav ms-auto bg-light rounded p-2">
         <ul class="d-flex align-items-center">
-            <li class="nav-item d-block d-lg-none"><a class="nav-link nav-icon search-bar-toggle " href="#"> <i class="bi bi-search"></i></a></li>
-            <li class="nav-item dropdown">
-                <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown"> <i class="bi bi-bell"></i> <span class="badge bg-primary badge-number">4</span> </a>
-                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
-                    <li class="dropdown-header"> Você tem X notificações <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Ver Todos</span></a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li class="notification-item">
-                        <i class="bi bi-exclamation-circle text-warning"></i>
-                        <div>
-                            <h4>Titulo</h4>
-                            <p>Descricao</p>
-                            <p>Quanto tempo atrás</p>
-                        </div>
-                    </li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li class="dropdown-footer"> <a href="#">Exibir Todas As Notificações</a></li>
-                </ul>
-            </li>
             <li class="nav-item dropdown p-3 bg-light rounded">
                 <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown"> <img src="{{asset(Auth::user()->image)}}" alt="Profile" class="rounded-circle"> <span class="d-none d-md-block dropdown-toggle ps-2">{{Auth::user()->name}}</span> </a>
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">

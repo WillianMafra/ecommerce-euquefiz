@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head><!-- CSS only -->
+<head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     @stack('style')
@@ -8,12 +8,10 @@
     <link href="{{asset('img/logo-design/LogoSemFundo.png')}}" rel="apple-touch-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="{{asset('css/form.css')}}">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('css/footer.css')}}">
     <link rel="stylesheet" href="{{asset('css/default.css')}}">
-
     <title>Eu Que Fiz</title>
 </head>
 @php
@@ -32,7 +30,6 @@
                 <ul>
                     <li class="dropdown"><a href="{{route('showAllProducts')}}"><span>Cardápio</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                         <ul>
-
                             @if(!empty($categories))
                                 @foreach ($categories as $category)
                                 <li class="dropdown"><a href="{{route('categoryPage',$category->id)}}"><span>{{$category->name}}</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -40,7 +37,6 @@
                             @endforeach
                             @endif
                             <li><a href="{{route('productsList')}}">Ver Todos</a></li>
-
                         </ul>
                     </li>
                     <li><a href="{{route('events')}}">Eventos</a></li>
@@ -153,16 +149,17 @@
 {{--<div id="preloader"></div>--}}
 <!-- JavaScript Bundle with Popper -->
 @stack('scripts')
-<script src="{{asset('js/app.js')}}"></script>
-<script src="https://plugin.handtalk.me/web/latest/handtalk.min.js"></script>
-<script>
+    <script src="https://plugin.handtalk.me/web/latest/handtalk.min.js"></script>
+    <script src="{{asset('js/carousel.js')}}"></script>
+    <script>
 
-    var ht = new HT({
+        var ht = new HT({
 
-        token: "4f60ffe8202947dff1b21ebc65ffe9bf"
+            token: "4f60ffe8202947dff1b21ebc65ffe9bf"
 
-    });
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="{{asset('js/app.js')}}"></script>
 </body>
 </html>
