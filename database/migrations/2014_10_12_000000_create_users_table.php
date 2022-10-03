@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -13,6 +14,7 @@ return new class extends Migration
      */
     public function up()
     {
+
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
@@ -31,6 +33,17 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
+        $user = User::insert(
+            [
+                'name' => 'admin',
+                'email' => 'adminEuquefiz@gmail.com',
+                'password' => 'adminEuquefiz',
+                'user_type' => 'admin',
+                'endereco' => 'Endereco Admin',
+                'cidade' => 'Cidade do Admin',
+                'cep' => '12-456-789',
+                'telefone' => '4002-8922' ]);
     }
 
     /**
@@ -41,5 +54,8 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('users');
+
     }
+
+
 };

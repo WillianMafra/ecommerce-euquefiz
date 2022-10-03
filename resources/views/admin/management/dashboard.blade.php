@@ -110,6 +110,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
+                                    @if(!empty($lastDataByDate))
                                     @foreach($lastDataByDate as $data)
                                         <tr>
                                             <th scope="row">{{$data['id']}}</th>
@@ -117,6 +118,7 @@
                                             <td>R$ {{$data['total']}}</td>
                                         </tr>
                                     @endforeach
+                                    @endif
                                     </tbody>
                                 </table>
                             </div>
@@ -146,6 +148,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
+                                    @if(!empty($lastDataByTotal))
                                     @foreach($lastDataByTotal as $data)
                                     <tr>
                                         <th scope="row">{{$data['id']}}</th>
@@ -153,6 +156,7 @@
                                         <td>R$ {{$data['total']}}</td>
                                     </tr>
                                     @endforeach
+                                    @endif
                                     </tbody>
                                 </table>
                             </div>
@@ -176,36 +180,22 @@
                     <div class="card-body">
                         <h5 class="card-title">Atividade Recente <span>| Hoje</span></h5>
                         <div class="activity">
+                            @foreach($lastDataByTotal as $data)
                             <div class="activity-item d-flex">
-                                <div class="activite-label">32 min</div>
+                                <div class="activite-label">{{($data['created_at'])}}</div>
                                 <i class='bi bi-circle-fill activity-badge text-success align-self-start'></i>
-                                <div class="activity-content"> Quia quae rerum <a href="#" class="fw-bold text-dark">explicabo officiis</a> beatae</div>
+                                <div class="activity-content">Usuário {{$data['user_name']}} Realizou uma Compra de R$ {{$data['total']}}</div>
                             </div>
+                            @endforeach
+                            @foreach($usersData as $userInfo)
+                                @if($userInfo->id != 1)
                             <div class="activity-item d-flex">
-                                <div class="activite-label">56 min</div>
+                                <div class="activite-label">{{$userInfo->created_at->format('d/m/Y')}}</div>
                                 <i class='bi bi-circle-fill activity-badge text-danger align-self-start'></i>
-                                <div class="activity-content"> Voluptatem blanditiis blanditiis eveniet</div>
+                                <div class="activity-content">{{$userInfo['name']}} Se Cadastrou</div>
                             </div>
-                            <div class="activity-item d-flex">
-                                <div class="activite-label">2 h</div>
-                                <i class='bi bi-circle-fill activity-badge text-primary align-self-start'></i>
-                                <div class="activity-content"> Voluptates corrupti molestias voluptatem</div>
-                            </div>
-                            <div class="activity-item d-flex">
-                                <div class="activite-label">1 dia</div>
-                                <i class='bi bi-circle-fill activity-badge text-info align-self-start'></i>
-                                <div class="activity-content"> Tempore autem saepe <a href="#" class="fw-bold text-dark">occaecati voluptatem</a> tempore</div>
-                            </div>
-                            <div class="activity-item d-flex">
-                                <div class="activite-label">2 dias</div>
-                                <i class='bi bi-circle-fill activity-badge text-warning align-self-start'></i>
-                                <div class="activity-content"> Est sit eum reiciendis exercitationem</div>
-                            </div>
-                            <div class="activity-item d-flex">
-                                <div class="activite-label">4 semanas</div>
-                                <i class='bi bi-circle-fill activity-badge text-muted align-self-start'></i>
-                                <div class="activity-content"> Dicta dolorem harum nulla eius. Ut quidem quidem sit quas</div>
-                            </div>
+                                    @endif
+                                @endforeach
                         </div>
                     </div>
                 </div>

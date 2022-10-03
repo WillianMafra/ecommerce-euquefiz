@@ -176,7 +176,8 @@
 </section>
 @endsection
 @push('scripts')
-<script src="{{asset('js/carousel.js')}}"></script>
-<script src="{{asset('js/form.js')}}"></script>
-<script src="{{asset('js/slider.js')}}"></script>
+    <script src="{{asset('js/carousel.js')}}"></script>
+    <script src="{{asset('js/form.js')}}"></script>
+    <script src="{{asset('js/slider.js')}}"></script>
 @endpush
+

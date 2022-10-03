@@ -22,3 +22,4 @@ As páginas foram desenvolvidas utilizando HTML,CSS,PHP e Laravel.
     </div>
 </div>
 @endsection
+
