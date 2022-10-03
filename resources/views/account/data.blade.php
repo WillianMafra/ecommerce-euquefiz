@@ -5,6 +5,7 @@
 @push('style')
     <link rel="stylesheet" href="{{asset('css/profile/profile.css')}}">
 @endpush
+@section('events')
     <section class="container">
         <div style="border:solid 1px;" class="container p-5 my-5 bg-white w-75">
             <div class="row">
@@ -64,4 +65,5 @@
             </div>
         </div>
     </section>
+@endsection
 
