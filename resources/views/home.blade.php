@@ -103,133 +103,128 @@
             <div class="col py-1 px-lg-1 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
                 <div class="chef-member">
                     <div class="member-img">
-                        <img src="{{asset('img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
+                        <img src="{{asset('img/chefs/Brunodev.jpg')}}" class="img-fluid" alt="master chef">
                         <div class="social">
                             <a href="" target="_blank"><i class="bi bi-twitter" ></i></a>
                             <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
-                            <a href="" target="_blank"><i class="bi bi-instagram"></i></a>
-                            <a href="" target="_blank"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/in/bruno-hoffmann-schumacher-0b4631168/"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
+                            <a href=""><img class="icone" src="{{asset('img/icone/instagram-icone.png')}}" alt="icone do instagram"></a>
                         </div>
                     </div>
                     <div class="member-info">
                         <h4>Bruno</h4>
                         <span>Dev</span>
-                        <p>xxx
-                        </p>
+                        
+                        
                     </div>
                 </div>
             </div><!-- End Chefs Member -->
             <div class="col py-1 px-lg-1 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
                 <div class="chef-member">
                     <div class="member-img">
-                        <img src="{{asset('img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
+                        <img src="{{asset('img/chefs/Claudiodev.jpg')}}" class="img-fluid" alt="master chef">
                         <div class="social">
                             <a href="" target="_blank"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
                             <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
-                            <a href="" target="_blank"><img class="icone" src="{{asset('img/icone/instagram-icone.png')}}" alt="icone do instagram"></a>
-                            <a href="" target="_blank"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/in/cl%C3%A1udio-j%C3%BAnior-872444251/"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
+                            <a href=""><img class="icone" src="{{asset('img/icone/instagram-icone.png')}}" alt="icone do instagram"></a>  
                         </div>
                     </div>
                     <div class="member-info">
                         <h4>Cláudio</h4>
                         <span>Dev</span>
-                        <p>xxx
-                        </p>
+                        <!-- <p>xxx
+                        </p> -->
                     </div>
                 </div>
             </div><!-- End Chefs Member -->
             <div class="col py-1 px-lg-1 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
                 <div class="chef-member">
                     <div class="member-img">
-                        <img src="{{asset('img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
+                        <img src="{{asset('img/chefs/Deboradev.jpg')}}" class="img-fluid" alt="master chef">
                         <div class="social">
                             <a href="" target="_blank"><i class="bi bi-twitter"></i></a>
                             <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
-                            <a href="" target="_blank"><i class="bi bi-instagram"></i></a>
-                            <a href="" target="_blank"><i class="bi bi-linkedin"></i></a>
+                            <<a href="https://www.linkedin.com/in/deborabl/"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
+                            <a href=""><img class="icone" src="{{asset('img/icone/instagram-icone.png')}}" alt="icone do instagram"></a>
                         </div>
                     </div>
                     <div class="member-info">
                         <h4>Débora</h4>
                         <span>Dev</span>
-                        <p>xxx
-                        </p>
+                       
                     </div>
                 </div>
             </div><!-- End Chefs Member -->
             <div class="col py-1 px-lg-1 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
                 <div class="chef-member">
                     <div class="member-img">
-                        <img src="{{asset('img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
+                        <img src="{{asset('img/chefs/Marlidev.jpg')}}" class="img-fluid" alt="master chef">
                         <div class="social">
                             <a href="" target="_blank"><i class="bi bi-twitter"></i></a>
                             <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
-                            <a href="" target="_blank"><i class="bi bi-instagram"></i></a>
-                            <a href="" target="_blank"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/in/marlimeza/"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
+                            <a href=""><img class="icone" src="{{asset('img/icone/instagram-icone.png')}}" alt="icone do instagram"></a>
                         </div>
                     </div>
                     <div class="member-info">
                         <h4>Marli</h4>
                         <span>Dev</span>
-                        <p>xxx
-                        </p>
+                        
                     </div>
                 </div>
             </div><!-- End Chefs Member -->
             <div class="col py-1 px-lg-1 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
                 <div class="chef-member">
                     <div class="member-img">
-                        <img src="{{asset('img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
+                        <img src="{{asset('img/chefs/Matheusdev.jpg')}}" class="img-fluid" alt="master chef">
                         <div class="social">
                             <a href="" target="_blank"><i class="bi bi-twitter"></i></a>
                             <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
-                            <a href="" target="_blank"><i class="bi bi-instagram"></i></a>
-                            <a href="" target="_blank"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/in/matheussan/"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
+                            <a href=""><img class="icone" src="{{asset('img/icone/instagram-icone.png')}}" alt="icone do instagram"></a>
                         </div>
                     </div>
                     <div class="member-info">
                         <h4>Matheus</h4>
                         <span>Dev</span>
-                        <p>xxx
-                        </p>
+                       
                     </div>
                 </div>
             </div><!-- End Chefs Member -->
             <div class="col py-1 px-lg-1 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
                 <div class="chef-member">
                     <div class="member-img">
-                        <img src="{{asset('img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
+                        <img src="{{asset('img/chefs/Thiagodev.jpg')}}" class="img-fluid" alt="master chef">
                         <div class="social">
                             <a href="" target="_blank"><i class="bi bi-twitter"></i></a>
                             <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
-                            <a href="" target="_blank"><i class="bi bi-instagram"></i></a>
-                            <a href="" target="_blank"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/in/thiagowolter/"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
+                            <a href=""><img class="icone" src="{{asset('img/icone/instagram-icone.png')}}" alt="icone do instagram"></a>
                         </div>
                     </div>
                     <div class="member-info">
                         <h4>Thiago</h4>
                         <span>Dev</span>
-                        <p>xxx
-                        </p>
+                    
                     </div>
                 </div>
             </div><!-- End Chefs Member -->
             <div class="col py-1 px-lg-1 d-flex align-items-stretch alte" data-aos="fade-up" data-aos-delay="300">
                 <div class="chef-member">
                     <div class="member-img">
-                        <img src="{{asset('img/chefs/jimmy.png')}}" class="img-fluid" alt="master chef">
+                        <img src="{{asset('img/chefs/Williandev.jpg')}}" class="img-fluid" alt="master chef">
                         <div class="social">
                             <a href="" target="_blank"><i class="bi bi-twitter"></i></a>
                             <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
-                            <a href="" target="_blank"><i class="bi bi-instagram"></i></a>
-                            <a href="" target="_blank"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/in/willnmafra/"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
+                            <a href=""><img class="icone" src="{{asset('img/icone/instagram-icone.png')}}" alt="icone do instagram"></a>
                         </div>
                     </div>
                     <div class="member-info">
                         <h4>Willian</h4>
                         <span>Dev</span>
-                        <p>xxx
-                        </p>
+                        
                     </div>
                 </div>
             </div><!-- End Chefs Member -->
