@@ -100,7 +100,7 @@
     <div class="container align-items-center">
         <div class="row gy-3">
             <div class="col-lg-3 col-md-6 d-flex">
-                <img width="30px" height="30px" src="{{asset('img/icone/shopping-bag.png')}}" alt="endereço para contato">
+                <!-- <img width="30px" height="30px" src="{{asset('img/icone/shopping-bag.png')}}" alt="endereço para contato"> -->
                 <div>
                     <h4>Endereço</h4>
                     <p>
@@ -110,7 +110,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 footer-links d-flex">
-                <img  width="30px" height="30px"  src="{{asset('img/icone/shopping-bag.png')}}" alt="contato para reservas">
+                <!-- <img  width="30px" height="30px"  src="{{asset('img/icone/shopping-bag.png')}}" alt="contato para reservas"> -->
                 <div>
                     <h4>Reservas</h4>
                     <p>
@@ -120,7 +120,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 footer-links d-flex">
-                <img  width="30px" height="30px" src="{{asset('img/icone/shopping-bag.png')}}" alt="horário de funcionamento">
+                <!-- <img  width="30px" height="30px" src="{{asset('img/icone/shopping-bag.png')}}" alt="horário de funcionamento"> -->
                 <div>
                     <h4>Horário de Funcionamento</h4>
                     <p>
