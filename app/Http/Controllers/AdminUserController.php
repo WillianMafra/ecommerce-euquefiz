@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Service\AdminSearchEngine\UserSearch;
 use App\Service\TransationMessage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -21,12 +22,12 @@ class AdminUserController extends Controller
         return view('admin.management.subview.navbar',compact('userData'));
     }
 
-    public function usersList(Request $request)
+    public function usersList(Request $request, UserSearch $userSearch)
     {
-
         $message = $request->session()->get('message');
 
-        $users = User::all()->except(['id' => '1']);
+        $users = $userSearch->search($request);
+        $users = $users->except([1]);
 
         return view('admin.management.users.usersList', compact('users', 'message'));
     }

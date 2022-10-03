@@ -39,7 +39,9 @@ class User extends Authenticatable
 
     public function getOrders()
     {
-        return $this->orders;
+        $orders = $this->orders;
+        return $this->toArray();
+
     }
 
     public function getId()

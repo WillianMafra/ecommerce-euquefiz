@@ -44,7 +44,7 @@ Route::prefix('admin')->group(function (){
 
     //Gerenciamento Das Orders (Nota Fiscal)
     Route::get('/lista/Notas-Fiscais', [AdminOrdersController::class, 'ordersList'])->name('ordersList');
-    Route::delete('/lista//apagar/{order}', [AdminOrdersController::class, 'destroyOrder'])->name('destroyOrder');
+    Route::delete('/lista/apagar/{order}', [AdminOrdersController::class, 'destroyOrder'])->name('destroyOrder');
     //Gerenciamento das Categorias - Admin
     Route::get('/lista/Categorias', [AdminCategoriesController::class, 'categoriesList'])->name('categoriesList');
     Route::get('/categorias/inserirCategoria', [AdminCategoriesController::class, 'createCategory'])->name('createCategory');
@@ -94,7 +94,12 @@ Route::prefix('/convidado')->group(function (){
 
 //Rota para acessar o perfil de usuário
 Route::prefix('meu-perfil')->group(function () {
+    Route::get('/home', [ClientController::class, 'profileIndex'])->name('profileIndex');
     Route::get('/minha-conta', [ClientController::class, 'account'])->name('account');
+    Route::get('/dados', [ClientController::class, 'data'])->name('data');
+    Route::post('/dados/nota-fiscal/{id}', [ClientController::class, 'data'])->name('data');
+    Route::get('/nota-fiscal/{id}', [ClientController::class, 'userOrder'])->name('userOrder');
+
     Route::get('/seu-espaco/', [ProfileController::class, 'dices'])->name('dices');
     Route::put('/seu-espaco/', [ProfileController::class, 'saveProfile'])->name('saveProfile');
 });

@@ -74,7 +74,7 @@
                     </li>
                     @endguest
                     @auth
-                    <li><a href="{{route('dices')}}">Perfil</a></li>
+                    <li><a href="{{route('profileIndex')}}">Perfil</a></li>
                     <li><a href="{{route('logout')}}">Logout</a></li>
                     @endauth
                     <li>

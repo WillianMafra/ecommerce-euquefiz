@@ -1,5 +1,12 @@
 @extends('admin.management.adminHeader')
 @include('admin.management.subview.navbar')
+@section('search')
+    <div class="search-bar p-3 ">
+        <form class="search-form d-flex align-items-center" method="GET" action="{{route('categoriesList')}}" autocomplete="off">
+            <input type="text" name="search" placeholder="Pesquisar Categorias" title="Procurar Categorias"><button type="submit"><i class="bi bi-search"></i></button>
+        </form>
+    </div>
+@endsection
 <section id="products">
     <div class="col-xs-4 col-sm-6">
         <div class="card">
