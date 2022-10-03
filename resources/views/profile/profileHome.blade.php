@@ -22,7 +22,7 @@
                                     </div>
                                 </a>
 
-                                <a href="dados" class="links-for-profile">
+                                <a href="{{route('data')}}" class="links-for-profile">
                                     <div class="border-home">Meus Pedidos
                                         <img src="{{asset('img/icone/order-list.png')}}" width="30px" alt="lista-de-pedidos">
                                     </div>
@@ -38,5 +38,5 @@
             </div>
         </div>
     </section>
-@
+
 

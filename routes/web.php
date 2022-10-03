@@ -29,7 +29,7 @@ Route::get('/sobre', [OthersController::class, 'aboutus'])->name('aboutus');
 Route::get('/galeria', [OthersController::class, 'gallery'])->name('gallery');
 
 //Rota para o admin fazer o gerenciamento do crud
-Route::prefix('admin')->group(function (){
+Route::prefix('admin')->middleware('isAdmin')->group(function (){
 
     //Controllers Gerais Admin
     Route::get('/', [AdminController::class, 'management'])->name('management');
@@ -54,7 +54,7 @@ Route::prefix('admin')->group(function (){
 
     //Gerenciamento dos Produtos - Admin
     Route::get('/lista', [AdminProductsController::class, 'list'])->name('list');
-    Route::get('/produtos/inserirProduto', [AdminProductsController::class, 'createProduct'])->name('createProduct')->middleware('isAdmin');
+    Route::get('/produtos/inserirProduto', [AdminProductsController::class, 'createProduct'])->name('createProduct');
     Route::post('/produtos/inserirProduto', [AdminProductsController::class, 'storeProduct'])->name('storeProduct');
     Route::get('/produtos/editarProduto/{product}', [AdminProductsController::class, 'editProduct'])->name('editProduct');
     Route::put('/produtos/editarProduto/{product}', [AdminProductsController::class, 'updateProduct'])->name('updateProduct');
@@ -97,9 +97,7 @@ Route::prefix('meu-perfil')->group(function () {
     Route::get('/home', [ClientController::class, 'profileIndex'])->name('profileIndex');
     Route::get('/minha-conta', [ClientController::class, 'account'])->name('account');
     Route::get('/dados', [ClientController::class, 'data'])->name('data');
-    Route::post('/dados/nota-fiscal/{id}', [ClientController::class, 'data'])->name('data');
     Route::get('/nota-fiscal/{id}', [ClientController::class, 'userOrder'])->name('userOrder');
-
     Route::get('/seu-espaco/', [ProfileController::class, 'dices'])->name('dices');
     Route::put('/seu-espaco/', [ProfileController::class, 'saveProfile'])->name('saveProfile');
 });
