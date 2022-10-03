@@ -110,7 +110,7 @@
                 <div>
                     <h4>Reservas</h4>
                     <p>
-                        <strong>Número</strong> (48) 99811-7740<br />
+                        <strong>Contato</strong> (48) 99811-7740<br />
                         <strong>Email:</strong> euquefiz.e21@gmail.com <br />
                     </p>
                 </div>
