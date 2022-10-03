@@ -68,18 +68,18 @@
                     </li>
                     @guest
                     <li class="dropdown">
-                        <a href="#"><span>Login / Cadastrar</span>
+                        <a href="#"><span>Entrar / Cadastrar</span>
                             <i class="bi bi-chevron-down dropdown-indicator"></i>
                         </a>
                         <ul>
-                            <li><a href="{{route('login')}}">Login</a></li>
-                            <li><a href="{{route('register')}}">Cadastro</a></li>
+                            <li><a href="{{route('login')}}">Entrar</a></li>
+                            <li><a href="{{route('register')}}">Criar conta</a></li>
                         </ul>
                     </li>
                     @endguest
                     @auth
                     <li><a href="{{route('profileIndex')}}">Perfil</a></li>
-                    <li><a href="{{route('logout')}}">Logout</a></li>
+                    <li><a href="{{route('logout')}}">Sair</a></li>
                     @endauth
                     <li>
                 </ul>
