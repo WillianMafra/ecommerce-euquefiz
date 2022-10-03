@@ -85,7 +85,6 @@ Route::prefix('/convidado')->group(function (){
     Route::post('/registro', [ClientController::class, 'salvar'])->name('salvar');
     Route::get('/entrar', [ClientController::class, 'login'])->name('login');
     Route::post('/entrar', [ClientController::class, 'entrar'])->name('entrar');
-    Route::get('/logout', [ClientController::class, 'logout'])->name('logout');
     Route::get('/esqueci-a-senha', [ClientController::class, 'resetPassword'])->name('resetPassword');
     Route::post('/esqueci-a-senha', [ClientController::class, 'emailPassword'])->name('password.email');
     Route::get('/resetar-senha/{token}', [ClientController::class, 'formNewPassword'])->name('password.reset');
@@ -94,6 +93,7 @@ Route::prefix('/convidado')->group(function (){
 
 //Rota para acessar o perfil de usuário
 Route::prefix('meu-perfil')->group(function () {
+    Route::get('/logout', [ClientController::class, 'logout'])->name('logout');
     Route::get('/home', [ClientController::class, 'profileIndex'])->name('profileIndex');
     Route::get('/minha-conta', [ClientController::class, 'account'])->name('account');
     Route::get('/dados', [ClientController::class, 'data'])->name('data');
