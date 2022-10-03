@@ -4,9 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Product;
-use App\Service\ProductsSearch;
+use App\Service\AdminSearchEngine\ProductsSearch;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
 
 class ProductsController extends Controller
 {
@@ -34,12 +33,6 @@ class ProductsController extends Controller
         $category = Category::find($id);
         $product = Product::all();
         return view('products.category', compact('product', 'category'));
-    }
-
-    public function showAllProducts()
-    {
-
-        return view('products.products');
     }
 
     public function productsList(Request $request, ProductsSearch $productsSearch)

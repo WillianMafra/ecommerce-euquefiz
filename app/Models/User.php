@@ -32,6 +32,11 @@ class User extends Authenticatable
         $this->attributes['name'] = $name;
     }
 
+    public function getUserType()
+    {
+        return $this->attributes['user_type'];
+    }
+
     public function orders()
     {
         return $this->hasMany(Order::class);
@@ -39,7 +44,9 @@ class User extends Authenticatable
 
     public function getOrders()
     {
-        return $this->orders;
+        $orders = $this->orders;
+        return $this->toArray();
+
     }
 
     public function getId()

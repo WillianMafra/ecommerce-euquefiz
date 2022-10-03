@@ -4,14 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CategoryStoreRequest;
 use App\Models\Category;
+use App\Service\AdminSearchEngine\CategorySearch;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
 
 class AdminCategoriesController extends Controller
 {
-    public function categoriesList()
+    public function categoriesList(CategorySearch $categorySearch, Request $request)
     {
-        $categories = Category::all();
+        $categories = $categorySearch->search($request);
+        
         return view('admin.management.categories.categoriesList', compact('categories'));
     }
 

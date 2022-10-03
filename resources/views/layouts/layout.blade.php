@@ -56,7 +56,11 @@
                             <li><a href="https://www.linkedin.com/in/willnmafra/" target="_blank">Integrante 7</a></li>
                         </ul>
                     </li>
-                    <li><a href="{{route('management')}}">Admin</a></li>
+                    @auth
+                    @if(\Illuminate\Support\Facades\Auth::user()->getUserType() == 'admin')
+                        <li><a href="{{route('management')}}">Admin</a></li>
+                    @endif
+                    @endauth
                     <li>
                         <a href="{{route('carShopping')}}">
                             <img src="{{asset('img/icone/shopping-bag.png')}}" alt="icone-carrinho" width="30" height="25">
@@ -74,7 +78,7 @@
                     </li>
                     @endguest
                     @auth
-                    <li><a href="{{route('dices')}}">Perfil</a></li>
+                    <li><a href="{{route('profileIndex')}}">Perfil</a></li>
                     <li><a href="{{route('logout')}}">Logout</a></li>
                     @endauth
                     <li>

@@ -29,7 +29,7 @@ Route::get('/sobre', [OthersController::class, 'aboutus'])->name('aboutus');
 Route::get('/galeria', [OthersController::class, 'gallery'])->name('gallery');
 
 //Rota para o admin fazer o gerenciamento do crud
-Route::prefix('admin')->group(function (){
+Route::prefix('admin')->middleware('isAdmin')->group(function (){
 
     //Controllers Gerais Admin
     Route::get('/', [AdminController::class, 'management'])->name('management');
@@ -44,7 +44,7 @@ Route::prefix('admin')->group(function (){
 
     //Gerenciamento Das Orders (Nota Fiscal)
     Route::get('/lista/Notas-Fiscais', [AdminOrdersController::class, 'ordersList'])->name('ordersList');
-    Route::delete('/lista//apagar/{order}', [AdminOrdersController::class, 'destroyOrder'])->name('destroyOrder');
+    Route::delete('/lista/apagar/{order}', [AdminOrdersController::class, 'destroyOrder'])->name('destroyOrder');
     //Gerenciamento das Categorias - Admin
     Route::get('/lista/Categorias', [AdminCategoriesController::class, 'categoriesList'])->name('categoriesList');
     Route::get('/categorias/inserirCategoria', [AdminCategoriesController::class, 'createCategory'])->name('createCategory');
@@ -54,7 +54,7 @@ Route::prefix('admin')->group(function (){
 
     //Gerenciamento dos Produtos - Admin
     Route::get('/lista', [AdminProductsController::class, 'list'])->name('list');
-    Route::get('/produtos/inserirProduto', [AdminProductsController::class, 'createProduct'])->name('createProduct')->middleware('isAdmin');
+    Route::get('/produtos/inserirProduto', [AdminProductsController::class, 'createProduct'])->name('createProduct');
     Route::post('/produtos/inserirProduto', [AdminProductsController::class, 'storeProduct'])->name('storeProduct');
     Route::get('/produtos/editarProduto/{product}', [AdminProductsController::class, 'editProduct'])->name('editProduct');
     Route::put('/produtos/editarProduto/{product}', [AdminProductsController::class, 'updateProduct'])->name('updateProduct');
@@ -85,7 +85,6 @@ Route::prefix('/convidado')->group(function (){
     Route::post('/registro', [ClientController::class, 'salvar'])->name('salvar');
     Route::get('/entrar', [ClientController::class, 'login'])->name('login');
     Route::post('/entrar', [ClientController::class, 'entrar'])->name('entrar');
-    Route::get('/logout', [ClientController::class, 'logout'])->name('logout');
     Route::get('/esqueci-a-senha', [ClientController::class, 'resetPassword'])->name('resetPassword');
     Route::post('/esqueci-a-senha', [ClientController::class, 'emailPassword'])->name('password.email');
     Route::get('/resetar-senha/{token}', [ClientController::class, 'formNewPassword'])->name('password.reset');
@@ -94,7 +93,11 @@ Route::prefix('/convidado')->group(function (){
 
 //Rota para acessar o perfil de usuário
 Route::prefix('meu-perfil')->group(function () {
+    Route::get('/logout', [ClientController::class, 'logout'])->name('logout');
+    Route::get('/home', [ClientController::class, 'profileIndex'])->name('profileIndex');
     Route::get('/minha-conta', [ClientController::class, 'account'])->name('account');
+    Route::get('/dados', [ClientController::class, 'data'])->name('data');
+    Route::get('/nota-fiscal/{id}', [ClientController::class, 'userOrder'])->name('userOrder');
     Route::get('/seu-espaco/', [ProfileController::class, 'dices'])->name('dices');
     Route::put('/seu-espaco/', [ProfileController::class, 'saveProfile'])->name('saveProfile');
 });
