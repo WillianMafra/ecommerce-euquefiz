@@ -36,51 +36,32 @@ class Item extends Model
     {
         $this->attributes['id'] = $id;
     }
-    public function getQuantity()
-    {
-        return $this->attributes['quantity'];
-    }
+
     public function setQuantity($quantity)
     {
         $this->attributes['quantity'] = $quantity;
     }
-    public function getPrice()
-    {
-        return $this->attributes['price'];
-    }
+
     public function setPrice($price)
     {
         $this->attributes['price'] = $price;
     }
-    public function getOrderId()
-    {
-        return $this->attributes['order_id'];
-    }
+
     public function setOrderId($orderId)
     {
         $this->attributes['order_id'] = $orderId;
-    }
-    public function getProductId()
-    {
-        return $this->attributes['product_id'];
     }
 
     public function setProductId($productId)
     {
         $this->attributes['product_id'] = $productId;
     }
-    public function getCreatedAt()
-    {
-        return $this->attributes['created_at'];
-    }
+
     public function setCreatedAt($createdAt)
     {
         $this->attributes['created_at'] = $createdAt;
     }
-    public function getUpdatedAt()
-    {
-        return $this->attributes['updated_at'];
-    }
+
     public function setUpdatedAt($updatedAt)
     {
         $this->attributes['updated_at'] = $updatedAt;

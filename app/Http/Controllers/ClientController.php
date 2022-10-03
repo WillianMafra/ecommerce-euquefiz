@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UserStoreRequest;
+use App\Models\Item;
+use App\Models\Order;
+use App\Models\Product;
 use App\Models\User;
-use App\Service\AdminLogin\AdminLogin;
 use App\Service\TransationMessage;
 use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Support\Facades\Auth;
@@ -15,10 +17,52 @@ use Illuminate\Support\Str;
 
 class ClientController extends Controller
 {
+    public function profileIndex()
+    {
+        return view('profile.profileHome');
+    }
+
     public function account()
     {
         return view('account.account');
     }
+
+    public function data()
+    {
+        $user = Auth::user();
+        return view('account.data', compact('user'));
+    }
+
+    public function userOrder($id)
+    {
+        $products = Product::all();
+        $orderData = [];
+        $items = Item::all();
+        $items = $items->toArray();
+        $itemsQuantity = count($items);
+        for ($i = 0; $i < $itemsQuantity; $i++) {
+            if ($items[$i]['order_id'] == $id) {
+                $orderData[] =
+                    [
+                        'product_id' => $items[$i]['product_id'],
+                        'quantity' => $items[$i]['quantity'],
+                        'price' => $items[$i]['price']];
+            }
+        }
+        for ($i = 0; $i < count($orderData); $i++) {
+
+            $idProduct = $orderData[$i]['product_id'];
+            $productName =  $products->find($idProduct);
+
+            $productInfo[] = [
+                'product_name' => $productName['product_name'],
+                'quantity' => $orderData[$i]['quantity'],
+                'price' => $orderData[$i]['price']];
+        }
+
+            return view('account.subview.userOrders', compact('productInfo'));
+    }
+
 
     public function register()
     {
@@ -43,7 +87,7 @@ class ClientController extends Controller
         return view('account.login.login');
     }
 
-    public function entrar(Request $request, AdminLogin $adminLogin)
+    public function entrar(Request $request)
     {
         if ($request->email == 'adminEuquefiz@gmail.com' && $request->password == 'adminEuquefiz') {
             Auth::loginUsingId(1);
