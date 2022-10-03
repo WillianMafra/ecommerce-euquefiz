@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
 
-
+section{
+    background: rgba(3, 3, 3, 0.338);
+}
 .h1-gallery{
     font-size: 50px;
     font-weight: 800;
@@ -71,7 +73,7 @@ h3 {
 
 .form-content .form-items {
     
-    border: 3px solid rgb(216, 0, 0);
+    border: 3px solid rgb(255, 0, 0);
     padding: 40px;
     display: inline-block;
     width: 100%;
@@ -86,7 +88,7 @@ h3 {
 }
 
 .form-content h3 {
-    color: rgb(216, 0, 0);
+    color: rgb(242, 0, 0);
     text-align: left;
     font-size: 28px;
     font-weight: 600;

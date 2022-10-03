@@ -57,12 +57,10 @@ h6 {
 --------------------------------------------------------------*/
 section {
     overflow: hidden;
-    padding: 80px 0;
+    padding: 40px 0;
 }
 
-.section-bg {
 
-}
 .subtitles{
     font-family: var(--font-secondary);
     color: white;
@@ -671,6 +669,7 @@ section {
 /*--------------------------------------------------------------
 # Chefs Section
 --------------------------------------------------------------*/
+
 .chefs .chef-member {
     overflow: hidden;
     text-align: center;
@@ -765,7 +764,7 @@ section {
 }
 
 @media screen and (max-width: 768px) {
-
+    
     .alte {
         max-width: 33%;
 
