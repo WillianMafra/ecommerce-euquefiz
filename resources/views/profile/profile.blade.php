@@ -29,7 +29,7 @@
                                     <div class="row mt-2">
                                         <div class="col-md-12">
                                             <label class="labels">Nome</label>
-                                            <input type="text" required name="name" class="form-control" placeholder="Nome completo" value="{{$user->name}}">
+                                            <input type="text" required name="name" class="form-control" value="{{$user->name}}">
                                         </div>
 
                                         @error('name')
@@ -38,7 +38,7 @@
 
                                         <div class="col-md-12">
                                             <label class="labels">CPF</label>
-                                            <input type="text" required name="cpf" class="form-control" placeholder="Nome completo" value="{{$user->cpf}}">
+                                            <input type="text" required name="cpf" class="form-control" value="{{$user->cpf}}">
                                         </div>
 
                                         @error('cpf')
@@ -47,7 +47,7 @@
 
                                         <div class="col-md-12">
                                             <label class="labels">Telefone</label>
-                                            <input type="tel" required name="telefone" class="form-control" placeholder="digite seu novo número de telefone" value="{{$user->telefone}}">
+                                            <input type="tel" required name="telefone" class="form-control" value="{{$user->telefone}}">
                                         </div>
 
                                         @error('telefone')
@@ -56,7 +56,7 @@
 
                                         <div class="col-md-12">
                                             <label class="labels">Cidade</label>
-                                            <input type="text" required name="cidade" class="form-control" placeholder="digite sua nova cidade" value="{{$user->cidade}}">
+                                            <input type="text" required name="cidade" class="form-control" value="{{$user->cidade}}">
                                         </div>
 
                                         @error('cidade')
@@ -65,7 +65,7 @@
 
                                         <div class="col-md-12">
                                             <label class="labels">Endereço</label>
-                                            <input type="text" required name="endereco" class="form-control" placeholder="digite seu novo endereço" value="{{$user->endereco}}">
+                                            <input type="text" required name="endereco" class="form-control" value="{{$user->endereco}}">
                                         </div>
 
                                         @error('endereco')
@@ -74,7 +74,7 @@
 
                                         <div class="col-md-12">
                                             <label class="labels">Data de Nascimento</label>
-                                            <input type="date" required name="nascimento" class="form-control" placeholder="Digite Sua Data de Nascimento" value="{{$user->nascimento}}">
+                                            <input type="date" required name="nascimento" class="form-control" value="{{$user->nascimento}}">
                                         </div>
 
                                         @error('nascimento')
@@ -83,7 +83,7 @@
 
                                         <div class="col-md-12">
                                             <label class="labels">CEP</label>
-                                            <input type="text" required name="cep" class="form-control" placeholder="digite seu novo CEP" value="{{$user->cep}}">
+                                            <input type="text" required name="cep" class="form-control" value="{{$user->cep}}">
                                         </div>
 
                                         @error('cep')
