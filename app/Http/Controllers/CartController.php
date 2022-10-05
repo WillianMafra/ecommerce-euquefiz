@@ -32,6 +32,8 @@ class CartController extends Controller
 
         $request->validated();
         $sucessOrFail = $quantityValidation->quantityValidator($request->quantity,$id);
+        $productStockReduction = Product::find($id);
+        $newStock = round($productStockReduction->stock) - $request->quantity;
 
         $transationMessage->productInsertedCart($request, $sucessOrFail);
 
@@ -44,11 +46,15 @@ class CartController extends Controller
             return redirect()->route('carShopping');
 
         }
+        $productStockReduction->setStock($newStock);
+        $productStockReduction->save();
         return redirect()->back();
     }
 
     public function destroy(Request $request)
     {
+
+
         $request->session()->forget('products');
 
         return redirect()->route('productsList');

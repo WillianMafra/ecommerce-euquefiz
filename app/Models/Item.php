@@ -67,22 +67,5 @@ class Item extends Model
         $this->attributes['updated_at'] = $updatedAt;
     }
 
-    public function getOrder()
-    {
-        return $this->order;
-    }
-    public function setOrder($order)
-    {
-        $this->order = $order;
-    }
-
-    public function getProduct()
-    {
-        return $this->product;
-    }
-    public function setProduct($product)
-    {
-        $this->product = $product;
-    }
 
 }

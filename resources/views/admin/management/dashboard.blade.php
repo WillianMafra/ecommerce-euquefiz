@@ -16,17 +16,6 @@
                 <div class="row">
                     <div class="col-xxl-4 col-md-6">
                         <div class="card info-card sales-card">
-                            <div class="filter">
-                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                    <li class="dropdown-header text-start">
-                                        <h6>Filtro</h6>
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Hoje</a></li>
-                                    <li><a class="dropdown-item" href="#">Este Mês</a></li>
-                                    <li><a class="dropdown-item" href="#">Este Ano</a></li>
-                                </ul>
-                            </div>
                             <div class="card-body">
                                 <h5 class="card-title">Vendas <span>| Hoje</span></h5>
                                 <div class="d-flex align-items-center">
@@ -40,17 +29,6 @@
                     </div>
                     <div class="col-xxl-4 col-md-6">
                         <div class="card info-card revenue-card">
-                            <div class="filter">
-                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                    <li class="dropdown-header text-start">
-                                        <h6>Filtro</h6>
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Hoje</a></li>
-                                    <li><a class="dropdown-item" href="#">Este Mês</a></li>
-                                    <li><a class="dropdown-item" href="#">Este Ano</a></li>
-                                </ul>
-                            </div>
                             <div class="card-body">
                                 <h5 class="card-title">Receita <span>| Este Mês</span></h5>
                                 <div class="d-flex align-items-center">
@@ -64,17 +42,6 @@
                     </div>
                     <div class="col-xxl-4 col-xl-12">
                         <div class="card info-card customers-card">
-                            <div class="filter">
-                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                    <li class="dropdown-header text-start">
-                                        <h6>Filtro</h6>
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Hoje</a></li>
-                                    <li><a class="dropdown-item" href="#">Este Mês</a></li>
-                                    <li><a class="dropdown-item" href="#">Este Ano</a></li>
-                                </ul>
-                            </div>
                             <div class="card-body">
                                 <h5 class="card-title">Clientes <span>| Este Ano</span></h5>
                                 <div class="d-flex align-items-center">
@@ -88,17 +55,6 @@
                     </div>
                     <div class="col-12">
                         <div class="card recent-sales overflow-auto">
-                            <div class="filter">
-                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                    <li class="dropdown-header text-start">
-                                        <h6>Filtro</h6>
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Hoje</a></li>
-                                    <li><a class="dropdown-item" href="#">Este Mês</a></li>
-                                    <li><a class="dropdown-item" href="#">Este Ano</a></li>
-                                </ul>
-                            </div>
                             <div class="card-body">
                                 <h5 class="card-title">Últimas Vendas <span>| Hoje</span></h5>
                                 <table class="table table-borderless datatable">
@@ -126,17 +82,6 @@
                     </div>
                     <div class="col-12">
                         <div class="card top-selling overflow-auto">
-                            <div class="filter">
-                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                    <li class="dropdown-header text-start">
-                                        <h6>Filtro</h6>
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Hoje</a></li>
-                                    <li><a class="dropdown-item" href="#">Este Mês</a></li>
-                                    <li><a class="dropdown-item" href="#">Este Ano</a></li>
-                                </ul>
-                            </div>
                             <div class="card-body pb-0">
                                 <h5 class="card-title">Top Vendas <span>| Hoje</span></h5>
                                 <table class="table table-borderless">
@@ -166,17 +111,6 @@
             </div>
             <div class="col-lg-4">
                 <div class="card">
-                    <div class="filter">
-                        <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                            <li class="dropdown-header text-start">
-                                <h6>Filtro</h6>
-                            </li>
-                            <li><a class="dropdown-item" href="#">Hoje</a></li>
-                            <li><a class="dropdown-item" href="#">Este Mês</a></li>
-                            <li><a class="dropdown-item" href="#">Este Ano</a></li>
-                        </ul>
-                    </div>
                     <div class="card-body">
                         <h5 class="card-title">Atividade Recente <span>| Hoje</span></h5>
                         <div class="activity">
@@ -184,7 +118,7 @@
                             <div class="activity-item d-flex">
                                 <div class="activite-label">{{($data['created_at'])}}</div>
                                 <i class='bi bi-circle-fill activity-badge text-success align-self-start'></i>
-                                <div class="activity-content">Usuário {{$data['user_name']}} Realizou uma Compra de R$ {{$data['total']}}</div>
+                                <div class="activity-content"><strong>Usuário {{$data['user_name']}} Realizou uma Compra de R$ {{$data['total']}}</strong></div>
                             </div>
                             @endforeach
                             @foreach($usersData as $userInfo)
@@ -192,7 +126,7 @@
                             <div class="activity-item d-flex">
                                 <div class="activite-label">{{$userInfo->created_at->format('d/m/Y')}}</div>
                                 <i class='bi bi-circle-fill activity-badge text-danger align-self-start'></i>
-                                <div class="activity-content">{{$userInfo['name']}} Se Cadastrou</div>
+                                <div class="activity-content"><strong>{{$userInfo['name']}} Se Cadastrou</strong></div>
                             </div>
                                     @endif
                                 @endforeach

@@ -8,7 +8,15 @@
             <div class="col-lg-10 offset-lg-1">
                 <div class="cart_container">
                     <div class="cart_title">Carrinho de Compras<small> (Voce tem X Itens no Carrinho) </small></div>
-
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all () as $error)
+                                    <li> {{ $error}}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     <div class="cart_items">
                         <ul class="cart_list">
                             @if(!empty($viewData['products']))
