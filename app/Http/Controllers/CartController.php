@@ -42,20 +42,29 @@ class CartController extends Controller
             $products = $request->session()->get("products");
             $products[$id] = $request->input('quantity');
             $request->session()->put('products', $products);
-
+            $productStockReduction->setStock($newStock);
+            $productStockReduction->save();
+            $request->session()->put('productsNew', $products);
             return redirect()->route('carShopping');
 
         }
-        $productStockReduction->setStock($newStock);
-        $productStockReduction->save();
+
         return redirect()->back();
     }
 
     public function destroy(Request $request)
     {
+        $oldProducts = $request->session()->get('products');
 
+        foreach ($oldProducts as $id => $stock) {
+           $findProduct = Product::find($id);
+           $newStock = $findProduct->stock + $stock;
+           $findProduct->setStock($newStock);
+           $findProduct->save();
+        }
 
         $request->session()->forget('products');
+        $request->session()->forget('productsNew');
 
         return redirect()->route('productsList');
 
