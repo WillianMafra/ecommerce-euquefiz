@@ -50,6 +50,11 @@ class Product extends Model
     {
         return $this->attributes['stock'];
     }
+
+    public function setStock($stock)
+    {
+        $this->attributes['stock'] = $stock;
+    }
     public function getProductCategoryId()
     {
         return $this->attributes['category_id'];

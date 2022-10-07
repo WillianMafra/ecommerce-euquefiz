@@ -7,6 +7,7 @@ use App\Models\Item;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\User;
+use App\Service\OrderCreator\OrderCreator;
 use App\Service\TransationMessage;
 use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Support\Facades\Auth;
@@ -33,32 +34,15 @@ class ClientController extends Controller
         return view('account.data', compact('user'));
     }
 
-    public function userOrder($id)
+    public function userOrder($id, OrderCreator $orderCreator)
     {
-        $products = Product::all();
-        $orderData = [];
+
         $items = Item::all();
         $items = $items->toArray();
         $itemsQuantity = count($items);
-        for ($i = 0; $i < $itemsQuantity; $i++) {
-            if ($items[$i]['order_id'] == $id) {
-                $orderData[] =
-                    [
-                        'product_id' => $items[$i]['product_id'],
-                        'quantity' => $items[$i]['quantity'],
-                        'price' => $items[$i]['price']];
-            }
-        }
-        for ($i = 0; $i < count($orderData); $i++) {
 
-            $idProduct = $orderData[$i]['product_id'];
-            $productName =  $products->find($idProduct);
-
-            $productInfo[] = [
-                'product_name' => $productName['product_name'],
-                'quantity' => $orderData[$i]['quantity'],
-                'price' => $orderData[$i]['price']];
-        }
+        $newArrayOrder = $orderCreator->newOrderArray($itemsQuantity,$items, $id);
+        $productInfo = $orderCreator->newProductArray($newArrayOrder);
 
             return view('account.subview.userOrders', compact('productInfo'));
     }
@@ -119,13 +103,10 @@ class ClientController extends Controller
         $transationMessage->newEmail($request, $request->email);
 
         $request->validate(['email' => 'required|email']);
-        $status = Password::sendResetLink(
+        Password::sendResetLink(
             $request->only('email')
         );
 
-        return $status === Password::RESET_LINK_SENT ? back()
-            ->with(['status' => __($status)])
-            : back()->withErrors(['email' => __($status)]);
     }
 
     public function formNewPassword($token)

@@ -46,45 +46,21 @@ class Order extends Model
     {
         $this->attributes['total'] = $total;
     }
-    public function getUserId()
-    {
-        return $this->attributes['user_id'];
-    }
+
     public function setUserId($userId)
     {
         $this->attributes['user_id'] = $userId;
     }
-    public function getCreatedAt()
-    {
-        return $this->attributes['created_at'];
-    }
+
     public function setCreatedAt($createdAt)
     {
         $this->attributes['created_at'] = $createdAt;
     }
 
-    public function getUpdatedAt()
-    {
-        return $this->attributes['updated_at'];
-    }
     public function setUpdatedAt($updatedAt)
     {
         $this->attributes['updated_at'] = $updatedAt;
     }
 
-
-    public function setUser($user)
-    {
-        $this->user = $user;
-    }
-
-    public function getItems()
-    {
-        return $this->items;
-    }
-    public function setItems($items)
-    {
-        $this->items = $items;
-    }
 
 }

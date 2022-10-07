@@ -34,3 +34,7 @@
         width: 100%;
     }
 }
+.div-botton {
+    display: flex;
+    justify-content: space-around;
+}

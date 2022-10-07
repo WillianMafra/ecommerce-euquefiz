@@ -13,7 +13,9 @@
                     </div>
                         <div class="row mt-2">
                             <div class="col-md-12">
-                                <input type="submit" style="margin-left: auto; margin-right: auto" value="Conferir Nota" class=" w-75 form-control bg-success" placeholder="Ver Nota Fiscal" >
+                                <a href="{{route('data')}}">
+                                    <button style="margin-left: auto; margin-right: auto" class="w-75 form-control bg-success">Conferir Compras</button>
+                                </a>
                             </div>
                         </div>
                 </div>

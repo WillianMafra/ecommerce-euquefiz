@@ -33,9 +33,18 @@
                                         <input type="password" id="form2Example27" class="form-control form-control-lg" name="password" />
                                         <label class="form-label" for="form2Example27">Senha</label>
                                     </div>
-                                    <a href="{{route('resetPassword')}}" class=""><p class="text-center text-white bg-secondary w-50 rounded">Esqueceu a Senha?</p></a>
-                                        <button class="btn btn-dark btn-lg btn-block" type="submit">Login</button>
-                                        <a href="{{route('register')}}" class=""><p class="text-center   text-primary ">Cadastre-se </p></a>
+                                    <a href="{{route('resetPassword')}}" class="">
+                                        <p class="text-center text-white bg-secondary w-50 rounded">Esqueceu a Senha?
+                                        </p>
+                                    </a>
+                                    <div class="div-botton">
+                                        <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+
+                                    <a href="{{route('register')}}" class="">
+                                        <button class="btn btn-success btn-lg btn-block">Cadastre-se
+                                        </button>
+                                    </a>
+                                    </div>
                                 </form>
                             </div>
                         </div>
