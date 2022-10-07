@@ -48,7 +48,7 @@
                         </a>
                         <ul>
                             <li><a href="https://www.linkedin.com/in/bruno-hoffmann-schumacher-0b4631168/" target="_blank">Integrante 1</a></li>
-                            <li><a href="https://www.linkedin.com/in/cl%C3%A1udio-j%C3%BAnior-872444251/">Integrante 2</a></li>
+                            <li><a href="https://www.linkedin.com/in/claudio-junior-872444251/">Integrante 2</a></li>
                             <li><a href="https://www.linkedin.com/in/deborabl/" target="_blank">Integrante 3</a></li>
                             <li><a href="https://www.linkedin.com/in/marlimeza/" target="_blank">Integrante 4</a></li>
                             <li><a href="https://www.linkedin.com/in/matheussan/" target="_blank">Integrante 5</a></li>
@@ -114,7 +114,7 @@
                 <div>
                     <h4>Reservas</h4>
                     <p>
-                        <strong>Número</strong> (48) 99811-7740<br />
+                        <strong>Contato</strong> (48) 99811-7740<br />
                         <strong>Email:</strong> euquefiz.e21@gmail.com <br />
                     </p>
                 </div>
