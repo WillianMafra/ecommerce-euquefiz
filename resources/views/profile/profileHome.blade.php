@@ -5,8 +5,8 @@
 @push('style')
     <link rel="stylesheet" href="{{asset('css/profile/profile.css')}}">
 @endpush
-@section('events')
     <section>
+    <div class="p-5 my-5 bg-white section-profile">
         <div style="border:solid 1px;" class="container p-5 my-5 bg-white w-75">
             <div class="row">
                 <div class="d-flex justify-content-center align-items-center">
@@ -32,13 +32,12 @@
                             @if(!empty($message))
                                 <div class="text-white alert alert-success bg-success text-center">{{$message}}</div>
                             @endif
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </section>
-@endsection
 
 

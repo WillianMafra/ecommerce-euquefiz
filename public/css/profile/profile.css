@@ -54,7 +54,6 @@ body {
     align-items: center;
     justify-content: center;
     color: rgb(0, 0, 0);
-
     cursor: pointer;
     font-family: sans-serif;
     transition: color 300ms ease-in-out, background 300ms ease-in-out;
@@ -100,4 +99,13 @@ body {
 .links-for-profile {
     color: black;
     text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+    .links-for-profile {
+        padding:  10px ;
+    }
+}
+.section-profile {
+    background-image: linear-gradient(to bottom, transparent 10%, #fff 98%),
+    url("../../img/logo-design/Background-Avermelhado1.png");
 }
