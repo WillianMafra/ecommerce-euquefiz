@@ -29,4 +29,8 @@
     background-image: linear-gradient(to bottom, transparent 0%, #fff 50%),
     url("../../../img/logo-design/Background-Avermelhado1.png");
 }
+.dropdown-menu-space {
+    margin-top: 5px;
+    margin-left: 25px;
+}
 

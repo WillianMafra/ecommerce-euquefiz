@@ -19,7 +19,7 @@
                             <div class="card-body">
                                 <h5 class="card-title text-dark">Vendas</h5>
                                 <div class="d-flex align-items-center">
-                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center"><img src="{{asset('img/icone/admin/shopping-cart.png')}}" width="30px" alt="carrinho-de-compras"></div>
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center"><img src="{{asset('img/icone/shopping-cart.png')}}" width="30px" alt="carrinho-de-compras"></div>
                                     <div class="ps-3">
                                         <p><b> Total de Vendas Atuais</b> {{$rentability['quantity']}}</p>
                                     </div>
@@ -32,7 +32,7 @@
                             <div class="card-body">
                                 <h5 class="card-title text-dark">Receita</h5>
                                 <div class="d-flex align-items-center">
-                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center"><img src="{{asset('img/icone/admin/cifrao.png')}}" width="30px" alt="icone-cifrao"></div>
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center"><img src="{{asset('img/icone/cifrao.png')}}" width="30px" alt="icone-cifrao"></div>
                                     <div class="ps-3">
                                         <h6 class="text-dark">R$ {{$rentability['total']}}</h6>
                                     </div>
@@ -45,7 +45,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Clientes</h5>
                                 <div class="d-flex align-items-center">
-                                   <img src="{{asset('img/icone/admin/diversity.png')}}" width="50px" alt="clientes-icone">
+                                   <img src="{{asset('img/icone/diversity.png')}}" width="50px" alt="clientes-icone">
                                     <div class="ps-3">
                                         <b><p class="text-dark">Atualmente Temos {{$usersQuantity}} Clientes Registrados</p></b>
                                     </div>
@@ -122,7 +122,7 @@
                             <div class="activity-item d-flex">
                                 <div class="activite-label">{{($data['created_at'])}}</div>
                                 <i class='bi bi-circle-fill activity-badge text-success align-self-start'></i>
-                                <div class="activity-content"><strong>Usuário {{$data['user_name']}} Realizou uma Compra de R$ {{$data['total']}}</strong></div>
+                                <div class="activity-content"><strong>Usuário <span class="text-success">{{$data['user_name']}}</span> Realizou uma Compra de R$ {{$data['total']}}</strong></div>
                             </div>
                             @endforeach
                             @foreach($usersData as $userInfo)
