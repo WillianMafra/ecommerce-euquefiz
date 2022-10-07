@@ -8,6 +8,7 @@
 <main>
 <section class="wrapper">
     <div class="container">
+        <div class="element">
         <div class="col-lg-7">
             <h5 class="fw-bold fs-3 fs-lg-5 lh-sm text-center text-lg-start">Confira Nossos Pratos</h5>
             <form method="GET" action="{{route('productsList')}}" autocomplete="off">
@@ -34,7 +35,7 @@
                                 <span class="font-weight-bold text-center d-block text-product">R$ {{$product->price}}</span>
 
                                 <div class="weight mt-2 text-center d-block text-product">
-                                    <small>{{round($product->stock)}} Unidades</small>
+                                    <small>{{round($product->stock)}} Unidades em estoque</small>
                                 </div>
 
                             </div>

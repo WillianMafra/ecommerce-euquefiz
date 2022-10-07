@@ -82,7 +82,8 @@
     <!-- DESCRIÇÃO EVENTOS -->
     <div class="row py-lg-5">
         <div class="col-lg-6 col-md-8 mx-auto">
-            <p class="events-font">Contrate eventos para casamentos, formaturas etc blalalaSomething short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, faça um orçamento abaixo!</p>
+            <p class="events-font">Cardápios para casamentos, formaturas, aniversários, jantares em casa com amigos, etc.
+               <br>Entre em contato e faça um orçamento.</p>
         </div>
     </div>
 
@@ -95,7 +96,7 @@
                         <h3>SOLICITAR ORÇAMENTO</h3>
                         <form class="requires-validation" action="https://formsubmit.co/euquefiz.e21@gmail.com" method="POST" novalidate>
 
-                            <!-- <div class="col-xs-4">
+                            <!-- <div class="col-xs-3">
                                 <select class="form-select mt-3" type="text" required>
                                     <option selected disabled value="">Tipo de Evento</option>
                                     <option value="jweb">Casamento</option>
@@ -138,7 +139,7 @@
                             </div>
 
                             <div class="col-xs-4">
-                                <input class="form-control" type="text" name="data" placeholder="Mes desejado" onfocus="(this.type='month')" required>
+                                <input class="form-control" type="text" name="data" placeholder="Mês desejado" onfocus="(this.type='month')" required>
                                 <div class="valid-feedback">Mês escolhido!</div>
                                 <div class="invalid-feedback">Insira o mês desejado!</div>
                             </div>

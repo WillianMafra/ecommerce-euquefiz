@@ -124,9 +124,9 @@
                     <div class="member-img">
                         <img src="{{asset('img/chefs/Claudiodev.jpg')}}" class="img-fluid" alt="master chef">
                         <div class="social">
-                            <a href="" target="_blank"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
+                           
                             <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
-                            <a href="https://www.linkedin.com/in/cl%C3%A1udio-j%C3%BAnior-872444251/"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
+                            <a href="https://www.linkedin.com/in/claudio-junior-872444251/"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
                             <a href=""><img class="icone" src="{{asset('img/icone/instagram-icone.png')}}" alt="icone do instagram"></a>  
                         </div>
                     </div>
@@ -145,7 +145,7 @@
                         <div class="social">
                             <a href="" target="_blank"><i class="bi bi-twitter"></i></a>
                             <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
-                            <<a href="https://www.linkedin.com/in/deborabl/"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
+                            <a href="https://www.linkedin.com/in/deborabl/"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
                             <a href=""><img class="icone" src="{{asset('img/icone/instagram-icone.png')}}" alt="icone do instagram"></a>
                         </div>
                     </div>

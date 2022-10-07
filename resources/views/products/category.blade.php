@@ -26,7 +26,7 @@
                                 <span class="font-weight-bold text-center d-block text-product">R$ {{$prod->price}}</span>
 
                                 <div class="weight mt-2 text-center d-block text-product">
-                                    <small>{{round($prod->stock)}} Unidades</small>
+                                    <small>{{round($prod->stock)}} Unidades em estoque</small>
                                 </div>
 
                             </div>
