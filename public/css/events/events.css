@@ -36,6 +36,8 @@ section{
     font-size: 26px;
     color: #f6f6f6;
     text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 
@@ -207,4 +209,12 @@ h3 {
     padding-left: 2px;
     margin-right: 100px;
     margin-left: 80px;
+}
+
+
+
+@media (max-width: 785px){
+    section{
+        background: rgba(3, 3, 3, 0.619);
+    }
 }
