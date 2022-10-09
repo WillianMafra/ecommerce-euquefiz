@@ -8,8 +8,6 @@
     <meta content="" name="description">
     <meta content="" name="keywords">
     @stack('adminStyle')
-    <link href="{{asset('storage/img/logo-design/LogoSemFundo.png')}}" rel="icon">
-    <link href="{{asset('storage/img/logo-design/LogoSemFundo.png')}}" rel="apple-touch-icon">
     <link href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -20,7 +18,7 @@
 <body class="bg-dark">
 <header id="header" class="header fixed-top d-flex align-items-center bg-dark">
     <div class="d-flex align-items-center justify-content-between"><a href="/" class="logo d-flex align-items-center">
-            <img src="{{asset('img/logo-design/LogoSemFundo.png')}}"class="mt-5" alt="Eu Que Fiz Logo">
+            <img src="{{asset('img/logo-design/LogoSemFundo.png')}}" class="mt-5" alt="Eu Que Fiz Logo">
             <span class="d-none d-lg-block" id="titulo" >Eu Que Fiz</span></a><i class="bi bi-list toggle-sidebar-btn text-primary"></i>
     </div>
 @yield('search')

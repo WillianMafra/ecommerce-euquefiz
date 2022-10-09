@@ -34,7 +34,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center"><img src="{{asset('img/icone/cifrao.png')}}" width="30px" alt="icone-cifrao"></div>
                                     <div class="ps-3">
-                                        <h6 class="text-dark">R$ {{$rentability['total']}}</h6>
+                                        <h6 class="text-dark">R$ {{number_format($rentability['total'],2,",",".")}}</h6>
                                     </div>
                                 </div>
                             </div>
@@ -73,7 +73,7 @@
                                                 @endif
                                             <th scope="row">{{$data['id']}}</th>
                                             <td>{{$data['user_name']}}</td>
-                                            <td>R$ {{$data['total']}}</td>
+                                            <td>R$ {{number_format($data['total'],2,",",".")}}</td>
                                         </tr>
                                     @endforeach
                                     @endif
@@ -102,7 +102,7 @@
                                     @endif
                                         <th scope="row">{{$data['id']}}</th>
                                         <td>{{$data['user_name']}}</td>
-                                        <td>R$ {{$data['total']}}</td>
+                                        <td>R$ {{number_format($data['total'],2,",",".")}}</td>
                                     </tr>
                                     @endforeach
                                     @endif
@@ -122,7 +122,7 @@
                             <div class="activity-item d-flex">
                                 <div class="activite-label">{{($data['created_at'])}}</div>
                                 <i class='bi bi-circle-fill activity-badge text-success align-self-start'></i>
-                                <div class="activity-content"><strong>Usuário <span class="text-success">{{$data['user_name']}}</span> Realizou uma Compra de R$ {{$data['total']}}</strong></div>
+                                <div class="activity-content"><strong>Usuário <span class="text-success">{{$data['user_name']}}</span> Realizou uma Compra de R$ {{number_format($data['total'],2,",",".")}}</strong></div>
                             </div>
                             @endforeach
                             @foreach($usersData as $userInfo)

@@ -17,6 +17,7 @@ class UserSearch implements SearchEngine
         });
 
         $users = $users->paginate(5);
+
         return $users;
     }
 }

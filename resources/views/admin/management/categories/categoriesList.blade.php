@@ -50,3 +50,6 @@
         </div>
     </div>
 </section>
+<div class="pagination-links">
+    {{ $categories->links() }}
+</div>

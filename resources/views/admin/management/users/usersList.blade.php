@@ -28,6 +28,7 @@
                     </thead>
                     <tbody>
                     @foreach ($users as $user)
+                        @if($user->id != 1)
                         <tr>
                             <td> @if (!empty($user->image))
                                     <img src="{{asset($user->image)}}" alt="imagem-de-perfil">
@@ -65,6 +66,7 @@
                                     </td>
                             </form>
                         </tr>
+                        @endif
                     @endforeach
                     </tbody>
                 </table>
@@ -72,3 +74,6 @@
         </div>
     </div>
 </section>
+<div class="pagination-links">
+    {{ $users->links() }}
+</div>

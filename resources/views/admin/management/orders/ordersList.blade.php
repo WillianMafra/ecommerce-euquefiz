@@ -57,3 +57,6 @@
         </div>
     </div>
 </section>
+<div class="pagination-links">
+{{ $orders->links() }}
+</div>

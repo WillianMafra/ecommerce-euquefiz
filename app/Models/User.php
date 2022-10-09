@@ -27,6 +27,7 @@ class User extends Authenticatable
         'email',
         'password',
     ];
+
     public function setName($name)
     {
         $this->attributes['name'] = $name;

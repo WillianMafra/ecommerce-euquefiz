@@ -33,4 +33,8 @@
     margin-top: 5px;
     margin-left: 25px;
 }
-
+.pagination-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

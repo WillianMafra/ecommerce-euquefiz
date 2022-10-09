@@ -44,7 +44,7 @@ Route::prefix('admin')->middleware('isAdmin')->group(function (){
 
     //Gerenciamento Das Orders (Nota Fiscal)
     Route::get('/lista/Notas-Fiscais', [AdminOrdersController::class, 'ordersList'])->name('ordersList');
-    Route::delete('/lista/apagar/{order}', [AdminOrdersController::class, 'destroyOrder'])->name('destroyOrder');
+    Route::delete('/lista/{order}/apagar', [AdminOrdersController::class, 'destroyOrder'])->name('destroyOrder');
     //Gerenciamento das Categorias - Admin
     Route::get('/lista/Categorias', [AdminCategoriesController::class, 'categoriesList'])->name('categoriesList');
     Route::get('/categorias/inserirCategoria', [AdminCategoriesController::class, 'createCategory'])->name('createCategory');

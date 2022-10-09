@@ -25,9 +25,8 @@ class AdminUserController extends Controller
     public function usersList(Request $request, UserSearch $userSearch)
     {
         $message = $request->session()->get('message');
-
         $users = $userSearch->search($request);
-        $users = $users->except([1]);
+
 
         return view('admin.management.users.usersList', compact('users', 'message'));
     }
