@@ -124,7 +124,9 @@
 .pqt-plus:hover,
 .pqt-minus:hover {
     background: #de5613;
-    color: #fff;
+    color: rgb(4, 4, 4);
     cursor: pointer;
 }
 .element{margin-top:90px}
+.bg
+    

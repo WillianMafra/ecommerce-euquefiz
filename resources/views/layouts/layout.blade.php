@@ -26,7 +26,7 @@
 
                 <img src="{{asset('img/logo-design/Euquefizlogo.png')}}" class="mt-5" width="170px" alt="logo-eu-que-fiz">
             </a>
-            <nav id="navbar" class="navbar navbar-expand-sm ">
+            <nav id="navbar" class="navbar navbar-expand-sm background">
                 <ul>
                     <li class="dropdown"><a href="{{route('productsList')}}"><span>Cardápio</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                         <ul>
