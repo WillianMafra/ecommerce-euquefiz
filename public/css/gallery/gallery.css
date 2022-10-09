@@ -3,7 +3,12 @@
 
   .testimonial{
     padding: 30px 45px;
-
+    background: rgba(3, 3, 3, 0.419);
+}
+@media(max-width: 750px){
+  .testimonial{
+    background: rgba(3, 3, 3, 0.619);
+  }
 }
 .h1-gallery{
   text-align: center;

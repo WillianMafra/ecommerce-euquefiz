@@ -7,7 +7,7 @@
     <div class="testimonial">
         <article>
             <h1 class="h1-about">Sobre Nós</h1>
-            <img class="about-img border-0" src="{{asset('img/logo-design/logosemfundo.png')}}"  alt="">
+            <img class="about-img border-0" src="{{asset('img/logo-design/LogoSemFundo.png')}}"  alt="logo-eu-que-fiz">
             <blockquote class="blockquote-about">
             Trata-se de um e-commerce de produtos alimentícios congelados e eventos culinários.
             Utilizando os conceitos aprendidos sobre Metodologias Ágeis, nós construimos um e-commerce responsivo com banco de dados MySql
