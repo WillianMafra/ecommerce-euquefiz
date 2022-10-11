@@ -62,7 +62,7 @@
                                     <tr class="table-admin-head">
                                         <th scope="col">ID</th>
                                         <th scope="col">Cliente</th>
-                                        <th scope="col">Preco Total</th>
+                                        <th scope="col">Preço Total</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -116,7 +116,7 @@
             <div class="col-lg-4">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Atividade Recente</h5>
+                        <h5 class="card-title">Atividades Recentes</h5>
                         <div class="activity">
                             @foreach($lastDataByTotal as $data)
                             <div class="activity-item d-flex">
