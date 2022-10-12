@@ -8,7 +8,7 @@
         <li class="nav-item  bg-light">
             <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
                 <img src="{{asset('img/icone/people.png')}}" class="mt-4" width="30px" alt="users">
-                    <span class="dropdown-menu-space">Usuarios</span>
+                    <span class="dropdown-menu-space">Usuários</span>
                     <i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
@@ -48,8 +48,8 @@
         <li class="nav-item bg-light">
             <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#"> <i class="bi bi-layout-text-window-reverse"></i><span>Outros</span><i class="bi bi-chevron-down ms-auto"></i> </a>
             <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                <li> <a href="#"> <i class="bi bi-circle"></i><span>Opcao 1</span> </a></li>
-                <li> <a href="#"> <i class="bi bi-circle"></i><span>Opcao 2</span> </a></li>
+                <li> <a href="#"> <i class="bi bi-circle"></i><span>Opção 1</span> </a></li>
+                <li> <a href="#"> <i class="bi bi-circle"></i><span>Opção 2</span> </a></li>
             </ul>
         </li>
     </ul>
