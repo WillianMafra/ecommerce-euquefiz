@@ -7,6 +7,7 @@
 @endpush
 
 <section class="container my-3">
+<body class="bg-black">
 <div class="container-fluid bg-3 text-center h-75">
     <h3>Você Está Na Categoria {{$category->name}}</h3><br>
     <div class="row">
@@ -37,4 +38,5 @@
         @endforeach
         </div>
     </div>
+</body>
 </section>

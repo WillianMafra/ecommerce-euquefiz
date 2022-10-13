@@ -107,7 +107,7 @@
                         <div class="social">
                             <a href="" target="_blank"><i class="bi bi-twitter" ></i></a>
                             <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
-                            <a href="https://www.linkedin.com/in/bruno-hoffmann-schumacher-0b4631168/"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
+                            <a href="https://www.linkedin.com/in/bruno-hoffmann-schumacher-0b4631168/" target="_blank"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
                             <a href=""><img class="icone" src="{{asset('img/icone/instagram-icone.png')}}" alt="icone do instagram"></a>
                         </div>
                     </div>
@@ -126,7 +126,7 @@
                         <div class="social">
                            
                             <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
-                            <a href="https://www.linkedin.com/in/claudio-junior-872444251/"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
+                            <a href="https://www.linkedin.com/in/claudio-junior-872444251/" target="_blank"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
                             <a href=""><img class="icone" src="{{asset('img/icone/instagram-icone.png')}}" alt="icone do instagram"></a>  
                         </div>
                     </div>
@@ -145,7 +145,7 @@
                         <div class="social">
                             <a href="" target="_blank"><i class="bi bi-twitter"></i></a>
                             <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
-                            <a href="https://www.linkedin.com/in/deborabl/"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
+                            <a href="https://www.linkedin.com/in/deborabl/" target="_blank"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
                             <a href=""><img class="icone" src="{{asset('img/icone/instagram-icone.png')}}" alt="icone do instagram"></a>
                         </div>
                     </div>
@@ -163,7 +163,7 @@
                         <div class="social">
                             <a href="" target="_blank"><i class="bi bi-twitter"></i></a>
                             <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
-                            <a href="https://www.linkedin.com/in/marlimeza/"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
+                            <a href="https://www.linkedin.com/in/marlimeza/" target="_blank"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
                             <a href=""><img class="icone" src="{{asset('img/icone/instagram-icone.png')}}" alt="icone do instagram"></a>
                         </div>
                     </div>
@@ -181,7 +181,7 @@
                         <div class="social">
                             <a href="" target="_blank"><i class="bi bi-twitter"></i></a>
                             <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
-                            <a href="https://www.linkedin.com/in/matheussan/"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
+                            <a href="https://www.linkedin.com/in/matheussan/" target="_blank"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
                             <a href=""><img class="icone" src="{{asset('img/icone/instagram-icone.png')}}" alt="icone do instagram"></a>
                         </div>
                     </div>
@@ -199,7 +199,7 @@
                         <div class="social">
                             <a href="" target="_blank"><i class="bi bi-twitter"></i></a>
                             <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
-                            <a href="https://www.linkedin.com/in/thiagowolter/"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
+                            <a href="https://www.linkedin.com/in/thiagowolter/" target="_blank"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
                             <a href=""><img class="icone" src="{{asset('img/icone/instagram-icone.png')}}" alt="icone do instagram"></a>
                         </div>
                     </div>
@@ -217,7 +217,7 @@
                         <div class="social">
                             <a href="" target="_blank"><i class="bi bi-twitter"></i></a>
                             <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
-                            <a href="https://www.linkedin.com/in/willnmafra/"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
+                            <a href="https://www.linkedin.com/in/willnmafra/" target="_blank"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
                             <a href=""><img class="icone" src="{{asset('img/icone/instagram-icone.png')}}" alt="icone do instagram"></a>
                         </div>
                     </div>

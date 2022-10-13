@@ -7,6 +7,7 @@
 @endpush
 <main>
 <section class="wrapper">
+    <body class="bg-black">
     <div class="container">
         <div class="element">
         <div class="col-lg-7">
@@ -45,6 +46,8 @@
             @endforeach
         </div>
     </div>
+    </div>
+</body>
 </section>
 </main>
 {{ $products->links() }}

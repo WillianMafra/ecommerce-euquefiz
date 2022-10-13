@@ -1,0 +1,14 @@
+@media screen and (max-width: 768px) {
+    p {
+        background-color: var(--userMessageBubbleColor);
+        color: var(--userMessageTextColor);
+        border-radius: 15px;
+        padding: 11px 15px;
+        text-align: left;
+        font-family: Roboto,serif;
+        margin-left: auto;
+        overflow-wrap: break-word;
+        overflow: auto;
+    }
+}
+
