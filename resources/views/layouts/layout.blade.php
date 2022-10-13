@@ -51,13 +51,13 @@
                             <i class="bi bi-chevron-down dropdown-indicator"></i>
                         </a>
                         <ul>
-                            <li><a href="https://www.linkedin.com/in/bruno-hoffmann-schumacher-0b4631168/" target="_blank">Integrante 1</a></li>
-                            <li><a href="https://www.linkedin.com/in/claudio-junior-872444251/">Integrante 2</a></li>
-                            <li><a href="https://www.linkedin.com/in/deborabl/" target="_blank">Integrante 3</a></li>
-                            <li><a href="https://www.linkedin.com/in/marlimeza/" target="_blank">Integrante 4</a></li>
-                            <li><a href="https://www.linkedin.com/in/matheussan/" target="_blank">Integrante 5</a></li>
-                            <li><a href="https://www.linkedin.com/in/thiagowolter/" target="_blank">Integrante 6</a></li>
-                            <li><a href="https://www.linkedin.com/in/willnmafra/" target="_blank">Integrante 7</a></li>
+                            <li><a href="https://www.linkedin.com/in/bruno-hoffmann-schumacher-0b4631168/" target="_blank">Bruno</a></li>
+                            <li><a href="https://www.linkedin.com/in/claudio-junior-872444251/" target="_blank">Cláudio</a></li>
+                            <li><a href="https://www.linkedin.com/in/deborabl/" target="_blank">Debora</a></li>
+                            <li><a href="https://www.linkedin.com/in/marlimeza/" target="_blank">Marli</a></li>
+                            <li><a href="https://www.linkedin.com/in/matheussan/" target="_blank">Matheus</a></li>
+                            <li><a href="https://www.linkedin.com/in/thiagowolter/" target="_blank">Thiago</a></li>
+                            <li><a href="https://www.linkedin.com/in/willnmafra/" target="_blank">Willian</a></li>
                         </ul>
                     </li>
                     @auth
@@ -169,5 +169,16 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="{{asset('js/app.js')}}"></script>
+<script>
+    (function (d, s, u) {
+        let h = d.getElementsByTagName(s)[0], k = d.createElement(s);
+        k.onload = function () {
+            let l = d.createElement(s); l.src = u; l.async = true;
+            h.parentNode.insertBefore(l, k.nextSibling);
+        };
+        k.async = true; k.src = 'https://storage.googleapis.com/push-webchat/wwc-latest.js';
+        h.parentNode.insertBefore(k, h);
+    })(document, 'script', 'https://weni-sp-integrations-production.s3.amazonaws.com/apptypes/wwc/d1564a88-6a1f-457f-bd31-0a113c88d047/script.js');
+</script>
 </body>
 </html>

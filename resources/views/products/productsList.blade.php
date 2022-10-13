@@ -46,6 +46,7 @@
             @endforeach
         </div>
     </div>
+    </div>
 </body>
 </section>
 </main>

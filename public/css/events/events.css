@@ -6,10 +6,8 @@ section{
 .h1-gallery{
     font-size: 50px;
     font-weight: 800;
-    /* text-transform: uppercase; */
-    font-family: pacifico;
-    letter-spacing: 1.5px;
-    /* margin-top: 125px; */
+    font-family: pacifico, sans-serif;
+    letter-spacing: 2px;
     text-align: center;
     color: white;
 }
@@ -21,8 +19,7 @@ section{
     max-width: 80%;
     background-color: #a90000;
     display: flex;
-    margin:auto;
-    margin-bottom: 50px;
+    margin: auto auto 50px;
 }
 .testimonial{
     padding: 30px 100px;
@@ -74,7 +71,7 @@ h3 {
 }
 
 .form-content .form-items {
-    
+
     border: 3px solid rgb(255, 0, 0);
     padding: 40px;
     display: inline-block;
@@ -135,7 +132,7 @@ h3 {
 .btn-primary{
     background-color: #a20000;
     outline: none;
-    border: 0px;
+    border: 0;
      box-shadow: none;
 }
 
@@ -188,10 +185,8 @@ h3 {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
     width: 100%;
-    padding: 100px 20px;
-    padding-right: 0;
-    padding-left: 0;
-    margin-right: 0px;
+    padding: 100px 0;
+    margin-right: 0;
     margin-left: 80px;
 
 }
@@ -205,16 +200,17 @@ h3 {
     --bs-bg-opacity: 1;
     background-color: rgba(var(--bs-primary-rgb),var(--bs-bg-opacity))!important;
     padding: 2px 2px;
-    padding-right: 2px;
-    padding-left: 2px;
     margin-right: 100px;
     margin-left: 80px;
 }
-
-
 
 @media (max-width: 785px){
     section{
         background: rgba(3, 3, 3, 0.619);
     }
+}
+.form-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }

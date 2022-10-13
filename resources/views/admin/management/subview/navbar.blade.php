@@ -46,7 +46,9 @@
         </li>
 
         <li class="nav-item bg-light">
-            <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#"> <i class="bi bi-layout-text-window-reverse"></i><span>Outros</span><i class="bi bi-chevron-down ms-auto"></i> </a>
+            <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+                <img src="{{asset('img/icone/under-construction.png')}}" class="mt-4" width="30px" alt="em-contrucao">
+                <span class="dropdown-menu-space">Em Construção</span><i class="bi bi-chevron-down ms-auto"></i> </a>
             <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li> <a href="#"> <i class="bi bi-circle"></i><span>Opção 1</span> </a></li>
                 <li> <a href="#"> <i class="bi bi-circle"></i><span>Opção 2</span> </a></li>
