@@ -767,15 +767,18 @@ section {
     opacity: 1;
 }
 
+#container-geral {
+    margin-top: 4rem
+}
+#div-imagem {
+    display: flex;
+    align-items: center;
+}
 @media screen and (max-width: 768px) {
 
     .alte {
         max-width: 33%;
 
-    }
-
-    .container-geral {
-        margin-top: 30px;
     }
 
     #product-detail {
@@ -853,3 +856,17 @@ section {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fa9119",endColorstr="#ffffff",GradientType=1);
 }
 
+@media (max-width: 1279px) {
+    #product-show {
+        margin-top: 6vh !important;
+        width: 100%;
+    }
+    #section-product {
+        width: 95%;
+    }
+}
+@media screen and (max-width: 768px) {
+    #product-quantity {
+        padding: 13px 19px;
+    }
+}
