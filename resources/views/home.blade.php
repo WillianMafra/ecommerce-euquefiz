@@ -114,8 +114,8 @@
                     <div class="member-info">
                         <h4>Bruno</h4>
                         <span>Dev</span>
-                        
-                        
+
+
                     </div>
                 </div>
             </div><!-- End Chefs Member -->
@@ -124,10 +124,10 @@
                     <div class="member-img">
                         <img src="{{asset('img/chefs/Claudiodev.jpg')}}" class="img-fluid" alt="master chef">
                         <div class="social">
-                           
+
                             <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
                             <a href="https://www.linkedin.com/in/claudio-junior-872444251/" target="_blank"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
-                            <a href=""><img class="icone" src="{{asset('img/icone/instagram-icone.png')}}" alt="icone do instagram"></a>  
+                            <a href=""><img class="icone" src="{{asset('img/icone/instagram-icone.png')}}" alt="icone do instagram"></a>
                         </div>
                     </div>
                     <div class="member-info">
@@ -152,7 +152,7 @@
                     <div class="member-info">
                         <h4>Débora</h4>
                         <span>Dev</span>
-                       
+
                     </div>
                 </div>
             </div><!-- End Chefs Member -->
@@ -170,7 +170,7 @@
                     <div class="member-info">
                         <h4>Marli</h4>
                         <span>Dev</span>
-                        
+
                     </div>
                 </div>
             </div><!-- End Chefs Member -->
@@ -188,7 +188,7 @@
                     <div class="member-info">
                         <h4>Matheus</h4>
                         <span>Dev</span>
-                       
+
                     </div>
                 </div>
             </div><!-- End Chefs Member -->
@@ -206,7 +206,7 @@
                     <div class="member-info">
                         <h4>Thiago</h4>
                         <span>Dev</span>
-                    
+
                     </div>
                 </div>
             </div><!-- End Chefs Member -->
@@ -224,7 +224,7 @@
                     <div class="member-info">
                         <h4>Willian</h4>
                         <span>Dev</span>
-                        
+
                     </div>
                 </div>
             </div><!-- End Chefs Member -->
