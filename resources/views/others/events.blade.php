@@ -144,24 +144,6 @@
                                 <div class="invalid-feedback">Insira o mês desejado!</div>
                             </div>
 
-                            <!-- <div class="col-xs-4 mt-3">
-                                <label class="mb-3 mr-1" for="gender">Gender: </label>
-
-                                <input type="radio" class="btn-check" name="gender" id="male" autocomplete="off" required>
-                                <label class="btn btn-sm btn-outline-secondary" for="male">Male</label>
-
-                                <input type="radio" class="btn-check" name="gender" id="female" autocomplete="off" required>
-                                <label class="btn btn-sm btn-outline-secondary" for="female">Female</label>
-
-                                <input type="radio" class="btn-check" name="gender" id="secret" autocomplete="off" required>
-                                <label class="btn btn-sm btn-outline-secondary" for="secret">Secret</label>
-                                <div class="valid-feedback mv-up">You selected a gender!</div>
-                                <div class="invalid-feedback mv-up">Please select a gender!</div>
-
-                                <input type="hidden" name="_captcha" value="false" />
-
-                                <input type="hidden" name="_next" value="{{route('events')}}" />
-                            </div> -->
                             <input type="hidden" name="_captcha" value="false" />
 
                                 <input type="hidden" name="_next" value="{{route('events')}}" />
@@ -177,8 +159,6 @@
 </section>
 @endsection
 @push('scripts')
-    <script src="{{asset('js/carousel.js')}}"></script>
     <script src="{{asset('js/form.js')}}"></script>
-    <script src="{{asset('js/slider.js')}}"></script>
 @endpush
 

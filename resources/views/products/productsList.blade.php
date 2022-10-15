@@ -2,9 +2,6 @@
 @push('style')
     <link rel="stylesheet" href="{{asset('css/products/productslist.css')}}">
 @endpush
-@push('scripts')
-    <script src="{{asset('js/products.js')}}"></script>
-@endpush
 <main>
 <section class="wrapper">
     <body class="bg-black">
