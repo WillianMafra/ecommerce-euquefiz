@@ -11,7 +11,7 @@
     <div class="container">
         <div class="element">
         <div class="col-lg-7">
-            <h5 class="fw-bold fs-3 fs-lg-5 lh-sm text-center text-lg-start">Confira Nossos Pratos</h5>
+            <h5 class="fw-bold fs-3 fs-lg-5 lh-sm text-center text-lg-start text-white">Confira Nossos Pratos</h5>
             <form method="GET" action="{{route('productsList')}}" autocomplete="off">
                 <section class="flex justify-center">
                     <label for="search" class="leading-7 text-sm text-gray-600 ml-2"></label>
