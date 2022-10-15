@@ -154,7 +154,7 @@
 </footer>
 <!-- End Footer -->
 <input type="image" src="{{asset('img/icone/scrollup.png')}}" id="bottonUp"  class="scroll-top d-flex align-items-center justify-content-center" alt="subir para o topo da página">
-{{--<div id="preloader"></div>--}}
+<div id="preloader"></div>
 <!-- JavaScript Bundle with Popper -->
 @stack('scripts')
     <script src="https://plugin.handtalk.me/web/latest/handtalk.min.js"></script>
