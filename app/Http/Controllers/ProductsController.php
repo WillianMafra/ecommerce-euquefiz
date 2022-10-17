@@ -32,6 +32,7 @@ class ProductsController extends Controller
     {
         $category = Category::find($id);
         $product = Product::all();
+
         return view('products.category', compact('product', 'category'));
     }
 

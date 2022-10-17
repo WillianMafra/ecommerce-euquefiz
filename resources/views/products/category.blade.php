@@ -2,14 +2,15 @@
 @push('style')
     <link rel="stylesheet" href="{{asset('css/products/productslist.css')}}">
 @endpush
-<section class="container my-3">
+<section class="container my-3" id="category">
 <body class="bg-black">
 <div class="container-fluid bg-3 text-center h-75">
     <h3>Você Está Na Categoria {{$category->name}}</h3><br>
     <div class="row">
+
         @foreach($product as $prod)
             @if($prod->category_id == $category->id)
-                <div class="col-md-3">
+                <div class="col-md-3" id="category-product">
                     <a href="{{route('showProduct',$prod->id)}}">
                         <div class="card p-3">
 
@@ -36,3 +37,4 @@
     </div>
 </body>
 </section>
+
