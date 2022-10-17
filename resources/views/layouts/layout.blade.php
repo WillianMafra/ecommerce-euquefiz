@@ -157,16 +157,17 @@
 <div id="preloader"></div>
 <!-- JavaScript Bundle with Popper -->
 @stack('scripts')
-    <script src="https://plugin.handtalk.me/web/latest/handtalk.min.js"></script>
     <script src="{{asset('js/carousel.js')}}"></script>
-    <script>
+<script src="https://plugin.handtalk.me/web/latest/handtalk.min.js"></script>
+<script>
 
-        var ht = new HT({
+    var ht = new HT({
 
-            token: "4f60ffe8202947dff1b21ebc65ffe9bf"
+        token: "773035674080b2c0959c2ab628f63b33"
 
-        });
-    </script>
+    });
+
+</script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="{{asset('js/app.js')}}"></script>
 <script>
