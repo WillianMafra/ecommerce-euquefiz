@@ -38,3 +38,12 @@
     display: flex;
     justify-content: space-around;
 }
+.hover-animation:hover {
+    transition: 0.5s;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.img-prato {
+    margin-top: 10%;
+}

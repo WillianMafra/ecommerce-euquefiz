@@ -10,7 +10,7 @@
                     <div class="row g-0">
                         <div class="col-md-6 col-lg-5 d-none d-md-block">
                             <img src="{{asset('img/logo-design/Prato.jpg')}}"
-                                 alt="login form" class="img-fluid"/>
+                                 alt="login form" class="img-fluid img-prato"/>
                         </div>
                         <div class="col-md-6 col-lg-7 d-flex align-items-center">
                             <div class="card-body p-4 p-lg-5 text-black">
@@ -33,17 +33,19 @@
                                         <input type="password" id="form2Example27" class="form-control form-control-lg" name="password" />
                                         <label class="form-label" for="form2Example27">Senha</label>
                                     </div>
-                                    <a href="{{route('resetPassword')}}" class="">
-                                        <p class="text-center text-white bg-secondary w-50 rounded">Esqueceu a Senha?
+                                    <a href="{{route('resetPassword')}}">
+                                        <p class="text-center text-white bg-secondary w-50 rounded hover-animation">Esqueceu a Senha?
                                         </p>
                                     </a>
                                     <div class="div-botton">
-                                        <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+                                        <button class="btn btn-primary btn-lg btn-block hover-animation" type="submit">Login</button>
 
-                                    <a href="{{route('register')}}" class="">
-                                        <button class="btn btn-success btn-lg btn-block">Cadastre-se
+
+                                        <button class="btn btn-success btn-lg btn-block hover-animation">
+                                            <a href="{{route('register')}}" class="text-white ">Cadastre-se
+                                            </a>
                                         </button>
-                                    </a>
+
                                     </div>
                                 </form>
                             </div>
