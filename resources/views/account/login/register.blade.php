@@ -14,7 +14,7 @@
                         <div class="row">
                             <div class="col-md-6 mb-4">
                                 <div class="form-outline">
-                                    <input type="text" id="form3Example1" class="form-control" name="name" value="{{ old('name') }}" required/>
+                                    <input type="text" id="name" class="form-control" name="name" value="{{ old('name') }}" required/>
                                     <label class="form-label" for="form3Example1">Nome</label>
                                 </div>
                                 @error('name')
