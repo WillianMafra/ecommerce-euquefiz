@@ -20,7 +20,7 @@
 .testimonial{
     background-image: url("../../img/logo-design/testebackground.png");
     padding: 30px 45px;
-
+    background:  rgba(3, 3, 3, 0.4);
 }
 .h1-about{
     font-size: 50px;
