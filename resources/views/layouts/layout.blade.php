@@ -86,7 +86,7 @@
                     <li><a href="{{route('logout')}}">Sair</a></li>
                     @endauth
                     <li>
-                    <li><a href="https://whatsa.me/5548998117740/?t=Gostaria%20de%20Fazer%20um%20Pedido"><img src="{{asset('img/icone/whatsapp.png')}}" width="40px" class="icone-whatsapp" alt="fechar-menu"></a></li>
+                    <li><a href="https://whatsa.me/5548998117740/?t=Gostaria%20de%20Fazer%20um%20Pedido" target="_blank"><img src="{{asset('img/icone/whatsapp.png')}}" width="40px" class="icone-whatsapp" alt="fechar-menu"></a></li>
                 </ul>
             </nav>
 
