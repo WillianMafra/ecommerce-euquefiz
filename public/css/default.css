@@ -26,10 +26,13 @@ html,body {
 }
 #cover-background{
     background-image: url("../img/logo-design/testebackgroundAltaRes.png");
-    top: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    /* top: 0;
     right: 0;
     bottom: 0;
-    left: 0;
+    left: 0; */
 }
 
 a {
