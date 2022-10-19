@@ -224,8 +224,5 @@
         </div>
     </div>
 </section>
-    @push('scripts')
-        <script src="{{asset('js/video.js')}}"></script>
-    @endpush
 @endsection
 

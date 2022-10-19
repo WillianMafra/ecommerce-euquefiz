@@ -157,7 +157,8 @@
 </footer>
 <!-- End Footer -->
 <input type="image" src="{{asset('img/icone/scrollup.png')}}" id="bottonUp"  class="scroll-top d-flex align-items-center justify-content-center" alt="subir para o topo da página">
-<div id="preloader"></div>
+{{--Descomente a linha abaixo para inserir um pré-loader--}}
+{{--<div id="preloader"></div>--}}
 <!-- JavaScript Bundle with Popper -->
 
 @stack('scripts')
