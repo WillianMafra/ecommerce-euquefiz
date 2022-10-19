@@ -86,8 +86,11 @@
                     <li><a href="{{route('logout')}}">Sair</a></li>
                     @endauth
                     <li>
+                    <li><a href="https://whatsa.me/5548998117740/?t=Gostaria%20de%20Fazer%20um%20Pedido"><img src="{{asset('img/icone/whatsapp.png')}}" width="40px" class="icone-whatsapp" alt="fechar-menu"></a></li>
                 </ul>
             </nav>
+
+
             <img width="30px" src="{{asset('img/icone/dropdown.png')}}" class="mobile-nav-toggle mobile-nav-show bi bi-list" alt="abrir menu">
             <img src="{{asset('img/icone/dropdown.png')}}" width="20px" class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x" alt="fechar-menu">
         </div>
@@ -156,8 +159,9 @@
 <input type="image" src="{{asset('img/icone/scrollup.png')}}" id="bottonUp"  class="scroll-top d-flex align-items-center justify-content-center" alt="subir para o topo da página">
 {{--<div id="preloader"></div>--}}
 <!-- JavaScript Bundle with Popper -->
+
 @stack('scripts')
-    <script src="{{asset('js/carousel.js')}}"></script>
+<script src="{{asset('js/app.js')}}"></script>
 <script src="https://plugin.handtalk.me/web/latest/handtalk.min.js"></script>
 <script>
 
@@ -169,17 +173,8 @@
 
 </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    <script src="{{asset('js/app.js')}}"></script>
-<script>
-    (function (d, s, u) {
-        let h = d.getElementsByTagName(s)[0], k = d.createElement(s);
-        k.onload = function () {
-            let l = d.createElement(s); l.src = u; l.async = true;
-            h.parentNode.insertBefore(l, k.nextSibling);
-        };
-        k.async = true; k.src = 'https://storage.googleapis.com/push-webchat/wwc-latest.js';
-        h.parentNode.insertBefore(k, h);
-    })(document, 'script', 'https://weni-sp-integrations-production.s3.amazonaws.com/apptypes/wwc/d1564a88-6a1f-457f-bd31-0a113c88d047/script.js');
-</script>
+    <script src="{{asset('js/carousel.js')}}"></script>
+
+
 </body>
 </html>
