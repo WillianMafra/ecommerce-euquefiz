@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="row table-admin-fundo">
-                    <div class="col-xxl-4 col-md-6">
+                    <div class="col-xxl-4 col-md-6  card-padding">
                         <div class="card info-card sales-card">
                             <div class="card-body">
                                 <h5 class="card-title text-dark">Vendas</h5>
@@ -27,7 +27,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xxl-4 col-md-6">
+                    <div class="col-xxl-4 col-md-6 card-padding">
                         <div class="card info-card revenue-card">
                             <div class="card-body">
                                 <h5 class="card-title text-dark">Receita</h5>
@@ -40,7 +40,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xxl-4 col-xl-12">
+                    <div class="col-xxl-4 col-xl-12  card-padding">
                         <div class="card info-card customers-card">
                             <div class="card-body">
                                 <h5 class="card-title">Clientes</h5>
@@ -113,7 +113,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 info-padding">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Atividades Recentes</h5>
