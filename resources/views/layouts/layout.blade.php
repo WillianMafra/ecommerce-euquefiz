@@ -51,13 +51,14 @@
                             <i class="bi bi-chevron-down dropdown-indicator"></i>
                         </a>
                         <ul>
-                            <li><a href="https://www.linkedin.com/in/bruno-hoffmann-schumacher-0b4631168/" target="_blank">Bruno</a></li>
-                            <li><a href="https://www.linkedin.com/in/claudio-junior-872444251/" target="_blank">Cláudio</a></li>
-                            <li><a href="https://www.linkedin.com/in/deborabl/" target="_blank">Debora</a></li>
-                            <li><a href="https://www.linkedin.com/in/marlimeza/" target="_blank">Marli</a></li>
-                            <li><a href="https://www.linkedin.com/in/matheussan/" target="_blank">Matheus</a></li>
-                            <li><a href="https://www.linkedin.com/in/thiagowolter/" target="_blank">Thiago</a></li>
-                            <li><a href="https://www.linkedin.com/in/willnmafra/" target="_blank">Willian</a></li>
+                            <li><a href="https://www.linkedin.com/in/xadrak/" target="_blank">Adriano Machado</a></li> 
+                            <li><a href="https://www.linkedin.com/in/bruno-hoffmann-schumacher-0b4631168/" target="_blank">Bruno Schumacher</a></li>
+                            <li><a href="https://www.linkedin.com/in/claudio-junior-872444251/" target="_blank">Cláudio Júnior</a></li>
+                            <li><a href="https://www.linkedin.com/in/deborabl/" target="_blank">Debora de Lima</a></li>
+                            <li><a href="https://www.linkedin.com/in/marlimeza/" target="_blank">Marli Mezza</a></li>
+                            <li><a href="https://www.linkedin.com/in/matheussan/" target="_blank">Matheus Santos</a></li>
+                            <li><a href="https://www.linkedin.com/in/thiagowolter/" target="_blank">Thiago Wolter</a></li>
+                            <li><a href="https://www.linkedin.com/in/willnmafra/" target="_blank">Willian Mafra</a></li>
                         </ul>
                     </li>
                     @auth
