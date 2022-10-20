@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-<section class="bg-light" id="section-product">
+<section class="bg-black" id="section-product">
     <div class="container pb-5 " id="container-geral">
         <div class="row" id="div-imagem">
             <div class="col-lg-5">
