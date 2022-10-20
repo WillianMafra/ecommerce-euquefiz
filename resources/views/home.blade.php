@@ -99,6 +99,23 @@
     <div class="container" data-aos="fade-up">
         <h2 class="font-weight-light my-5 subtitles text-center">Nossos Chefs</h2>
         <div class="row gy-4">
+        <div class="col py-1 px-lg-1 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                <div class="chef-member">
+                    <div class="member-img">
+                        <img src="{{asset('img/chefs/Adrianoprof.jpg')}}" class="img-fluid" alt="master chef">
+                        <div class="social">
+                            <a href="" target="_blank"><i class="bi bi-twitter" ></i></a>
+                            <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
+                            <a href="https://www.linkedin.com/in/xadrak/" target="_blank"><img class="icone" src="{{asset('img/icone/linkedin-icone.png')}}" alt="icone do linkedin"></a>
+                            <a href="https://instagram.com/maxadocombr?igshid=YmMyMTA2M2Y=" target="_blank"><img class="icone" src="{{asset('img/icone/instagram-icone.png')}}" alt="icone do instagram"></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h4>Adriano</h4>
+                        <span>Orientador</span>
+                    </div>
+                </div>
+            </div><!-- End Chefs Member -->
             <div class="col py-1 px-lg-1 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
                 <div class="chef-member">
                     <div class="member-img">
