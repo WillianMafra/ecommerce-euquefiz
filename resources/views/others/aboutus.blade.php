@@ -5,7 +5,7 @@
 @section('aboutus')
 <div class="wrapper-about">
     <div class="testimonial">
-        <div class="bg">
+        <!-- <div class="bg"> -->
         <article>
             <h1 class="h1-about">Sobre Nós</h1>
             <img class="about-img border-0" src="{{asset('img/logo-design/LogoSemFundo.png')}}"  alt="logo-eu-que-fiz">
