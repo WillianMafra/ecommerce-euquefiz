@@ -217,7 +217,6 @@
                     <div class="member-info">
                         <h4>Thiago</h4>
                         <span>Dev</span>
-
                     </div>
                 </div>
             </div><!-- End Chefs Member -->
