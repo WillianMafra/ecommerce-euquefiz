@@ -19,7 +19,7 @@ formulários para cadastros, sistema de autenticação e permissões do usuário
 ## 📚 Autores
 
 * [Bruno](https://www.linkedin.com/in/bruno-hoffmann-schumacher-0b4631168/)
-* [Claúdio]()
+* [Claúdio](https://www.linkedin.com/in/claudio-junior-872444251/)
 * [Débora](https://www.linkedin.com/in/deborabl/)
 * [Marli](https://www.linkedin.com/in/marlimeza/)
 * [Matheus](https://www.linkedin.com/in/matheussan/)
