@@ -12,6 +12,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('css/footer.css')}}">
     <link rel="stylesheet" href="{{asset('css/default.css')}}">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-615XKQXEJX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-615XKQXEJX');
+    </script>
     <title>Eu Que Fiz</title>
 </head>
 @php
@@ -168,15 +177,7 @@
 <!-- JavaScript Bundle with Popper -->
 
 @stack('scripts')
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-615XKQXEJX"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'G-615XKQXEJX');
-</script>
 <script src="{{asset('js/app.js')}}"></script>
 <script src="https://plugin.handtalk.me/web/latest/handtalk.min.js"></script>
 <script>

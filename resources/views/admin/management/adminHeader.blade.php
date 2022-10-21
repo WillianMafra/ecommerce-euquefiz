@@ -14,6 +14,15 @@
     <link rel="stylesheet" href="{{asset('css/admin/dashboard/style.css')}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="{{asset('css/admin/dashboard/css.css')}}">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-615XKQXEJX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-615XKQXEJX');
+    </script>
 </head>
 <body class="bg-dark">
 <header id="header" class="header fixed-top d-flex align-items-center bg-dark">
@@ -47,15 +56,7 @@
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 <!-- JavaScript Bundle with Popper -->
 @stack('adminScript')
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-615XKQXEJX"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'G-615XKQXEJX');
-</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 <script src="{{asset('js/admin/dashboard/main.js')}}"></script>
 <script src="{{asset('js/admin/dashboard/scripts.js')}}"></script>
