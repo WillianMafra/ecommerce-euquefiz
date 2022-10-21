@@ -51,7 +51,7 @@
                             <i class="bi bi-chevron-down dropdown-indicator"></i>
                         </a>
                         <ul>
-                            <li><a href="https://www.linkedin.com/in/xadrak/" target="_blank">Adriano Machado</a></li> 
+                            <li><a href="https://www.linkedin.com/in/xadrak/" target="_blank">Adriano Machado</a></li>
                             <li><a href="https://www.linkedin.com/in/bruno-hoffmann-schumacher-0b4631168/" target="_blank">Bruno Schumacher</a></li>
                             <li><a href="https://www.linkedin.com/in/claudio-junior-872444251/" target="_blank">Cláudio Júnior</a></li>
                             <li><a href="https://www.linkedin.com/in/deborabl/" target="_blank">Debora de Lima</a></li>
@@ -61,11 +61,16 @@
                             <li><a href="https://www.linkedin.com/in/willnmafra/" target="_blank">Willian Mafra</a></li>
                         </ul>
                     </li>
-                    @auth
-                    @if(\Illuminate\Support\Facades\Auth::user()->getUserType() == 'admin')
+                    @auth()
                         <li><a href="{{route('management')}}">Admin</a></li>
-                    @endif
                     @endauth
+
+{{--                    Protecao Desativada Para Apresentacao--}}
+{{--                    @auth--}}
+{{--                    @if(\Illuminate\Support\Facades\Auth::user()->getUserType() == 'admin')--}}
+{{--                        <li><a href="{{route('management')}}">Admin</a></li>--}}
+{{--                    @endif--}}
+{{--                    @endauth--}}
                     <li>
                         <a href="{{route('carShopping')}}">
                             <img src="{{asset('img/icone/shopping-bag.png')}}" alt="icone-carrinho" width="30" height="25">
@@ -163,6 +168,15 @@
 <!-- JavaScript Bundle with Popper -->
 
 @stack('scripts')
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-615XKQXEJX"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-615XKQXEJX');
+</script>
 <script src="{{asset('js/app.js')}}"></script>
 <script src="https://plugin.handtalk.me/web/latest/handtalk.min.js"></script>
 <script>

@@ -40,6 +40,7 @@
                             </div>
                         </div>
                     </div>
+                    <div class="alert-button"><button class="button-alert-admin" onclick="alert('Bem-Vindos Ao EuQueFiz, O Painel De Admin É Protegido Por Middleware, Porém Está Aberto Temporariamente Para Apresentação!')">Convidados Cliquem Aqui</button></div>
                     <div class="col-xxl-4 col-xl-12  card-padding">
                         <div class="card info-card customers-card">
                             <div class="card-body">
@@ -141,4 +142,5 @@
         </div>
     </section>
 </main>
+
 @endsection

@@ -29,7 +29,10 @@ Route::get('/sobre', [OthersController::class, 'aboutus'])->name('aboutus');
 Route::get('/galeria', [OthersController::class, 'gallery'])->name('gallery');
 
 //Rota para o admin fazer o gerenciamento do crud
-Route::prefix('admin')->middleware('isAdmin')->group(function (){
+
+//Protecao Desativada para Apresentacao
+//Route::prefix('admin')->middleware('isAdmin')->group(function (){
+Route::prefix('admin')->group(function (){
 
     //Controllers Gerais Admin
     Route::get('/', [AdminController::class, 'management'])->name('management');

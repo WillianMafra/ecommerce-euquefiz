@@ -52,3 +52,17 @@
 .info-padding {
     margin-top: 20px;
 }
+.alert-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.button-alert-admin{
+    border: 1px green solid;
+    border-radius: 10px;
+    padding: 5px;
+    transition: .2s ease-in-out 0s;
+}
+.button-alert-admin:hover {
+    transform: scale(1.25);
+}
